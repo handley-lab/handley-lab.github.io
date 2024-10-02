@@ -46,3 +46,4 @@ The race to understand the Cosmic Dawn is entering a new phase. With next-genera
 * [Experiment to Detect the Global EoR Signature (EDGES)](https://en.wikipedia.org/wiki/Experiment_to_Detect_the_Global_EoR_Signature)
 * [Nature article on 21-cm cosmology](https://www.nature.com/articles/d44151-023-00183-0) 
 
+![IMG_7490](https://github.com/user-attachments/assets/dd548fe1-fbcf-4d68-aa75-df25e9ea0ab9)
