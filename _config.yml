@@ -1,7 +1,7 @@
-title: Handley-Lab
+title: The Handley Research Group
 email: wh260@cam.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Welcome to the Handley Lab website. We are a research group based in the Institute of Astronomy at the University of Cambridge. Our research focuses on Bayesian statistics, machine learning, and data analysis for astrophysics, cosmology and high energy physics. This website code and content was written with the aid of Large Language Models (LLMs) and is hosted on GitHub Pages.
+  We are a research group based in the Institute of Astronomy at the University of Cambridge. Our research focuses on Bayesian statistics, machine learning, and data analysis for astrophysics, cosmology and high energy physics. This website code and content was written with the aid of Large Language Models (LLMs) and is hosted on GitHub Pages.
 domain: "handley-lab.co.uk"
 url: "https://handley-lab.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  handley-lab
