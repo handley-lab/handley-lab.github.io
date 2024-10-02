@@ -5,10 +5,12 @@ description: >- # this means to ignore newlines until "baseurl:"
 domain: "handley-lab.co.uk"
 url: "https://handley-lab.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  handley-lab
+minima:
+  skin: dark
 
 # Build settings
 theme: minima
-  skin: dark
+
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
