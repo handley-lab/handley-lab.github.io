@@ -6,7 +6,7 @@ domain: "handley-lab.co.uk"
 url: "https://handley-lab.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  handley-lab
 minima:
-  skin: dark
+  skin: auto
 
 # Build settings
 theme: minima
