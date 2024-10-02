@@ -12,7 +12,7 @@ Our group recently returned from the **7th Global 21-cm Workshop**, held at the 
 
 Representing our group at the workshop were:
 
-* [Will Handley](/people/will-handley) - [Talk link coming soon]
+* [Will Handley](/people/will-handley) - [Talk](https://github.com/williamjameshandley/talks/tree/india_2024)
 * [Sam Leeney](/people/sam-leeney) - [Talk link coming soon]
 * [Harry Bevins](/people/harry-bevins) - [Talk link coming soon]
 * [George Carter](/people/george-carter) - [Talk link coming soon]
