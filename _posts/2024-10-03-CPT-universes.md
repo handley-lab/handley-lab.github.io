@@ -1,7 +1,7 @@
 ---
 layout: post
-title:  "Predicting spatial curvature in globally $CPT$-symmetric universes"
-date:   2024-10-04
+title:  "Predicting spatial curvature in globally CPT-symmetric universes"
+date:   2024-10-03
 categories: conferences
 ---
 
