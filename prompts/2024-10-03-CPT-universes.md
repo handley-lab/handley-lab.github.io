@@ -1,3 +1,4 @@
+{% raw %}
 PhD student Wei-Ning Deng from the Handley research group gave a talk on her latest paper at the Cambridge-LMU meeting. Could you write a blog post for my jekyll website using the below information, with the header
 
 ```markdown
@@ -820,3 +821,5 @@ When writing the blog poste emphasise the facts
 Please include relevent references with their numbers throughout the text. Format these in markdown as [XXXX.YYYYY](https://arxiv.org/abs/XXXX.YYYYY), with the correct numbers filled in as inferred from the latex of the paper.
 
 Please use a tone written by a scientific expert, so no hyperbole or spin. The aim is to communicate the science clearly and accurately, but in a way that is accessible to a general audience.
+
+{% endraw %}
