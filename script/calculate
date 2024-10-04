@@ -1,0 +1,6 @@
+#!/bin/bash
+
+echo "Generating group timeline"
+assets/group/timeline.py
+echo "Generating group table"
+assets/group/html_table.py

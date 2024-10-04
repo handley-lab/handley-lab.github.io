@@ -1,0 +1,601 @@
+Will Handley:
+  pi:
+    start: 2020-10-01
+  postdoc:
+    start: 2016-10-01
+    end: 2020-10-01
+  phd:
+    start: 2012-10-01
+    end: 2016-09-30
+  original_image: images/originals/will_handley.jpeg
+  image: images/will_handley.jpg
+  links:
+  - <a href="https://willhandley.co.uk">Webpage</a>
+George Carter:
+  postdoc:
+    start: 2024-08-12
+    end: 2024-11-12
+  phd:
+    start: 2020-10-01
+    end: 2024-08-11
+    supervisors:
+    - Nima Razavi-Ghods
+    - Mark Ashdown
+  original_image: originals/images/george_carter.jpg
+  image: images/george_carter.jpg
+Thomas Gessey-Jones:
+  postdoc:
+    start: 2024-04-01
+    end: 2024-08-04
+  phd:
+    start: 2020-10-01
+    end: 2024-03-31
+    supervisors:
+    - Eloy de Lera Acedo
+    - Anastasia Fialkov
+  partiii:
+    start: 2019-10-01
+    end: 2020-06-01
+  original_image: images/originals/thomas_gessey-jones.jpg
+  image: images/thomas_gessey-jones.jpg
+  links:
+  - <a href="https://www.cavendishradiocosmology.com/">Group webpage</a>
+  - <a href="https://arxiv.org/search/?query=T+Gessey-Jones&searchtype=all&abstracts=show&order=-announced_date_first&size=50">arXiv</a>
+  destination:
+    2024-08-05: <a href="https://www.physicx.ai/">PhysicsX</a>
+David Yallup:
+  postdoc:
+    start: 2021-01-10
+  original_image: images/originals/david_yallup.jpg
+  image: images/david_yallup.jpg
+  links:
+  - <a href="https://orcid.org/0000-0003-4716-5817">ORCiD</a>
+  - <a href="https://www.linkedin.com/in/dyallup/">linkedin</a>
+Kamran Javid:
+  postdoc:
+    start: 2018-10-01
+    end: 2019-10-01
+  phd:
+    start: 2017-10-01
+    end: 2018-09-30
+  original_image: images/originals/kamran_javid.jpeg
+  image: images/kamran_javid.jpg
+  links:
+  - <a href="https://scholar.google.com/citations?user=USKsovMAAAAJ">Google scholar</a>
+  - <a href="https://www.linkedin.com/in/kamranjavid91">linkedin</a>
+  destination:
+    2019-10-01: Arabesque (finance)
+Namu Kroupa:
+  phd:
+    start: 2023-10-01
+    supervisors:
+    - "G\xE1bor Cs\xE1nyi"
+  summer:
+    start: 2023-06-12
+    end: 2023-09-30
+  original_image: images/originals/namu_kroupa.jpg
+  image: images/namu_kroupa.jpg
+Dily Ong:
+  phd:
+    start: 2023-10-01
+  original_image: images/originals/dily_ong.jpg
+  image: images/dily_ong.jpg
+Sam Leeney:
+  phd:
+    start: 2023-10-01
+    supervisors:
+    - Eloy de Lera Acedo
+    - Harry Bevins
+  mphil:
+    start: 2022-04-11
+    end: 2022-12-30
+    supervisors:
+    - Eloy de Lera Acedo
+  original_image: images/originals/sam_leeney.jpeg
+  image: images/sam_leeney.jpg
+  links:
+  - <a href="https://github.com/samleeney">Webpage</a>
+  - <a href="https://www.cavendishradiocosmology.com/">Group Webpage</a>
+Sinah Legner:
+  phd:
+    start: 2022-10-01
+    supervisors:
+    - Will Barker
+  original_image: images/originals/sinah_legner.jpg
+  image: images/sinah_legner.jpg
+Metha Prathaban:
+  phd:
+    start: 2022-10-01
+  partiii:
+    start: 2020-10-01
+    end: 2021-06-01
+  original_image: images/originals/metha_prathaban.png
+  image: images/metha_prathaban.jpg
+Wei-Ning Deng:
+  phd:
+    start: 2022-10-01
+  original_image: images/originals/wei-ning_deng.jpg
+  image: images/wei-ning_deng.jpg
+Adam Ormondroyd:
+  phd:
+    start: 2021-10-01
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+  original_image: images/originals/adam_ormondroyd.jpg
+  image: images/adam_ormondroyd.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/adam-ormondroyd/"> linkedin </a>
+  - <a href="https://github.com/ormorod"> GitHub </a>
+Ayngaran Thavanesan:
+  phd:
+    start: 2021-10-01
+    end: 2023-01-19
+    supervisors:
+    - David Stefanyszyn
+  original_image: images/originals/ayngaran_thavanesan.png
+  image: images/ayngaran_thavanesan.jpg
+Kilian Scheutwinkel:
+  phd:
+    start: 2020-12-01
+    end: 2024-08-09
+    supervisors:
+    - Eloy de Lera Acedo
+  original_image: images/originals/kilian_scheutwinkel.JPG
+  image: images/kilian_scheutwinkel.jpg
+  links:
+  - <a href="https://www.c2d3.cam.ac.uk/directory/8681/mr-kilian-scheutwinkel">C2D3
+    profile</a>
+  - <a href="https://www.cavendishradiocosmology.com/">Group webpage</a>
+  destination:
+    2024-09-01: TRGC (Venture fund focussed on digital assets)
+Thomas Mcaloone:
+  phd:
+    start: 2020-06-10
+    end: 2021-09-30
+    supervisors:
+    - Keith Grainge
+    - Malak Olamaie
+  original_image: images/originals/thomas_mcaloone.jpg
+  image: images/thomas_mcaloone.jpg
+  destination:
+    2021-10-01: Data scientist (PolyChord Ltd)
+Isidro Gomez Vargas:
+  phd:
+    start: 2020-03-16
+    end: 2020-12-04
+  original_image: images/originals/isidro_gomez_vargas.jpg
+  image: images/isidro_gomez_vargas.jpg
+  links:
+  - <a href="https://igomezv.github.io">Webpage</a>
+  - <a href="https://www.fis.unam.mx/directorio/1333/isidro-strong-gomez-strong-vargas">Department
+    webpage</a>
+  destination:
+    2021-11-01: Postdoc at UNAM (mexico)
+Harry Bevins:
+  phd:
+    start: 2019-10-01
+    end: 2023-03-31
+    supervisors:
+    - Eloy de Lera Acedo
+    - Anastasia Fialkov
+  original_image: images/originals/harry_bevins.jpeg
+  image: images/harry_bevins.jpg
+  links:
+  - <a href="https://htjb.github.io/">Webpage</a>
+  - <a href="https://github.com/htjb">GitHub</a>
+  - <a href="https://ui.adsabs.harvard.edu/search/q=author%3A%22Bevins%2C%20H.%20T.%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0">ADS</a>
+  - <a href="https://publons.com/researcher/5239833/harry-bevins/">Publons</a>
+  destination:
+    2023-04-01: Postdoc in Cambridge (Eloy)
+    2023-10-01: Cambridge Kavli Fellowship
+Ian Roque:
+  phd:
+    start: 2019-10-01
+    end: 2023-12-31
+    supervisors:
+    - Nima Razavi-Ghods
+  mphil:
+    start: 2018-10-01
+    end: 2019-09-15
+    supervisors:
+    - Nima Razavi-Ghods
+  original_image: images/originals/ian_roque.png
+  image: images/ian_roque.jpg
+  links:
+  - <a href="https://www.astro.phy.cam.ac.uk/directory/ian-roque">Webpage</a>
+  destination:
+    2024-08-01: <a href="https://profiles.stanford.edu/ian-roque">Stanford SLAC staff
+      engineer</a>
+Dominic Anstey:
+  phd:
+    start: 2018-10-01
+    end: 2022-09-30
+    supervisors:
+    - Eloy de Lera Acedo
+  original_image: images/originals/dominic_anstey.jpg
+  image: images/dominic_anstey.jpg
+  destination:
+    2022-10-01: Postdoc at Cambridge (UK)
+Fruzsina Agocs:
+  phd:
+    start: 2017-10-01
+    end: 2021-09-01
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+  partiii:
+    start: 2016-10-01
+    end: 2017-06-01
+  original_image: images/originals/fruzsina_agocs.jpg
+  image: images/fruzsina_agocs.jpg
+  links:
+  - <a href="https://fruzsinaagocs.github.io/">Webpage</a>
+  - <a href="https://www.simonsfoundation.org/people/fruzsina-agocs/">Group webpage</a>
+  destination:
+    2021-10-01: 3y fellowship CCM New York
+    2024-10-01: Assistant Professor at Boulder, Colorado
+Will Barker:
+  phd:
+    start: 2017-10-01
+    end: 2021-08-25
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+  original_image: images/originals/will_barker.png
+  image: images/will_barker.jpg
+  links:
+  - <a href="https://wevbarker.com">Webpage</a>
+  destination:
+    2021-10-01: 3y Junior Research Fellowship (Girton, Cambridge)
+    2024-10-01: 2y Marie Curie fellowship prague
+Lukas Hergt:
+  phd:
+    start: 2017-01-01
+    end: 2021-01-08
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+  original_image: images/originals/lukas_hergt.jpg
+  image: images/lukas_hergt.jpg
+  links:
+  - <a href="https://phas.ubc.ca/users/lukas-hergt">Webpage</a>
+  destination:
+    2021-01-08: 4-year cosmology fellowship in UBC
+Ed Higson:
+  phd:
+    start: 2016-10-01
+    end: 2018-10-01
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+  original_image: images/originals/ed_higson.jpg
+  image: images/ed_higson.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/ejhigson">linkedin</a>
+  destination:
+    2017-10-01: Goldman Sachs (UK finance)
+    2020-05-01: DE Shaw (US finance)
+Danielle Dineen:
+  mphil:
+    start: 2022-10-01
+    end: 2023-09-15
+  original_image: images/originals/danielle_dineen.jpg
+  image: images/danielle_dineen.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/danielle-dineen-34887a120/">linkedin</a>
+  - <a href="https://arxiv.org/search/?query=danielle+dineen&searchtype=all&source=header">arxiv
+    papers</a>
+  destination:
+    2023-10-01: PhD in Cosmology, Toronto
+Allahyar Sahibzada:
+  mphil:
+    start: 2021-10-01
+    end: 2022-12-19
+  original_image: images/originals/allahyar_sahibzada.jpeg
+  image: images/allahyar_sahibzada.jpg
+Emma Shen:
+  mphil:
+    start: 2019-10-01
+    end: 2020-09-30
+    supervisors:
+    - Eloy de Lera Acedo
+    - Anastasia Fialkov
+  original_image: images/originals/emma_shen.jpg
+  image: images/emma_shen.jpg
+  destination:
+    2021-10-01: PhD in Radio astronomy, Cambridge
+Panagiotis Mavrogiannis:
+  mphil:
+    start: 2017-10-01
+    end: 2018-09-30
+    supervisors:
+    - Anthony Lasenby
+  original_image: images/originals/panagiotis_mavrogiannis.jpg
+  image: images/panagiotis_mavrogiannis.jpg
+  destination:
+    2018-10-01: PhD in Astrophysics, Thessaloniki, Greece
+Tze Goh:
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+    supervisors:
+    - Suhail Dhawan
+  original_image: images/originals/tze_goh.jpeg
+  image: images/tze_goh.jpg
+Patrick Lau:
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+Felicity Ibrahim:
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+  original_image: images/originals/felicity_ibrahim.png
+  image: images/felicity_ibrahim.jpg
+Samuel Hewson:
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+  summer:
+    start: 2024-06-24
+    end: 2024-08-01
+Nicolas Mediato Diaz:
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+  summer:
+    start: 2024-07-22
+    end: 2024-09-13
+Toby Lovick:
+  partiii:
+    start: 2022-10-01
+    end: 2023-06-01
+    supervisors:
+    - Suhail Dhawan
+  summer:
+    start: 2023-07-24
+    end: 2023-09-15
+    supervisors:
+    - Suhail Dhawan
+Zixiao Hu:
+  partiii:
+    start: 2022-10-01
+    end: 2023-06-01
+  summer:
+    start: 2023-06-26
+    end: 2023-08-18
+  original_image: images/originals/zixiao_hu.jpeg
+  image: images/zixiao_hu.jpg
+Sankalan Bhattacharyya:
+  partiii:
+    start: 2022-10-01
+    end: 2023-06-01
+  original_image: images/originals/sankalan_bhattacharyya.jpg
+  image: images/sankalan_bhattacharyya.jpg
+Cole Meldorf:
+  partiii:
+    start: 2022-10-01
+    end: 2023-06-01
+  original_image: images/originals/cole_meldorf.jpg
+  image: images/cole_meldorf.jpg
+  links:
+  - <a href="https://scholar.google.com/citations?user=Zqa8QOMAAAAJ&hl=en&oi=ao">Google
+    scholar</a>
+Carola Zanoletti:
+  partiii:
+    start: 2021-10-01
+    end: 2022-06-01
+  original_image: images/originals/carola_zanoletti.jpg
+  image: images/carola_zanoletti.jpg
+  links:
+  - <a href="https://blogs.ncl.ac.uk/cosmology/">Group webpage</a>
+  - <a href="https://www.mas.ncl.ac.uk/danielle.leonard/">PhD supervisor</a>
+  - <a href="https://research.ncl.ac.uk/phdstudentships/robinsoncosmology/#Leonard">PhD
+    project</a>
+  destination:
+    2022-10-01: PhD in cosmology, Nottingham
+Oliver Normand:
+  partiii:
+    start: 2021-10-01
+    end: 2022-06-01
+  original_image: images/originals/oliver_normand.jpg
+  image: images/oliver_normand.jpg
+  destination:
+    2022-10-01: Management consultancy
+Xy Wang:
+  partiii:
+    start: 2021-10-01
+    end: 2022-06-01
+  original_image: images/originals/xy_wang.jpg
+  image: images/xy_wang.jpg
+  destination:
+    2022-10-01: PhD in Quantum Computing, Germany
+Yoann Launay:
+  partiii:
+    start: 2021-10-01
+    end: 2022-06-01
+  original_image: images/originals/yoann_launay.jpg
+  image: images/yoann_launay.jpg
+  destination:
+    2022-10-01: PhD in Cosmology, DAMTP
+Yi Jer Loh:
+  partiii:
+    start: 2020-10-01
+    end: 2021-06-01
+  original_image: images/originals/yi_jer_loh.jpg
+  image: images/yi_jer_loh.jpg
+  destination:
+    2021-10-01: Data Scientist, Spotify
+Aleksandr Petrosyan:
+  partiii:
+    start: 2019-10-01
+    end: 2020-06-01
+  original_image: images/originals/aleksandr_petrosyan.jpeg
+  image: images/aleksandr_petrosyan.jpg
+  destination:
+    2020-10-01: Lead cryptography engineer, Armenia
+Deaglan Bartlett:
+  partiii:
+    start: 2018-10-01
+    end: 2019-06-01
+  original_image: images/originals/deaglan_bartlett.JPG
+  image: images/deaglan_bartlett.jpg
+  links:
+  - <a href="https://www.physics.ox.ac.uk/our-people/bartlett">Webpage</a>
+  - <a href="https://arxiv.org/a/bartlett_d_1">arXiv</a>
+  destination:
+    2019-10-01: PhD in Astrophysics, Oxford
+    2022-10-01: Postdoc in IAP, Paris
+Jamie Bamber:
+  partiii:
+    start: 2018-10-01
+    end: 2019-06-01
+  original_image: images/originals/jamie_bamber.JPG
+  image: images/jamie_bamber.jpg
+  destination:
+    2019-10-01: PhD in Astrophysics, Oxford
+Jessica Rigley:
+  partiii:
+    start: 2017-10-01
+    end: 2018-06-01
+  original_image: images/originals/jessica_rigley.jpeg
+  image: images/jessica_rigley.jpg
+  links:
+  - <a href="https://jessicarigley.com/">Website</a>
+  destination:
+    2019-10-01: PhD in astronomy, IoA
+Ward Haddadin:
+  partiii:
+    start: 2017-10-01
+    end: 2018-06-01
+  summer:
+    start: 2018-06-01
+    end: 2018-09-01
+  original_image: images/originals/ward_haddadin.jpg
+  image: images/ward_haddadin.jpg
+  destination:
+    2018-10-01: PhD in Particle physics theory, DAMTP
+Daniel Manela:
+  partiii:
+    start: 2016-10-01
+    end: 2017-06-01
+  original_image: images/originals/daniel_manela.png
+  image: images/daniel_manela.jpg
+  links:
+  - <a href="https://csml.stats.ox.ac.uk/">Department webpage</a>
+  destination:
+    2019-10-01: Msc Computational stats & ML, UCL
+    2021-01-01: statistical/ML engineer at UCB Pharmaceuticals
+    2022-10-01: PhD in ML, Oxford
+Bob Knighton:
+  partiii:
+    start: 2016-10-01
+    end: 2017-06-01
+  original_image: images/originals/bob_knighton.JPG
+  image: images/bob_knighton.jpg
+  destination:
+    2019-10-01: PhD in theoretical cosmology, ETH Zurich
+    2023-10-01: Postdoc at DAMTP (Cambridge)
+Stephen Pickman:
+  partiii:
+    start: 2016-10-01
+    end: 2017-06-01
+  original_image: images/originals/stephen_pickman.jpeg
+  image: images/stephen_pickman.jpg
+  destination:
+    2017-10-01: Software developer at DarkTrace
+Charlotte Priestley:
+  summer:
+    start: 2024-07-01
+    end: 2024-08-30
+  original_image: images/originals/charlotte_priestley.jpg
+  image: images/charlotte_priestley.jpg
+Artyom Baryshnikov:
+  summer:
+    start: 2022-06-27
+    end: 2022-08-26
+  original_image: images/originals/artyom_baryshnikov.png
+  image: images/artyom_baryshnikov.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/artem-baryshnikov-4b31a6189">linkedin</a>
+  destination:
+    2022-10-01: MSc in Cyber Security in Edinburgh
+Beichen Xu:
+  summer:
+    start: 2022-06-27
+    end: 2022-09-16
+  original_image: images/originals/beichen_xu.jpg
+  image: images/beichen_xu.jpg
+  destination:
+    2022-10-01: Physics in Birmingham
+Mary Letey:
+  summer:
+    start: 2022-06-24
+    end: 2022-08-22
+  original_image: images/originals/mary_letey.jpg
+  image: images/mary_letey.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/maryletey">linkedin</a>
+  destination:
+    2022-10-01: Msc in Theoretical Physics, Perimeter Institute
+    2023-10-01: PhD in Applied Mathematics, Harvard
+Mattia Varrone:
+  summer:
+    start: 2021-06-21
+    end: 2021-09-30
+  original_image: images/originals/mattia_varrone.jpg
+  image: images/mattia_varrone.jpg
+Zak Shumaylov:
+  summer:
+    start: 2021-06-21
+    end: 2021-09-30
+  original_image: images/originals/zak_shumaylov.jpeg
+  image: images/zak_shumaylov.jpg
+  destination:
+    2022-10-01: PhD in machine learning, DAMTP
+Denis Werth:
+  summer:
+    start: 2019-06-01
+    end: 2019-09-01
+  original_image: images/originals/denis_werth.jpg
+  image: images/denis_werth.jpg
+  destination:
+    2019-10-01: Masters in Sorbonne, Paris
+    2021-10-01: PhD in Astrophysics, Paris (IAP & Sorbonne)
+Liam L.H. Lau:
+  summer:
+    start: 2019-06-01
+    end: 2019-09-01
+  original_image: images/originals/liam_lau.jpg
+  image: images/liam_lau.jpg
+  destination:
+    2019-10-01: PhD in Physics, Rutgers (US)
+Maxime Jabarian:
+  summer:
+    start: 2019-06-01
+    end: 2019-09-01
+  original_image: images/originals/maxime_jabarian.jpeg
+  image: images/maxime_jabarian.jpg
+  links:
+  - <a href="https://www.linkedin.com/in/maxime-jabarian/">linkedin</a>
+  - <a href="https://www.researchgate.net/profile/Maxime-Jabarian-2">ResearchGate</a>
+  destination:
+    2022-01-01: AI/Cybersecurity startup, Paris
+Elizabeth Guest:
+  summer:
+    start: 2018-06-01
+    end: 2018-09-01
+  original_image: images/originals/elizabeth_guest.jpg
+  image: images/elizabeth_guest.jpg
+  destination:
+    2019-10-01: MSc in Theoretical Chemistry, Cambridge
+    2022-10-01: PhD in exoplanet atmospheres, UCL
+Shu-Fan Chen:
+  summer:
+    start: 2018-06-01
+    end: 2018-09-01
+  original_image: images/originals/shu-fan_chen.jpeg
+  image: images/shu-fan_chen.jpg
+  destination:
+    2019-10-01: PhD in Cosmology, Harvard
