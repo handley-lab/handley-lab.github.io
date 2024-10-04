@@ -20,7 +20,8 @@ colors = {'partiii': 'C1',
           'phd': 'C0',
           'postdoc': 'C2',
           'summer': 'C3',
-          'mphil': 'C4'}
+          'mphil': 'C4',
+          'pi': 'C5'}
 
 fig, ax = plt.subplots()
 rects = {}

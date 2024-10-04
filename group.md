@@ -4,5 +4,5 @@ title: The Group
 permalink: /group/
 ---
 
-![Timeline of students and postdocs](/assets/students/students.png)
+![Timeline of students and postdocs](/assets/group/group.png)
 

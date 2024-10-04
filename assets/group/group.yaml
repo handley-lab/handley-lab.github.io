@@ -65,6 +65,19 @@ Kamran Javid:
   - <a href="https://www.linkedin.com/in/kamranjavid91">linkedin</a>
   destination:
     2019-10-01: Arabesque (finance)
+Toby Lovick:
+  phd:
+    start: 2024-10-01
+  partiii:
+    start: 2022-10-01
+    end: 2023-06-01
+    supervisors:
+    - Suhail Dhawan
+  summer:
+    start: 2023-07-24
+    end: 2023-09-15
+    supervisors:
+    - Suhail Dhawan
 Namu Kroupa:
   phd:
     start: 2023-10-01
@@ -347,17 +360,6 @@ Nicolas Mediato Diaz:
   summer:
     start: 2024-07-22
     end: 2024-09-13
-Toby Lovick:
-  partiii:
-    start: 2022-10-01
-    end: 2023-06-01
-    supervisors:
-    - Suhail Dhawan
-  summer:
-    start: 2023-07-24
-    end: 2023-09-15
-    supervisors:
-    - Suhail Dhawan
 Zixiao Hu:
   partiii:
     start: 2022-10-01
