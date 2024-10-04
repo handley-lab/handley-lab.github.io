@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "7th Global 21-cm Workshop 2024"
+title:  "7th Global 21-cm Workshop"
 date:   2024-10-04
 categories: conferences
 ---
