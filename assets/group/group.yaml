@@ -1,3 +1,18 @@
+Krish Nanavati:
+  partiii:
+    start: 2024-10-01
+  original_image: images/originals/krish_nanavati.jpg
+  image: images/krish_nanavati.jpg
+Ming Yang:
+  partiii:
+    start: 2024-10-01
+  original_image: images/originals/ming-yang.jpeg
+  image: images/ming-yang.jpg
+Will Templeton:
+  partiii:
+    start: 2024-10-01
+  original_image: images/originals/will-templeton.png
+  image: images/will-templeton.png
 Will Handley:
   pi:
     start: 2020-10-01
