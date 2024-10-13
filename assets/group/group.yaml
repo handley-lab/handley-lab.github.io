@@ -341,13 +341,13 @@ Krish Nanavati:
 Ming Yang:
   partiii:
     start: 2024-10-01
-  original_image: images/originals/ming-yang.jpeg
-  image: images/ming-yang.jpg
+  original_image: images/originals/ming_yang.jpeg
+  image: images/ming_yang.jpg
 Will Templeton:
   partiii:
     start: 2024-10-01
-  original_image: images/originals/will-templeton.png
-  image: images/will-templeton.jpg
+  original_image: images/originals/will_templeton.png
+  image: images/will_templeton.jpg
 Charlotte Priestley:
   partiii:
     start: 2024-10-01
