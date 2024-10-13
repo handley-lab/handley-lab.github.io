@@ -26,6 +26,8 @@ supervisors = [
     Supervisor('Suhail Dhawan',"https://www.lucy.cam.ac.uk/fellows/dr-suhail-dhawan"),
     Supervisor('Gábor Csányi',"http://www.eng.cam.ac.uk/profiles/gc121"),
     Supervisor('Harry Bevins',"https://harrybevins.co.uk/"),
+    Supervisor('James Alvey',"https://www.kicc.cam.ac.uk/staff/dr-james-alvey"),
+    Supervisor('Chris Lester',"https://www.phy.cam.ac.uk/directory/lesterc"),
 ]
 
 supervisors = {s.name:s for s in supervisors}

@@ -1,18 +1,3 @@
-Krish Nanavati:
-  partiii:
-    start: 2024-10-01
-  original_image: images/originals/krish_nanavati.jpg
-  image: images/krish_nanavati.jpg
-Ming Yang:
-  partiii:
-    start: 2024-10-01
-  original_image: images/originals/ming-yang.jpeg
-  image: images/ming-yang.jpg
-Will Templeton:
-  partiii:
-    start: 2024-10-01
-  original_image: images/originals/will-templeton.png
-  image: images/will-templeton.png
 Will Handley:
   pi:
     start: 2020-10-01
@@ -343,6 +328,36 @@ Panagiotis Mavrogiannis:
   image: images/panagiotis_mavrogiannis.jpg
   destination:
     2018-10-01: PhD in Astrophysics, Thessaloniki, Greece
+Harvey Williams:
+  partiii:
+    start: 2024-10-01
+Krish Nanavati:
+  partiii:
+    start: 2024-10-01
+    supervisors:
+    - James Alvey
+  original_image: images/originals/krish_nanavati.jpg
+  image: images/krish_nanavati.jpg
+Ming Yang:
+  partiii:
+    start: 2024-10-01
+  original_image: images/originals/ming-yang.jpeg
+  image: images/ming-yang.jpg
+Will Templeton:
+  partiii:
+    start: 2024-10-01
+  original_image: images/originals/will-templeton.png
+  image: images/will-templeton.jpg
+Charlotte Priestley:
+  partiii:
+    start: 2024-10-01
+  summer:
+    start: 2024-07-01
+    end: 2024-08-30
+    supervisors:
+    - Harry Bevins
+  original_image: images/originals/charlotte_priestley.jpg
+  image: images/charlotte_priestley.jpg
 Tze Goh:
   partiii:
     start: 2023-10-01
@@ -368,6 +383,8 @@ Samuel Hewson:
   summer:
     start: 2024-06-24
     end: 2024-08-01
+    supervisors:
+    - Chris Lester
 Nicolas Mediato Diaz:
   partiii:
     start: 2023-10-01
@@ -522,12 +539,6 @@ Stephen Pickman:
   image: images/stephen_pickman.jpg
   destination:
     2017-10-01: Software developer at DarkTrace
-Charlotte Priestley:
-  summer:
-    start: 2024-07-01
-    end: 2024-08-30
-  original_image: images/originals/charlotte_priestley.jpg
-  image: images/charlotte_priestley.jpg
 Artyom Baryshnikov:
   summer:
     start: 2022-06-27
