@@ -4,7 +4,7 @@ title:  "Hybrid Summary Statistics: Telling Neural Networks Where to Look"
 date:   2024-10-04
 categories: conferences
 ---
-![feh_989281_000001_tmphe6hde5c](https://github.com/user-attachments/assets/4ac93078-40be-48f0-a06a-81cc406e0cd8)
+![DALLE3 prompt: A swirling galaxy of data points, converging towards a glowing neural network.  Traditional summary statistics form a structured grid, while new, complementary information emerges as streaks of light.](https://github.com/user-attachments/assets/4ac93078-40be-48f0-a06a-81cc406e0cd8)
 
 Lukas Mäkinen from Imperial College London recently gave a talk at the Cambridge Data Science Discussion Group about his work on hybrid summary statistics for cosmological inference.  This blog post summarises the main points of his talk and the related papers [2407.18909](https://arxiv.org/pdf/2407.18909) and [2410.07548](https://arxiv.org/pdf/2410.07548).
 
