@@ -1,5 +1,3 @@
-## Hybrid Summary Statistics: Telling Neural Networks Where to Look
-
 ---
 layout: post
 title:  "Hybrid Summary Statistics: Telling Neural Networks Where to Look"
