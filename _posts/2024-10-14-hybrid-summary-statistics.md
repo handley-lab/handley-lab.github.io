@@ -29,9 +29,7 @@ This approach has several advantages. First, it guarantees that the new neural s
 
 ### Applications to Weak Lensing and the 21cm Signal
 
-In his talk, Mäkinen presented the results of applying hybrid summary statistics to two different cosmological datasets: weak gravitational lensing maps and simulations of the 21cm signal from the Epoch of Reionization. 
-
-In both cases, his hybrid approach yielded significantly tighter constraints on the cosmological parameters compared to using either traditional statistics or neural statistics alone. This highlights the potential of hybrid summary statistics to extract more information from cosmological data and improve our understanding of the Universe.
+In his talk, Mäkinen presented the results of applying hybrid summary statistics to weak gravitational lensing maps. His hybrid approach yielded significantly tighter constraints on the cosmological parameters compared to using either traditional statistics or neural statistics alone. This highlights the potential of hybrid summary statistics to extract more information from cosmological data and improve our understanding of the Universe.
 
 ### Future Directions
 
