@@ -38,6 +38,7 @@ class Level(object):
         self.start = kwargs.pop('start')
         self.end = kwargs.pop('end', None)
         self.supervisors = [supervisors[s] for s in kwargs.pop('supervisors', [])]
+        self.thesis = kwargs.pop('thesis', None)
 
     def __lt__(self, other):
         return self.seniority < other.seniority

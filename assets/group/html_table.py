@@ -79,12 +79,13 @@ with open(html_file, 'w') as f:
                                                 doc.text('%s from %s' % (l, l.start.strftime("%b %Y")))
                                                 if l.end:
                                                     doc.text(' to %s' % l.end.strftime("%b %Y"))
-                                                if l.supervisors:
-                                                    str(l.supervisors[0])
-                                                    with doc.tag('ul'):
-                                                        with doc.tag('li'):
-                                                            text = ', '.join([str(cs) for cs in  l.supervisors])
-                                                            doc.asis("co-supervised with %s" % text)
+                                                with doc.tag('ul'):
+                                                    if l.supervisors:
+                                                            with doc.tag('li'):
+                                                                text = ', '.join([str(cs) for cs in  l.supervisors])
+                                                                doc.asis("co-supervised with %s" % text)
+                                                    if l.thesis:
+                                                        doc.line('li', f'Thesis: {l.thesis}')
 
                                         joint_papers = person.joint_papers()
                                         if joint_papers:

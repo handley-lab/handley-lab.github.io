@@ -1,12 +1,15 @@
 Will Handley:
   pi:
     start: 2020-10-01
+    thesis: null
   postdoc:
     start: 2016-10-01
     end: 2020-10-01
+    thesis: null
   phd:
     start: 2012-10-01
     end: 2016-09-30
+    thesis: null
   original_image: images/originals/will_handley.jpeg
   image: images/will_handley.jpg
   links:
@@ -15,27 +18,32 @@ George Carter:
   postdoc:
     start: 2024-08-12
     end: 2024-11-12
+    thesis: null
   phd:
     start: 2020-10-01
     end: 2024-08-11
     supervisors:
     - Nima Razavi-Ghods
     - Mark Ashdown
+    thesis: null
   original_image: originals/images/george_carter.jpg
   image: images/george_carter.jpg
 Thomas Gessey-Jones:
   postdoc:
     start: 2024-04-01
     end: 2024-08-04
+    thesis: null
   phd:
     start: 2020-10-01
     end: 2024-03-31
     supervisors:
     - Eloy de Lera Acedo
     - Anastasia Fialkov
+    thesis: 'Probing the First Stars with the 21-cm Signal: Theory, Methods, and Forecasts'
   partiii:
     start: 2019-10-01
     end: 2020-06-01
+    thesis: Initial Conditions Before Inflation
   original_image: images/originals/thomas_gessey-jones.jpg
   image: images/thomas_gessey-jones.jpg
   links:
@@ -46,6 +54,7 @@ Thomas Gessey-Jones:
 David Yallup:
   postdoc:
     start: 2021-01-10
+    thesis: null
   original_image: images/originals/david_yallup.jpg
   image: images/david_yallup.jpg
   links:
@@ -55,9 +64,11 @@ Kamran Javid:
   postdoc:
     start: 2018-10-01
     end: 2019-10-01
+    thesis: null
   phd:
     start: 2017-10-01
     end: 2018-09-30
+    thesis: null
   original_image: images/originals/kamran_javid.jpeg
   image: images/kamran_javid.jpg
   links:
@@ -68,29 +79,35 @@ Kamran Javid:
 Toby Lovick:
   phd:
     start: 2024-10-01
+    thesis: null
   partiii:
     start: 2022-10-01
     end: 2023-06-01
     supervisors:
     - Suhail Dhawan
+    thesis: null
   summer:
     start: 2023-07-24
     end: 2023-09-15
     supervisors:
     - Suhail Dhawan
+    thesis: null
 Namu Kroupa:
   phd:
     start: 2023-10-01
     supervisors:
     - "G\xE1bor Cs\xE1nyi"
+    thesis: null
   summer:
     start: 2023-06-12
     end: 2023-09-30
+    thesis: null
   original_image: images/originals/namu_kroupa.jpg
   image: images/namu_kroupa.jpg
 Dily Ong:
   phd:
     start: 2023-10-01
+    thesis: null
   original_image: images/originals/dily_ong.jpg
   image: images/dily_ong.jpg
 Sam Leeney:
@@ -99,11 +116,14 @@ Sam Leeney:
     supervisors:
     - Eloy de Lera Acedo
     - Harry Bevins
+    thesis: null
   mphil:
     start: 2022-04-11
     end: 2022-12-30
     supervisors:
     - Eloy de Lera Acedo
+    thesis: 'Data science in early universe Cosmology: a novel Bayesian RFI mitigation
+      approach using numerical sampling techniques'
   original_image: images/originals/sam_leeney.jpeg
   image: images/sam_leeney.jpg
   links:
@@ -114,19 +134,23 @@ Sinah Legner:
     start: 2022-10-01
     supervisors:
     - Will Barker
+    thesis: null
   original_image: images/originals/sinah_legner.jpg
   image: images/sinah_legner.jpg
 Metha Prathaban:
   phd:
     start: 2022-10-01
+    thesis: null
   partiii:
     start: 2020-10-01
     end: 2021-06-01
+    thesis: Evidence for a Palindromic Universe
   original_image: images/originals/metha_prathaban.png
   image: images/metha_prathaban.jpg
 Wei-Ning Deng:
   phd:
     start: 2022-10-01
+    thesis: null
   original_image: images/originals/wei-ning_deng.jpg
   image: images/wei-ning_deng.jpg
 Adam Ormondroyd:
@@ -135,6 +159,7 @@ Adam Ormondroyd:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    thesis: null
   original_image: images/originals/adam_ormondroyd.jpg
   image: images/adam_ormondroyd.jpg
   links:
@@ -146,6 +171,7 @@ Ayngaran Thavanesan:
     end: 2023-01-19
     supervisors:
     - David Stefanyszyn
+    thesis: null
   original_image: images/originals/ayngaran_thavanesan.png
   image: images/ayngaran_thavanesan.jpg
 Kilian Scheutwinkel:
@@ -154,6 +180,7 @@ Kilian Scheutwinkel:
     end: 2024-08-09
     supervisors:
     - Eloy de Lera Acedo
+    thesis: null
   original_image: images/originals/kilian_scheutwinkel.JPG
   image: images/kilian_scheutwinkel.jpg
   links:
@@ -169,6 +196,7 @@ Thomas Mcaloone:
     supervisors:
     - Keith Grainge
     - Malak Olamaie
+    thesis: null
   original_image: images/originals/thomas_mcaloone.jpg
   image: images/thomas_mcaloone.jpg
   destination:
@@ -177,6 +205,7 @@ Isidro Gomez Vargas:
   phd:
     start: 2020-03-16
     end: 2020-12-04
+    thesis: null
   original_image: images/originals/isidro_gomez_vargas.jpg
   image: images/isidro_gomez_vargas.jpg
   links:
@@ -192,6 +221,8 @@ Harry Bevins:
     supervisors:
     - Eloy de Lera Acedo
     - Anastasia Fialkov
+    thesis: A Machine Learning-enhanced Toolbox for Bayesian 21-cm Data Analysis and
+      Constraints on the Astrophysics of the Early Universe
   original_image: images/originals/harry_bevins.jpeg
   image: images/harry_bevins.jpg
   links:
@@ -208,11 +239,13 @@ Ian Roque:
     end: 2023-12-31
     supervisors:
     - Nima Razavi-Ghods
+    thesis: 'EXCALIBRATE: Calibration for astrophysical experimentation'
   mphil:
     start: 2018-10-01
     end: 2019-09-15
     supervisors:
     - Nima Razavi-Ghods
+    thesis: Bayesian Techniques for the Calibration of 21 cm Global Experiments
   original_image: images/originals/ian_roque.png
   image: images/ian_roque.jpg
   links:
@@ -226,6 +259,8 @@ Dominic Anstey:
     end: 2022-09-30
     supervisors:
     - Eloy de Lera Acedo
+    thesis: 'Data Analysis in Global 21cm Experiments: Physically Motivated Bayesian
+      Modelling Techniques'
   original_image: images/originals/dominic_anstey.jpg
   image: images/dominic_anstey.jpg
   destination:
@@ -237,9 +272,12 @@ Fruzsina Agocs:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    thesis: 'Primordial evolution of cosmological perturbations: Theory and computation'
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    thesis: "The Runge\u2013Kutta\u2013Wentzel\u2013Kramers\u2013Brillouin method\
+      \ and the primordial Universe"
   original_image: images/originals/fruzsina_agocs.jpg
   image: images/fruzsina_agocs.jpg
   links:
@@ -255,6 +293,7 @@ Will Barker:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    thesis: null
   original_image: images/originals/will_barker.png
   image: images/will_barker.jpg
   links:
@@ -269,6 +308,7 @@ Lukas Hergt:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    thesis: null
   original_image: images/originals/lukas_hergt.jpg
   image: images/lukas_hergt.jpg
   links:
@@ -282,6 +322,7 @@ Ed Higson:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    thesis: Bayesian Methods and machine Learning in Astrophysics
   original_image: images/originals/ed_higson.jpg
   image: images/ed_higson.jpg
   links:
@@ -293,6 +334,7 @@ Danielle Dineen:
   mphil:
     start: 2022-10-01
     end: 2023-09-15
+    thesis: Cosmological Matching Conditions for Primordial Perturbations
   original_image: images/originals/danielle_dineen.jpg
   image: images/danielle_dineen.jpg
   links:
@@ -305,6 +347,8 @@ Allahyar Sahibzada:
   mphil:
     start: 2021-10-01
     end: 2022-12-19
+    thesis: 'Machine Learning and Nested Sampling: in the context of data intensive
+      science and cosmology'
   original_image: images/originals/allahyar_sahibzada.jpeg
   image: images/allahyar_sahibzada.jpg
 Emma Shen:
@@ -314,6 +358,7 @@ Emma Shen:
     supervisors:
     - Eloy de Lera Acedo
     - Anastasia Fialkov
+    thesis: Ionospheric Effects in the Global 21-cm Experiment
   original_image: images/originals/emma_shen.jpg
   image: images/emma_shen.jpg
   destination:
@@ -324,6 +369,8 @@ Panagiotis Mavrogiannis:
     end: 2018-09-30
     supervisors:
     - Anthony Lasenby
+    thesis: "Wheeler\u2013Feynman absorber theory of radiation: Establishing the cosmological\
+      \ electrodynamic arrow of time"
   original_image: images/originals/panagiotis_mavrogiannis.jpg
   image: images/panagiotis_mavrogiannis.jpg
   destination:
@@ -331,31 +378,37 @@ Panagiotis Mavrogiannis:
 Harvey Williams:
   partiii:
     start: 2024-10-01
+    thesis: null
 Krish Nanavati:
   partiii:
     start: 2024-10-01
     supervisors:
     - James Alvey
+    thesis: null
   original_image: images/originals/krish_nanavati.jpg
   image: images/krish_nanavati.jpg
 Ming Yang:
   partiii:
     start: 2024-10-01
+    thesis: null
   original_image: images/originals/ming_yang.jpeg
   image: images/ming_yang.jpg
 Will Templeton:
   partiii:
     start: 2024-10-01
+    thesis: null
   original_image: images/originals/will_templeton.png
   image: images/will_templeton.jpg
 Charlotte Priestley:
   partiii:
     start: 2024-10-01
+    thesis: null
   summer:
     start: 2024-07-01
     end: 2024-08-30
     supervisors:
     - Harry Bevins
+    thesis: null
   original_image: images/originals/charlotte_priestley.jpg
   image: images/charlotte_priestley.jpg
 Tze Goh:
@@ -364,53 +417,65 @@ Tze Goh:
     end: 2024-06-01
     supervisors:
     - Suhail Dhawan
+    thesis: 'Bayesian Model Selection of Anisotropic Cosmologies with Type Ia supernova
+      data '
   original_image: images/originals/tze_goh.jpeg
   image: images/tze_goh.jpg
 Patrick Lau:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    thesis: null
 Felicity Ibrahim:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    thesis: Higher order solvers for cosmological perturbations
   original_image: images/originals/felicity_ibrahim.png
   image: images/felicity_ibrahim.jpg
 Samuel Hewson:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    thesis: Galaxies, snails and parity violation
   summer:
     start: 2024-06-24
     end: 2024-08-01
     supervisors:
     - Chris Lester
+    thesis: null
 Nicolas Mediato Diaz:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    thesis: Astronomical Linear Simulation-based Inference
   summer:
     start: 2024-07-22
     end: 2024-09-13
+    thesis: null
 Zixiao Hu:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    thesis: Approximating the end of nested sampling
   summer:
     start: 2023-06-26
     end: 2023-08-18
+    thesis: null
   original_image: images/originals/zixiao_hu.jpeg
   image: images/zixiao_hu.jpg
 Sankalan Bhattacharyya:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    thesis: Jordan-Magnus Methods for Cosmological Perturbation Theory
   original_image: images/originals/sankalan_bhattacharyya.jpg
   image: images/sankalan_bhattacharyya.jpg
 Cole Meldorf:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    thesis: Bayesian inference and the shape of the primordial universe
   original_image: images/originals/cole_meldorf.jpg
   image: images/cole_meldorf.jpg
   links:
@@ -420,6 +485,7 @@ Carola Zanoletti:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    thesis: 'Palindromic Universes: Alternative Solution by Matrix Representation'
   original_image: images/originals/carola_zanoletti.jpg
   image: images/carola_zanoletti.jpg
   links:
@@ -433,6 +499,7 @@ Oliver Normand:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    thesis: Bayesian reconstructions of the primordial universe from Planck CMB data
   original_image: images/originals/oliver_normand.jpg
   image: images/oliver_normand.jpg
   destination:
@@ -441,6 +508,7 @@ Xy Wang:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    thesis: Accelerated nested sampling with proposal prior mixing for Bayesian inference
   original_image: images/originals/xy_wang.jpg
   image: images/xy_wang.jpg
   destination:
@@ -449,6 +517,7 @@ Yoann Launay:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    thesis: Primordial Non-Gaussianity from kinetic initial conditions for inflation
   original_image: images/originals/yoann_launay.jpg
   image: images/yoann_launay.jpg
   destination:
@@ -457,6 +526,7 @@ Yi Jer Loh:
   partiii:
     start: 2020-10-01
     end: 2021-06-01
+    thesis: Constructing Non-Linear Cosmological Tension Coordinate with Neural Networks
   original_image: images/originals/yi_jer_loh.jpg
   image: images/yi_jer_loh.jpg
   destination:
@@ -465,6 +535,7 @@ Aleksandr Petrosyan:
   partiii:
     start: 2019-10-01
     end: 2020-06-01
+    thesis: Accelerated nested sampling in the context of cosmological parameter estimation
   original_image: images/originals/aleksandr_petrosyan.jpeg
   image: images/aleksandr_petrosyan.jpg
   destination:
@@ -473,6 +544,7 @@ Deaglan Bartlett:
   partiii:
     start: 2018-10-01
     end: 2019-06-01
+    thesis: The Conformal Boundary at the End of the Universe
   original_image: images/originals/deaglan_bartlett.JPG
   image: images/deaglan_bartlett.jpg
   links:
@@ -485,6 +557,7 @@ Jamie Bamber:
   partiii:
     start: 2018-10-01
     end: 2019-06-01
+    thesis: Beyond the Runge-Kutta-Wentzel-Kramers-Brillouin method
   original_image: images/originals/jamie_bamber.JPG
   image: images/jamie_bamber.jpg
   destination:
@@ -493,6 +566,7 @@ Jessica Rigley:
   partiii:
     start: 2017-10-01
     end: 2018-06-01
+    thesis: Cosmologically Investigating the Neutrino Hierachy
   original_image: images/originals/jessica_rigley.jpeg
   image: images/jessica_rigley.jpg
   links:
@@ -503,9 +577,11 @@ Ward Haddadin:
   partiii:
     start: 2017-10-01
     end: 2018-06-01
+    thesis: The Primordial Power Spectrum of Kinetically Dominated Universes
   summer:
     start: 2018-06-01
     end: 2018-09-01
+    thesis: null
   original_image: images/originals/ward_haddadin.jpg
   image: images/ward_haddadin.jpg
   destination:
@@ -514,6 +590,7 @@ Daniel Manela:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    thesis: Affine-invariant ensemble sampling with applications to LIGO data
   original_image: images/originals/daniel_manela.png
   image: images/daniel_manela.jpg
   links:
@@ -526,6 +603,7 @@ Bob Knighton:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    thesis: Investigations into the Kinetically Dominated Universe
   original_image: images/originals/bob_knighton.JPG
   image: images/bob_knighton.jpg
   destination:
@@ -535,6 +613,7 @@ Stephen Pickman:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    thesis: The perfect clustering algorithm
   original_image: images/originals/stephen_pickman.jpeg
   image: images/stephen_pickman.jpg
   destination:
@@ -543,6 +622,7 @@ Artyom Baryshnikov:
   summer:
     start: 2022-06-27
     end: 2022-08-26
+    thesis: null
   original_image: images/originals/artyom_baryshnikov.png
   image: images/artyom_baryshnikov.jpg
   links:
@@ -553,6 +633,7 @@ Beichen Xu:
   summer:
     start: 2022-06-27
     end: 2022-09-16
+    thesis: null
   original_image: images/originals/beichen_xu.jpg
   image: images/beichen_xu.jpg
   destination:
@@ -561,6 +642,7 @@ Mary Letey:
   summer:
     start: 2022-06-24
     end: 2022-08-22
+    thesis: null
   original_image: images/originals/mary_letey.jpg
   image: images/mary_letey.jpg
   links:
@@ -572,12 +654,14 @@ Mattia Varrone:
   summer:
     start: 2021-06-21
     end: 2021-09-30
+    thesis: null
   original_image: images/originals/mattia_varrone.jpg
   image: images/mattia_varrone.jpg
 Zak Shumaylov:
   summer:
     start: 2021-06-21
     end: 2021-09-30
+    thesis: null
   original_image: images/originals/zak_shumaylov.jpeg
   image: images/zak_shumaylov.jpg
   destination:
@@ -586,6 +670,7 @@ Denis Werth:
   summer:
     start: 2019-06-01
     end: 2019-09-01
+    thesis: null
   original_image: images/originals/denis_werth.jpg
   image: images/denis_werth.jpg
   destination:
@@ -595,6 +680,7 @@ Liam L.H. Lau:
   summer:
     start: 2019-06-01
     end: 2019-09-01
+    thesis: Machine learning the future of cosmology experiments
   original_image: images/originals/liam_lau.jpg
   image: images/liam_lau.jpg
   destination:
@@ -603,6 +689,7 @@ Maxime Jabarian:
   summer:
     start: 2019-06-01
     end: 2019-09-01
+    thesis: null
   original_image: images/originals/maxime_jabarian.jpeg
   image: images/maxime_jabarian.jpg
   links:
@@ -614,6 +701,7 @@ Elizabeth Guest:
   summer:
     start: 2018-06-01
     end: 2018-09-01
+    thesis: null
   original_image: images/originals/elizabeth_guest.jpg
   image: images/elizabeth_guest.jpg
   destination:
@@ -623,6 +711,7 @@ Shu-Fan Chen:
   summer:
     start: 2018-06-01
     end: 2018-09-01
+    thesis: null
   original_image: images/originals/shu-fan_chen.jpeg
   image: images/shu-fan_chen.jpg
   destination:
