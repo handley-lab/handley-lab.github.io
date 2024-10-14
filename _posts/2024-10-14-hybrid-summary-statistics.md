@@ -1,7 +1,7 @@
 ---
 layout: post
 title:  "Hybrid Summary Statistics: Telling Neural Networks Where to Look"
-date:   2024-10-04
+date:   2024-10-14
 categories: conferences
 ---
 
