@@ -2,7 +2,7 @@
 layout: post
 title:  "Hybrid Summary Statistics: Telling Neural Networks Where to Look"
 date:   2024-10-14
-categories: conferences
+categories: seminars
 ---
 
 ![DALLE3 prompt: A swirling galaxy of data points, converging towards a glowing neural network.  Traditional summary statistics form a structured grid, while new, complementary information emerges as streaks of light.](https://github.com/user-attachments/assets/4ac93078-40be-48f0-a06a-81cc406e0cd8)
