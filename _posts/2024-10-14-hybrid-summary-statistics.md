@@ -27,7 +27,7 @@ The main idea behind Mäkinen's work is to combine the strengths of both traditi
 
 This approach has several advantages. First, it guarantees that the new neural summary statistics will be at least as informative as the traditional summaries. Second, it can significantly reduce the number of simulations required to train the network, which is important for computationally expensive cosmological models. Finally, it can provide insights into the physical features in the data that are most informative about the cosmological parameters.
 
-### Applications to Weak Lensing and the 21cm Signal
+### Applications to Weak Lensing
 
 In his talk, Mäkinen presented the results of applying hybrid summary statistics to weak gravitational lensing maps. His hybrid approach yielded significantly tighter constraints on the cosmological parameters compared to using either traditional statistics or neural statistics alone. This highlights the potential of hybrid summary statistics to extract more information from cosmological data and improve our understanding of the Universe.
 
