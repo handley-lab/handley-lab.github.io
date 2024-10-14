@@ -402,6 +402,8 @@ Will Templeton:
 Charlotte Priestley:
   partiii:
     start: 2024-10-01
+    supervisors:
+    - Harry Bevins
     thesis: null
   summer:
     start: 2024-07-01
