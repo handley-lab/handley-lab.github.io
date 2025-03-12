@@ -4,6 +4,10 @@ title:  "Scaling laws for large time-series models: More data, more parameters"
 date:   2024-10-28
 categories: seminars
 ---
+
+![tmpkhval60o](https://github.com/user-attachments/assets/be89285e-2def-4c13-be31-ba14a23ccb7f)
+
+
 James Alvey recently gave a seminar at the Kavli Institute for Cosmology, as part of the Astro Data Science Discussion Group seminar series. His talk was titled "Scaling laws for large time-series models: More data, more parameters", and was based on work recently presented at the NeurIPS Time Series in the Age of Large Models workshop [2405.13867](https://arxiv.org/abs/2405.13867).
 
 ## Scaling Laws for LLMs
