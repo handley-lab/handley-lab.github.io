@@ -1,9 +1,11 @@
 # Uncovering Structure in Dark Energy:
 ## A Nonparametric Reconstruction via “Flexknots”
 
-A newly released paper by PhD student A.N. Ormondroyd and collaborators explores an innovative approach to reconstructing the dark energy equation of state. By forgoing the usual strict parametric forms in favor of a flexible, “nonparametric” method—a scheme they call **flexknots**—the authors have uncovered subtle features in our cosmological data that may open up new avenues in the long-standing quest to understand the accelerating universe.
+A newly released [paper](https://arxiv.org/abs/2503.08658) by PhD student A.N. Ormondroyd and collaborators explores an innovative approach to reconstructing the dark energy equation of state. By forgoing the usual strict parametric forms in favor of a flexible, “nonparametric” method—a scheme they call **flexknots**—the authors have uncovered subtle features in our cosmological data that may open up new avenues in the long-standing quest to understand the accelerating universe.
 
 ---
+![2025-03-12_16-06-16](https://github.com/user-attachments/assets/4ee9227a-3dca-4143-9375-a8ed0cc0f4a9)
+![2025-03-12_16-06-36](https://github.com/user-attachments/assets/594d54f1-ab64-412b-a6b7-3e360cddd6e3)
 
 ## Introduction
 
