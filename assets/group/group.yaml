@@ -9,7 +9,10 @@ Will Handley:
   phd:
     start: 2012-10-01
     end: 2016-09-30
-    thesis: null
+    supervisors:
+      - Anthony Lasenby
+      - Mike Hobson
+    thesis: "Kinetic initial conditions for inflation: theory, observation and methods"
   original_image: images/originals/will_handley.jpeg
   image: images/will_handley.jpg
   links:
@@ -23,9 +26,10 @@ George Carter:
     start: 2020-10-01
     end: 2024-08-11
     supervisors:
+    - Will Handley
     - Nima Razavi-Ghods
     - Mark Ashdown
-    thesis: null
+    thesis: "The Bayesian Global Sky Model (B-GSM)"
   original_image: originals/images/george_carter.jpg
   image: images/george_carter.jpg
 Thomas Gessey-Jones:
@@ -39,10 +43,13 @@ Thomas Gessey-Jones:
     supervisors:
     - Eloy de Lera Acedo
     - Anastasia Fialkov
+    - Will Handley
     thesis: 'Probing the First Stars with the 21-cm Signal: Theory, Methods, and Forecasts'
   partiii:
     start: 2019-10-01
     end: 2020-06-01
+    supervisors:
+      - Will Handley
     thesis: Initial Conditions Before Inflation
   original_image: images/originals/thomas_gessey-jones.jpg
   image: images/thomas_gessey-jones.jpg
@@ -68,6 +75,8 @@ Kamran Javid:
   phd:
     start: 2017-10-01
     end: 2018-09-30
+    supervisors:
+    - Will Handley
     thesis: null
   original_image: images/originals/kamran_javid.jpeg
   image: images/kamran_javid.jpg
@@ -81,12 +90,15 @@ Kamran Javid:
 Toby Lovick:
   phd:
     start: 2024-10-01
+    supervisors:
+    - Will Handley
     thesis: null
   partiii:
     start: 2022-10-01
     end: 2023-06-01
     supervisors:
     - Suhail Dhawan
+    - Will Handley
     thesis: null
   summer:
     start: 2023-07-24
@@ -101,6 +113,7 @@ Namu Kroupa:
     start: 2023-10-01
     supervisors:
     - "G\xE1bor Cs\xE1nyi"
+    - Will Handley
     thesis: null
   summer:
     start: 2023-06-12
@@ -111,6 +124,8 @@ Namu Kroupa:
 Dily Ong:
   phd:
     start: 2023-10-01
+    supervisors:
+    - Will Handley
     thesis: null
   original_image: images/originals/dily_ong.jpg
   image: images/dily_ong.jpg
@@ -120,14 +135,14 @@ Sam Leeney:
     supervisors:
     - Eloy de Lera Acedo
     - Harry Bevins
+    - Will Handley
     thesis: null
   mphil:
     start: 2022-04-11
     end: 2022-12-30
     supervisors:
     - Eloy de Lera Acedo
-    thesis: 'Data science in early universe Cosmology: a novel Bayesian RFI mitigation
-      approach using numerical sampling techniques'
+    thesis: 'Data science in early universe Cosmology: a novel Bayesian RFI mitigation approach using numerical sampling techniques'
   original_image: images/originals/sam_leeney.jpeg
   image: images/sam_leeney.jpg
   links:
@@ -137,6 +152,7 @@ Sinah Legner:
   phd:
     start: 2022-10-01
     supervisors:
+    - Will Handley
     - Will Barker
     thesis: null
   original_image: images/originals/sinah_legner.jpg
@@ -144,16 +160,25 @@ Sinah Legner:
 Metha Prathaban:
   phd:
     start: 2022-10-01
+    supervisors:
+    - Will Handley
     thesis: null
   partiii:
     start: 2020-10-01
     end: 2021-06-01
+    supervisors:
+      - Will Handley
     thesis: Evidence for a Palindromic Universe
   original_image: images/originals/metha_prathaban.png
   image: images/metha_prathaban.jpg
+  links:
+    - <a href="https://www.hardingscholars.fund.cam.ac.uk/metha-prathaban-2022-cohort">Harding Scholar</a>
+    - <a href="https://github.com/mrosep">GitHub</a>
 Wei-Ning Deng:
   phd:
     start: 2022-10-01
+    supervisors:
+    - Will Handley
     thesis: null
   original_image: images/originals/wei-ning_deng.jpg
   image: images/wei-ning_deng.jpg
@@ -161,20 +186,22 @@ Adam Ormondroyd:
   phd:
     start: 2021-10-01
     supervisors:
-    - Anthony Lasenby
     - Mike Hobson
+    - Will Handley
+    - Anthony Lasenby
     thesis: null
   original_image: images/originals/adam_ormondroyd.jpg
   image: images/adam_ormondroyd.jpg
   links:
   - <a href="https://www.linkedin.com/in/adam-ormondroyd/"> linkedin </a>
-  - <a href="https://github.com/ormorod"> GitHub </a>
+  - <a href="https://github.com/AdamOrmondroyd"> GitHub </a>
 Ayngaran Thavanesan:
   phd:
     start: 2021-10-01
     end: 2023-01-19
     supervisors:
     - David Stefanyszyn
+    - Will Handley
     thesis: null
   original_image: images/originals/ayngaran_thavanesan.png
   image: images/ayngaran_thavanesan.jpg
@@ -183,8 +210,9 @@ Kilian Scheutwinkel:
     start: 2020-12-01
     end: 2024-08-09
     supervisors:
+    - Will Handley
     - Eloy de Lera Acedo
-    thesis: null
+    thesis: "Simulation-based Bayesian machine learning methods for Cosmology and beyond"
   original_image: images/originals/kilian_scheutwinkel.JPG
   image: images/kilian_scheutwinkel.jpg
   links:
@@ -200,6 +228,7 @@ Thomas Mcaloone:
     supervisors:
     - Keith Grainge
     - Malak Olamaie
+    - Will Handley
     thesis: null
   original_image: images/originals/thomas_mcaloone.jpg
   image: images/thomas_mcaloone.jpg
@@ -209,6 +238,9 @@ Isidro Gomez Vargas:
   phd:
     start: 2020-03-16
     end: 2020-12-04
+    supervisors:
+    - Jose Alberto Vazquez
+    - Will Handley
     thesis: null
   original_image: images/originals/isidro_gomez_vargas.jpg
   image: images/isidro_gomez_vargas.jpg
@@ -223,6 +255,7 @@ Harry Bevins:
     start: 2019-10-01
     end: 2023-03-31
     supervisors:
+    - Will Handley
     - Eloy de Lera Acedo
     - Anastasia Fialkov
     thesis: A Machine Learning-enhanced Toolbox for Bayesian 21-cm Data Analysis and
@@ -242,6 +275,7 @@ Ian Roque:
     start: 2019-10-01
     end: 2023-12-31
     supervisors:
+    - Will Handley
     - Nima Razavi-Ghods
     thesis: 'EXCALIBRATE: Calibration for astrophysical experimentation'
   mphil:
@@ -249,6 +283,7 @@ Ian Roque:
     end: 2019-09-15
     supervisors:
     - Nima Razavi-Ghods
+    - Will Handley
     thesis: Bayesian Techniques for the Calibration of 21 cm Global Experiments
   original_image: images/originals/ian_roque.png
   image: images/ian_roque.jpg
@@ -263,8 +298,8 @@ Dominic Anstey:
     end: 2022-09-30
     supervisors:
     - Eloy de Lera Acedo
-    thesis: 'Data Analysis in Global 21cm Experiments: Physically Motivated Bayesian
-      Modelling Techniques'
+    - Will Handley
+    thesis: 'Data Analysis in Global 21cm Experiments: Physically Motivated Bayesian Modelling Techniques'
   original_image: images/originals/dominic_anstey.jpg
   image: images/dominic_anstey.jpg
   destination:
@@ -274,14 +309,16 @@ Fruzsina Agocs:
     start: 2017-10-01
     end: 2021-09-01
     supervisors:
+    - Will Handley
     - Anthony Lasenby
     - Mike Hobson
     thesis: 'Primordial evolution of cosmological perturbations: Theory and computation'
   partiii:
     start: 2016-10-01
     end: 2017-06-01
-    thesis: "The Runge\u2013Kutta\u2013Wentzel\u2013Kramers\u2013Brillouin method\
-      \ and the primordial Universe"
+    supervisors:
+      - Will Handley
+    thesis: "The Runge\u2013Kutta\u2013Wentzel\u2013Kramers\u2013Brillouin method\ and the primordial Universe"
   original_image: images/originals/fruzsina_agocs.jpg
   image: images/fruzsina_agocs.jpg
   links:
@@ -297,6 +334,7 @@ Will Barker:
     supervisors:
     - Anthony Lasenby
     - Mike Hobson
+    - Will Handley
     thesis: null
   original_image: images/originals/will_barker.png
   image: images/will_barker.jpg
@@ -310,6 +348,7 @@ Lukas Hergt:
     start: 2017-01-01
     end: 2021-01-08
     supervisors:
+    - Will Handley
     - Anthony Lasenby
     - Mike Hobson
     thesis: null
@@ -324,8 +363,9 @@ Ed Higson:
     start: 2016-10-01
     end: 2018-10-01
     supervisors:
-    - Anthony Lasenby
+    - Will Handley
     - Mike Hobson
+    - Anthony Lasenby
     thesis: Bayesian Methods and machine Learning in Astrophysics
   original_image: images/originals/ed_higson.jpg
   image: images/ed_higson.jpg
@@ -339,6 +379,8 @@ Danielle Dineen:
     start: 2022-10-01
     end: 2023-09-15
     thesis: Cosmological Matching Conditions for Primordial Perturbations
+    supervisors:
+      - Will Handley
   original_image: images/originals/danielle_dineen.jpg
   image: images/danielle_dineen.jpg
   links:
@@ -351,8 +393,9 @@ Allahyar Sahibzada:
   mphil:
     start: 2021-10-01
     end: 2022-12-19
-    thesis: 'Machine Learning and Nested Sampling: in the context of data intensive
-      science and cosmology'
+    thesis: 'Machine Learning and Nested Sampling: in the context of data intensive science and cosmology'
+    supervisors:
+      - Will Handley
   original_image: images/originals/allahyar_sahibzada.jpeg
   image: images/allahyar_sahibzada.jpg
 Emma Shen:
@@ -362,6 +405,7 @@ Emma Shen:
     supervisors:
     - Eloy de Lera Acedo
     - Anastasia Fialkov
+    - Will Handley
     thesis: Ionospheric Effects in the Global 21-cm Experiment
   original_image: images/originals/emma_shen.jpg
   image: images/emma_shen.jpg
@@ -373,6 +417,7 @@ Panagiotis Mavrogiannis:
     end: 2018-09-30
     supervisors:
     - Anthony Lasenby
+    - Will Handley
     thesis: "Wheeler\u2013Feynman absorber theory of radiation: Establishing the cosmological\
       \ electrodynamic arrow of time"
   original_image: images/originals/panagiotis_mavrogiannis.jpg
@@ -383,6 +428,8 @@ Harvey Williams:
   partiii:
     start: 2024-10-01
     thesis: null
+    supervisors:
+      - Will Handley
   original_image: images/originals/harvey_williams.jpg
   image: images/harvey_williams.jpg
 Krish Nanavati:
@@ -390,6 +437,7 @@ Krish Nanavati:
     start: 2024-10-01
     supervisors:
     - James Alvey
+    - Will Handley
     thesis: null
   original_image: images/originals/krish_nanavati.jpg
   image: images/krish_nanavati.jpg
@@ -397,18 +445,23 @@ Ming Yang:
   partiii:
     start: 2024-10-01
     thesis: null
+    supervisors:
+      - Will Handley
   original_image: images/originals/ming_yang.jpeg
   image: images/ming_yang.jpg
 Will Templeton:
   partiii:
     start: 2024-10-01
     thesis: null
+    supervisors:
+      - Will Handley
   original_image: images/originals/will_templeton.png
   image: images/will_templeton.jpg
 Charlotte Priestley:
   partiii:
     start: 2024-10-01
     supervisors:
+    - Will Handley
     - Harry Bevins
     thesis: null
   summer:
@@ -425,6 +478,7 @@ Tze Goh:
     end: 2024-06-01
     supervisors:
     - Suhail Dhawan
+    - Will Handley
     thesis: 'Bayesian Model Selection of Anisotropic Cosmologies with Type Ia supernova
       data '
   original_image: images/originals/tze_goh.jpeg
@@ -434,10 +488,14 @@ Patrick Lau:
     start: 2023-10-01
     end: 2024-06-01
     thesis: null
+    supervisors:
+      - Will Handley
 Felicity Ibrahim:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    supervisors:
+      - Will Handley
     thesis: Higher order solvers for cosmological perturbations
   original_image: images/originals/felicity_ibrahim.png
   image: images/felicity_ibrahim.jpg
@@ -445,6 +503,8 @@ Samuel Hewson:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    supervisors:
+      - Will Handley
     thesis: Galaxies, snails and parity violation
   summer:
     start: 2024-06-24
@@ -456,6 +516,8 @@ Nicolas Mediato Diaz:
   partiii:
     start: 2023-10-01
     end: 2024-06-01
+    supervisors:
+      - Will Handley
     thesis: Astronomical Linear Simulation-based Inference
   summer:
     start: 2024-07-22
@@ -465,6 +527,8 @@ Zixiao Hu:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    supervisors:
+      - Will Handley
     thesis: Approximating the end of nested sampling
   summer:
     start: 2023-06-26
@@ -476,6 +540,8 @@ Sankalan Bhattacharyya:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    supervisors:
+      - Will Handley
     thesis: Jordan-Magnus Methods for Cosmological Perturbation Theory
   original_image: images/originals/sankalan_bhattacharyya.jpg
   image: images/sankalan_bhattacharyya.jpg
@@ -483,6 +549,8 @@ Cole Meldorf:
   partiii:
     start: 2022-10-01
     end: 2023-06-01
+    supervisors:
+      - Will Handley
     thesis: Bayesian inference and the shape of the primordial universe
   original_image: images/originals/cole_meldorf.jpg
   image: images/cole_meldorf.jpg
@@ -493,6 +561,8 @@ Carola Zanoletti:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    supervisors:
+      - Will Handley
     thesis: 'Palindromic Universes: Alternative Solution by Matrix Representation'
   original_image: images/originals/carola_zanoletti.jpg
   image: images/carola_zanoletti.jpg
@@ -507,6 +577,8 @@ Oliver Normand:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    supervisors:
+      - Will Handley
     thesis: Bayesian reconstructions of the primordial universe from Planck CMB data
   original_image: images/originals/oliver_normand.jpg
   image: images/oliver_normand.jpg
@@ -516,6 +588,8 @@ Xy Wang:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    supervisors:
+      - Will Handley
     thesis: Accelerated nested sampling with proposal prior mixing for Bayesian inference
   original_image: images/originals/xy_wang.jpg
   image: images/xy_wang.jpg
@@ -525,6 +599,8 @@ Yoann Launay:
   partiii:
     start: 2021-10-01
     end: 2022-06-01
+    supervisors:
+      - Will Handley
     thesis: Primordial Non-Gaussianity from kinetic initial conditions for inflation
   original_image: images/originals/yoann_launay.jpg
   image: images/yoann_launay.jpg
@@ -534,6 +610,8 @@ Yi Jer Loh:
   partiii:
     start: 2020-10-01
     end: 2021-06-01
+    supervisors:
+      - Will Handley
     thesis: Constructing Non-Linear Cosmological Tension Coordinate with Neural Networks
   original_image: images/originals/yi_jer_loh.jpg
   image: images/yi_jer_loh.jpg
@@ -543,6 +621,8 @@ Aleksandr Petrosyan:
   partiii:
     start: 2019-10-01
     end: 2020-06-01
+    supervisors:
+      - Will Handley
     thesis: Accelerated nested sampling in the context of cosmological parameter estimation
   original_image: images/originals/aleksandr_petrosyan.jpeg
   image: images/aleksandr_petrosyan.jpg
@@ -552,6 +632,8 @@ Deaglan Bartlett:
   partiii:
     start: 2018-10-01
     end: 2019-06-01
+    supervisors:
+      - Will Handley
     thesis: The Conformal Boundary at the End of the Universe
   original_image: images/originals/deaglan_bartlett.JPG
   image: images/deaglan_bartlett.jpg
@@ -565,6 +647,8 @@ Jamie Bamber:
   partiii:
     start: 2018-10-01
     end: 2019-06-01
+    supervisors:
+      - Will Handley
     thesis: Beyond the Runge-Kutta-Wentzel-Kramers-Brillouin method
   original_image: images/originals/jamie_bamber.JPG
   image: images/jamie_bamber.jpg
@@ -574,6 +658,8 @@ Jessica Rigley:
   partiii:
     start: 2017-10-01
     end: 2018-06-01
+    supervisors:
+      - Will Handley
     thesis: Cosmologically Investigating the Neutrino Hierachy
   original_image: images/originals/jessica_rigley.jpeg
   image: images/jessica_rigley.jpg
@@ -585,6 +671,8 @@ Ward Haddadin:
   partiii:
     start: 2017-10-01
     end: 2018-06-01
+    supervisors:
+      - Will Handley
     thesis: The Primordial Power Spectrum of Kinetically Dominated Universes
   summer:
     start: 2018-06-01
@@ -598,6 +686,8 @@ Daniel Manela:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    supervisors:
+      - Will Handley
     thesis: Affine-invariant ensemble sampling with applications to LIGO data
   original_image: images/originals/daniel_manela.png
   image: images/daniel_manela.jpg
@@ -611,6 +701,8 @@ Bob Knighton:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    supervisors:
+      - Will Handley
     thesis: Investigations into the Kinetically Dominated Universe
   original_image: images/originals/bob_knighton.JPG
   image: images/bob_knighton.jpg
@@ -621,6 +713,8 @@ Stephen Pickman:
   partiii:
     start: 2016-10-01
     end: 2017-06-01
+    supervisors:
+      - Will Handley
     thesis: The perfect clustering algorithm
   original_image: images/originals/stephen_pickman.jpeg
   image: images/stephen_pickman.jpg
@@ -724,3 +818,72 @@ Shu-Fan Chen:
   image: images/shu-fan_chen.jpg
   destination:
     2019-10-01: PhD in Cosmology, Harvard
+Mike Hobson:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/directory/hobsonm">Department webpage</a>
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/hobsonm.jpg?itok=H1iEFAas
+Anthony Lasenby:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/directory/lasenbya">Department webpage</a>
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lasenbya.jpg?itok=9nNfXc4k
+Will Barker:
+  coi:
+    links:
+      - <a href="https://wevbarker.com">Webpage</a>
+Eloy de Lera Acedo:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/directory/dr-eloy-de-lera-acedo">Department webpage</a>
+  image: https://www.astro.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/headshotlow.jpg?itok=RMrJ4zTa
+Anastasia Fialkov:
+  coi:
+    links:
+      - <a href="https://www.ast.cam.ac.uk/people/Anastasia.Fialkov">Department webpage</a>
+  image: https://www.ast.cam.ac.uk/sites/default/files/styles/inline/public/anastasia-fialkov-20180213-sq2.jpg?itok=am4DF9YQ
+Mark Ashdown:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/staff/dr-mark-ashdown">Department webpage</a>
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/dr_mark_ashdown.png?itok=rkun0buR
+Nima Razavi-Ghods:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/directory/razavi-ghods">Department webpage</a>
+Suhail Dhawan:
+  coi:
+    links:
+      - "https://www.lucy.cam.ac.uk/fellows/dr-suhail-dhawan"
+  image: https://www.lucy.cam.ac.uk/sites/default/files/styles/650x650_scale_and_crop/public/fellow-images/Suhail%20Dhawan.jpg?itok=IinGhbdp
+Keith Grainge:
+  coi:
+    links:
+      - <a href="https://www.research.manchester.ac.uk/portal/keith.grainge.html">Department webpage</a>
+Malak Olamaie:
+  coi:
+    links:
+      - <a href="https://www.yorksj.ac.uk/our-staff/staff-profiles/malak-olamaie.php">Department webpage</a>
+David Stefanyszyn:
+  coi:
+    links:
+      - <a href="https://www.nottingham.ac.uk/physics/people/david.stefanyszyn">Department webpage</a>
+Gábor Csányi:
+  coi:
+    links:
+      - <a href="http://www.eng.cam.ac.uk/profiles/gc121">Department webpage</a>
+  image: https://www.eng.cam.ac.uk/sites/www.eng.cam.ac.uk/files/styles/small_events_search_results_profile/public/uploads/profiles/images/Gabor-kalapos-square-400.png?itok=GszDCAc9
+James Alvey:
+  coi:
+    links:
+      - <a href="https://www.kicc.cam.ac.uk/staff/dr-james-alvey">Department webpage</a>
+  image: https://www.kicc.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/profilepicture-min_1.jpeg?itok=ccmz2RPK
+Chris Lester:
+  coi:
+    links:
+      - <a href="https://www.phy.cam.ac.uk/directory/lesterc">Department webpage</a>
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lesterc.jpg?itok=QNLbVvIS
+Jose Alberto Vazquez:
+  coi:
+    links:
+      - <a href="https://inspirehep.net/authors/1061596">INSPIRE</a>
