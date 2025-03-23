@@ -1,4 +1,4 @@
-
+{% raw %}
 Title: Update and Enhance Our Research Group Summary for the Website
 ====================================================================================
 Our goal is to create a concise, engaging, and factually accurate summary that captures our research group’s identity, achievements, and future ambitions—with a special focus on our artificial intelligence initiatives.
@@ -4055,3 +4055,4 @@ Final Output Requirements
 - The tone should be professional, accessible, and engaging.
 
 Generate only the final Markdown output that meets all these requirements.
+{% endraw %}
