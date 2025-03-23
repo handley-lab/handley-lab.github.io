@@ -2,24 +2,48 @@
 layout: home
 ---
 
-![AI generated image](/assets/images/index.png)\\
+![AI generated image](/assets/images/index.png)
+
 <!-- START OF WEBSITE SUMMARY -->
-The Handley Research Group ([https://www.handley-lab.co.uk](https://www.handley-lab.co.uk)) is dedicated to pushing the boundaries of cosmological understanding through the development and application of cutting-edge artificial intelligence and Bayesian statistical inference methods. Our research spans a wide range of topics, from the very first stars and galaxies to the nature of dark matter, dark energy, and the fundamental laws of gravity. We are committed to developing open-source software and fostering a collaborative research environment.
+The Handley Research Group is dedicated to advancing our understanding of the Universe through the development and application of cutting-edge artificial intelligence and Bayesian statistical inference methods. Our research spans a wide range of cosmological topics, from the very first moments of the Universe to the nature of dark matter and dark energy, with a particular focus on analyzing complex datasets from next-generation surveys.
 
-Our core research themes include:
+## Research Focus
 
-* **Simulation-Based Inference (SBI):** We are developing next-generation SBI methods for analyzing complex cosmological datasets like the Cosmic Microwave Background (CMB) and Baryon Acoustic Oscillations (BAO). This includes building realistic simulations of the Universe incorporating astrophysical effects and systematics, and training neural networks to efficiently perform parameter inference and model comparison (as outlined in our grant application [https://www.handley-lab.co.uk/future_research_directions](/future_research_directions.html)).
+Our core research revolves around developing innovative methodologies for analyzing large-scale cosmological datasets. We specialize in Simulation-Based Inference (SBI), a powerful technique that leverages our ability to simulate realistic universes to perform robust parameter inference and model comparison, even when likelihood functions are intractable ([LSBI framework](https://arxiv.org/abs/2501.03921)).  This focus allows us to tackle complex astrophysical and instrumental systematics that are challenging to model analytically ([Foreground map errors](https://arxiv.org/abs/2211.10448)).
 
-* **AI-driven Cosmological Parameter Estimation:**  We apply advanced AI techniques, including neural ratio estimation ([NRE](https://arxiv.org/abs/2207.11457)), to constrain cosmological parameters from CMB ([https://arxiv.org/abs/1908.00906](https://arxiv.org/abs/1908.00906)), BAO ([https://arxiv.org/abs/1701.08165](https://arxiv.org/abs/1701.08165)), and supernovae ([https://arxiv.org/abs/2312.02075](https://arxiv.org/abs/2312.02075)) data.  We are also exploring the use of AI to address the Hubble tension ([https://arxiv.org/abs/2312.02075](https://arxiv.org/abs/2312.02075)).
+A key aspect of our work is the development of next-generation SBI tools ([Gradient-guided Nested Sampling](https://arxiv.org/abs/2312.03911)), particularly those based on neural ratio estimation. These methods offer significant advantages in efficiency and scalability for high-dimensional inference problems ([NRE-based SBI](https://arxiv.org/abs/2207.11457)).  We are also pioneering the application of these methods to the analysis of Cosmic Microwave Background ([CMB](https://arxiv.org/abs/1908.00906)) data, Baryon Acoustic Oscillations ([BAO](https://arxiv.org/abs/1701.08165)) from surveys like DESI and 4MOST, and gravitational wave observations.
 
-* **21-cm Cosmology:** We are developing novel Bayesian data analysis techniques ([https://arxiv.org/abs/2207.11457](https://arxiv.org/abs/2207.11457)) to probe the Cosmic Dawn and Epoch of Reionization using the 21-cm signal. This includes developing robust foreground modelling techniques ([https://arxiv.org/abs/2211.10448](https://arxiv.org/abs/2211.10448)), accounting for instrumental systematics ([https://arxiv.org/abs/2204.04445](https://arxiv.org/abs/2204.04445)), and developing fast, accurate emulators for the 21-cm signal ([https://arxiv.org/abs/2104.04336](https://arxiv.org/abs/2104.04336)). We are also investigating the impact of the primordial stellar initial mass function ([IMF](https://arxiv.org/abs/2202.02099)) and cosmic rays ([https://arxiv.org/abs/2304.07201](https://arxiv.org/abs/2304.07201)) on the 21-cm signal.
+Our AI initiatives extend beyond standard density estimation to encompass a broader range of machine learning techniques, such as:
 
-* **Primordial Cosmology:**  We study the physics of the very early Universe, including inflation ([https://arxiv.org/abs/1908.00906](https://arxiv.org/abs/1908.00906)),  primordial non-Gaussianity ([https://arxiv.org/abs/2104.03016](https://arxiv.org/abs/2104.03016)), and the implications of spatial curvature ([https://arxiv.org/abs/1907.08524](https://arxiv.org/abs/1907.08524)).  We have developed innovative methods for reconstructing the primordial power spectrum ([https://arxiv.org/abs/2503.08658](https://arxiv.org/abs/2503.08658)) and the inflationary potential.
+* **Emulator Development:** We develop fast and accurate emulators of complex astrophysical signals ([globalemu](https://arxiv.org/abs/2104.04336)) for efficient parameter exploration and model comparison ([Neural network emulators](https://arxiv.org/abs/2503.13263)).
+* **Bayesian Neural Networks:** We explore the full posterior distribution of Bayesian neural networks for improved generalization and interpretability ([BNN marginalisation](https://arxiv.org/abs/2205.11151)).
+* **Automated Model Building:**  We are developing novel techniques to automate the process of building and testing theoretical cosmological models using a combination of symbolic computation and machine learning ([Automated model building](https://arxiv.org/abs/2006.03581)).
 
-* **Testing General Relativity:**  Our work extends to testing Einstein's theory of gravity on cosmological scales, utilizing data from various sources, including gravitational waves ([https://arxiv.org/abs/2411.17663](https://arxiv.org/abs/2411.17663)).
+Additionally, we are active in the development and application of advanced sampling methods like nested sampling ([Nested sampling review](https://arxiv.org/abs/2205.15570)), including dynamic nested sampling ([Dynamic nested sampling](https://arxiv.org/abs/1704.03459)) and its acceleration through techniques like posterior repartitioning ([Accelerated nested sampling](https://arxiv.org/abs/2411.17663)).
 
-Our group has a strong record of publications in high-impact journals, contributing significantly to the field of cosmology. We actively participate in international collaborations, including the GAMBIT collaboration, and are committed to open-source software development, making our tools and techniques accessible to the wider scientific community. Our future research, as detailed in our grant application ([https://www.handley-lab.co.uk/future_research_directions](/future_research_directions.html)), focuses on developing even more advanced SBI methods, including neural ratio estimation and automated model building, to tackle the challenges posed by next-generation cosmological datasets.  We are particularly excited about exploring extensions to General Relativity and deepening our involvement in interdisciplinary collaborations within the GAMBIT framework.  We are also interested in investigating the potential of AI models ([https://arxiv.org/abs/2503.13263](https://arxiv.org/abs/2503.13263)) for enhancing scientific discovery.
-<!-- END OF WEBSITE SUMMARY -->\\
-Post generated by [gemini-1.5-pro](https://deepmind.google/technologies/gemini/) using [this prompt](/prompts/posts/index.md).\\
-Image generated by [imagen-3.0-generate-002](https://deepmind.google/technologies/gemini/) using [this prompt](/prompts/images/index.md).\\
+## Highlight Achievements
 
+Our group has a strong publication record in high-impact journals and on the arXiv preprint server. Some key highlights include:
+
+* Development of novel AI-driven methods for analyzing the 21-cm signal from the Cosmic Dawn ([21-cm analysis](https://arxiv.org/abs/2201.11531)).
+* Contributing to the Planck Collaboration's analysis of CMB data ([Planck 2018](https://arxiv.org/abs/1807.06205)).
+* Development of the PolyChord nested sampling software ([PolyChord](https://arxiv.org/abs/1506.00171)), which is now widely used in cosmological analyses.
+* Contributions to the GAMBIT global fitting framework ([GAMBIT CosmoBit](https://arxiv.org/abs/2009.03286)).
+* Applying SBI to constrain dark matter models ([Dirac Dark Matter EFTs](https://arxiv.org/abs/2106.02056)).
+
+## Future Directions
+
+We are committed to pushing the boundaries of cosmological analysis through our ongoing and future projects, including:
+
+* Applying SBI to test extensions of General Relativity ([Modified Gravity](https://arxiv.org/abs/2006.03581)).
+* Developing AI-driven tools for efficient and robust calibration of cosmological experiments ([Calibration for astrophysical experimentation](https://arxiv.org/abs/2307.00099)).
+* Exploring the use of transformers and large language models for automating the process of cosmological model building.
+* Applying our expertise to the analysis of data from next-generation surveys like Euclid, the Vera Rubin Observatory, and the Square Kilometre Array.  This will allow us to probe the nature of dark energy with increased precision ([Dynamical Dark Energy](https://arxiv.org/abs/2503.08658)), search for parity violation in the large-scale structure ([Parity Violation](https://arxiv.org/abs/2410.16030)), and explore a variety of other fundamental questions.
+
+
+
+<!-- END OF WEBSITE SUMMARY -->
+
+Content generated by [gemini-1.5-pro](https://deepmind.google/technologies/gemini/) using [this prompt](/prompts/posts/index.md).
+
+Image generated by [imagen-3.0-generate-002](https://deepmind.google/technologies/gemini/) using [this prompt](/prompts/images/index.md).
