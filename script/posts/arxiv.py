@@ -26,7 +26,7 @@ url = f"https://export.arxiv.org/api/query?id_list={arxiv}"
 response = requests.get(url)
 response.raise_for_status()
 feed = feedparser.parse(response.content)
-betadata = feed.entries[0]
+metadata = feed.entries[0]
 dt = to_datetime(feed.entries[0].published)
 title = metadata.title.replace('\n', '')
 print(f"Generating post for \"{title}\"")
@@ -226,10 +226,10 @@ response
 from PIL import Image
 image = Image.open(BytesIO(
     response.generated_images[0].image.image_bytes
-    ))
+    )).convert("RGBA")
 
 # Save image
-image.save(f'.{imagename}')
+image.save(f'.{imagename}', format='PNG', optimize=True)
 print(f"Image saved to .{imagename}")
 
 # Save post
