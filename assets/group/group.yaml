@@ -1,3 +1,86 @@
+Suhail Dhawan:
+  coi:
+    start: 2024-10-01
+    thesis: null
+  image: https://www.lucy.cam.ac.uk/sites/default/files/styles/650x650_scale_and_crop/public/fellow-images/Suhail%20Dhawan.jpg?itok=IinGhbdp
+  links:
+    Department webpage: https://www.lucy.cam.ac.uk/fellows/dr-suhail-dhawan
+James Alvey:
+  coi:
+    start: 2024-10-01
+    thesis: null
+  image: https://www.kicc.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/profilepicture-min_1.jpeg?itok=ccmz2RPK
+  links:
+    Department webpage: Department webpage
+"G\xE1bor Cs\xE1nyi":
+  coi:
+    start: 2023-10-01
+    thesis: null
+  image: https://www.eng.cam.ac.uk/sites/www.eng.cam.ac.uk/files/styles/small_events_search_results_profile/public/uploads/profiles/images/Gabor-kalapos-square-400.png?itok=GszDCAc9
+  links:
+    Department webpage: http://www.eng.cam.ac.uk/profiles/gc121
+Chris Lester:
+  coi:
+    start: 2023-10-01
+    thesis: null
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lesterc.jpg?itok=QNLbVvIS
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/directory/lesterc
+Harry Bevins:
+  coi:
+    start: 2023-10-01
+    thesis: null
+  phd:
+    start: 2019-10-01
+    end: 2023-03-31
+    supervisors:
+    - Will Handley
+    - Eloy de Lera Acedo
+    - Anastasia Fialkov
+    thesis: A Machine Learning-enhanced Toolbox for Bayesian 21-cm Data Analysis and
+      Constraints on the Astrophysics of the Early Universe
+  original_image: images/originals/harry_bevins.jpeg
+  image: images/harry_bevins.jpg
+  links:
+    Webpage: https://htjb.github.io/
+    GitHub: https://github.com/htjb
+    ADS: https://ui.adsabs.harvard.edu/search/q=author%3A%22Bevins%2C%20H.%20T.%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
+    Publons: https://publons.com/researcher/5239833/harry-bevins/
+  destination:
+    2023-04-01: Postdoc in Cambridge (Eloy)
+    2023-10-01: Cambridge Kavli Fellowship
+Will Barker:
+  coi:
+    start: 2022-10-01
+    thesis: null
+  phd:
+    start: 2017-10-01
+    end: 2021-08-25
+    supervisors:
+    - Anthony Lasenby
+    - Mike Hobson
+    - Will Handley
+    thesis: null
+  original_image: images/originals/will_barker.png
+  image: images/will_barker.jpg
+  links:
+    Webpage: https://wevbarker.com
+  destination:
+    2021-10-01: 3y Junior Research Fellowship (Girton, Cambridge)
+    2024-10-01: 2y Marie Curie fellowship prague
+Mark Ashdown:
+  coi:
+    start: 2021-10-01
+    thesis: null
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/dr_mark_ashdown.png?itok=rkun0buR
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/staff/dr-mark-ashdown
+David Stefanyszyn:
+  coi:
+    start: 2021-10-01
+    thesis: null
+  links:
+    Department webpage: https://www.nottingham.ac.uk/physics/people/david.stefanyszyn
 Will Handley:
   pi:
     start: 2020-10-01
@@ -17,90 +100,59 @@ Will Handley:
   image: images/will_handley.jpg
   links:
     Webpage: https://willhandley.co.uk
-Will Barker:
-  coi:
-    start: 2022-10-01
-    thesis: null
-  phd:
-    start: 2017-10-01
-    end: 2021-08-25
-    supervisors:
-    - Anthony Lasenby
-    - Mike Hobson
-    - Will Handley
-    thesis: null
-  original_image: images/originals/will_barker.png
-  image: images/will_barker.jpg
-  links:
-    Webpage: https://wevbarker.com"
-  destination:
-    2021-10-01: 3y Junior Research Fellowship (Girton, Cambridge)
-    2024-10-01: 2y Marie Curie fellowship prague
-Mike Hobson:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/hobsonm.jpg?itok=H1iEFAas
-Anthony Lasenby:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lasenbya.jpg?itok=9nNfXc4k
-Eloy de Lera Acedo:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.astro.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/headshotlow.jpg?itok=RMrJ4zTa
-Anastasia Fialkov:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.ast.cam.ac.uk/sites/default/files/styles/inline/public/anastasia-fialkov-20180213-sq2.jpg?itok=am4DF9YQ
-Mark Ashdown:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/dr_mark_ashdown.png?itok=rkun0buR
-Nima Razavi-Ghods:
-  coi:
-    start: 1970-01-01
-    thesis: null
-Suhail Dhawan:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.lucy.cam.ac.uk/sites/default/files/styles/650x650_scale_and_crop/public/fellow-images/Suhail%20Dhawan.jpg?itok=IinGhbdp
 Keith Grainge:
   coi:
-    start: 1970-01-01
+    start: 2020-06-10
     thesis: null
+  links:
+    Department webpage: https://www.research.manchester.ac.uk/portal/keith.grainge.html
 Malak Olamaie:
   coi:
-    start: 1970-01-01
+    start: 2020-06-10
     thesis: null
-David Stefanyszyn:
-  coi:
-    start: 1970-01-01
-    thesis: null
-"G\xE1bor Cs\xE1nyi":
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.eng.cam.ac.uk/sites/www.eng.cam.ac.uk/files/styles/small_events_search_results_profile/public/uploads/profiles/images/Gabor-kalapos-square-400.png?itok=GszDCAc9
-James Alvey:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.kicc.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/profilepicture-min_1.jpeg?itok=ccmz2RPK
-Chris Lester:
-  coi:
-    start: 1970-01-01
-    thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lesterc.jpg?itok=QNLbVvIS
+  links:
+    Department webpage: https://www.yorksj.ac.uk/our-staff/staff-profiles/malak-olamaie.php
 Jose Alberto Vazquez:
   coi:
-    start: 1970-01-01
+    start: 2020-03-16
     thesis: null
+  links:
+    INSPIRE: https://inspirehep.net/authors/1061596
+    thesis: null
+Anastasia Fialkov:
+  coi:
+    start: 2019-10-01
+    thesis: null
+  image: https://www.ast.cam.ac.uk/sites/default/files/styles/inline/public/anastasia-fialkov-20180213-sq2.jpg?itok=am4DF9YQ
+  links:
+    Department webpage: https://www.ast.cam.ac.uk/people/Anastasia.Fialkov
+Nima Razavi-Ghods:
+  coi:
+    start: 2019-10-01
+    thesis: null
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/directory/razavi-ghods
+Eloy de Lera Acedo:
+  coi:
+    start: 2018-10-01
+    thesis: null
+  image: https://www.astro.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/headshotlow.jpg?itok=RMrJ4zTa
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/directory/dr-eloy-de-lera-acedo
+Mike Hobson:
+  coi:
+    start: 2012-10-01
+    thesis: null
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/hobsonm.jpg?itok=H1iEFAas
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/directory/hobsonm
+Anthony Lasenby:
+  coi:
+    start: 2012-10-01
+    thesis: null
+  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lasenbya.jpg?itok=9nNfXc4k
+  links:
+    Department webpage: https://www.phy.cam.ac.uk/directory/lasenbya
 George Carter:
   postdoc:
     start: 2024-08-12
@@ -333,26 +385,6 @@ Isidro Gomez Vargas:
     Department webpage: https://www.fis.unam.mx/directorio/1333/isidro-strong-gomez-strong-vargas
   destination:
     2021-11-01: Postdoc at UNAM (mexico)
-Harry Bevins:
-  phd:
-    start: 2019-10-01
-    end: 2023-03-31
-    supervisors:
-    - Will Handley
-    - Eloy de Lera Acedo
-    - Anastasia Fialkov
-    thesis: A Machine Learning-enhanced Toolbox for Bayesian 21-cm Data Analysis and
-      Constraints on the Astrophysics of the Early Universe
-  original_image: images/originals/harry_bevins.jpeg
-  image: images/harry_bevins.jpg
-  links:
-    Webpage: https://htjb.github.io/
-    GitHub: https://github.com/htjb
-    ADS: https://ui.adsabs.harvard.edu/search/q=author%3A%22Bevins%2C%20H.%20T.%20J.%22&sort=date%20desc%2C%20bibcode%20desc&p_=0
-    Publons: https://publons.com/researcher/5239833/harry-bevins/
-  destination:
-    2023-04-01: Postdoc in Cambridge (Eloy)
-    2023-10-01: Cambridge Kavli Fellowship
 Ian Roque:
   phd:
     start: 2019-10-01

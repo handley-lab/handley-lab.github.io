@@ -6,26 +6,72 @@ from pandas import to_datetime
 from io import BytesIO
 import tarfile
 import sys
+import yaml
+
+#TODO: Fix image size to be landscape
+#TODO: check for improvements that can be made with a view to getting talks to work
 
 arxiv = sys.argv[1]
-arxiv = '2410.16030'
 
-
+# Algorithm parameters
 basic_model = "gemini-1.5-flash"
 text_model = "gemini-1.5-pro"
 image_model = "gemini-2.0-flash-exp-image-generation"
 url_model = "https://deepmind.google/technologies/gemini/"
+client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 # Get arxiv metadata
+print(f"Getting metadata for {arxiv}")
 url = f"https://export.arxiv.org/api/query?id_list={arxiv}"
 response = requests.get(url)
 response.raise_for_status()
 feed = feedparser.parse(response.content)
 metadata = feed.entries[0]
-metadata.published
 dt = to_datetime(feed.entries[0].published)
+title = metadata.title.replace('\n', '')
+print(f"Generating post for \"{title}\"")
+
+# Read group yaml file:
+with open('assets/group/group.yaml', 'r') as f:
+    group = f.read()
+    group = yaml.safe_load(group)
+
+# Read group homepage
+with open('index.md', 'r') as f:
+    homepage = f.read()
+
+
+# Extract author info
+print(f"Retrieving author data for {metadata.authors} from assets/group/group.yaml")
+contents = f"""
+Find the dictionary keys in the following group:
+```python
+{group.keys()}
+```
+that most closely match the following authors:
+```python
+{metadata.authors}
+```
+Give your answer as comma separate list of keys, in the same order as the authors list. If you cannot find a match, just list the original author name.
+"""
+response = client.models.generate_content(model=basic_model, contents=contents)
+authors = response.text.split(',')
+authors = {author.strip():group.get(author.strip(), author.strip()) for author in authors}
+
+for a, dat in authors.items():
+    try:
+        if dat['image'].startswith('images/'):
+            dat['image'] = f'/assets/group/{dat["image"]}'
+    except KeyError:
+        dat['image'] = '/assets/images/user.png'
+
+postname = f'{dt.strftime("%Y-%m-%d")}-{arxiv}'
+imagename = f'/assets/images/posts/{postname}.png'
+prompt_save = f'/prompts/posts/{postname}.md'
+image_prompt_save = f'/prompts/images/{postname}.md'
 
 # Get arxiv source
+print(f"Getting source for {arxiv}")
 response = requests.get(f'https://arxiv.org/src/{arxiv}')
 tar_stream = BytesIO(response.content)
 tex = ''
@@ -38,125 +84,141 @@ with tarfile.open(fileobj=tar_stream, mode='r') as tar:
         if member.name.endswith('.bbl'):
             bbl += file.read().decode('utf-8')
 
-# Read group yaml file:
-import yaml
-with open('assets/group/group.yaml', 'r') as f:
-    group = f.read()
-    group = yaml.safe_load(group)
-
-with open('index.md', 'r') as f:
-    homepage = f.read()
-
-client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
-
-contents = f"""
-Find the dictionary keys in the following group:
-```python
-{group.keys()}
-```
-that most closely match the following authors:
-```python
-{metadata.authors}
-```
-Give your answer as comma separate list of keys, in the same order as the authors list. If you cannot find a match, just list the original author name.
-"""
-
-response = client.models.generate_content(model=basic_model, contents=contents)
-authors = response.text.split(',')
-authors = {author.strip():group.get(author.strip(), author.strip()) for author in authors}
-images = ''.join([f"<img src=\"/assets/group/{dat['image']}\" alt=\"{a}\" style=\"width: 25%; height: auto;\">" for a, dat in authors.items() if'image' in dat])
-
-postname = f'{dt.strftime("%Y-%m-%d")}-{arxiv}'
-imagename = f'/assets/images/posts/{postname}.png'
-prompt_save = f'/prompts/posts/{postname}.md'
-image_prompt_save = f'/prompts/images/{postname}.md'
-
+# Retrieve images for authors
+height = 100/max(len(authors)+1, 4)
+style = f'width: auto; height: {height}vw;'
+images = ''.join([f"<img src=\"{dat['image']}\" alt=\"{a}\" style=\"{style}\">" for a, dat in authors.items()])
 
 prompt = f"""
-I’m creating a new blog post for our research website that integrates details about our work and features a research paper. You must generate a final Markdown file (ready for a GitHub-served Jekyll site) that exactly follows the output format below.
+Title: Create a Markdown Blog Post Integrating Research Details and a Featured Paper
+====================================================================================
 
+This task involves generating a Markdown file (ready for a GitHub-served Jekyll site) that integrates our research details with a featured research paper. The output must follow the exact format and conventions described below.
+
+====================================================================================
 Output Format (Markdown):
--------------------------------------------------
+------------------------------------------------------------------------------------
 ---
 layout: post
-title:  {metadata.title}
+title:  "{metadata.title}"
 date:   {dt.strftime('%Y-%m-%d')}
 categories: papers
 ---
-![AI generate image from the prompt]({imagename})\\
+![AI generated image]({imagename})\\\\
 <!-- BEGINNING OF GENERATED POST -->
+<!-- END OF GENERATED POST -->\\\\
+{images}\\\\
+Post generated by [{text_model}]({url_model}) using [this prompt]({prompt_save}).\\\\
+Image generated by [{image_model}]({url_model}) using [this prompt]({image_prompt_save}).\\\\
+------------------------------------------------------------------------------------
+====================================================================================
 
-<!-- END OF GENERATED POST -->\\
-{images}\\
-Post generated by [{text_model}]({url_model}) using [this prompt]({prompt_save}).\\
-Image generated by [{image_model}]({url_model}) using [this prompt]({image_prompt_save}).\\
--------------------------------------------------
+a=1
+Please adhere strictly to the following instructions:
 
-Instructions for Generating the Page Body:
-1. Write a well-composed, engaging page body that is suitable for a scholarly audience interested in advanced AI and astrophysics.
-2. Use the tone and style inspired by our homepage (see the “Homepage Content” block), but do not directly reuse its content.
-3. Highlight key aspects of the paper using details from the Paper Metadata (JSON) and the Paper Source (TeX). Emphasize the contributions and the impact of the work, with special focus on the lead author ({metadata.authors[0]}). When mentioning the authors, use any links provided in the Author Information block.
-4. Contextualize the research within the broader literature by leveraging the Bibliographic Information (bbl block) to generate Markdown-formatted links (using DOIs or arXiv numbers).
-   - Review the Bibliographic Information (bbl block) and extract every reference that includes a DOI or arXiv identifier.
-   - For each such entry, generate a Markdown link formatted as:
-     - DOI Example: [DOI:10.1234/xyz](https://doi.org/10.1234/xyz)
-     - arXiv Example: [arXiv:2103.12345](https://arxiv.org/abs/2103.12345)
-   - Ensure that three or more of the most relevant literature links are seamlessly integrated into the narrative.
-5. Seamlessly integrate information from all provided materials (metadata, TeX source, bbl file, and author information) to form a cohesive and informative narrative.
-6. Ensure that the final output is plain Markdown—do not wrap the output in a Markdown code block.
+====================================================================================
+Section 1: Content Creation Instructions
+====================================================================================
 
-Data Provided:
-1. Homepage Content (for tone and context):
+1. **Generate the Page Body:**
+   - Write a well-composed, engaging narrative that is suitable for a scholarly audience interested in advanced AI and astrophysics.
+   - Ensure the narrative is original and reflective of the tone and style in the "Homepage Content" block (provided below), but do not reuse its content verbatim.
+
+2. **Highlight Key Research Details:**
+   - Emphasize the contributions and impact of the paper, focusing on its methodology, significance, and context within current research.
+   - Specifically highlight the lead author ({metadata.authors[0]}). When referencing any author, use Markdown links from the Author Information block (choose academic or GitHub links over social media).
+
+3. **Integrate Data from Multiple Sources:**
+   - Seamlessly weave information from the following:
+     - **Paper Metadata (YAML):** Essential details including the title and authors.
+     - **Paper Source (TeX):** Technical content from the paper.
+     - **Bibliographic Information (bbl):** Extract bibliographic references.
+     - **Author Information (YAML):** Profile details for constructing Markdown links.
+   - Merge insights from the Paper Metadata, TeX source, Bibliographic Information, and Author Information blocks into a coherent narrative—do not treat these as separate or isolated pieces.
+   - Insert the generated narrative between the HTML comments:
+     <!-- BEGINNING OF GENERATED POST --> and <!-- END OF GENERATED POST -->
+
+4. **Generate Bibliographic References:**
+   - Review the Bibliographic Information block carefully.
+   - For each reference that includes a DOI or arXiv identifier:
+     - For DOIs, generate a link formatted as:
+       [DOI:10.1234/xyz](https://doi.org/10.1234/xyz)
+     - For arXiv entries, generate a link formatted as:
+       [arXiv:2103.12345](https://arxiv.org/abs/2103.12345)
+    - **Important:** Do not use any LaTeX citation commands (e.g., `\\cite{{...}}`). Every reference must be rendered directly as a Markdown link. For example, instead of `\\cite{{mycitation}}`, output `[mycitation](https://doi.org/mycitation)`
+        - **Incorrect:** `\\cite{{10.1234/xyz}}`  
+        - **Correct:** `[DOI:10.1234/xyz](https://doi.org/10.1234/xyz)`
+   - Ensure that at least three (3) of the most relevant references are naturally integrated into the narrative.
+
+5. **Final Formatting Requirements:**
+   - The output must be plain Markdown; do not wrap it in Markdown code fences.
+   - Preserve the YAML front matter exactly as provided.
+
+====================================================================================
+Section 2: Provided Data for Integration
+====================================================================================
+
+1. **Homepage Content (Tone and Style Reference):**
 ```markdown
 {homepage}
 ```
 
-2. Paper Metadata (essential details about the research paper):
-```json
-{metadata}
+2. **Paper Metadata:**
+```yaml
+{yaml.dump(metadata, sort_keys=False)}
 ```
 
-3. Paper Source (raw TeX content of the paper):
+3. **Paper Source (TeX):**
 ```tex
 {tex}
 ```
 
-4. Bibliographic Information (bibliography details for generating links):
+4. **Bibliographic Information:**
 ```bbl
 {bbl}
 ```
 
-5. Author Information:
+5. **Author Information:**
 - Lead Author: {metadata.authors[0]}
 - Full Authors List:
-```json
-{authors}
+```yaml
+{yaml.dump(authors, sort_keys=False)}
 ```
+This YAML file provides a concise snapshot of an academic research group. It lists members by name along with their academic roles—ranging from Part III and summer projects to MPhil, PhD, and postdoctoral positions—with corresponding dates, thesis topics, and supervisor details. Supplementary metadata includes image paths and links to personal or departmental webpages. A dedicated "coi" section profiles senior researchers, highlighting the group’s collaborative mentoring network and career trajectories in cosmology, astrophysics, and Bayesian data analysis.
 
-Generate only the final Markdown output based on the format above.
 
-Double-check that each bibliographic reference with a DOI or arXiv is used to generate a Markdown link.
+
+====================================================================================
+Final Output Instructions
+====================================================================================
+
+- Combine all data sources to create a seamless, engaging narrative.
+- Follow the exact Markdown output format provided at the top.
+- Do not include any extra explanation, commentary, or wrapping beyond the specified Markdown.
+- Validate that every bibliographic reference with a DOI or arXiv identifier is converted into a Markdown link as per the examples.
+- Validate that every Markdown author link corresponds to a link in the author information block.
+- Before finalizing, confirm that no LaTeX citation commands or other undesired formatting remain.
+
+Generate only the final Markdown output that meets all these requirements.
 """
-
 
 print("Generating post")
 response = client.models.generate_content(model=text_model, contents=prompt)
 post = response.text
-print("Post generated")
 
-
+print ("Generating image prompt")
 pre_image_prompt=f"""
 Generate a prompt which will generate an image to headline this post:
 ```markdown
 {post}
 ```
+The image should be abstract, and not try to relay any quantitative information (so no graphs, numbers or text). It should be visually appealing and related to the topic of the paper.
 """
 response = client.models.generate_content(model=text_model, contents=pre_image_prompt)
 image_prompt = response.text
 
 print("Generating image")
 response = client.models.generate_content(model=image_model, contents=image_prompt, config=genai.types.GenerateContentConfig( response_modalities=['Text', 'Image']))
-print("Image generated")
 
 from PIL import Image
 image = Image.open(BytesIO(
@@ -165,14 +227,18 @@ image = Image.open(BytesIO(
 
 # Save image
 image.save(f'.{imagename}')
+print(f"Image saved to .{imagename}")
 
 # Save post
 with open(f'_posts/{postname}.md', 'w') as f:
     f.write(post)
+print(f"Post saved to _posts/{postname}.md")
 
 # Save prompts
 with open(f'.{prompt_save}', 'w') as f:
     f.write(prompt)
+print(f"Prompt saved to .{prompt_save}")
 
 with open(f'.{image_prompt_save}', 'w') as f:
     f.write(image_prompt)
+print(f"Image prompt saved to .{image_prompt_save}")

@@ -1,43 +1,13 @@
 import datetime
 import yaml
 import os
-
-class Supervisor(object):
-    def __init__(self, name, url=None):
-        self.name = name
-        self.url = url
-
-    def __str__(self):
-        if self.url is None:
-            return self.name
-        return f'<a href="{self.url}">{self.name}</a>'
-
-supervisors = [
-    Supervisor('Anthony Lasenby', "https://www.phy.cam.ac.uk/directory/lasenbya"),
-    Supervisor('Mike Hobson', "https://www.phy.cam.ac.uk/directory/hobsonm"),
-    Supervisor('Will Barker', "https://wevbarker.com/"),
-    Supervisor('Eloy de Lera Acedo', "https://www.phy.cam.ac.uk/directory/dr-eloy-de-lera-acedo"),
-    Supervisor('Anastasia Fialkov',"https://www.ast.cam.ac.uk/people/Anastasia.Fialkov"),
-    Supervisor('Nima Razavi-Ghods', "https://www.phy.cam.ac.uk/staff/dr-nima-razavi-ghods"),
-    Supervisor('Mark Ashdown', "https://www.phy.cam.ac.uk/staff/dr-mark-ashdown"),
-    Supervisor('Keith Grainge', "https://www.research.manchester.ac.uk/portal/keith.grainge.html"),
-    Supervisor('Malak Olamaie', "https://www.yorksj.ac.uk/our-staff/staff-profiles/malak-olamaie.php"),
-    Supervisor('David Stefanyszyn',"https://www.nottingham.ac.uk/physics/people/david.stefanyszyn"),
-    Supervisor('Suhail Dhawan',"https://www.lucy.cam.ac.uk/fellows/dr-suhail-dhawan"),
-    Supervisor('Gábor Csányi',"http://www.eng.cam.ac.uk/profiles/gc121"),
-    Supervisor('Harry Bevins',"https://harrybevins.co.uk/"),
-    Supervisor('James Alvey',"https://www.kicc.cam.ac.uk/staff/dr-james-alvey"),
-    Supervisor('Chris Lester',"https://www.phy.cam.ac.uk/directory/lesterc"),
-]
-
-supervisors = {s.name:s for s in supervisors}
-
+import re
 
 class Level(object):
     def __init__(self, **kwargs):
-        self.start = kwargs.pop('start')
+        self.start = kwargs.pop('start', datetime.date(1970,1,1) )
         self.end = kwargs.pop('end', None)
-        self.supervisors = [supervisors[s] for s in kwargs.pop('supervisors', [])]
+        self.supervisors = kwargs.pop('supervisors', [])
         self.thesis = kwargs.pop('thesis', None)
 
     def __lt__(self, other):
@@ -47,8 +17,6 @@ class Level(object):
         d = self.__dict__.copy()
         if not d['supervisors']:
             d.pop('supervisors')
-        else:
-            d['supervisors'] = [s.name for s in d['supervisors']]
         if d['end'] is None:
             d.pop('end')
         return d
@@ -61,6 +29,11 @@ class PI(Level):
     key = 'pi'
     seniority = -1
     string = 'PI'
+
+class CoI(Level):
+    key = 'coi'
+    seniority = -1
+    string = 'Co-I'
 
 class PostDoc(Level):
     key = 'postdoc'
@@ -88,8 +61,7 @@ class Summer(Level):
     string = 'Summer student'
 
 
-levels = {p.key:p for p in [PI, PostDoc, PhD, MPhil, PartIII, Summer]}
-
+levels = {p.key:p for p in [PI, CoI, PostDoc, PhD, MPhil, PartIII, Summer]}
 
 
 class Student(object):
@@ -154,13 +126,17 @@ class Student(object):
             url = f'https://arxiv.org/search/?query=handley%2C+w%3B+{surname}%2C{initial}&searchtype=author'
             return f'<a href="{url}">Group research papers ({npapers})</a>'
 
-yaml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.yaml')
+#yaml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.yaml')
+yaml_file = 'assets/group/group.yaml'
 
 with open(yaml_file) as f:
-    people = [Student(name, **kwargs) for name, kwargs in yaml.safe_load(f).items()]
+    data = yaml.safe_load(f)
 
-
+people = [Student(name, **kwargs) for name, kwargs in data.items()]
 people = sorted(people)
+
+supervisors = {name:list(d['links'].values())[0] for name, d in data.items() if 'coi' in d and 'links' in d}
+supervisors
 
 with open(yaml_file, 'w') as f:
     yaml.dump({p.name:p.to_dict() for p in people}, 

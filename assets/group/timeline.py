@@ -13,7 +13,7 @@ plt.rcParams['ytick.color'] = grey
 plt.rcParams['ytick.color'] = grey
 
 
-people = [p for p in people if p.start <= datetime.date.today()]
+people = [p for p in people if p.start <= datetime.date.today() and [l.key for l in p.levels] != ['coi']]
 people = sorted(people, key=lambda p: (p.start, min([(l.start, l.seniority) for l in p.levels])[1]))
 
 colors = {'partiii': 'C1',
@@ -28,6 +28,8 @@ rects = {}
 for i, person in enumerate(people):
     weight = None
     for l in person.levels:
+        if l.key == 'coi':
+            continue
         start = l.start.toordinal()
         if l.end is not None:
             end = l.end.toordinal() 

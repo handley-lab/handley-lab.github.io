@@ -1,5 +1,5 @@
 #!/usr/bin/env python
-from group import people, levels
+from group import people, levels, supervisors
 from yattag import Doc, indent
 import os
 from pandas import DataFrame, to_datetime
@@ -41,18 +41,21 @@ with open(html_file, 'w') as f:
 
     for i, df in enumerate([df[df.present], df[~df.present]]):
         for level in levels:
+            if level == 'coi':
+                continue
             sdf = df[df.level==level].data.to_list()
             if len(sdf):
 
                 with doc.tag('div', klass='wrapper', style='margin-top:30pt'):
                     with doc.tag('h1'):
+                        level_str = levels[level].string
                         if i==0:
-                            if levels[level].string == 'PI':
-                                doc.text('%s' % levels[level].string)
+                            if level_str == 'PI':
+                                doc.text(f'{level_str}')
                             else:
-                                doc.text('%ss' % levels[level].string)
+                                doc.text(f'{level_str}s')
                         else:
-                            doc.text('Past %ss' % levels[level].string)
+                            doc.text(f'Past {level_str}s')
                     with doc.tag('div', klass="grid"):
                         for person in sdf:
                             if person.name in ignore:
@@ -76,14 +79,18 @@ with open(html_file, 'w') as f:
                                     with doc.tag('ul'):
                                         for l in person.levels:
                                             with doc.tag('li'):
-                                                doc.text('%s from %s' % (l, l.start.strftime("%b %Y")))
+                                                doc.text(f'{l} from {l.start.strftime("%b %Y")}')
                                                 if l.end:
-                                                    doc.text(' to %s' % l.end.strftime("%b %Y"))
+                                                    doc.text(f' to {l.end.strftime("%b %Y")}')
                                                 with doc.tag('ul'):
                                                     if l.supervisors:
-                                                            with doc.tag('li'):
-                                                                text = ', '.join([str(cs) for cs in  l.supervisors])
-                                                                doc.asis("co-supervised with %s" % text)
+                                                        text = []
+                                                        for cs in l.supervisors:
+                                                            if cs != 'Will Handley':
+                                                                text.append(f'<a href="{supervisors[cs]}">{cs}</a>')
+                                                        text = ', '.join(text)
+                                                        with doc.tag('li'):
+                                                            doc.asis(f"co-supervised with {text}")
                                                     if l.thesis:
                                                         doc.line('li', f'Thesis: {l.thesis}')
 
@@ -95,15 +102,15 @@ with open(html_file, 'w') as f:
                                         if person.links:
                                             doc.line('li', 'Links:')
                                             with doc.tag('ul'):
-                                                for l in person.links:
+                                                for l, href in person.links.items():
                                                     with doc.tag('li'):
-                                                        doc.asis(l)
+                                                        doc.asis(f"<a href='{href}'>{l}</a>")
 
                                         if person.destination:
                                             doc.line('li', 'Subsequent career:')
                                             with doc.tag('ul'):
                                                 for date, loc in person.destination.items():
                                                     with doc.tag('li'):
-                                                        doc.asis("%s: %s" % (date.strftime("%b %Y"), loc))
+                                                        doc.asis(f"{date.strftime('%b %Y')}: {loc}")
 
     f.write(indent(doc.getvalue()))
