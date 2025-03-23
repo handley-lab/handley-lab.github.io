@@ -8,10 +8,10 @@ import tarfile
 import sys
 import yaml
 
-#TODO: Fix image size to be landscape
 #TODO: check for improvements that can be made with a view to getting talks to work
 
 arxiv = sys.argv[1]
+#arxiv = '2503.08658'
 
 # Algorithm parameters
 basic_model = "gemini-1.5-flash"
@@ -85,7 +85,7 @@ with tarfile.open(fileobj=tar_stream, mode='r') as tar:
             bbl += file.read().decode('utf-8')
 
 # Retrieve images for authors
-height = 100/max(len(authors)+1, 4)
+height = 100//max(len(authors)+1, 4)
 style = f'width: auto; height: {height}vw;'
 images = ''.join([f"<img src=\"{dat['image']}\" alt=\"{a}\" style=\"{style}\">" for a, dat in authors.items()])
 
@@ -142,13 +142,14 @@ Section 1: Content Creation Instructions
    - Review the Bibliographic Information block carefully.
    - For each reference that includes a DOI or arXiv identifier:
      - For DOIs, generate a link formatted as:
-       [DOI:10.1234/xyz](https://doi.org/10.1234/xyz)
+       [10.1234/xyz](https://doi.org/10.1234/xyz)
      - For arXiv entries, generate a link formatted as:
-       [arXiv:2103.12345](https://arxiv.org/abs/2103.12345)
+       [2103.12345](https://arxiv.org/abs/2103.12345)
     - **Important:** Do not use any LaTeX citation commands (e.g., `\\cite{{...}}`). Every reference must be rendered directly as a Markdown link. For example, instead of `\\cite{{mycitation}}`, output `[mycitation](https://doi.org/mycitation)`
         - **Incorrect:** `\\cite{{10.1234/xyz}}`  
-        - **Correct:** `[DOI:10.1234/xyz](https://doi.org/10.1234/xyz)`
+        - **Correct:** `[10.1234/xyz](https://doi.org/10.1234/xyz)`
    - Ensure that at least three (3) of the most relevant references are naturally integrated into the narrative.
+   - Ensure that the link to the Featured paper [{arxiv}](https://arxiv.org/abs/{arxiv}) is included in the first sentence.
 
 5. **Final Formatting Requirements:**
    - The output must be plain Markdown; do not wrap it in Markdown code fences.
@@ -198,6 +199,7 @@ Final Output Instructions
 - Validate that every bibliographic reference with a DOI or arXiv identifier is converted into a Markdown link as per the examples.
 - Validate that every Markdown author link corresponds to a link in the author information block.
 - Before finalizing, confirm that no LaTeX citation commands or other undesired formatting remain.
+- Before finalizing, confirm that the link to the paper itself [{arxiv}](https://arxiv.org/abs/{arxiv}) is featured in the first sentence.
 
 Generate only the final Markdown output that meets all these requirements.
 """
@@ -218,11 +220,12 @@ response = client.models.generate_content(model=text_model, contents=pre_image_p
 image_prompt = response.text
 
 print("Generating image")
-response = client.models.generate_content(model=image_model, contents=image_prompt, config=genai.types.GenerateContentConfig( response_modalities=['Text', 'Image']))
+response = client.models.generate_images(model='imagen-3.0-generate-002', prompt=image_prompt, config=genai.types.GenerateImagesConfig(aspect_ratio="16:9", number_of_images=1))
+response
 
 from PIL import Image
 image = Image.open(BytesIO(
-    response.candidates[0].content.parts[0].inline_data.data
+    response.generated_images[0].image.image_bytes
     ))
 
 # Save image
