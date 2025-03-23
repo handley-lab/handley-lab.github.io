@@ -160,7 +160,7 @@ response = client.models.generate_images(model=image_model, prompt=image_prompt,
 from PIL import Image
 image = Image.open(BytesIO(
     response.generated_images[0].image.image_bytes
-    ))
+    )).convert("RGBA")
  
 # Save page
 with open('index.md', 'w') as f:
@@ -168,14 +168,14 @@ with open('index.md', 'w') as f:
 print(f"Page saved to index.md")
 
 # Save image
-image.save(f'.{imagename}')
+image.save(f'.{imagename}', format='PNG', optimize=True)
 print(f"Image saved to .{imagename}")
 
 # Save prompts
 with open(f'.{prompt_save}', 'w') as f:
-    f.write(prompt)
+    f.write("{% raw %}\n" + prompt + "\n{% endraw %}")
 print(f"Prompt saved to .{prompt_save}")
 
 with open(f'.{image_prompt_save}', 'w') as f:
-    f.write(image_prompt)
+    f.write("{% raw %}\n" + image_prompt + "\n{% endraw %}")
 print(f"Image prompt saved to .{image_prompt_save}")
