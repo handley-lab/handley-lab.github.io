@@ -1,4 +1,3 @@
-import numpy as np
 from google import genai
 import requests
 import os
@@ -86,7 +85,7 @@ with tarfile.open(fileobj=tar_stream, mode='r') as tar:
             bbl += file.read().decode('utf-8')
 
 # Retrieve images for authors
-height = 100//max(len(authors)+1, 4)
+height = 100//max(len(authors)+2, 4)
 style = f'width: auto; height: {height}vw;'
 images = ''.join([f"<img src=\"{dat['image']}\" alt=\"{a}\" style=\"{style}\">" for a, dat in authors.items()])
 

@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image representing the concept of matching primordial scalar perturbations across a cosmological phase transition using Israel junction conditions.  The image should evoke a sense of transition or joining, perhaps through contrasting colors, textures, or shapes. It could also suggest the concept of a hypersurface dividing different spacetime regions. Avoid literal depictions of graphs, equations, or scientific instruments.  Consider using visual metaphors to represent concepts like energy density, scalar fields, or the smoothness of spacetime. The overall aesthetic should be intriguing and visually appealing, suitable for headlining a scientific blog post on the topic.
+
+{% endraw %}

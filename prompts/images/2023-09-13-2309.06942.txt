@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image representing Bayesian forecasting using an evidence network. The image should evoke concepts of prediction, uncertainty, and network connections, but should not include any explicit numbers, graphs, or text. Consider visualizing the flow of information, the merging of probabilities, or the decision-making process within the network.  The style could be inspired by network diagrams, flow charts, or artistic representations of neural networks, but with an abstract and visually engaging twist.  Think about using color gradients, light trails, or interconnected shapes to convey the complex process of Bayesian inference.  The overall impression should be one of sophisticated computation and insightful prediction. The image should be suitable for use as a header image for a blog post about a scientific paper.
+
+{% endraw %}

@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image visualizing the concept of "Quantum initial conditions for curved inflating universes".  The image should evoke a sense of the early universe, possibly using swirling colors, textures, and light to represent quantum fluctuations, expansion, and the curvature of spacetime. Avoid any literal depictions of planets, stars, or galaxies.  The style should be artistic and visually engaging, suitable for a scientific blog post header image.  Think cosmic, abstract, and dynamic.  Avoid including any text, numbers, or graphs.
+
+{% endraw %}

@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image representing the concept of searching for parity violation in the large-scale structure of the universe.  The image should evoke a sense of asymmetry and subtle differences in a cosmic web-like structure.  Consider using swirling patterns, mirrored but not identical shapes, or variations in color and texture to visually represent the idea of parity violation. Avoid depicting galaxies or other specific celestial objects directly. The image should be suitable for a scientific blog post header.
+
+{% endraw %}

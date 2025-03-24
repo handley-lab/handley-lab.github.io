@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image that visually represents the concept of a CPT-symmetric universe with constrained spatial curvature.  The image should evoke ideas of symmetry, boundaries, and perhaps a closed or cyclical nature, without using any explicit scientific diagrams or text.  Consider using elements like mirrored forms, repeating patterns, or enclosed shapes to convey these ideas.  Think in terms of artistic expression rather than literal depiction of scientific concepts. The colors and style should be evocative and intriguing.  Avoid any graphs, numbers, or text.  The intended use is as a header image for a blog post about a scientific paper on this topic.
+
+{% endraw %}

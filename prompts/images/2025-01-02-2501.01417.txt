@@ -1,0 +1,11 @@
+{% raw %}
+Create an abstract image representing the Bayesian Global Sky Model (B-GSM) for separating foregrounds from the Epoch of Reionization signal. The image should evoke a sense of uncovering a faint signal hidden behind a complex foreground, using a data-driven approach. Consider incorporating visual elements suggestive of:
+
+* **Faint background signal:** A subtle, textured background representing the 21-cm signal from the EoR. Perhaps a hazy, mottled texture in muted oranges or reds.
+* **Complex foregrounds:** Overlapping, swirling shapes or colors representing the various foreground emissions (synchrotron, free-free, etc.) that obscure the EoR signal.  These could be brighter and more prominent than the background signal.
+* **Bayesian inference and data-driven approach:** A network of interconnected lines or points, perhaps with varying weights or intensities, to symbolize the Bayesian network and the data informing the model.  Consider using colors that contrast with the foreground and background.
+* **Global sky model:**  A sense of encompassing the whole sky, perhaps through a circular or spherical framing element, or a radiating pattern.
+
+Avoid literal depictions of telescopes, graphs, or data points. The goal is an artistic representation of the concepts rather than a scientific visualization.  The style could be similar to abstract expressionism or data visualization art.  The overall impression should be one of discovery, revealing something hidden within complexity.
+
+{% endraw %}

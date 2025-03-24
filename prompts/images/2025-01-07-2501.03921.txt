@@ -1,0 +1,11 @@
+{% raw %}
+Create an abstract image related to cosmological parameter estimation and sequential linear simulation-based inference.  Evoke concepts like the iterative refinement of a model, the vastness and complexity of the cosmos, and the convergence towards a solution.  Consider using visual metaphors for concepts like:
+
+* **Sequential inference:**  Perhaps a ripple effect, a series of converging lines or shapes, or a phased transformation of a pattern.
+* **Linear approximation:**  Straight lines or planes interacting with more complex or curved shapes.
+* **Cosmological parameters:**  Representations of cosmic structures (nebulae, galaxies, cosmic microwave background) but in an abstract and stylized way.
+* **Convergence:**  A visual progression towards a focal point, a sharpening of details, or a unification of elements.
+
+The image should be visually compelling and suitable for a blog post header image, avoiding literal depictions of data or graphs.  Favor a sense of mystery and exploration.  Color palettes inspired by astronomical imagery (deep blues, purples, oranges, with hints of bright highlights) could be effective.  The overall style should be modern and abstract.
+
+{% endraw %}

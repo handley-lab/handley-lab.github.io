@@ -1,0 +1,11 @@
+{% raw %}
+Create an abstract image visualizing the concept of accelerated nested sampling with β-flows for gravitational waves.  The image should evoke a sense of speeding up or improving efficiency in the analysis of gravitational wave data.  Consider incorporating visual elements suggestive of:
+
+* **Gravitational waves:** Ripples, distortions of space-time, or spiraling patterns.
+* **Nested sampling:** Layered structures, converging shapes, or a sense of exploration and refinement.
+* **Flow:** Smooth transitions, dynamic movement, or directed lines.
+* **Acceleration/Efficiency:**  Streaking effects, light trails, or a sense of rapid progress.
+
+Avoid literal depictions of graphs, numbers, or text. The overall impression should be artistic and evocative, rather than scientifically precise.  The color palette should be visually appealing and could incorporate colors associated with space or astrophysics.
+
+{% endraw %}

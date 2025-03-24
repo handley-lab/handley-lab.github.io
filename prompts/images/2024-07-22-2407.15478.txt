@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image that visually represents the concept of calibrating Bayesian tension statistics using neural networks.  The image should evoke ideas of balance, comparison, or reconciliation between different datasets, possibly through the use of contrasting colors or shapes.  It should also hint at the use of a neural network, perhaps through interconnected lines or nodes, without explicitly depicting a network diagram.  Avoid including any numerical data, graphs, or text.  The overall aesthetic should be modern and visually appealing, suitable for a scientific blog post about a new method in cosmology.  Consider using themes of cosmic webs, interconnectedness, or the balance of forces in the universe as inspiration.
+
+{% endraw %}

@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image representing the refinement of error estimation in nested sampling for gravitational wave data analysis.  The image should evoke concepts like improved accuracy, convergence, and the utilization of previously discarded information (phantom points). Consider visuals such as converging spirals, shimmering or solidifying nebulae, or the gradual sharpening of a blurry image.  Avoid literal representations of gravitational waves, black holes, or scientific data. The overall aesthetic should be sophisticated and intriguing.
+
+{% endraw %}

@@ -1,0 +1,11 @@
+{% raw %}
+Create an abstract image representing the Bayesian inference of cosmological parameters, such as the Hubble constant (H0), using Gaussian Processes.  Incorporate visual elements suggestive of:
+
+* **Marginalization over uncertainties:** Perhaps a blurred or layered effect, or multiple translucent shapes overlapping.
+* **Kernel selection:** Different textures or patterns subtly interacting.
+* **Exoplanet transits:**  A subtle, stylized representation of a planet passing in front of a star, potentially as a small dark circle partially obscuring a brighter one, or a dip in a smooth, abstract curve.  Avoid literal depiction.
+* **Time series data:** A sense of flow or progression could be implied through color gradients or the arrangement of elements.
+
+The overall style should be modern, artistic, and evocative rather than literal.  The color palette could be inspired by astronomical imagery (e.g., nebulae, galaxies) or be more minimalist. The final image should be suitable for use as a header image for a blog post.
+
+{% endraw %}

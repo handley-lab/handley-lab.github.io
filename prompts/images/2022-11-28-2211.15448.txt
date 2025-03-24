@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image related to Bayesian inference applied to radio frequency interference mitigation.  Visualize the concept of cleaning a noisy radio signal, perhaps by depicting the separation of structured data from chaotic noise. Consider using a color palette inspired by radio waves or astronomical imagery. Avoid any literal representations of graphs, formulas, telescopes, or satellites. The image should evoke a sense of uncovering a clear signal from a noisy background, reflecting the Bayesian process of updating beliefs based on evidence.  Think of terms like signal, noise, filtering, probability, and clarity when composing the image.  The overall aesthetic should be visually appealing and suitable for a scientific blog post header.
+
+{% endraw %}

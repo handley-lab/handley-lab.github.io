@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image visually representing the concept of "Piecewise Normalizing Flows." The image should evoke the idea of a complex distribution being broken down into smaller, more manageable parts, each flowing and transforming individually.  Avoid literal depictions of graphs, numbers, or text. Think in terms of color gradients, flowing shapes, and potentially fragmented or clustered forms that suggest a sense of piecing things together.  Consider using a style reminiscent of fluid dynamics or abstract art. The overall aesthetic should be visually appealing and suggestive of the dynamic nature of normalizing flows.
+
+{% endraw %}
