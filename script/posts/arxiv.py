@@ -1,3 +1,4 @@
+import numpy as np
 from google import genai
 import requests
 import os
@@ -67,7 +68,7 @@ for a, dat in authors.items():
 
 postname = f'{dt.strftime("%Y-%m-%d")}-{arxiv}'
 imagename = f'/assets/images/posts/{postname}.png'
-prompt_save = f'/prompts/posts/{postname}.txt'
+prompt_save = f'/prompts/content/{postname}.txt'
 image_prompt_save = f'/prompts/images/{postname}.txt'
 
 # Get arxiv source
@@ -226,7 +227,7 @@ response
 from PIL import Image
 image = Image.open(BytesIO(
     response.generated_images[0].image.image_bytes
-    )).convert("RGBA")
+    ))
 
 # Save post
 with open(f'_posts/{postname}.md', 'w') as f:
@@ -234,7 +235,7 @@ with open(f'_posts/{postname}.md', 'w') as f:
 print(f"Post saved to _posts/{postname}.md")
 
 # Save image
-image.save(f'.{imagename}', format='PNG', optimize=True)
+image.save(f'.{imagename}')
 print(f"Image saved to .{imagename}")
 
 # Save prompts

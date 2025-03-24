@@ -1,0 +1,4 @@
+{% raw %}
+Generate an abstract image representing the accuracy of posterior recovery using neural network emulators. The image should evoke concepts of approximation, uncertainty, and reliability in a scientific context, possibly hinting at astrophysics or cosmology.  Consider using swirling nebulae, interconnected nodes, or converging light patterns as visual metaphors. Avoid literal depictions of neural networks or graphs. The style should be professional and visually engaging, suitable for a scientific blog post header.  The color palette can be inspired by astronomical imagery.
+
+{% endraw %}

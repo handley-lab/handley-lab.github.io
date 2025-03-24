@@ -1,0 +1,4 @@
+{% raw %}
+Create an abstract image representing the comparison of dynamical dark energy models with the standard ΛCDM model, using the DESI DR2 dataset.  The image should evoke a sense of dynamic change and perhaps a tension between two different concepts. Think of contrasting colors, textures, or shapes to represent the different models. Avoid any literal representation of data or graphs.  Consider using keywords like "cosmic expansion," "dark energy," "cosmological constant," "dynamic universe," and "gravitational lensing" for inspiration, but do not include these words in the image itself.
+
+{% endraw %}
