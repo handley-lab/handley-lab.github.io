@@ -13,8 +13,8 @@ url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
 imagename = f'/assets/images/index.png'
-prompt_save = f'/prompts/posts/index.md'
-image_prompt_save = f'/prompts/images/index.md'
+prompt_save = f'/prompts/posts/index.txt'
+image_prompt_save = f'/prompts/images/index.txt'
 
 # Get arxiv papers
 print(f"Getting arxiv papers")

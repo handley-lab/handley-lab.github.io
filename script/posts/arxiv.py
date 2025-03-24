@@ -67,8 +67,8 @@ for a, dat in authors.items():
 
 postname = f'{dt.strftime("%Y-%m-%d")}-{arxiv}'
 imagename = f'/assets/images/posts/{postname}.png'
-prompt_save = f'/prompts/posts/{postname}.md'
-image_prompt_save = f'/prompts/images/{postname}.md'
+prompt_save = f'/prompts/posts/{postname}.txt'
+image_prompt_save = f'/prompts/images/{postname}.txt'
 
 # Get arxiv source
 print(f"Getting source for {arxiv}")
