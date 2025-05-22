@@ -1,0 +1,18 @@
+{% raw %}
+A 9:16 aspect ratio, abstract, and minimalistic background image. The design should be extremely subtle, intended for a Github Jekyll homepage, ensuring it does not distract from overlying text content. The central area of the image will be obscured, so visual interest must be concentrated towards the top, bottom, and vertical side margins.
+
+Evoke the vastness and mystery of **cosmology** combined with the intricate precision of **artificial intelligence** and **Bayesian statistical methods**.
+
+**Visual Style:**
+*   **Overall:** Ethereal, sophisticated, deep, and contemplative. Think digital painting with a focus on soft gradients, subtle textures, and faint, luminous elements.
+*   **Cosmological Elements (background base):** Deep, muted cosmic colors like indigo, sapphire blue, deep violet, with hints of charcoal grey. Imagine the faintest, large-scale structures of the universe – perhaps subtle, almost imperceptible gradients suggesting the cosmic microwave background anisotropies or the delicate filaments of the cosmic web, rendered as soft, diffuse textures or very gentle color shifts. No bright stars or distinct galaxies.
+*   **AI & Bayesian Inspired Elements (marginal details):**
+    *   Along the vertical margins (left and right edges), visualize extremely delicate, thin, luminous lines or pathways. These could be a pale, desaturated cyan, silver, or a soft, warm off-white. These lines should be abstract, suggesting complex networks, flowing data streams, or the iterative paths of nested sampling algorithms exploring a parameter space. They should appear as though they are subtly emerging from or interacting with the cosmic background, perhaps forming faint, intricate geometric patterns or sparse, interconnected nodes.
+    *   The top and bottom margins can feature slightly more pronounced, but still very subtle, nebulous textures or faint energy glows, hinting at primordial energy fields, inflation, or distant, unresolved cosmic phenomena.
+*   **Minimalism & Subtlety:** Low overall contrast. The elements should feel integrated and almost translucent in places. The "AI" patterns should not be overtly technological (no circuit boards or binary code) but rather organic and algorithmically inspired. The "cosmic" elements should be vast and understated, not busy or cluttered.
+*   **Focus on Margins:** The center of the image should be the most subdued, perhaps a very smooth, deep color field or an extremely diffuse, barely-there texture. The described intricate details and subtle glows must be concentrated towards the edges and corners, drawing the eye outwards.
+
+**Keywords for AI:** Abstract cosmology, AI network aesthetics, Bayesian pathways, subtle energy, deep space, minimalistic, ethereal, luminous lines, faint structures, dark tones, scientific elegance, marginal detail, 9:16, unobtrusive background.
+
+**Avoid:** Bright colors, sharp edges (unless part of the faint line work), recognizable objects, clutter, high contrast in the center, literal depictions of technology or space objects. The overall feeling should be one of quiet depth and intelligent design.
+{% endraw %}

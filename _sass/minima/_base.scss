@@ -203,6 +203,8 @@ pre {
   margin-left: auto;
   padding-right: $spacing-unit * .5;
   padding-left: $spacing-unit * .5;
+  padding-top: $spacing-unit * .5;
+  padding-bottom: $spacing-unit * .5;
   @extend %clearfix;
 
   @media screen and (min-width: $on-large) {
@@ -242,6 +244,7 @@ pre {
   height: 1.25em;
   display: inline-block;
   fill: currentColor;
+  padding: 5px 3px 2px 5px;
   vertical-align: text-bottom;
   overflow: visible;
 }
@@ -279,4 +282,20 @@ table {
     -webkit-overflow-scrolling: touch;
             -ms-overflow-style: -ms-autohiding-scrollbar;
   }
+}
+
+body {
+    background-image: url('/assets/images/backgrond.png');
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    @media screen and (min-width: 1000px) {
+        background-image: url('/assets/images/background.png');
+    }
+}
+
+.wrapper {
+    background-color: $background-color;
+    opacity: 0.96;
+    border-radius: 20px;
 }

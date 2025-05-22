@@ -11,11 +11,11 @@ import yaml
 #TODO: check for improvements that can be made with a view to getting talks to work
 
 arxiv = sys.argv[1]
-#arxiv = '2503.08658'
+#arxiv = '2504.16791'
 
 # Algorithm parameters
-basic_model = "gemini-1.5-flash"
-text_model = "gemini-1.5-pro"
+basic_model = "gemini-2.5-flash-preview-04-17"
+text_model = "gemini-2.5-pro-preview-05-06"
 image_model = "imagen-3.0-generate-002"
 url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
@@ -52,11 +52,11 @@ that most closely match the following authors:
 ```python
 {metadata.authors}
 ```
-Give your answer as comma separate list of keys, in the same order as the authors list. If you cannot find a match, just list the original author name.
+Give your answer just as comma separated list of keys, in the same order as the authors list. Do not give any pre- or post-amble If you cannot find a match, just list the original author name.
 """
 response = client.models.generate_content(model=basic_model, contents=contents)
 authors = response.text.split(',')
-authors = {author.strip():group.get(author.strip(), author.strip()) for author in authors}
+authors = {author.strip():group.get(author.strip(), {}) for author in authors}
 
 for a, dat in authors.items():
     try:

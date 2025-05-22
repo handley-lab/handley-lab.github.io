@@ -1,9 +1,29 @@
-Create an abstract image that evokes the research of the Handley Research Group, which focuses on cosmology, artificial intelligence, and Bayesian statistics.  The image should suggest the vastness and complexity of the universe, while hinting at the intricate patterns and connections revealed through data analysis and AI.  Consider incorporating elements like:
+{% raw %}
+Okay, here's a prompt designed to generate an abstract, visually appealing headline image for The Handley Research Group's website, based on the provided text:
 
-* **Cosmic webs or filaments:**  Representing the large-scale structure of the universe.
-* **Nebulae or galaxies:** Symbolizing the beauty and mystery of the cosmos.
-* **Flowing, interconnected lines or networks:**  Illustrating the interconnectedness of data and the flow of information.
-* **Abstract geometric shapes:**  Hinting at the mathematical and computational aspects of the research.
-* **A sense of depth and dimensionality:**  Conveying the exploration of high-dimensional parameter spaces.
+**Prompt:**
 
-The color palette should be sophisticated and evocative, possibly using deep blues, purples, and oranges.  Avoid literal representations of telescopes, computers, or equations.  The overall impression should be one of wonder, exploration, and discovery.  The image should be suitable for use as a header image on a website.  The style should be professional and high-quality, suitable for a scientific research group.
+"Generate an abstract, artistic representation symbolizing the fusion of deep cosmological exploration and advanced artificial intelligence. Visualize swirling cosmic nebulae, distant stylized galaxies, and subtle hints of gravitational wave ripples or cosmic microwave background patterns, interwoven with elegant, glowing geometric patterns, abstract neural network structures, or flowing data streams representing AI, machine learning, and Bayesian inference.
+
+These two domains should merge and interact harmoniously, suggesting a powerful synergy and the unraveling of cosmic mysteries. The overall mood should be awe-inspiring, sophisticated, and forward-thinking.
+
+Emphasize deep cosmic blues, purples, and blacks, punctuated by luminous accents of gold, silver, or electric teal/cyan to represent technological insight, data, and discovery. The composition should be dynamic yet balanced, suitable for a wide website banner.
+
+**Crucially, the image must be entirely abstract, avoiding any literal depictions of telescopes, computers, equations, text, numbers, or data graphs. Focus on conceptual visual metaphors and aesthetic appeal.**
+
+Keywords for style: conceptual digital art, sci-fi abstract, cosmic intelligence, elegant complexity, luminous data, emergent patterns."
+
+**Breakdown of why this prompt works:**
+
+1.  **Core Theme:** "fusion of deep cosmological exploration and advanced artificial intelligence" – this is the central idea.
+2.  **Visual Metaphors (Cosmology):** "swirling cosmic nebulae, distant stylized galaxies, gravitational wave ripples, cosmic microwave background patterns" – these are evocative but lend themselves to abstraction.
+3.  **Visual Metaphors (AI/Data):** "glowing geometric patterns, abstract neural network structures, flowing data streams" – represents the AI and Bayesian methods.
+4.  **Interaction:** "merge and interact harmoniously, suggesting a powerful synergy" – emphasizes the group's approach.
+5.  **Mood & Tone:** "awe-inspiring, sophisticated, forward-thinking" – sets the desired emotional impact.
+6.  **Color Palette:** Provides guidance for visual appeal and thematic relevance.
+7.  **Composition:** "dynamic yet balanced, suitable for a wide website banner" – practical consideration for its use.
+8.  **Crucial Negative Constraints:** "entirely abstract, avoiding any literal depictions... text, numbers, or data graphs" – directly addresses the user's explicit requirements.
+9.  **Keywords for Style:** Gives the AI image generator further stylistic cues to aim for.
+
+This prompt encourages the AI to create something that feels like "cosmology meets AI" without being a literal diagram, making it suitable as an artistic and intriguing headline image.
+{% endraw %}

@@ -7,14 +7,16 @@ import feedparser
 import requests
 import yaml
 
-text_model = "gemini-1.5-pro"
+basic_model = "gemini-2.5-flash-preview-04-17"
+text_model = "gemini-2.5-pro-preview-05-06"
 image_model = "imagen-3.0-generate-002"
 url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
-imagename = f'/assets/images/index.png'
-prompt_save = f'/prompts/posts/index.txt'
-image_prompt_save = f'/prompts/images/index.txt'
+postname='index'
+imagename = f'/assets/images/{postname}.png'
+prompt_save = f'/prompts/content/{postname}.txt'
+image_prompt_save = f'/prompts/images/{postname}.txt'
 
 # Get arxiv papers
 print(f"Getting arxiv papers")
