@@ -1,4 +1,25 @@
 {% raw %}
-Create an abstract image representing the comparison of dynamical dark energy models with the standard ΛCDM model, using the DESI DR2 dataset.  The image should evoke a sense of dynamic change and perhaps a tension between two different concepts. Think of contrasting colors, textures, or shapes to represent the different models. Avoid any literal representation of data or graphs.  Consider using keywords like "cosmic expansion," "dark energy," "cosmological constant," "dynamic universe," and "gravitational lensing" for inspiration, but do not include these words in the image itself.
+Okay, here's a prompt designed to generate an abstract, visually appealing image for your post, focusing on the core concepts:
 
+---
+
+**Prompt:**
+
+"Abstract cosmological artwork visualizing the tension and interplay between the established ΛCDM model (Lambda Cold Dark Matter) and evolving, dynamical dark energy theories. Depict the ΛCDM concept as a vast, deep, perhaps subtly structured cosmic expanse, representing its foundational nature. Contrast this with dynamical dark energy, visualized as more fluid, energetic, and perhaps slightly chaotic or undulating streams/filaments of light or ethereal matter weaving through or challenging the ΛCDM backdrop. Incorporate subtle visual cues hinting at precision data acquisition, like faint, intersecting geometric lines or focused beams of light (representing DESI's new insights), influencing or revealing aspects of these dark energy forms. The overall mood should be one of profound cosmic mystery, cutting-edge research, and the subtle shift in understanding. Avoid literal representations (no galaxies, telescopes, graphs, or text). Emphasize color contrasts (e.g., deep blues/purples for ΛCDM vs. brighter, perhaps warmer or more varied hues for dynamical energy) and textures to convey the different theoretical concepts. Cinematic lighting, dramatic. High detail. Aspect ratio 16:9."
+
+---
+
+**Breakdown of why this prompt should work:**
+
+*   **"Abstract cosmological artwork"**: Sets the style and theme immediately.
+*   **"tension and interplay"**: Captures the core idea of comparison and potential deviation.
+*   **"ΛCDM model ... vast, deep, subtly structured cosmic expanse"**: Gives a visual anchor for the standard model – stable, foundational.
+*   **"dynamical dark energy ... fluid, energetic, chaotic or undulating streams/filaments"**: Provides a contrasting visual for the evolving models, hinting at the "flexknot" idea of flexibility without being literal.
+*   **"subtle visual cues hinting at precision data acquisition ... (representing DESI's new insights)"**: Incorporates the data aspect without showing instruments or graphs. The "influencing or revealing" part connects the data to the theories.
+*   **"profound cosmic mystery, cutting-edge research, subtle shift in understanding"**: Guides the mood and feeling.
+*   **"Avoid literal representations"**: Reinforces the abstract requirement.
+*   **"Emphasize color contrasts ... and textures"**: Provides specific artistic direction to differentiate the concepts visually.
+*   **"Cinematic lighting, dramatic. High detail. Aspect ratio 16:9."**: Standard good practices for image generation, aiming for quality and the right format for a blog header.
+
+This prompt aims to give the AI enough conceptual meat to work with while allowing for creative interpretation, hopefully resulting in an image that is both relevant and aesthetically pleasing.
 {% endraw %}

@@ -1,0 +1,31 @@
+{% raw %}
+Okay, here are a few prompt options, playing with slightly different angles while adhering to your "abstract, visually appealing, related, no quantitative info" criteria. The goal is to evoke the essence of the paper.
+
+**Option 1 (Focus on the Sky & EoR signal):**
+
+```
+"An abstract, artistic representation of the entire celestial sphere as seen in low-frequency radio waves. Swirling nebulae of deep blues, purples, and faint reds should dominate, hinting at vast cosmic structures. Subtly interwoven should be fainter, more delicate patterns suggesting the elusive signals from the Epoch of Reionization, as if being carefully uncovered. The image should evoke a sense of cosmic scale and the challenge of discerning faint truths. No text or graphs."
+```
+
+**Option 2 (Focus on the Bayesian modeling & calibration process):**
+
+```
+"A sophisticated, abstract visualization representing the process of Bayesian modeling of the sky. Imagine layers of semi-transparent data, like ethereal veils, gradually aligning and clarifying to form a coherent map of low-frequency cosmic emissions. Colors should be rich and deep (cosmic blues, violets, with hints of warm tones for emission hotspots), perhaps with areas of clarity emerging from more diffuse, uncertain regions. The overall feel should be one of precision, discovery, and the filtering of noise. Avoid literal representations like charts or numbers."
+```
+
+**Option 3 (More direct, focusing on foregrounds and the challenge):**
+
+```
+"Abstract cosmic vista depicting the low-frequency radio sky. Emphasize swirling, layered emissions in deep blues, purples, and subtle oranges, suggesting overwhelming Galactic foregrounds. A faint, underlying, and more uniform glow should hint at the Cosmic Dawn signal being meticulously sought. The style should be painterly and ethereal, conveying both the immensity of the foreground challenge and the importance of the faint target. No text or numbers."
+```
+
+**Option 4 (A slightly more minimalist/conceptual approach):**
+
+```
+"An abstract, flowing artwork symbolizing the low-frequency universe. Use smooth gradients and interwoven streams of color (deep indigo, cosmic purple, with subtle traces of ancient light like pale gold or soft cyan) to represent radio waves and cosmic signals. The composition should suggest layers of information and a sense of deep space, with a focus on the interplay between dominant foreground structures and faint, almost hidden, background patterns. Purely visual, no text or scientific diagrams."
+```
+
+**I would probably lean towards Option 1 or 2** as they seem to best capture the multiple facets of the paper (the sky model itself, the Bayesian approach, and the EoR context) in an abstract way.
+
+When you use the prompt, you might also consider adding style keywords if the AI supports them, like "cinematic lighting," "ethereal," "cosmic art," "digital painting," "impressionistic," etc., depending on the aesthetic you're aiming for.
+{% endraw %}

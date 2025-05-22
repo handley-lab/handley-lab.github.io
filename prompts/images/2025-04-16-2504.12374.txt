@@ -1,0 +1,43 @@
+{% raw %}
+Okay, here are a few prompt options, ranging in their level of abstraction and specific focus, designed to generate a visually appealing and relevant image for the post.
+
+**Option 1 (Focus on Resonance and Dynamics):**
+
+```
+Generate an abstract, visually striking image suitable for a scientific article on 'Resonances in reflective Hamiltonian Monte Carlo.' The image should evoke the concept of particles moving within a bounded, perhaps subtly implied geometric space (like a sphere or cube, but abstractly). Key elements to convey are:
+- **Particle dynamics:** Suggest motion, perhaps with streaks of light or flowing energy.
+- **Resonance/Unmixing:** Instead of uniform distribution, show areas where particles seem to cluster, form wave-like patterns, or get trapped in specific pathways. This is the central 'problem' the paper discusses.
+- **High-dimensionality:** Hint at complexity or depth, perhaps through overlapping layers or intricate patterns.
+- **Mood:** Scientific, intriguing, perhaps a little problematic due to the "unmixing" issue.
+- **Style:** Abstract art with a scientific feel, possibly incorporating elements of light and shadow, or fluid dynamics. Use a sophisticated color palette. No text or numbers.
+```
+
+**Option 2 (Focus on Reflection and Boundaries):**
+
+```
+Create an abstract image for a blog post titled 'Resonances in reflective Hamiltonian Monte Carlo.' The image should metaphorically represent the challenge of particles mixing within a confined space due to reflection dynamics.
+Visually emphasize:
+- **Reflections:** Abstract representation of particles or energy bouncing off unseen boundaries.
+- **Pathways:** Some trajectories are smooth and exploratory, while others become trapped or overly regular due to 'resonances'.
+- **Emergent Patterns:** Show subtle, unexpected patterns or concentrations of 'particles' (represented as light, color, or texture) forming within the space, contrasting with areas that appear more uniformly explored.
+- **Style:** Modern digital art, clean, with a focus on light, lines, and geometric forms (even if abstract). Avoid clutter. No text or specific scientific diagrams.
+```
+
+**Option 3 (More Evocative and Conceptual):**
+
+```
+Generate an abstract artwork depicting the concept of 'particle unmixing' and 'resonance' in a high-dimensional system. Imagine luminous particles navigating a complex, bounded environment. Instead of achieving a uniform spread, visualize them creating unexpected coherent structures, standing waves, or getting focused into dense clusters due to subtle reflective interactions. The image should feel dynamic yet also hint at a breakdown of ideal mixing. Use a primarily cool or analytical color palette with highlights or bursts of color indicating the resonant phenomena. No text or graphs.
+```
+
+**Key elements common to good prompts for this topic:**
+
+*   **Abstract:** Crucial, as requested.
+*   **Particles/Energy/Light:** Good metaphors for HMC samples.
+*   **Bounded Space/Boundaries:** Essential for "reflective" HMC. Can be implied.
+*   **Motion/Trajectories:** To show dynamics.
+*   **Clustering/Patterns/Waves:** To represent "resonance" and "unmixing" versus uniform spread.
+*   **Sophisticated/Scientific Feel:** Appropriate for the context.
+*   **No text/numbers/graphs:** Explicitly stated.
+
+I'd recommend trying Option 1 or Option 3 first, as they directly tackle the "resonance" aspect which is central to the paper's title and findings.
+{% endraw %}
