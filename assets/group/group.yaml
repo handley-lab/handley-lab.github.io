@@ -238,7 +238,7 @@ Charlotte Priestley:
     thesis: null
   partiii:
     start: 2024-10-01
-    end: 2020-06-01
+    end: 2025-06-01
     supervisors:
     - Will Handley
     - Harry Bevins
@@ -556,7 +556,7 @@ Panagiotis Mavrogiannis:
 Harvey Williams:
   partiii:
     start: 2024-10-01
-    end: 2020-06-01
+    end: 2025-06-01
     supervisors:
     - Will Handley
     thesis: null
@@ -565,7 +565,7 @@ Harvey Williams:
 Krish Nanavati:
   partiii:
     start: 2024-10-01
-    end: 2020-06-01
+    end: 2025-06-01
     supervisors:
     - James Alvey
     - Will Handley
@@ -584,7 +584,7 @@ Ming Yang:
 Will Templeton:
   partiii:
     start: 2024-10-01
-    end: 2020-06-01
+    end: 2025-06-01
     supervisors:
     - Will Handley
     thesis: null
