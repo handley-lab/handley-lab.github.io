@@ -153,6 +153,15 @@ Anthony Lasenby:
   image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lasenbya.jpg?itok=9nNfXc4k
   links:
     Department webpage: https://www.phy.cam.ac.uk/directory/lasenbya
+Jiamin Hou:
+  postdoc:
+    start: 2025-06-18
+    thesis: null
+  original_image: images/originals/jiamin_hou.jpg
+  image: images/jiamin_hou.jpg
+  links:
+    ORCiD: https://orcid.org/0000-0001-6083-1947
+    Webpage: https://www.mpe.mpg.de/~octobers/
 George Carter:
   postdoc:
     start: 2024-08-12
@@ -221,6 +230,27 @@ Kamran Javid:
     2023-01-01: Quantitative Research & Development (systematic trading), ADIA, United
       Arab Emirates
     2019-10-01: AI Researcher (systematic trading), Arabesque AI, London
+Charlotte Priestley:
+  phd:
+    start: 2025-10-01
+    supervisors:
+    - Will Handley
+    thesis: null
+  partiii:
+    start: 2024-10-01
+    end: 2020-06-01
+    supervisors:
+    - Will Handley
+    - Harry Bevins
+    thesis: null
+  summer:
+    start: 2024-07-01
+    end: 2024-08-30
+    supervisors:
+    - Harry Bevins
+    thesis: null
+  original_image: images/originals/charlotte_priestley.jpg
+  image: images/charlotte_priestley.jpg
 Toby Lovick:
   phd:
     start: 2024-10-01
@@ -526,6 +556,7 @@ Panagiotis Mavrogiannis:
 Harvey Williams:
   partiii:
     start: 2024-10-01
+    end: 2020-06-01
     supervisors:
     - Will Handley
     thesis: null
@@ -534,6 +565,7 @@ Harvey Williams:
 Krish Nanavati:
   partiii:
     start: 2024-10-01
+    end: 2020-06-01
     supervisors:
     - James Alvey
     - Will Handley
@@ -543,6 +575,7 @@ Krish Nanavati:
 Ming Yang:
   partiii:
     start: 2024-10-01
+    end: 2025-06-01
     supervisors:
     - Will Handley
     thesis: null
@@ -551,26 +584,12 @@ Ming Yang:
 Will Templeton:
   partiii:
     start: 2024-10-01
+    end: 2020-06-01
     supervisors:
     - Will Handley
     thesis: null
   original_image: images/originals/will_templeton.png
   image: images/will_templeton.jpg
-Charlotte Priestley:
-  partiii:
-    start: 2024-10-01
-    supervisors:
-    - Will Handley
-    - Harry Bevins
-    thesis: null
-  summer:
-    start: 2024-07-01
-    end: 2024-08-30
-    supervisors:
-    - Harry Bevins
-    thesis: null
-  original_image: images/originals/charlotte_priestley.jpg
-  image: images/charlotte_priestley.jpg
 Tze Goh:
   partiii:
     start: 2023-10-01
