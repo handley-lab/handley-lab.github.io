@@ -3,10 +3,11 @@ from group import people, levels, supervisors
 from yattag import Doc, indent
 import os
 from pandas import DataFrame, to_datetime
+from datetime import datetime, date
 df = DataFrame()
 df['data'] = people
 df['level'] = df.data.apply(lambda x: min(x.levels).key)
-df['present'] =  df.data.apply(lambda x: x.end()==None) 
+df['present'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start <= date.today()) 
 
 html_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.html')
 
