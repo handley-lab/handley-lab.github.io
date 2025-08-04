@@ -7,7 +7,8 @@ from datetime import datetime, date
 df = DataFrame()
 df['data'] = people
 df['level'] = df.data.apply(lambda x: min(x.levels).key)
-df['present'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start <= date.today()) 
+df['present'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start <= date.today())
+df['future'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start > date.today()) 
 
 html_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.html')
 
@@ -40,7 +41,7 @@ with open(html_file, 'w') as f:
     with doc.tag('style'):
         doc.asis(css)
 
-    for i, df in enumerate([df[df.present], df[~df.present]]):
+    for i, df in enumerate([df[df.present], df[~df.present & ~df.future]]):
         for level in levels:
             if level == 'coi':
                 continue
