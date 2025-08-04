@@ -1,0 +1,46 @@
+{% raw %}
+Excellent. This is a perfect use case for an abstract, conceptual image. The goal is to evoke the *feeling* and *concept* of the research—bringing clarity and a smooth underlying truth out of noisy, discrete data—without being literal.
+
+Here is a prompt designed to generate a suitable image, along with a few variations that emphasize different aspects of the paper.
+
+### Primary Prompt
+
+This prompt focuses on the core idea of inferring a smooth, continuous function from noisy, discrete points. It's the most direct visual metaphor for the paper's contribution.
+
+```
+An abstract and elegant digital artwork representing the inference of a clean signal from noisy data. In a dark, deep-blue void, there is a scattered cloud of faint, glowing digital particles, representing stochastic data points. Emerging from this chaotic cloud and gracefully weaving through it is a single, smooth, brilliant white or golden luminous curve. The curve is clean and confident, starkly contrasting with the noisy, scattered points it is derived from. The overall mood is one of clarity, precision, and discovery. Minimalist yet complex, cinematic lighting, ultra high resolution.
+```
+
+---
+
+### Why this prompt works:
+
+*   **Abstract:** It explicitly calls for "abstract digital artwork" and avoids any real-world objects.
+*   **No Quantitative Info:** There are no axes, numbers, or text. The "particles" and "curve" are conceptual.
+*   **Visually Appealing:** Uses evocative words like "elegant," "graceful," "luminous," "brilliant," "cinematic lighting," and "ultra high resolution" to guide the AI toward a high-quality, aesthetic result.
+*   **Related to the Topic:**
+    *   "Scattered cloud of faint, glowing digital particles" directly represents the noisy nested sampling data (`L_i`).
+    *   "A single, smooth, brilliant... luminous curve" represents the inferred, continuous `L(X)` function using Information Field Theory.
+    *   The contrast between the two visually captures the paper's central theme: improving accuracy and finding the underlying structure.
+    *   "Clarity, precision, and discovery" sets the intended emotional tone of the scientific breakthrough.
+
+### Alternative Prompts
+
+Here are two other options that play on different concepts from the paper.
+
+#### Alternative 1 (Focus on "Nested Sampling")
+
+This prompt uses the metaphor of nested shells to represent the shrinking prior volumes.
+
+```
+A conceptual, abstract visualization of information theory. In the center are several concentric, translucent, glowing shells, as if looking at the layers of an onion made of cosmic energy. The shells have subtle imperfections and digital noise on their surfaces. A smooth, flowing river of golden light pierces through the layers, revealing a clear path from the outer shell to the core. The aesthetic is celestial and scientific, set against a deep space background, conveying a sense of order being found within a structured but noisy system.
+```
+
+#### Alternative 2 (Focus on "Information Field Theory")
+
+This prompt leans into the name of the method itself, imagining what an "information field" might look like.
+
+```
+A futuristic and abstract representation of an information field. A vast, dark space is filled with a sparse cloud of faint data points. A vibrant, complex web of interconnected, flowing lines of light, like a mix between a neural network and cosmic filaments, permeates the space. The field looks like it is actively inferring structure from the scattered points, with lines converging and strengthening as they pass through denser regions of data. The image should feel data-driven, ethereal, and intelligent.
+```
+{% endraw %}

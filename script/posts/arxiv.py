@@ -14,8 +14,8 @@ arxiv = sys.argv[1]
 #arxiv = '2504.16791'
 
 # Algorithm parameters
-basic_model = "gemini-2.5-flash-preview-04-17"
-text_model = "gemini-2.5-pro-preview-05-06"
+basic_model = "gemini-2.5-flash"
+text_model = "gemini-2.5-pro"
 image_model = "imagen-3.0-generate-002"
 url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
@@ -58,7 +58,10 @@ response = client.models.generate_content(model=basic_model, contents=contents)
 authors = response.text.split(',')
 authors = {author.strip():group.get(author.strip(), {}) for author in authors}
 
-for a, dat in authors.items():
+# Filter for group members before image assignment
+group_members = {a: dat for a, dat in authors.items() if dat}  # Only include authors found in group.yaml
+
+for a, dat in group_members.items():
     try:
         if dat['image'].startswith('images/'):
             dat['image'] = f'/assets/group/{dat["image"]}'
@@ -84,10 +87,10 @@ with tarfile.open(fileobj=tar_stream, mode='r') as tar:
         if member.name.endswith('.bbl'):
             bbl += file.read().decode('utf-8')
 
-# Retrieve images for authors
-height = 100//max(len(authors)+2, 4)
+# Retrieve images for group members only
+height = 100//max(len(group_members)+2, 4)
 style = f'width: auto; height: {height}vw;'
-images = ''.join([f"<img src=\"{dat['image']}\" alt=\"{a}\" style=\"{style}\">" for a, dat in authors.items()])
+images = ''.join([f"<img src=\"{dat['image']}\" alt=\"{a}\" style=\"{style}\">" for a, dat in group_members.items()])
 
 prompt = f"""
 Title: Create a Markdown Blog Post Integrating Research Details and a Featured Paper

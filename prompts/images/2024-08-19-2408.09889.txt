@@ -1,0 +1,16 @@
+{% raw %}
+An excellent prompt needs to capture the core concepts of the post in an abstract, visual metaphor. The key ideas are:
+
+1.  **Nested Sampling:** A process of exploring a space with shrinking, "nested" volumes. This can be visualized as concentric shells, Russian dolls, or layers of an onion.
+2.  **Stochasticity/Noise:** The original method has random errors, making the result jagged or uncertain. This can be visualized as chaotic particles, a noisy signal, or a fractured/pixelated form.
+3.  **Field Theory / Smoothing:** The new method uses a "field" to infer a smooth, continuous underlying reality from the noisy data. This can be visualized as flowing lines of force, a smooth river of light, or a magnetic field organizing scattered filings.
+4.  **Context:** The work is applied to high-dimensional problems in cosmology/astrophysics, suggesting a cosmic or ethereal aesthetic (nebulae, deep space, flowing light).
+
+Here is a prompt designed to synthesize these elements into a single, compelling image.
+
+---
+
+### Suggested Prompt:
+
+**A vibrant, abstract visualization of information flowing through a complex system. On one side of the image, represent stochasticity with a cloud of chaotic, disconnected, glowing particles. This cloud transitions across the image, being organized and smoothed by an elegant, flowing field of light into a series of perfect, nested, luminous shells or contours. The aesthetic should be cosmic and ethereal, with deep blues, purples, and gold highlights, reminiscent of a nebula being shaped by a gravitational field. The image should be beautiful and conceptual, conveying a sense of order and precision emerging from randomness, without any text or graphs.**
+{% endraw %}

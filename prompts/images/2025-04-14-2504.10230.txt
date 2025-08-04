@@ -1,0 +1,20 @@
+{% raw %}
+Excellent. This is a great example of a modern academic blog post. The goal is to create a headline image that is abstract, evocative, and scientifically relevant without being a literal diagram.
+
+Here is a prompt designed to generate such an image. It fuses the core concepts of the paper—the cosmic web, galaxy clusters, and the "learning" process of simulation-based inference (visualized as a neural network)—into a single, cohesive artistic concept.
+
+### The Prompt:
+
+**An abstract, cinematic digital art piece visualizing the intersection of cosmology and artificial intelligence. The scene is a deep, dark representation of the large-scale structure of the universe, with ethereal filaments of the cosmic web rendered in deep blues and purples. At the nodes of this web, brilliant, concentrated points of golden light represent massive galaxy clusters. Overlaid and intertwined with this cosmic structure is a glowing, abstract representation of a neural network or a data-driven inference process. This network, made of fine, electric-blue lines of light, connects the galaxy clusters, suggesting a process of learning and extracting information directly from the simulated structure. The overall feeling should be one of immense scale, complexity, and a new frontier of discovery, blending the organic structure of the cosmos with the digital precision of simulation-based inference. The image should be abstract and visually stunning, containing no text, graphs, or explicit equations.**
+
+### Why this prompt works:
+
+*   **Abstract & Non-Quantitative:** It explicitly requests an "abstract... digital art piece" and forbids "text, graphs, or explicit equations," meeting your core requirements.
+*   **Visually Appealing:** Words like "cinematic," "ethereal," "brilliant," "glowing," and "visually stunning" guide the AI toward a high-quality, aesthetically pleasing result.
+*   **Thematic Relevance:**
+    *   **"Cosmic web" & "Galaxy clusters":** Directly mentions the physical objects of study.
+    *   **"Neural network / data-driven inference process":** Provides a powerful visual metaphor for Simulation-Based Inference (SBI), the key method of the paper.
+    *   **"Intertwined," "connects the galaxy clusters":** Visually represents the paper's central idea—using the new method to analyze the clusters.
+    *   **"Blending the organic... with the digital":** Captures the essence of using simulations (digital) to understand the universe (organic).
+*   **Sets a Tone:** The prompt aims for a feeling of "immense scale, complexity, and a new frontier of discovery," which perfectly matches the forward-looking and impactful tone of the blog post.
+{% endraw %}

@@ -1,0 +1,30 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from more conceptual to more metaphorical, designed to generate a fitting headline image for your post. Each prompt adheres to the constraints: abstract, no quantitative information, visually appealing, and relevant.
+
+### Option 1 (Focus on the Signal vs. Noise)
+
+This prompt focuses on the core challenge described in the paper: extracting a faint, hidden signal from overwhelming noise.
+
+**Prompt:**
+> An abstract cosmological artwork depicting the search for the 21-cm signal. A vast, turbulent, and chaotic expanse of bright, swirling colors like red and orange represents the overwhelming astrophysical foregrounds. From within this visual noise, a single, faint, coherent thread of deep blue or silver light is being carefully extracted and revealed. The style is ethereal and cosmic, conveying a sense of immense scale and a breakthrough discovery. Digital art, high detail.
+
+### Option 2 (Focus on the Method: Simulation-Based Inference)
+
+This prompt visualizes the "paradigm shift" of using AI/SBI to solve the problem.
+
+**Prompt:**
+> An abstract representation of simulation-based inference for cosmology. On one side, a chaotic, high-dimensional cloud of multi-colored data points represents complex simulations. This cloud flows into and is processed by a luminous, intricate network of glowing nodes and connections, representing a neural network. The network funnels and refines the chaos, causing a single, pure, focused beam of white light—the recovered truth—to emerge on the other side. The aesthetic is futuristic and digital, emphasizing the theme of data, computation, and clarity.
+
+### Option 3 (Focus on the Subject: Cosmic Dawn)
+
+This prompt is a more direct, yet still abstract, visualization of the scientific subject itself.
+
+**Prompt:**
+> A dark, deep-blue and purple cosmic void, representing the primordial universe during the Cosmic Dawn. Faint, ethereal tendrils of white and gold light begin to weave through the darkness, signifying the faint 21-cm signal and the birth of the first stars. The image should feel vast, mysterious, and primordial, hinting at the creation of the first cosmic structures. The style is abstract and painterly, evoking a sense of wonder.
+
+---
+
+**Recommendation:**
+
+For your specific post, **Option 1** is likely the most effective. It visually captures the central narrative of the paper: the struggle and ultimate success of finding a "needle in a haystack," which is the main theme you emphasize in the text.
+{% endraw %}

@@ -1,0 +1,15 @@
+{% raw %}
+**Prompt for an AI Image Generator (e.g., Imagen, Midjourney, DALL-E):**
+
+An abstract and epic digital painting depicting the Cosmic Reionization.
+
+The scene is a vast, dark, nebulous expanse, representing the neutral, opaque universe during the cosmic dark ages. This darkness is being dramatically and rapidly cleared by a few, distinct, and intensely powerful sources of light, representing massive primordial galaxies.
+
+From these brilliant sources, huge, overlapping bubbles of transparency and light expand, carving through the cosmic fog. The transition from darkness to light is swift and decisive.
+
+As a visual metaphor for the multi-probe data analysis, several streams of ethereal light converge from the foreground. Each stream has a unique color and texture (e.g., faint patterned blue, subtle rippling red, sharp bright yellow) to symbolize the different datasets—CMB, 21-cm, and Lyman-line—that are combined to create this unified view.
+
+**Style:** A blend of astronomical art and abstract expressionism. Cinematic, awe-inspiring, with vibrant colors set against the deep blacks of space. The image should convey the core scientific ideas—a rapid reionization driven by massive galaxies, revealed through the fusion of diverse data.
+
+**Crucially, the image must be entirely abstract and contain no text, numbers, or graphs.**
+{% endraw %}

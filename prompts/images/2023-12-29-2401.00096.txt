@@ -1,0 +1,27 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a fitting headline image, along with a few alternatives that explore different aspects of the paper.
+
+### Primary Prompt
+
+This prompt focuses on the core idea of a single "foundation" model giving rise to diverse material structures.
+
+**An abstract digital art piece symbolizing a universal foundation model for chemistry. At the center, a luminous, complex nexus of light. Emanating from this central point are diverse, ethereal structures: one side shows glowing, interconnected spheres forming a perfect crystalline lattice, while another side morphs into a dynamic, flowing liquid state. The entire image is connected by faint, pulsating lines of energy, representing the flow of information. The aesthetic is clean, futuristic, and sophisticated, with a color palette of deep blues, purples, and shimmering gold. No text or graphs. Cinematic lighting, high detail.**
+
+---
+
+### Alternative Prompts
+
+Here are a few other options that emphasize different concepts from the paper:
+
+**Alternative 1 (Focus on Versatility):**
+
+> A visual metaphor for a single AI model simulating diverse chemical systems. The image shows a seamless transition across different states of matter. On the left, a detailed, glowing metal-organic framework (MOF) with porous, geometric precision. This structure slowly morphs towards the right, becoming an ordered crystalline structure like ice, and then dissolves further into a dynamic, abstract representation of liquid water. A subtle, unifying network of glowing, ethereal lines underpins the entire scene, suggesting a single computational foundation. The style is abstract, elegant, and cinematic. Macro photography aesthetic, with a shallow depth of field.
+
+**Alternative 2 (Focus on "Message Passing"):**
+
+> An abstract, high-contrast visualization of an equivariant message-passing neural network for materials. A cluster of stylized, semi-transparent spheres representing atoms fills the space. Vibrant beams of light arc between the spheres, representing the flow of information and forces. The paths of light are complex and multi-bodied, showing information being passed not just between pairs but among triplets and larger groups of atoms. The overall mood is dark, computational, and futuristic, with neon blues, magentas, and oranges against a dark background. Minimalist but intricate.
+
+**Alternative 3 (More Minimalist):**
+
+> An elegant, minimalist, abstract image representing the unification of materials chemistry. A single, glowing, intricate atomic crystal lattice structure is positioned centrally. From this one structure, wisps of light and energy flow outwards, subtly suggesting other forms—the chaotic arrangement of a liquid, the complex surface of a catalyst. The background is dark and clean, putting all focus on the central structure and its potential. Color palette of silver, white, and electric blue.
+{% endraw %}

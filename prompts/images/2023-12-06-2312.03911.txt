@@ -1,0 +1,7 @@
+{% raw %}
+An abstract digital art piece visualizing a complex computational process. In the center is a multi-peaked, glowing core representing a multimodal probability distribution. This core is surrounded by several translucent, concentric, geometric shells, like the layers of a cosmic onion, which represent likelihood contours.
+
+Luminous streams of energy, like comets, flow inwards from the dark outer edges. These streams follow curved paths as if guided by a gravitational field. Crucially, upon reaching one of the translucent shells, they sharply **reflect** off its inner surface, changing direction to continue exploring the space between the shells, getting progressively closer to the center.
+
+The aesthetic is dark, sophisticated, and technological, with a color palette of deep blues, purples, and vibrant, glowing cyans and magentas. The image should feel dynamic and elegant, capturing the idea of efficiently exploring a complex, high-dimensional space.
+{% endraw %}

@@ -1,0 +1,26 @@
+{% raw %}
+Excellent. Here is a prompt crafted to generate an image for the blog post, adhering to your specified constraints.
+
+The prompt is designed to capture the core visual themes of the paper: the cosmic string, the radio background it creates, and its interaction with the environment of the Cosmic Dawn.
+
+---
+
+### The Generated Prompt:
+
+```
+An abstract, cinematic image of the early universe, capturing the essence of cosmic dawn. A single, vibrant filament representing a superconducting cosmic string stretches across the dark, textured void. The string radiates a subtle, pervasive glow, visualizing the low-frequency radio background it emits. This faint light interacts with the deep, cool colors of the surrounding primordial gas, hinting at the 21-cm signal. The style is epic and mysterious, focusing on the interplay of a sharp, energetic line of light with a diffuse, cosmic background.
+
+The image should be abstract, and not try to relay any quantitative information (so no graphs, numbers or text). It should be visually appealing and related to the topic of the paper.
+```
+
+### Rationale for this Prompt:
+
+*   **"Abstract, cinematic image of the early universe..."**: This sets the overall tone and style, aiming for something beautiful and grand rather than a literal scientific diagram.
+*   **"...capturing the essence of cosmic dawn."**: This grounds the image in the specific cosmological era discussed in the paper.
+*   **"A single, vibrant filament representing a superconducting cosmic string..."**: This identifies the main subject. "Vibrant filament" is a strong visual cue for an AI.
+*   **"...stretches across the dark, textured void."**: This establishes the vast, empty setting of the very early cosmos. "Textured" adds a layer of visual interest.
+*   **"The string radiates a subtle, pervasive glow, visualizing the low-frequency radio background it emits."**: This is the key physical effect. It translates the concept of a radio background into a visual element ("pervasive glow").
+*   **"This faint light interacts with the deep, cool colors of the surrounding primordial gas, hinting at the 21-cm signal."**: This brings in the other major component of the paper—the 21-cm signal—and describes its relationship to the string's radiation in an abstract way.
+*   **"The style is epic and mysterious... focusing on the interplay of a sharp, energetic line of light with a diffuse, cosmic background."**: This provides final stylistic instructions, emphasizing the contrast between the string (the new physics) and its environment (the astrophysics), which is a central theme of the research.
+*   **The final paragraph is your exact constraint language**, included to reinforce the most important rules for the AI generator.
+{% endraw %}

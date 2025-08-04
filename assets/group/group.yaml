@@ -11,7 +11,7 @@ James Alvey:
     thesis: null
   image: https://www.kicc.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/profilepicture-min_1.jpeg?itok=ccmz2RPK
   links:
-    Department webpage: Department webpage
+    Department webpage: https://www.kicc.cam.ac.uk/staff/dr-james-alvey
 "G\xE1bor Cs\xE1nyi":
   coi:
     start: 2023-10-01
@@ -23,7 +23,7 @@ Chris Lester:
   coi:
     start: 2023-10-01
     thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lesterc.jpg?itok=QNLbVvIS
+  image: https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/lester-150x150.jpg
   links:
     Department webpage: https://www.phy.cam.ac.uk/directory/lesterc
 Harry Bevins:
@@ -72,7 +72,7 @@ Mark Ashdown:
   coi:
     start: 2021-10-01
     thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/dr_mark_ashdown.png?itok=rkun0buR
+  image: https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/mark-ashdown-150x150.png
   links:
     Department webpage: https://www.phy.cam.ac.uk/staff/dr-mark-ashdown
 David Stefanyszyn:
@@ -143,14 +143,14 @@ Mike Hobson:
   coi:
     start: 2012-10-01
     thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/hobsonm.jpg?itok=H1iEFAas
+  image: https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/hobson-150x150.jpg
   links:
     Department webpage: https://www.phy.cam.ac.uk/directory/hobsonm
 Anthony Lasenby:
   coi:
     start: 2012-10-01
     thesis: null
-  image: https://www.phy.cam.ac.uk/sites/default/files/styles/leading/public/media/profile/lasenbya.jpg?itok=9nNfXc4k
+  image: https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/lasenby-150x150.jpg
   links:
     Department webpage: https://www.phy.cam.ac.uk/directory/lasenbya
 Natalie Hogg:

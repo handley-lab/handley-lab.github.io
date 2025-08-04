@@ -1,0 +1,11 @@
+{% raw %}
+An abstract, conceptual digital art piece that serves as a visual metaphor for separating a faint cosmological signal from overwhelming noise.
+
+On the left side of the image, a faint, delicate, coherent sine wave of cosmic blue and purple light, representing the 21-cm signal from the Cosmic Dawn, is almost entirely overwhelmed by a vast, turbulent, multi-layered torrent of fiery orange, red, and yellow noise, representing galactic foregrounds. Within the bright noise are sharp, jagged, white-hot artifacts, representing mathematical singularities and instrumental errors.
+
+In the center, a sophisticated, semi-transparent, luminous filtering process, depicted as an intricate, evolving geometric or probabilistic network, is acting upon the combined signal and noise. This filter is selectively dampening the chaotic orange noise and smoothing out the sharp, jagged singularities.
+
+On the right side of the image, the pristine, underlying blue cosmic wave emerges, now clear, distinct, and free from the overwhelming noise and artifacts. The background is a deep, cosmic black.
+
+The overall aesthetic should be cinematic, ethereal, and high-contrast, emphasizing the immense challenge and the elegance of the solution. The image should be beautiful and evocative of cosmology, signal processing, and Bayesian inference without being a literal diagram.
+{% endraw %}

@@ -1,0 +1,7 @@
+{% raw %}
+An abstract, ethereal digital art piece with a cosmic theme. The image depicts a vast, diffuse cloud of glowing particles, representing a high-dimensional prior volume. Within this cloud, there are faint, concentric, onion-like shells, hinting at the "nested" nature of the algorithm.
+
+The central action of the image is the process of "anisotropic compression": the cloud is not shrinking uniformly into a sphere, but is being drawn inward and stretched into a long, glowing, filament-like structure. This filament, composed of increasingly dense points of light, extends across the scene, converging towards a single, brilliant, focused point of light on the horizon—the "approximated end".
+
+The color palette should be deep and cosmic, with blues, purples, and blacks for the background space, and golds, cyans, and whites for the luminous particles and the final point of convergence. The overall feeling is one of a grand, elegant, and predictable process unfolding over immense scales of time and space, moving from chaotic diffusion to a focused conclusion.
+{% endraw %}

@@ -1,0 +1,15 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a visually compelling, abstract image that captures the essence of the blog post. It focuses on the core concepts of "tension," "resolution," and "torsion" in a cosmological context, while adhering to your constraints.
+
+### The Generated Prompt:
+
+An abstract cosmological artwork symbolizing the Hubble tension and its resolution through spacetime torsion.
+
+The image should be conceptually split. On one side, represent the early universe with a smooth, glowing, mottled texture reminiscent of the Cosmic Microwave Background. On the other side, represent the late universe as a dark expanse, punctuated by the sharp, bright lights of distant galaxies and supernovae.
+
+A visible "tension" or fracture exists between these two sides. However, bridging this gap is a powerful yet elegant vortex of twisting, spiraling light and shadow. This central feature, representing Torsion, should appear to be harmonizing the two sides, smoothing the fracture.
+
+The color palette should be deep and cosmic—rich blues, purples, and blacks, with the torsion vortex and celestial objects rendered in ethereal golds and brilliant whites. The style should be elegant, cinematic, and minimalist, conveying a sense of profound cosmic mystery being solved.
+
+**Crucially, the image must be completely abstract, with no text, numbers, graphs, or realistic depictions of celestial bodies.**
+{% endraw %}

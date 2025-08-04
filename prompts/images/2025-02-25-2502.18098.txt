@@ -1,0 +1,13 @@
+{% raw %}
+An abstract, epic digital painting of the Cosmic Dawn. The scene depicts the very early universe, a vast expanse of dark, cosmic fog representing neutral hydrogen. Emerging from this darkness are the first stars (Population III stars), visualized not as simple points but as abstract sources of light that hint at their different masses.
+
+Central to the image is the interplay of light representing different stellar mass functions:
+*   Intensely bright, sharp, blue-white flares of light signify massive, hot stars.
+*   These are contrasted with a more diffuse, widespread glow of warmer, orange-red light, representing a multitude of smaller stars.
+
+Emanating from the brightest sources are energetic, crackling tendrils of violet and magenta light, symbolizing the X-rays from high-mass X-ray binaries heating the surrounding cosmic gas.
+
+Superimposed over the entire scene are vast, faint, ghostly ripples or wave-like patterns, a visual metaphor for the 21-cm radio signal that carries this information across cosmic time.
+
+The overall mood is one of mystery, immense scale, and the dawning of a new era. The composition is dynamic and ethereal, focusing on the abstract interplay of light, color, and texture. No literal objects like telescopes or galaxies should be visible. High-contrast, cinematic lighting.
+{% endraw %}

@@ -1,0 +1,28 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a fitting image for the post, along with an explanation of why it's structured the way it is.
+
+### The Prompt
+
+```
+An abstract, artistic representation of the search for sub-GeV dark matter, designed for a science article headline. The image must visually contrast the concepts of 'resonant' and 'asymmetric' dark matter models.
+
+Represent the 'resonant' model as a very sharp, fine-tuned, glowing filament of light, almost like a perfect laser beam or a single, pristine standing wave, cutting through a dark, cosmic void. This symbolizes the precise, knife-edge condition required for this model.
+
+Represent the 'asymmetric' model as a swirling, lopsided nebula or a vast cloud of ethereal particles. Within this cloud, there is a clear imbalance: one type of glowing particle (e.g., deep purple) vastly outnumbers a second, fading type (e.g., faint orange), illustrating how one component has been annihilated away, leaving the other behind.
+
+These two concepts should coexist within a single, cohesive cosmic scene. The overall style should be dark, mysterious, and beautiful, evoking the vastness of space and the fundamental nature of particle physics. The color palette should be dominated by deep blues, purples, and blacks, with glowing highlights for the particles and the resonant beam.
+
+Crucially, the image must remain entirely abstract: no text, numbers, graphs, or explicit diagrams of particle interactions.
+```
+
+### Rationale for the Prompt's Design
+
+*   **Headline-Worthy and Abstract:** The prompt begins by stating the purpose ("science article headline") and the core constraint ("abstract, artistic representation"). This sets the tone and prevents the AI from creating a literal, textbook-style diagram.
+*   **Central Dichotomy:** The prompt is built around the paper's title: "Resonant or asymmetric." By asking the AI to visually contrast these two core ideas, the resulting image will directly reflect the article's main theme.
+*   **Visual Metaphors:** It provides concrete, yet abstract, visual metaphors for the key physics concepts:
+    *   **Resonance:** Described as a "sharp, fine-tuned, glowing filament" or a "pristine standing wave." This captures the essence of a very specific, high-precision condition ($m_{A'} \approx 2m_{\text{DM}}$) without needing equations. The "knife-edge" analogy reinforces the idea of fine-tuning.
+    *   **Asymmetry:** Described as a "lopsided nebula" or a particle cloud with a "clear imbalance." This is a direct and intuitive way to visualize a particle-antiparticle asymmetry where the minority component has been depleted.
+*   **Cohesive Composition:** It explicitly requests that these two elements "coexist within a single, cohesive cosmic scene," preventing a simple split-screen effect and encouraging a more integrated, artistic composition.
+*   **Mood and Palette:** Specifying the style ("dark, mysterious, beautiful") and a color palette ("deep blues, purples, blacks") guides the AI towards an aesthetic that is commonly associated with cosmology, dark matter, and the vastness of space.
+*   **Explicit Negative Constraints:** The final sentence, "Crucially, the image must remain entirely abstract: no text, numbers, graphs, or explicit diagrams," is a direct instruction to avoid the pitfalls of scientific illustration, ensuring the final image is artistic and suitable for a headline.
+{% endraw %}
