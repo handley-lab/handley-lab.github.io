@@ -1,0 +1,7 @@
+{% raw %}
+Excellent. This is a perfect use case for a conceptual, abstract image. The goal is to evoke the core ideas of the paper without being literal. Here is a prompt designed to do just that, drawing on the key themes of cosmology, data fusion, noise reduction, and machine learning.
+
+### Generated Prompt
+
+**A highly detailed, abstract digital artwork with a cosmic theme. In the center of the image, two large, swirling nebulae of data—one a deep, cosmic blue, the other a fiery, energetic orange—are converging. These represent two distinct cosmological datasets. As they meet, they don't just mix, but are channeled through a luminous, intricate, crystalline structure that glows with a soft white light. This structure represents a neural network or a masked autoregressive flow, filtering and processing the information. Surrounding the converging nebulae is a chaotic, hazy, and noisy cloud of faint, multicolored particles, representing the nuisance parameters. The crystalline structure is clearly separating the core data streams from this surrounding noise. Emerging from the other side of the structure is not a mixture, but a single, incredibly sharp, focused, and coherent beam of pure white light, representing the final, distilled, nuisance-free posterior. The overall composition should be elegant and cinematic, conveying a sense of clarity and insight emerging from complexity and noise. The style should be reminiscent of high-end scientific visualization, but purely conceptual and beautiful.**
+{% endraw %}

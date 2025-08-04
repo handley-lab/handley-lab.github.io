@@ -1,0 +1,3 @@
+{% raw %}
+An abstract digital art visualization of a Bayesian neural network's "split personalities". From a single point, two distinct and separate streams of luminous, colored energy emerge and flow outwards, representing two different solutions. These two streams then curve towards each other, overlapping and interfering to create a third, more complex, stable, and intricate pattern of light where they merge. The aesthetic is clean, elegant, and high-tech, set against a dark, minimalist background.
+{% endraw %}

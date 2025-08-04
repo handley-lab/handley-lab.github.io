@@ -1,0 +1,43 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a visually compelling, abstract image for the blog post on nested sampling.
+
+### Primary Prompt
+
+This prompt is designed to be descriptive and evocative, combining the key visual metaphors of nested contours, exploring particles, and a journey towards a central peak.
+
+**Prompt:**
+```
+An abstract digital art piece visualizing the concept of nested sampling. A luminous, complex 3D energy landscape with rolling hills and deep valleys, seen from above. The landscape is defined by shimmering, translucent, nested iso-contours of light, like a topographic map made of glass. These contours are most sparse on the outside and become increasingly dense and bright towards a single, brilliant peak at the center. A swarm of small, glowing particles is scattered across the landscape, with most of them clustered near the central peak, illustrating a search process converging on a solution. The aesthetic is futuristic and clean, with a dark background to make the vibrant blues, purples, and gold of the landscape and particles stand out. Cinematic lighting, high detail, no text or numbers.
+```
+
+---
+
+### Alternative Prompts
+
+Here are a few variations that focus on different aspects of the concept.
+
+**Alternative 1 (Focus on the "Nesting" metaphor):**
+```
+Abstract art of a cosmic object resembling a translucent onion made of pure energy. Each layer is a different colored, glowing, semi-transparent shell, becoming progressively smaller and more intensely brilliant towards the core. Tiny star-like particles are visible within the layers, most densely concentrated near the luminous center. Ethereal and beautiful, with nebula-like textures in the background.
+```
+
+**Alternative 2 (Focus on "Dimensional Reduction"):**
+```
+An abstract visualization of a wide, chaotic swarm of glowing data points being drawn into a smooth, orderly vortex. The mouth of the vortex is vast and diffuse, representing a high-dimensional space. As the particles spiral inward, their path becomes a single, bright, well-defined stream, converging on a point of intense light. The image should convey a sense of simplification, from chaos to order. Sleek, minimalist design, neon accents on a black background.
+```
+
+**Alternative 3 (More Minimalist):**
+```
+A 3D topographic map made of concentric, glowing rings of light on a dark plane. The rings are widely spaced at the edges and become tightly packed and brighter towards the center, forming a luminous peak. A few stray particles of light are scattered in the outer regions, while a dense cluster of particles illuminates the central peak. Abstract, minimalist, high contrast, blue and orange light.
+```
+
+### Rationale for the Prompt Design
+
+*   **Abstract & No Quantitative Info:** The prompts explicitly request "abstract digital art" and forbid "text or numbers," directly adhering to your constraints.
+*   **Visually Appealing:** Keywords like "luminous," "shimmering," "cinematic lighting," "vibrant," and "ethereal" are used to guide the AI towards an aesthetically pleasing result suitable for a headline.
+*   **Related to the Topic:**
+    *   **"Nested iso-contours" / "Concentric shells"**: This is the core visual metaphor for the nested sampling algorithm, which integrates over contours of constant likelihood.
+    *   **"Swarm of glowing particles"**: These represent the "live points" used in the algorithm.
+    *   **"Converging on a central peak"**: This visualizes the process of discarding low-likelihood points and exploring towards the high-likelihood regions of the posterior.
+    *   **"Landscape" / "Hills and valleys"**: This represents the complex, multi-dimensional parameter space that the algorithm explores.
+{% endraw %}

@@ -1,0 +1,36 @@
+{% raw %}
+Excellent. The goal is to create a prompt for an abstract, visually appealing image that captures the essence of "hunting for a faint signal in a massive, smooth background" without being a literal graph. The key concepts are:
+
+*   **Vastness/Overwhelming Background:** A huge, smooth, mostly featureless space.
+*   **The Hunt/Search:** The act of looking for something small.
+*   **The Signal/Bump:** A tiny, significant, but subtle anomaly.
+*   **Precision/Clarity from Noise:** The signal is distinct, not just random noise.
+*   **Abstract & Elegant:** It should feel like high-concept digital art, not a diagram.
+
+Here are a few options, ranging from more direct metaphor to more abstract.
+
+---
+
+### Prompt Option 1 (Recommended)
+
+This prompt focuses on the core metaphor of a landscape and a subtle, luminous discovery. It's direct, evocative, and gives the AI clear artistic direction.
+
+**Prompt:**
+> An abstract digital art piece representing the search for a new particle. The image depicts a vast, dark, smoothly curving digital landscape, almost like a rolling sand dune or flowing silk seen from above. The surface is mostly uniform and featureless, representing a massive background dataset. In one specific area, a small, subtle, but distinct and gently glowing peak or 'bump' rises from the smooth surface. This anomaly is the clear focal point, representing a rare signal found within overwhelming noise. The aesthetic is clean, minimalist, and cinematic, with a strong sense of scale and discovery. The color palette is dark and monochromatic (deep blues or charcoals) with a single contrasting accent of warm gold or white light for the signal. The image should be abstract and contain no text, numbers, or graph-like axes.
+
+### Prompt Option 2 (More Conceptual)
+
+This option leans more into the "signal vs. noise" and "data filtering" aspect of the paper.
+
+**Prompt:**
+> A conceptual, abstract image visualizing signal detection. The majority of the frame is filled with a dark, deep, and subtly textured field, representing overwhelming background noise. Flowing through this field are countless faint, blurry, parallel lines of light, suggesting smooth data. From this sea of uniformity, a single, coherent, and sharply focused waveform emerges—a small, perfect sine-wave-like "bump" of brilliant light. This signal stands out in its clarity and structure against the vast, flowing background. The style is ethereal and high-tech, evoking concepts of data analysis and discovery. The image is abstract, with no text or measurement indicators.
+
+### Prompt Option 3 (Minimalist & Punchy)
+
+This is a shorter, more direct prompt that focuses on the core visual contrast.
+
+**Prompt:**
+> A minimalist abstract artwork. A vast, dark, perfectly smooth surface recedes into the distance. In the center, a single, small, luminous ripple breaks the perfection of the surface. The ripple glows with a soft, warm light, creating a stark contrast with the cold, dark smoothness of its surroundings. The image captures a moment of singular, subtle discovery in an immense space. The style is clean, elegant, and focused.
+
+Any of these prompts will generate an image that is abstract, visually appealing, and directly related to the theme of "Hunting for bumps in the margins" without creating a literal scientific plot. The recommended **Option 1** is likely the most robust choice as it provides strong visual metaphors (dunes, silk) for the AI to work with.
+{% endraw %}

@@ -1,0 +1,11 @@
+{% raw %}
+**Prompt:**
+
+An abstract digital art piece visualizing the separation of a faint cosmic signal from overwhelming foreground noise.
+
+The scene is a cosmic tapestry. Dominating the image are vast, turbulent waves of luminous orange and red plasma, representing the bright galactic foregrounds. Woven within this chaos, and almost lost, is a delicate, shimmering thread of deep blue and violet light, representing the faint 21cm signal from the Cosmic Dawn.
+
+A subtle spiral or vortex motion is implied, suggesting the passage of time and the rotation of the Earth, which acts as a key to separating the components. The overall effect is one of a complex filtering process on a celestial scale, where a hidden truth is being methodically revealed from a chaotic dataset.
+
+The image should be beautiful and ethereal, with cinematic lighting and a sense of profound discovery. No text or graphs.
+{% endraw %}

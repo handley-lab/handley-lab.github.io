@@ -1,0 +1,24 @@
+{% raw %}
+Excellent. This is a great example of a technical blog post that needs a compelling, abstract visual. The goal is to capture the essence of the concepts without being literal or creating a confusing diagram.
+
+Here is a prompt designed to generate a suitable image, followed by an explanation of why it works.
+
+### The Prompt
+
+**An abstract and artistic visualization of the Nested Sampling algorithm exploring a high-dimensional phase space. The image should depict a vast, dark, multi-dimensional space, like a swirling cosmic nebula. Within this space, a swarm of luminous points, representing 'live points', are shown in a state of dynamic contraction. The points are sparse and scattered in the outer regions but become densely clustered and intensely bright as they converge towards a complex, radiant, and intricate structure at the center, which represents a region of high likelihood in a particle collision. The overall aesthetic is a sense of order emerging from chaos, with ethereal light trails showing the paths of discarded points. Cinematic lighting, deep cosmic blues and purples, with a brilliant gold and white core. Digital art, high-resolution, no text or numbers.**
+
+---
+
+### Deconstruction of the Prompt
+
+This prompt is effective because it translates the key technical concepts from the post into strong visual metaphors:
+
+*   **"An abstract and artistic visualization..."**: This immediately sets the style guide, aligning with the user's request to avoid quantitative information and be visually appealing.
+*   **"...exploring a high-dimensional phase space. The image should depict a vast, dark, multi-dimensional space, like a swirling cosmic nebula."**: This tackles the concept of "phase space." Instead of trying to literally draw many dimensions, it uses the metaphor of a vast, complex nebula, which implies depth, complexity, and largely unexplored territory.
+*   **"a swarm of luminous points, representing 'live points'..."**: This gives the AI a concrete object to draw for the "live points" mentioned in the article. "Luminous points" or a "swarm" is a classic and effective way to represent a computational ensemble.
+*   **"...in a state of dynamic contraction. The points are sparse and scattered in the outer regions but become densely clustered and intensely bright as they converge..."**: This is the core visual instruction for the **Nested Sampling algorithm**. It translates the iterative process of "contracting the volume" and moving towards higher likelihood into a clear visual action: a swarm of light getting smaller, denser, and brighter.
+*   **"...towards a complex, radiant, and intricate structure at the center, which represents a region of high likelihood in a particle collision."**: This defines the "goal" of the sampling process. The "high likelihood" region (the interesting physics of the gluon scattering) is represented as the most complex and brilliant part of the image, making it the natural focal point.
+*   **"ethereal light trails showing the paths of discarded points"**: This is a subtle but important detail that visualizes the history of the process and adds to the dynamism. As points are replaced, they leave a trace, enhancing the sense of a journey or exploration.
+*   **"Cinematic lighting, deep cosmic blues and purples, with a brilliant gold and white core."**: This provides specific art direction on color and mood. The contrast between the dark, cool background and the bright, warm core creates a dramatic and visually pleasing composition.
+*   **"Digital art, high-resolution, no text or numbers."**: These are final technical constraints to ensure the output is a clean, high-quality image suitable for a headline, explicitly reinforcing the "no quantitative information" rule.
+{% endraw %}

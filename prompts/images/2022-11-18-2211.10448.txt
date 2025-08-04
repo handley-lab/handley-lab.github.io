@@ -1,0 +1,31 @@
+{% raw %}
+Of course. The goal is to create a prompt that captures the essence of the paper: separating a faint, ancient signal from overwhelming, error-prone foreground noise using a clever statistical method. The image should be abstract, beautiful, and conceptually relevant.
+
+Here is a prompt designed to generate a fitting headline image, along with a few variations that emphasize different aspects of the paper.
+
+### Recommended Prompt
+
+This prompt combines the core conflict (signal vs. noise) with the paper's solution (partitioning and correcting).
+
+```
+An abstract and cinematic digital artwork visualizing the search for the cosmic dawn signal. In the background is a vast, deep, dark cosmic expanse, with a subtle, faint, ethereal web of deep purple and blue light representing the 21-cm signal from the early universe. This faint signal is almost completely obscured by a brilliant, chaotic, and overwhelming foreground of swirling gold, orange, and white light. Superimposed on this bright glare is a translucent, glowing grid that partitions the scene. Within each cell of the grid, the chaotic foreground light is being subtly corrected and dimmed, allowing the faint purple web behind it to become clearer and more visible. The image should convey a sense of immense scale, precision, and the intellectual power of clarifying a hidden truth from overwhelming noise. No text or numbers.
+```
+
+---
+
+### Alternative Prompts
+
+Here are a few other options that focus on slightly different metaphors from the text.
+
+**Alternative 1 (Focus on "Whisper vs. Shout"):** This prompt is more poetic and focuses on the dramatic difference in scale between the signal and the foregrounds.
+
+```
+A highly abstract, painterly visualization of a faint cosmic whisper being drowned out by a galactic shout. The image is dominated by a massive, explosive, and turbulent wash of bright, fiery colors like orange, yellow, and white. Almost lost within this chaos, a single, delicate, and coherent thread of deep, cool-blue light can just be discerned, representing the faint and structured 21-cm signal. The visual contrast should be extreme, emphasizing the immense challenge of detecting the tiny signal within the noise. Style should be epic and atmospheric, like a nebula painted with light.
+```
+
+**Alternative 2 (Focus on "Disentangling"):** This prompt uses the metaphor of disentangling threads to represent the statistical separation.
+
+```
+A minimalist and symbolic abstract image representing the disentangling of cosmic signals. Two streams of energy are intertwined on a dark background. One stream is thick, bright, and chaotic, made of brilliant white and gold light. The other is a very fine, structured filament of deep indigo light. The central focus is a conceptual 'filter' or 'lens'—not a literal object, but a region of space where the two streams pass through and emerge separated and parallel. This represents the Bayesian framework methodically separating the faint cosmological signal from the bright foreground contamination. Style is clean, modern, and elegant.
+```
+{% endraw %}

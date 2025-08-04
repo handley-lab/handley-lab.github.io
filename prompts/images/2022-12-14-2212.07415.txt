@@ -1,0 +1,11 @@
+{% raw %}
+An abstract digital art piece visualizing the extraction of a faint cosmic signal.
+
+In the center, a single, pure, luminous sine wave of cool blue light, representing the 21-cm signal from the Cosmic Dawn, is being isolated.
+
+This faint wave is emerging from an overwhelming, chaotic, and powerful torrent of multi-colored light—vibrant oranges, reds, and deep purples—representing the bright astrophysical foregrounds.
+
+The key concept to visualize is the method of extraction: three distinct streams of this chaotic light, originating from off-screen, are shown converging. Each stream is subtly different in its texture and pattern, representing how three different types of radio antennas perceive the same sky. As these streams are processed together, the chaotic elements are filtered away, revealing the single, clean, blue sine wave at their confluence.
+
+The overall mood is one of sophisticated signal processing and cosmic archaeology, a technological triumph of separating a whisper from a roar. The style should be ethereal and abstract, with glowing light and energy fields, not realistic hardware. Aspect ratio 16:9.
+{% endraw %}

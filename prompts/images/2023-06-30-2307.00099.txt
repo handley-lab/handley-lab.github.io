@@ -1,0 +1,3 @@
+{% raw %}
+An abstract visualization of a high-precision radio astronomy experiment. A single, faint, ethereal wave, representing the cosmic 21-cm signal from the early universe, travels through a dark, cosmic void. This wave is almost overwhelmed by a storm of complex, sharp, geometric patterns of light emanating from an abstract representation of a radio receiver. The image captures the immense technological challenge of isolating a subtle signal from overwhelming instrumental noise. Cinematic, high-contrast, beautiful complexity, digital art. No text or graphs.
+{% endraw %}
