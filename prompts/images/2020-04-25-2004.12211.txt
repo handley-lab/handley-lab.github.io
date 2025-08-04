@@ -1,0 +1,3 @@
+{% raw %}
+An abstract digital art piece illustrating the principle of Occam's razor in Bayesian neural networks. In the background, a vast and complex nebula of tangled, dimly lit, chaotic lines and nodes suggests infinite, overly-complex possibilities. From this complexity, a single, elegant, and symmetrical structure emerges into the foreground. This structure is composed of clean, glowing golden lines and nodes, representing the optimal, simple model chosen by Bayesian evidence. The lighting is dramatic and focused, highlighting the contrast between the chaotic background and the pure, beautiful simplicity of the selected model. The aesthetic is sophisticated, minimalist, and cinematic.
+{% endraw %}

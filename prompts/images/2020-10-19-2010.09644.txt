@@ -1,0 +1,9 @@
+{% raw %}
+An abstract, artistic visualization of the challenges in 21cm cosmology. In the background, a subtle, deep-red cosmic texture represents the faint signal from the cosmic dawn. This signal is almost completely overwhelmed by brilliant, multi-colored waves of energy representing astrophysical foregrounds.
+
+The key feature is that the entire scene is viewed as if through an imperfect, chromatic lens, representing instrumental effects. This lens causes the bright foreground waves to distort, split into their constituent spectral colors, and create complex, spurious ripples that contaminate the entire view.
+
+There is a sense of a methodical deconstruction, as if a computational Bayesian process is attempting to model and peel back these layers of chromatic distortion to isolate the pure, faint signal hidden beneath. The image should be beautiful but complex, conveying a sense of a profound signal buried within layers of structured noise and instrumental corruption.
+
+Sci-fi, digital art style, epic and cinematic.
+{% endraw %}

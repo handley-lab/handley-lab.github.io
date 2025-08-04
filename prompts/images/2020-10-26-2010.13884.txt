@@ -1,0 +1,9 @@
+{% raw %}
+An abstract, visually stunning digital artwork inspired by the "nested sampling with plateaus" problem in computational statistics.
+
+The image should feature a central structure resembling a multi-layered "wedding cake" or a terraced mountain, representing a complex likelihood function. These layers should be distinct, glowing, and have flat tops (plateaus) at different heights and widths. The structure should feel vast and architectural.
+
+Scattered across these plateaus and in the space around them are countless small, luminous particles, representing the "live points" of the algorithm. On the flat plateau surfaces, these particles should appear more densely clustered.
+
+The overall aesthetic should be sophisticated and cosmic, with a color palette of deep blues, purples, and accents of gold or white light, evoking a sense of data exploration on a grand, celestial scale. The image must be entirely abstract, conveying the concepts of nested layers, flat regions, and sampling points without resorting to graphs, text, or numbers.
+{% endraw %}

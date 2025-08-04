@@ -1,0 +1,30 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from more direct and conceptual to more abstract and artistic, all designed to create a fitting headline image for the post.
+
+### Option 1 (Recommended)
+
+This prompt directly visualizes the core concepts of curvature, waves, and suppression in a clean, abstract way.
+
+**Prompt:**
+> An abstract, elegant visualization of the early universe, representing the concept of the primordial power spectrum on a curved spacetime. The image shows the fabric of space itself as a vast, dark, subtly curved surface. Across this surface, ethereal ripples of light and energy propagate outwards from a central point. These waves exhibit interference patterns and "ringing" effects, appearing as concentric circles of varying brightness. The largest, outermost waves are fainter, visually representing the suppression of power at large scales. The overall aesthetic is minimalist, cosmic, and profound, with a color palette of deep blues, purples, and glowing gold. The image is purely conceptual and contains no text, graphs, or celestial bodies.
+
+---
+
+### Option 2
+
+This prompt uses a more energetic and textural metaphor of "cosmic sound waves" to capture the idea of primordial fluctuations.
+
+**Prompt:**
+> A conceptual artwork visualizing the primordial power spectrum as cosmic sound waves reverberating through the early universe. The scene is a vast expanse of glowing, energetic plasma. Concentric waves of light and shadow emanate from an unseen origin, creating interference patterns like ripples in a cosmic pond. These waves, representing quantum fluctuations, show clear oscillations. The waves at the largest scales appear more diffuse and dampened. The style is abstract and cinematic, with a focus on light, texture, and immense scale.
+
+---
+
+### Option 3
+
+This prompt is more symbolic, contrasting the chaotic nature of the universe with the elegant mathematical solution described in the paper.
+
+**Prompt:**
+> An abstract digital painting that juxtaposes the chaotic beauty of the primordial universe with the elegance of a mathematical approximation. The background is a swirling, high-energy texture, like a cosmic foam or nebula, representing quantum fluctuations. Overlaid on this chaos is a pure, glowing, geometric pattern of perfect, flowing lines and harmonic waves. This pattern represents the analytical template, bringing a sense of order and understanding to the underlying reality. The geometric lines subtly follow the faint, large-scale curvature of the background space. Style: High-contrast, symbolic, minimalist yet epic.
+
+For most AI image generators, **Option 1** is likely to produce the most relevant and visually appealing result that directly relates to the paper's key ideas.
+{% endraw %}

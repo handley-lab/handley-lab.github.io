@@ -1,0 +1,19 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a fitting image for the post, incorporating the key themes of unification, cosmology, particle physics, and computation.
+
+### Recommended Prompt
+
+**An abstract, artistic visualization of the unification of particle physics and cosmology. The image depicts the vast, web-like filaments of cosmic large-scale structure in deep blues and purples. Woven into this cosmic tapestry are brilliant, energetic threads of gold and white light, representing the ephemeral trails of subatomic particles and quantum interactions. The two motifs are deeply intertwined, converging towards a subtle, glowing nexus that suggests a computational core where these different scales of reality are analyzed together. The aesthetic is elegant, complex, and awe-inspiring, like a glimpse into the fundamental code of the universe. Cinematic lighting, high detail.**
+
+---
+
+### Rationale for this prompt:
+
+*   **"Abstract, artistic visualization"**: This immediately sets the tone and aligns with your constraint to avoid literal or quantitative representations.
+*   **"Unification of particle physics and cosmology"**: This states the core theme of the blog post and the `CosmoBit` software.
+*   **"Cosmic large-scale structure in deep blues and purples"**: This provides a specific, recognizable, and visually compelling element from cosmology (the cosmic web). The color palette suggests the vastness and mystery of space.
+*   **"Brilliant, energetic threads of gold and white light... ephemeral trails of subatomic particles"**: This introduces the particle physics element with contrasting colors and textures, representing the high-energy, quantum world.
+*   **"Deeply intertwined... converging towards a subtle, glowing nexus"**: This is the key metaphor. "Intertwined" visualizes the joint analysis, and the "nexus" or "computational core" directly represents `GAMBIT` and `CosmoBit` as the tool that brings these two fields together.
+*   **"Elegant, complex, and awe-inspiring"**: These keywords guide the AI toward a high-quality, aesthetically pleasing image that evokes a sense of wonder.
+*   **"Cinematic lighting, high detail"**: These are technical instructions that encourage the AI to produce a polished, high-resolution final image suitable for a headline.
+{% endraw %}

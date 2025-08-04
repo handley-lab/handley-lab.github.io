@@ -1,0 +1,46 @@
+{% raw %}
+Excellent. This is a perfect use case for an abstract AI image. The goal is to evoke the core concepts of the paper—cosmological data, tension, and multiple perspectives—without being literal or creating a scientific diagram.
+
+Here are a few prompt options, ranging from more conceptual to more metaphorical. They are designed to give modern image generators like Midjourney, DALL-E 3, or Imagen a strong creative direction while adhering to your constraints.
+
+### Option 1 (Recommended)
+
+This prompt uses the metaphor of light being refracted differently, which is a powerful and elegant way to represent different experimental results from a single source (the universe).
+
+**Prompt:**
+> A minimalist and elegant abstract visualization of cosmological tension. A single beam of cosmic light, subtly textured like the cosmic microwave background, enters from the left. It passes through a complex, fractured, crystalline prism in the center. The light emerges on the right, split into three distinct, slightly misaligned projections of the original texture. The projections overlap, creating interference and moiré patterns where they fail to perfectly align, visualizing the statistical tension. The aesthetic is clean and scientific, set against a dark, deep-space background. The colors are primarily deep blues and purples, with the light rendered in glowing gold and electric cyan.
+
+**Why it works:**
+*   **Abstract:** Uses the prism as a metaphor for the experiments (Planck, ACT, SPT).
+*   **No Quantitative Info:** The "misalignment" is visual and conceptual, not a graph.
+*   **Visually Appealing:** The combination of crystalline structures, glowing light, and deep space colors is a classic and effective aesthetic.
+*   **Related to Topic:** Directly visualizes the idea of a single reality (the CMB) yielding slightly different results ("projections") through different "lenses" (the experiments), creating "tension" (the interference).
+
+---
+
+### Option 2
+
+This prompt uses the metaphor of waves and interference, which is a direct nod to the wave-like nature of the CMB power spectrum.
+
+**Prompt:**
+> An abstract digital painting of cosmic resonance and discordance. In the center is a dark, circular pool whose surface has the subtle, mottled texture of the Cosmic Microwave Background. From three distinct points around the edge of the pool, synchronized ripples emanate. The ripples are fine, glowing lines of gold, silver, and blue light. As the three wave patterns travel towards the center, they interfere. In some areas they align perfectly creating bright, constructive patterns (agreement), but in other areas they clash, creating chaotic, muted, and discordant patterns (tension). The overall mood is one of subtle, beautiful, but unresolved complexity.
+
+**Why it works:**
+*   **Abstract:** The "pool" and "ripples" are metaphorical representations of the universe and the data.
+*   **Visually Appealing:** The idea of glowing ripples on a dark, textured surface is visually striking.
+*   **Related to Topic:** The concept of "interference," "agreement," and "discordance" is a direct translation of the paper's theme into a visual metaphor. It beautifully captures the idea of a global statistical comparison.
+
+---
+
+### Option 3
+
+This prompt is more organic and textural, focusing on the idea of the "fabric of cosmology" being under stress.
+
+**Prompt:**
+> A macro photograph of a luminous, cosmic tapestry. The fabric is woven with threads of light and shadow, forming the intricate, multi-scale pattern of the Cosmic Microwave Background. The tapestry is being pulled taut from three different directions just out of frame. This pull creates visible stress lines and subtle warping in the weave, causing the otherwise uniform pattern to become slightly distorted and misaligned in different regions. The image captures a sense of underlying tension without any actual tearing, conveying a feeling of a beautiful, fundamental theory being tested. Ethereal, high-contrast, deep space aesthetic.
+
+**Why it works:**
+*   **Abstract:** The "tapestry" is a metaphor for the $\Lambda$CDM model or the universe itself.
+*   **Visually Appealing:** The idea of a "cosmic tapestry" with glowing threads offers a rich and detailed visual.
+*   **Related to Topic:** "Stress lines" and "warping" are excellent visual synonyms for statistical tension, and the concept of a single fabric being pulled in different directions perfectly represents the ACT vs. SPT vs. Planck comparison.
+{% endraw %}

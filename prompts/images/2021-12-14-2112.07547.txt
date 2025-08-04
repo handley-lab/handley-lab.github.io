@@ -1,0 +1,11 @@
+{% raw %}
+An abstract, epic, and ethereal digital painting of the primordial universe. The image should conceptualize the core ideas of k-inflation with spatial curvature.
+
+The background should be a vast, subtly curved fabric of spacetime, hinting at a closed, spherical universe without being literal. Emerging across this canvas are primordial fluctuations, visualized as a complex interplay of waves.
+
+There should be two distinct types of waves to represent the different physics at play:
+1.  Vast, gentle, low-frequency undulations that fade out at the largest scales, representing the power cutoff due to curvature.
+2.  Superimposed on these are sharp, luminous, high-frequency "ringing" oscillations, representing the signature of a changing sound speed.
+
+The interaction between these wave patterns should create intricate, mesmerizing interference. The color palette should be deep and cosmic—rich purples, electric blues, and streaks of incandescent gold and white—evoking a sense of immense energy and the birth of structure. The overall mood is one of awe-inspiring, chaotic, yet structured, cosmic genesis.
+{% endraw %}

@@ -1,0 +1,20 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a visually compelling, abstract image that captures the core concepts of the paper. It focuses on the metaphors of nesting, compression, and finding a rare event in a vast space, while adhering to the "no quantitative info" rule.
+
+### Recommended Prompt:
+
+An abstract digital artwork visualizing the concept of nested sampling for calculating small probabilities. A vast, dark space, representing a probability distribution, is filled with diffuse, faintly glowing points. From this expanse, a luminous, spiraling vortex forms, funneling the points inward through a series of shrinking, concentric, translucent shells. The vortex converges on a single, intensely bright point of light in the extreme corner of the image, symbolizing the efficient discovery of a rare event in the tail of the distribution. The style should be elegant, clean, and futuristic, with a color palette of deep blues, purples, and a brilliant white/gold for the focal point.
+
+---
+
+### Why this prompt works:
+
+*   **Abstract:** It explicitly calls for an "abstract digital artwork" and avoids literal representations like graphs or charts.
+*   **Visually Appealing:** It uses descriptive words like "luminous," "spiraling vortex," "translucent shells," and "intensely bright point of light" to guide the AI toward a dynamic and beautiful composition.
+*   **Related to the Topic:**
+    *   **"Vast, dark space... with diffuse... points"** represents the entire sampling space under the null hypothesis.
+    *   **"Shrinking, concentric, translucent shells"** is a direct visual metaphor for the "nested" part of nested sampling.
+    *   **"Spiraling vortex... funneling the points inward"** visualizes the core idea of **compression**—efficiently moving from the entire space to the region of interest.
+    *   **"Single, intensely bright point of light in the extreme corner"** represents the tiny, rare *p*-value or the "5σ" event in the tail of the distribution.
+*   **No Quantitative Info:** There are no numbers, axes, or text requested. The focus is purely on the conceptual visualization.
+{% endraw %}

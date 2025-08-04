@@ -1,0 +1,28 @@
+{% raw %}
+Excellent. Here is a prompt designed to generate a fitting headline image, based on the provided blog post and your constraints.
+
+The prompt is structured to guide the AI by first establishing the core concept, then detailing the key visual elements, and finally defining the artistic style and mood.
+
+---
+
+### The Prompt:
+
+**An abstract and conceptual piece of digital art symbolizing the precise measurement of the neutrino mass by combining cosmological and terrestrial data.**
+
+**The image should depict a vast cosmic scene, reminiscent of the Cosmic Microwave Background and the cosmic web, with faint, deep blue and purple filaments and nebulae. From this cosmic background, and also from a subtle, glowing geometric structure representing a terrestrial experiment in the foreground, three faint, ethereal streams of light (one gold, one cyan, one magenta) emerge. These wispy, ghostly streams—representing the three neutrino masses—travel through the scene and are guided and focused by an unseen cosmic lens. They converge towards a single, brilliant, infinitesimally small point of white light, symbolizing the successful and strengthened bound on their mass.**
+
+**The style should be elegant and minimalist, with a strong sense of depth and scale. The focus is on the convergence of light. The overall mood is one of profound discovery and precision. High resolution, cinematic lighting.**
+
+**Do not include any text, numbers, graphs, or literal depictions of Earth or laboratory equipment.**
+
+### Rationale for this prompt:
+
+*   **Abstract & Conceptual:** It explicitly asks for a symbolic representation, not a literal one, fulfilling your main requirement.
+*   **Combines Terrestrial & Cosmological:** It directs the AI to include visual cues for both sources of data: the "cosmic scene" and the "glowing geometric structure."
+*   **Represents the Science:**
+    *   **Neutrinos:** "Ghostly, ethereal streams of light" captures their elusive nature. Using three distinct colors hints at the three mass states.
+    *   **Strengthening the Bound:** The core visual metaphor is the "convergence" of these streams to a "single, brilliant, infinitesimally small point," which visually represents the act of narrowing down the measurement to a precise limit.
+    *   **Cosmology:** It specifically mentions the "Cosmic Microwave Background" and "cosmic web" as inspiration for the background texture.
+*   **Visually Appealing:** The prompt uses descriptive artistic terms like "deep blue and purple filaments," "cinematic lighting," "elegant and minimalist," and "strong sense of depth" to guide the AI towards a high-quality, aesthetically pleasing image.
+*   **No Quantitative Info:** The final line explicitly reinforces the negative constraint to avoid any numbers, text, or graphs.
+{% endraw %}

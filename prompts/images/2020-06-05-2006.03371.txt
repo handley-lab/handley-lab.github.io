@@ -1,0 +1,16 @@
+{% raw %}
+Excellent. This is a fascinating topic that lends itself well to abstract visualization. The key concepts to capture are:
+
+*   **Nesting/Layers:** The core algorithm's structure.
+*   **Order vs. Chaos:** The difference between a correct run (uniform insertion indexes) and a failed run (non-uniform).
+*   **Diagnostics/Cross-Checks:** The idea of finding a "flaw" or a "red flag" in a process.
+*   **Cosmic/Scientific Aesthetic:** The context where this algorithm is used.
+
+Here is a prompt designed to capture these ideas for an AI image generator, blending the concepts into a single, cohesive image.
+
+---
+
+### Prompt for AI Image Generation:
+
+**An abstract, sophisticated digital artwork visualizing a statistical self-check for a complex algorithm. The image features a series of translucent, nested, glowing layers, like cosmic shells, receding into a dark, deep space. Flowing across these layers is a stream of luminous particles. On the outer, larger shells, the particles are arranged in a perfectly uniform, evenly-spaced distribution, glowing with a cool, serene blue light. As the stream moves towards the inner, more complex shells, the pattern breaks down—the particles become erratically clumped and scattered, glowing with a disruptive, chaotic orange and red. This visual contrast between order and chaos represents a statistical anomaly being detected. The overall aesthetic is minimalist, scientific, and reminiscent of data flowing through a high-dimensional space in astrophysics.**
+{% endraw %}

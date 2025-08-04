@@ -1,0 +1,18 @@
+{% raw %}
+Excellent. This is a great example of a technical blog post that would be enhanced by a powerful, abstract image. The key is to distill the core concepts of the paper into visual metaphors.
+
+Here are the core concepts to capture:
+*   **Composite Higgs:** The Higgs isn't fundamental but is made of something else. This suggests internal structure, complexity, or something emerging from a more chaotic/energetic background.
+*   **Symmetry Breaking ($SO(5) \rightarrow SO(4)$):** A larger, more perfect symmetry is broken, revealing a new, lower-energy structure. This is a classic visual metaphor: a perfect sphere shattering, but into a beautiful, ordered pattern, not just random shards.
+*   **Bayesian Global Fits & Convergence:** Searching a vast, high-dimensional space to find the *correct* regions. This can be visualized as countless paths or lines converging onto a specific, glowing area.
+*   **Thin Hypersurfaces:** The key finding that the viable solutions exist on thin "sheets" within a massive parameter space. This is a very strong visual.
+*   **Information Gain (KL Divergence):** Moving from a diffuse, uncertain state (the prior) to a sharp, focused one (the posterior). This can be shown as a blurry cloud being focused into an intricate, sharp pattern.
+
+Combining these ideas, here is a prompt designed to generate a fitting image:
+
+---
+
+### Prompt for AI Image Generation:
+
+**An abstract, ethereal, scientific illustration representing the concepts of Composite Higgs Models and Bayesian parameter space exploration. The central focus is a complex, intricate structure that evokes a shattered celestial sphere or a fractured crystal, symbolizing a high-order symmetry breaking. From the fractures, intricate, glowing, paper-thin sheets of light emanate and weave through a vast, dark, multidimensional space; these sheets represent the viable parameter regions found by a global fit. Wisps of cosmic dust and faint probability clouds (representing the prior) appear to be converging and collapsing onto these glowing sheets, signifying Bayesian inference and information gain. In the heart of the shattered structure, there is a brilliant point of energy, hinting at a particle collision and the composite nature of the Higgs boson. The style should be a blend of cosmic nebulae photography and abstract data visualization, with dramatic and cinematic lighting. Use a color palette of deep cosmic blues and purples for the background, with the glowing sheets and central energy rendered in brilliant gold, white, and electric blue. The image must be purely abstract and symbolic, containing no text, graphs, or explicit diagrams. The feeling should be one of profound discovery and underlying order within immense complexity.**
+{% endraw %}

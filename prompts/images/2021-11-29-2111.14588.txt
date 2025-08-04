@@ -1,0 +1,51 @@
+{% raw %}
+Of course. The goal is to create a prompt that captures the core concepts of the paper—symmetry, time, waves, and the cosmos—in an abstract and visually striking way, without being a literal diagram.
+
+Here are a few options, from most recommended to alternatives, that build on the user's provided starting point.
+
+### Recommended Prompt
+
+This prompt combines the key visual metaphors from the paper: the palindromic (symmetrical) structure and the quantized (standing wave) nature of the universe.
+
+```
+An abstract digital painting of a palindromic universe. The composition is defined by a perfect central reflection, as if the cosmos is mirrored upon itself across a vertical axis. On either side of the mirror line, ethereal, glowing filaments of light form intricate standing wave patterns, like cosmic strings vibrating in space. The background is a deep, dark void, subtly textured with the faint, mottled pattern of the cosmic microwave background. The color palette is sophisticated, using deep blues, purples, and shimmering gold to evoke a sense of fundamental, elegant physics. The image should be abstract and beautiful, conveying resonance and symmetry.
+```
+
+**Why this works:**
+*   **"Abstract digital painting"**: Sets the artistic style.
+*   **"Perfect central reflection"**: Directly visualizes the "palindromic" concept.
+*   **"Standing wave patterns, like cosmic strings"**: Captures the paper's key prediction of a quantized spectrum, using the analogy from the text.
+*   **"Textured with the faint, mottled pattern of the cosmic microwave background"**: Grounds the abstract image in the specific observational data (the CMB) that the paper addresses.
+*   **"Sophisticated color palette... deep blues, purples, and shimmering gold"**: Guides the AI towards an aesthetically pleasing and serious tone, avoiding garish colors.
+*   **"Conveying resonance and symmetry"**: Reinforces the main emotional and conceptual themes.
+
+---
+
+### Alternative Prompt (Focus on Time and Transition)
+
+This version focuses more on the idea of a universe with a beginning and an end, and the "recombination" transition in the middle.
+
+```
+An abstract visualization of a time-symmetric universe, conceived as a cosmic hourglass. The top and bottom bulbs of the hourglass contain a dense, chaotic, glowing plasma in fiery oranges and reds. In the narrow central neck, representing the era of recombination, this chaos resolves. The opaque plasma becomes transparent, and from it emerge clear, structured beams and waves of cool blue light that travel outwards into the now-clear space. The image should feel like a grand cosmic event, a transition from an opaque fog to a universe of clear, defined structure and order.
+```
+
+**Why this works:**
+*   **"Cosmic hourglass"**: A powerful, intuitive metaphor for a universe with a beginning and an end.
+*   **"Chaos resolves... opaque plasma becomes transparent"**: A direct visual metaphor for recombination, the key physical process in the paper.
+*   **"Transition from an opaque fog to a universe of clear, defined structure"**: Captures the "rescuing" aspect of the paper's title—a clearer model resolves the problems.
+
+---
+
+### More Minimalist Prompt
+
+This prompt is highly abstract, focusing solely on the idea of symmetry being imposed on a physical system.
+
+```
+A minimalist, abstract image representing cosmic symmetry. The canvas is split by a razor-thin, glowing vertical line. On the left side, a deep space nebula is depicted with soft, swirling, chaotic clouds of gas and light. On the right side is a perfect mirror image of the left, but with a critical difference: the chaotic swirls are transformed into ordered, geometric patterns and discrete, resonant lines of light. The overall effect is a powerful contrast between chaos and imposed order, stemming from a fundamental symmetry.
+```
+
+**Why this works:**
+*   **"Minimalist"**: Encourages a clean, high-concept image.
+*   **"Chaos and imposed order"**: This is the core intellectual idea—the boundary conditions (symmetry) impose a specific form (quantization) on the physical fluctuations.
+*   **"Transformed into ordered, geometric patterns"**: A clear visual representation of the consequences of the palindromic model.
+{% endraw %}

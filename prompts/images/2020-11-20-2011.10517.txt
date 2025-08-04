@@ -1,0 +1,22 @@
+{% raw %}
+Excellent. Based on the provided blog post, here are a few prompt options, ranging from more conceptual to more literal, while adhering to your "abstract and no quantitative info" rule.
+
+### Recommended Prompt
+
+This prompt is designed to capture the core conflict described in the paper: the faint, ancient signal being obscured by the vibrant, distorting ionosphere.
+
+**Prompt:**
+> An abstract digital artwork illustrating the faint, whisper-thin signal of the Cosmic Dawn traveling through deep space. As the signal reaches Earth, it passes through a vibrant, shimmering, and turbulent veil representing the planet's ionosphere. This atmospheric layer acts as a chromatic lens, bending, distorting, and partially absorbing the ancient cosmic light. The ionosphere glows with auroral colors, while the faint signal from the early universe struggles to pass through it. The overall style is elegant, cinematic, and conceptual, with a dark, cosmic background.
+
+---
+
+### Alternative Prompts
+
+Here are two other options with slightly different focuses.
+
+**Option 2 (More Minimalist & Symbolic):**
+> A minimalist and abstract representation of a cosmic wave, depicted as a delicate and intricate thread of faint light, traveling from the top of the image downwards. Halfway down, it encounters a thick, semi-transparent, and iridescent layer of energy that causes the wave to bend and lose its clarity. The style is conceptual art, with a dark background, focusing on the interaction between the clean signal and the distorting medium.
+
+**Option 3 (Slightly More Grounded, but still Abstract):**
+> A stylized view from Earth's surface looking up at the night sky. The deep space background shows a faint, web-like structure representing the early universe. Draped over the sky like a celestial curtain is a glowing, colorful, and turbulent plasma—the ionosphere—which warps the view of the cosmos behind it. The image should capture a sense of a beautiful, yet frustrating, celestial filter. Digital painting style, epic scale, no text or specific telescope shapes.
+{% endraw %}

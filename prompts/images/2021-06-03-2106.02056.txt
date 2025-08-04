@@ -1,0 +1,19 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a fitting image for the post, keeping in mind the key concepts of the paper and the user's constraints.
+
+### Generated Prompt
+
+An abstract, artistic visualization of a global analysis in particle physics. Numerous faint, ethereal streams of light, representing data from disparate sources like particle colliders, cosmic microwave background observations, and deep space telescopes, converge on a central, subtly glowing region. This convergence point symbolizes the search for a dark matter particle (WIMP). The background is a vast, dark cosmic void, interwoven with a subtle web-like structure, hinting at the large-scale structure of the universe shaped by dark matter. The overall aesthetic is one of intricate connection, statistical synthesis, and profound mystery. Cinematic lighting, deep shadows, high detail.
+
+---
+
+### Rationale for the Prompt's Design:
+
+*   **"Abstract, artistic visualization"**: This directly addresses the user's main constraint to avoid literal representations.
+*   **"Numerous faint, ethereal streams of light... converge on a central, subtly glowing region"**: This is a visual metaphor for the "Global Fit." Each stream represents a different dataset (LHC, Planck, XENON1T, etc.), and their convergence represents the statistical combination in the GAMBIT framework.
+*   **"Symbolizes the search for a dark matter particle (WIMP)"**: This explicitly links the central point of the image to the main subject of the paper.
+*   **"Vast, dark cosmic void, interwoven with a subtle web-like structure"**: This evokes the core concepts of dark matter and its role in forming the cosmic web, providing a relevant and scientifically-inspired background.
+*   **"Intricate connection, statistical synthesis, and profound mystery"**: These keywords guide the AI to capture the *feeling* of the research—it's complex, it brings things together, and it's about the unknown.
+*   **"Cinematic lighting, deep shadows, high detail"**: These are stylistic instructions to ensure the final image is visually appealing and has a professional, high-quality finish suitable for a headline.
+*   **No Quantitative Elements**: The prompt deliberately avoids any mention of graphs, numbers, equations, or text, as requested.
+{% endraw %}

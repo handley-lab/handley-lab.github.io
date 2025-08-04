@@ -1,0 +1,39 @@
+{% raw %}
+Of course. The goal is to create a prompt for an abstract image that visually represents the core concepts of the paper: transforming a simple, uniform distribution (the "unit hyper-cube") into a complex, arbitrary one (the "prior you like") using a flexible, learned mapping (a "bijector" or "normalizing flow").
+
+Here is a prompt designed to generate a suitable image, along with a few variations.
+
+### Recommended Prompt
+
+This prompt is designed to be both descriptive and abstract, giving the AI model clear concepts to work with while encouraging an artistic interpretation.
+
+```
+An abstract, minimalist visualization of a luminous, perfect cube. Ethereal streams of light and data flow out from the cube, warping and transforming into a complex, organic, multi-dimensional, nebula-like shape. The style should be clean and elegant, with a dark background, focusing on the glowing transformation from simple geometry to a complex, beautiful form. No text or numbers.
+```
+
+---
+
+### Why this prompt works:
+
+*   **"Abstract, minimalist visualization"**: Sets the artistic style and directly addresses the constraint of not being quantitative.
+*   **"Luminous, perfect cube"**: Represents the simple, well-defined starting point—the unit hyper-cube prior.
+*   **"Ethereal streams of light and data"**: Evokes the idea of a "normalizing flow" or "bijector"—the active transformation process.
+*   **"Warping and transforming"**: This is the key action of the method.
+*   **"Complex, organic, multi-dimensional, nebula-like shape"**: Represents the arbitrary, complex target prior that the method allows you to use. The "nebula" or "cosmic" theme ties in nicely with the paper's cosmology example.
+*   **"Dark background, clean and elegant"**: Specifies a visually appealing aesthetic that makes the core elements stand out.
+*   **"No text or numbers"**: Explicitly reinforces the negative constraint.
+
+### Alternative Prompts
+
+Here are a few other options that focus on slightly different aspects of the paper:
+
+**Option 2 (Focus on the "Flow" and "Neural Network" aspect):**
+```
+Abstract digital art of a normalizing flow. On the left, a simple cloud of glowing particles is arranged in a uniform cube. A vibrant, fluid stream of energy, like an abstract neural network with glowing nodes and connections, passes through the cloud, reorganizing the particles into a complex, swirling, banana-shaped distribution on the right. The image should be conceptual and beautiful, set against a dark, clean background.
+```
+
+**Option 3 (More Metaphorical and Cosmic):**
+```
+A striking, abstract cosmic scene. A simple, uniform grid of stardust is being gently pulled and reshaped by an unseen force. This transformation bends the simple grid into a beautiful, complex, flowing structure reminiscent of a swirling galaxy or a complex nebula. The image should be elegant and convey the idea of mapping a simple space to a complex one. No text or realistic celestial bodies.
+```
+{% endraw %}

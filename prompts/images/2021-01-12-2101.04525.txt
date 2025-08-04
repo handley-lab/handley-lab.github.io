@@ -1,0 +1,3 @@
+{% raw %}
+An abstract, visually appealing digital artwork representing optimisation in a high-dimensional cosmic landscape. The image should feature swirling, multi-dimensional structures, suggesting a complex parameter space from astrophysics. Luminous paths or particles should be seen navigating this space, converging towards a single, brilliant point of light, which represents the global optimum. The overall theme should blend concepts of computational search with the vastness of the universe. Avoid any literal representations, text, numbers, or graphs.
+{% endraw %}
