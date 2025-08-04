@@ -14,3 +14,13 @@ theme: minima
 plugins:
   - jekyll-feed
   - jekyll-seo-tag
+
+# Exclude files from Jekyll build
+exclude:
+  - CLAUDE.md
+  - script/
+  - venv/
+  - requirements.txt
+  - .git/
+  - .gitignore
+  - README.md
