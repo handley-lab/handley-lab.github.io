@@ -364,11 +364,12 @@ Wei-Ning Deng:
 Adam Ormondroyd:
   phd:
     start: 2021-10-01
+    end: 2025-09-30
     supervisors:
     - Mike Hobson
     - Will Handley
     - Anthony Lasenby
-    thesis: null
+    thesis: 'Bayesian methods in a flexible universe: sampling, tension and dark energy'
   original_image: images/originals/adam_ormondroyd.jpg
   image: images/adam_ormondroyd.jpg
   links:
