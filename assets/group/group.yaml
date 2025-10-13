@@ -157,10 +157,12 @@ Natalie Hogg:
   postdoc:
     start: 2025-10-06
     thesis: null
+  image: images/natalie_hogg.jpg
 Matt Grayling:
   postdoc:
-    start: 2025-10-06
+    start: 2025-10-01
     thesis: null
+  image: images/matt_grayling.jpg
 Chris Lovell:
   postdoc:
     start: 2025-07-17
