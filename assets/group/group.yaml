@@ -853,6 +853,15 @@ Stephen Pickman:
   image: images/stephen_pickman.jpg
   destination:
     2017-10-01: Software developer at DarkTrace
+Fedir Boreiko:
+  summer:
+    start: 2025-06-30
+    end: 2025-08-22
+    supervisors:
+    - Will Handley
+    thesis: Machine Learning Enhanced Cosmological Tension Detection
+  original_image: images/originals/fedir_boreiko.jpg
+  image: images/fedir_boreiko.jpg
 Artyom Baryshnikov:
   summer:
     start: 2022-06-27
