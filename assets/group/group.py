@@ -111,20 +111,58 @@ class Student(object):
             return min(self.levels).start > min(other.levels).start
 
     def joint_papers(self):
-        import arxiv
-        arr = self.name.split(' ')
-        surname = arr[-1]
-        #initial = ','.join([section[0] for section in arr[0].split('-')])
-        initial = arr[0][0]
+        import yaml
+        import re
 
-        query = f'au:Handley_W AND au:{surname}_{initial}'
-        query = query.replace('-','_')
-        search = arxiv.Search(query=query)
-        npapers = len(list(search.results()))
+        # Load papers.yaml - the ground truth
+        papers_file = '../general/data/papers.yaml'
+        try:
+            with open(papers_file) as f:
+                papers = yaml.safe_load(f)
+        except FileNotFoundError:
+            return None
 
-        if npapers>0:
-            url = f'https://arxiv.org/search/?query=handley%2C+w%3B+{surname}%2C{initial}&searchtype=author'
-            return f'<a href="{url}">Group research papers ({npapers})</a>'
+        # Extract surname and first initial for matching
+        name_parts = self.name.split(' ')
+        surname = name_parts[-1].lower()
+        first_initial = name_parts[0][0].lower()
+
+        # Find papers where this person is an author
+        person_papers = []
+        for paper in papers:
+            authors = paper.get('authors', [])
+            # Join list of authors into a single string
+            if isinstance(authors, list):
+                authors_str = ' '.join(authors).lower()
+            else:
+                authors_str = str(authors).lower()
+
+            # Use word boundary matching to avoid false positives
+            # Match surname as a complete word (not substring)
+            if re.search(r'\b' + re.escape(surname) + r'\b', authors_str):
+                arxiv_id = paper.get('arxiv', '')
+                title = paper.get('title', 'Untitled')
+                if arxiv_id:
+                    person_papers.append({'arxiv': arxiv_id, 'title': title})
+
+        if len(person_papers) > 0:
+            # Check if this is the PI - if so, just link to author page
+            is_pi = any(isinstance(level, PI) for level in self.levels)
+
+            if is_pi:
+                # For PI, link to arXiv author page
+                author_url = f'https://arxiv.org/a/{surname}_{first_initial}_1.html'
+                return f'<a href="{author_url}">arXiv papers ({len(person_papers)})</a>'
+            else:
+                # For others, build HTML list of papers in reverse order (most recent first)
+                html_list = '<ul>'
+                for paper in reversed(person_papers):
+                    arxiv_url = f"https://arxiv.org/abs/{paper['arxiv']}"
+                    html_list += f'<li><a href="{arxiv_url}">{paper["title"]}</a></li>'
+                html_list += '</ul>'
+                return html_list
+
+        return None
 
 #yaml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.yaml')
 yaml_file = 'assets/group/group.yaml'

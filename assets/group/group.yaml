@@ -377,6 +377,8 @@ Adam Ormondroyd:
   links:
     linkedin: https://www.linkedin.com/in/adam-ormondroyd/
     GitHub: https://github.com/AdamOrmondroyd
+  destination:
+    2025-10-01: Data Scientist at PolyChord Ltd
 Ayngaran Thavanesan:
   phd:
     start: 2021-10-01
@@ -570,6 +572,28 @@ Panagiotis Mavrogiannis:
   image: images/panagiotis_mavrogiannis.jpg
   destination:
     2018-10-01: PhD in Astrophysics, Thessaloniki, Greece
+Rose Luo:
+  partiii:
+    start: 2025-10-01
+    end: 2026-06-01
+    supervisors:
+    - Will Handley
+    thesis: null
+Alex Drane:
+  partiii:
+    start: 2025-10-01
+    end: 2026-06-01
+    supervisors:
+    - Will Handley
+    - Namu Kroupa
+    thesis: null
+Farah Wallauer:
+  partiii:
+    start: 2025-10-01
+    end: 2026-06-01
+    supervisors:
+    - Will Handley
+    thesis: null
 Harvey Williams:
   partiii:
     start: 2024-10-01
@@ -862,6 +886,13 @@ Fedir Boreiko:
     thesis: Machine Learning Enhanced Cosmological Tension Detection
   original_image: images/originals/fedir_boreiko.jpg
   image: images/fedir_boreiko.jpg
+Ajinkya Naik:
+  summer:
+    start: 2025-06-30
+    end: 2025-08-22
+    supervisors:
+    - Will Handley
+    thesis: null
 Artyom Baryshnikov:
   summer:
     start: 2022-06-27

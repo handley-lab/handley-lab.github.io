@@ -1,0 +1,11 @@
+{% raw %}
+An abstract and elegant digital art piece visualizing the recalibration of cosmological measurements.
+
+The scene depicts the vast, dark expanse of spacetime, subtly textured to suggest expansion. Scattered across this background are faint, precise points of light, representing Type Ia supernovae used as standard candles to measure the cosmos.
+
+The central theme is the reduction of tension between a complex model of evolving dark energy and the simpler cosmological constant. This could be represented by a subtle shift in the image's structure: a slightly chaotic or vibrating energy field in one part of the image resolves into a more stable, serene, and harmonious pattern in another.
+
+The aesthetic should be clean, sophisticated, and scientific, evoking a sense of deep space, mystery, and dawning clarity. Use a color palette of deep cosmic blues, purples, and blacks, with the supernovae represented by sharp, luminous points of gold or white.
+
+The final image should be symbolic and conceptual, with absolutely no text, numbers, graphs, or literal depictions of astronomical objects.
+{% endraw %}

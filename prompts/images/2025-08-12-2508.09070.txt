@@ -1,0 +1,27 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from more literal and descriptive to more abstract and artistic, all designed to create a fitting headline image for the post.
+
+### Option 1 (Recommended)
+
+This prompt focuses on the core concept of the "four-point correlation" in a visually compelling way.
+
+```
+An abstract scientific illustration visualizing the four-point correlation function in the cosmic web. The focus is on a quartet of ancient, luminous red and golden galaxies. Ethereal, glowing lines of energy connect these four points, forming a subtle geometric structure against the vast, dark tapestry of space. In the background, the large-scale structure is visible as a network of faint filaments and countless distant galaxies. The mood is awe-inspiring and mysterious, hinting at the hidden order within the cosmos. Cinematic lighting, deep shadows, high detail. No text, numbers, or graphs.
+```
+
+### Option 2
+
+This prompt is more artistic and metaphorical, leaning into the idea of "data" and "measurement" from the DESI instrument.
+
+```
+A highly abstract and artistic representation of cosmological data analysis. From a central, unseen viewpoint, thousands of thin, luminous fibers stretch out into the darkness of space, mapping the cosmic web. These fibers terminate on glowing points of light, representing luminous red galaxies. The key visual element is that the fibers are highlighting specific quartets of galaxies, with sets of four fibers glowing more intensely and their connected galaxies pulsing with light. The overall image should feel like a neural network mapping the universe, a blend of technology and cosmic grandeur. Dark, deep blue and black background with accents of red, orange, and electric blue. No text, graphs, or data overlays.
+```
+
+### Option 3
+
+This prompt is more minimalist and elegant, focusing on the geometric patterns uncovered by the research.
+
+```
+An elegant and abstract visualization of the large-scale structure of the universe. The image depicts a dark, textured canvas where a web of faint, glowing filaments connects luminous nodes. The composition emphasizes geometric relationships, with subtle, interconnected groups of four golden-red nodes forming repeating tetrahedral patterns throughout the structure. The overall aesthetic is minimalist and profound, evoking the fundamental geometric order underlying the cosmos. It should not look like a literal photograph of space, but rather a conceptual piece of art. High contrast, deep blacks, rich red and gold highlights. No text or numbers.
+```
+{% endraw %}

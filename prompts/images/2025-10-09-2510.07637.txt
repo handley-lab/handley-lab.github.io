@@ -1,0 +1,11 @@
+{% raw %}
+An abstract and artistic representation of gravitational lensing used to test cosmological models.
+
+**Scene:** A distant, singular supernova shines as a brilliant, pure point of light in the background. Its light travels towards the viewer, but is intercepted and warped by the immense, invisible gravity of a foreground galaxy cluster. This warping effect splits the supernova's light into three distinct, distorted, and brightly magnified images or arcs that are prominent in the foreground.
+
+**Core Concept:** The central theme is the idea of a *mismatch* or a *test*. The lensed images should appear unnaturally bright, almost overexposed, creating a subtle visual tension. This hints that the scientific models are *overestimating* the magnification effect of the lens. It's a beautiful cosmic phenomenon, but with an underlying hint of an error or discrepancy being revealed.
+
+**Style:** Cinematic, ethereal, and elegant digital art. The background should be the deep, dark void of space, perhaps with subtle, wispy nebulae in shades of dark blue and purple. The light from the supernova and its lensed images should be a brilliant, glowing gold and white.
+
+**Keywords:** Gravitational lensing, supernova, cosmology, spacetime warp, deep space, abstract science, ethereal light, cinematic, elegant, high detail.
+{% endraw %}

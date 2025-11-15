@@ -16,7 +16,7 @@ arxiv = sys.argv[1]
 # Algorithm parameters
 basic_model = "gemini-2.5-flash"
 text_model = "gemini-2.5-pro"
-image_model = "imagen-3.0-generate-002"
+image_model = "imagen-4.0-generate-001"
 url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
@@ -41,22 +41,28 @@ with open('index.md', 'r') as f:
     homepage = f.read()
 
 
-# Extract author info
+# Extract author info - match on surnames
 print(f"Retrieving author data for {metadata.authors} from assets/group/group.yaml")
-contents = f"""
-Find the dictionary keys in the following group:
-```python
-{group.keys()}
-```
-that most closely match the following authors:
-```python
-{metadata.authors}
-```
-Give your answer just as comma separated list of keys, in the same order as the authors list. Do not give any pre- or post-amble If you cannot find a match, just list the original author name.
-"""
-response = client.models.generate_content(model=basic_model, contents=contents)
-authors = response.text.split(',')
-authors = {author.strip():group.get(author.strip(), {}) for author in authors}
+
+# Build surname lookup from group.yaml
+surname_to_key = {}
+for key in group.keys():
+    surname = key.split()[-1].lower()  # Last word is surname
+    surname_to_key[surname] = key
+
+# Match paper authors to group members by surname
+authors = {}
+for author_dict in metadata.authors:
+    author_name = author_dict['name']
+    surname = author_name.split()[-1].lower()
+
+    # Try to find matching group member
+    if surname in surname_to_key:
+        group_key = surname_to_key[surname]
+        authors[author_name] = group[group_key]
+        print(f"  Matched '{author_name}' -> '{group_key}'")
+    else:
+        authors[author_name] = {}  # Not in group
 
 # Filter for group members before image assignment
 group_members = {a: dat for a, dat in authors.items() if dat}  # Only include authors found in group.yaml

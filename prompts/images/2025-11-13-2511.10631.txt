@@ -1,0 +1,24 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from more direct metaphorical representations to more abstract concepts. Each one is designed to be visually appealing, abstract, and relevant to the blog post's content without using any text or graphs.
+
+### Option 1 (Recommended)
+
+This prompt focuses on the core theme: a simple model versus a more complex one, and the idea of "tension" being resolved. It's the most direct visual metaphor for the paper's conclusion.
+
+**Prompt:**
+> An abstract cosmological artwork visualizing the conflict between two models of the universe. The image is split by a subtle, shimmering fault line. On one side, the fabric of spacetime is a smooth, deep, uniform indigo, representing the constant Lambda-CDM model. On the other side, spacetime is a more complex, dynamic tapestry of deep purples and magentas with subtle, slow-moving waves, representing evolving dark energy. Along the fault line, where the two sides meet, there is a visible tension, a slight distortion, which the dynamic side seems to resolve and smooth out. The overall aesthetic is elegant, minimalist, and cinematic, like a high-resolution space telescope photo of a conceptual phenomenon.
+
+### Option 2
+
+This prompt uses the metaphor of a lens or prism to represent the Bayesian framework itself, showing how it reveals different interpretations of the same data.
+
+**Prompt:**
+> A conceptual science art piece. In the background is a vast, dark cosmic canvas, subtly textured with faint light and shadow representing cosmological data. Floating in the foreground is a large, ethereal, multi-faceted geometric crystal, acting as a prism. The cosmic background, viewed through this crystal, is refracted into two distinct, competing visions: one is a stable, serene, and unchanging universe; the other is a subtly warped reality with gentle, flowing currents of energy. The crystal itself glows faintly, symbolizing the Bayesian evidence framework analyzing the data and weighing the possibilities. The style is clean, sophisticated, and mysterious.
+
+### Option 3
+
+This prompt is more focused on the idea of conflicting data streams, which is the technical source of the discrepancy discussed in the paper.
+
+**Prompt:**
+> An abstract visualization of conflicting cosmological data. Two powerful, interwoven streams of light traverse a dark void. One stream is a cool, speckled blue, representing CMB data. The other is a series of sharp, brilliant bursts of gold, representing supernova data. The streams are not perfectly aligned; where they intersect, they create patterns of interference and tension, causing the space around them to ripple. A third, more fluid and complex field of violet energy seems to emerge from this tension, its flexibility accommodating and reconciling the two conflicting streams. The image should be dramatic and full of glowing light and deep shadows, emphasizing the theme of statistical tension.
+{% endraw %}

@@ -1,0 +1,34 @@
+{% raw %}
+Excellent. This is a fascinating topic that blends cosmology, statistics, and high-performance computing. The key is to create a prompt that captures the essence of "finding a clean signal in a sea of noise" within a cosmic context, without being literal.
+
+Here is a primary prompt designed to generate a sophisticated and relevant image, along with a few alternatives exploring different visual metaphors.
+
+### Primary Prompt
+
+**An abstract and elegant digital artwork depicting the process of Bayesian data curation in cosmology. A flowing stream of luminous data points, representing a supernova's light curve, travels across a deep space nebula background. Most of the points form a smooth, coherent, glowing blue-white arc. However, the stream is corrupted by sporadic, chaotic, and brightly colored "anomalous" data points that stray from the main path. A subtle, geometric, semi-transparent filter or a probabilistic field intercepts the stream. This filter intelligently identifies the anomalous points, causing them to dim and fade away, while allowing the coherent arc to pass through, emerging cleaner and more defined on the other side. The style should be minimalist yet cinematic, with a strong sense of depth and ethereal lighting. Focus on the conceptual contrast between chaos and order, noise and signal.**
+
+---
+
+### Rationale for the Prompt
+
+*   **"Abstract and elegant digital artwork"**: Sets the desired high-level aesthetic.
+*   **"Flowing stream of luminous data points... against a deep space nebula"**: Immediately grounds the image in the themes of data and cosmology.
+*   **"Smooth, coherent, glowing blue-white arc"**: This is the "good" data, the underlying physical SALT3 model. The arc shape is a classic representation of a light curve.
+*   **"Sporadic, chaotic, and brightly colored 'anomalous' data points"**: This is the visual representation of the problem – the outliers and bad data that need to be removed. The color contrast makes them stand out.
+*   **"Subtle, geometric, semi-transparent filter or a probabilistic field"**: This is the core of the paper's solution. It's not a hard "sieve" but something more intelligent and statistical, hence "probabilistic field." It's the Bayesian framework in action.
+*   **"Causing them to dim and fade away"**: This visually represents the "down-weighting" of bad data points, which is more accurate than simply "deleting" them.
+*   **"Minimalist yet cinematic... ethereal lighting"**: Guides the AI toward a professional, visually appealing style suitable for a scientific post.
+*   **"Focus on the conceptual contrast between chaos and order, noise and signal"**: This is the central theme of the paper, boiled down to its artistic essence.
+
+### Alternative Prompts
+
+Here are a few other options that play with slightly different metaphors:
+
+**Alternative 1 (Focus on the Supernova itself):**
+> A conceptual, abstract illustration of a Type Ia supernova. The central point of light is surrounded by an expanding shell of data, represented as glowing particles. A perfect, smooth spiral of white light represents the true physical model. This spiral is obscured by a cloud of noisy, erratic, jarringly colored particles representing anomalous data. A shimmering, intelligent Bayesian probability field surrounds the supernova, gently pushing the noisy particles away and making them transparent, revealing the clean, underlying spiral of light. The overall aesthetic is dark, cosmic, and sophisticated. Digital art.
+
+**Alternative 2 (More Minimalist and Symbolic):**
+> A minimalist digital painting about finding a clear signal in cosmic noise. A single, graceful, glowing arc of light (a supernova light curve) travels across a dark canvas. The arc is interrupted and partially hidden by a cluster of jagged, bright, red and yellow digital "glitches" (anomalies). An ethereal, soft blue wave of light (the Bayesian algorithm) is sweeping over the glitches, causing them to dissolve and reveal the complete, perfect arc underneath. The image should be abstract, clean, and highly symbolic.
+
+Any of these prompts should produce a compelling and thematically appropriate image for your post. The primary prompt is likely the most comprehensive for capturing the full story of the paper.
+{% endraw %}

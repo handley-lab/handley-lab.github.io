@@ -1,0 +1,23 @@
+{% raw %}
+Excellent. Here is a prompt designed to generate a compelling and thematically appropriate image for the blog post about the `Synthesizer` software package.
+
+This prompt is structured to guide an AI image generator by explaining the core concept, defining the visual elements and their symbolic meaning, and specifying the desired artistic style.
+
+---
+
+### The Prompt:
+
+**A visually stunning and abstract digital art piece that conceptualizes the process of creating synthetic astronomical observations from raw simulation data.**
+
+**On the left side of the image:** Depict the "input" as an abstract, glowing wireframe grid or a cloud of digital particles, representing complex simulation data. This side should feel structured, mathematical, and digital, with faint, code-like patterns flowing through it. Use cool colors like deep blues and electric purples.
+
+**In the center:** Show a "synthesis" or "transformation" process. Luminous threads of data and light should be seen flowing from the left, passing through a series of interconnected, glowing nodes and abstract modular components. This represents the software, the "Synthesizer," acting as a bridge. This central area should be a nexus of energy and creation.
+
+**On the right side of the image:** The threads of light coalesce and resolve into the "output" – a beautiful, realistic-looking spiral galaxy surrounded by a vibrant nebula. This side should feel organic, cosmic, and awe-inspiring, with warm colors like gold, orange, and magenta, representing starlight and gas clouds.
+
+**Overall Style:**
+*   **Theme:** Bridging the digital and the cosmic. Transformation from data to reality.
+*   **Aesthetics:** Cinematic, ethereal, high-detail, with a strong sense of depth and flow from left to right.
+*   **Lighting:** Dramatic lighting with a high contrast between the dark cosmic background and the glowing elements.
+*   **Exclusions:** Absolutely no text, numbers, graphs, or user interface elements. The image must be purely conceptual and artistic.
+{% endraw %}

@@ -1,0 +1,9 @@
+{% raw %}
+Excellent. Here is a prompt designed to generate a fitting headline image for the provided blog post. The prompt incorporates the key scientific concepts (lensing, supernova, time delay, microlensing) into an abstract visual metaphor, while adhering to your stylistic constraints.
+
+---
+
+### The Prompt:
+
+**An abstract and visually stunning digital art piece inspired by the gravitational lensing of a distant supernova. In the center, a subtle, dark gravitational mass warps the fabric of spacetime. The brilliant light from a single, distant stellar explosion is split into multiple, distinct arcs of light that travel along curved paths around the central mass. Each arc has a slightly different length, brightness, and color temperature (e.g., some more golden, others more blue) to visually represent the time delay between the images. The light within these arcs is not perfectly smooth, but has a subtle, complex, shimmering texture, hinting at the chaotic effect of microlensing. The overall aesthetic is elegant, cosmic, and cinematic, set against the deep blues and purples of intergalactic space. The image should be symbolic and artistic, with no text, graphs, or equations.**
+{% endraw %}

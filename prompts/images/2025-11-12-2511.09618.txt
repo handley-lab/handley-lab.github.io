@@ -1,0 +1,32 @@
+{% raw %}
+Of course. The goal is to create a prompt that captures the core themes of the post—cosmic variance, large-scale coherent effects ("conformity"), and the idea of a survey "box" within a larger simulated universe—in an abstract and visually compelling way.
+
+Here are a few options, ranging from more conceptual to more artistic.
+
+### Option 1 (Focus on "Think inside the box")
+
+This prompt directly visualizes the central metaphor of the post.
+
+**Prompt:**
+> An abstract, cosmological scene. A vast, ethereal, semi-transparent cube representing a simulation volume floats in deep space. Within this larger cube, numerous smaller, glowing cubic regions are visible, representing survey fields. One of these smaller cubes shines exceptionally brightly, containing a dense cluster of brilliant, interconnected, star-like points, while the others are more sparsely populated. The overall color palette should be deep blues, purples, and incandescent gold, evoking the early universe as seen by JWST. The style is elegant, clean, and minimalist, emphasizing the geometry and the contrast between the overdense region and the average.
+
+### Option 2 (Focus on "Large-Scale Conformity")
+
+This prompt visualizes the idea of a coherent, large-scale influence on galaxy formation.
+
+**Prompt:**
+> A visualization of the cosmic web at high redshift. A vast, filamentary structure of dark matter, rendered in deep purples and blues, stretches across the frame. Embedded within these filaments are nascent galaxies, depicted as points of intense, golden light. In one specific, large region, these points of light are not only more numerous but also shine with a synchronized, heightened intensity and are interconnected by faint golden threads, as if influenced by a shared, invisible field. This 'conformity' region stands in stark contrast to other, quieter areas of the cosmic web. The style is ethereal and abstract, a blend of scientific simulation and artistic interpretation.
+
+### Option 3 (Most Abstract & Artistic)
+
+This prompt focuses on creating a beautiful, evocative image that hints at the concepts without being literal.
+
+**Prompt:**
+> An abstract artistic representation of cosmic structure and variance. The image depicts a celestial mosaic of interlocking, translucent geometric blocks, reminiscent of cubic volumes seen in perspective. Within each block, galaxies from the early universe are represented as delicate, glowing nebulae and sharp points of light. The density and brilliance of these galaxies vary dramatically from one block to another. One prominent volume is saturated with luminous, interconnected golden structures, suggesting a region of accelerated, coherent galaxy formation. The background is a deep, textured indigo, giving a sense of infinite depth. The style should be elegant, awe-inspiring, and conceptual.
+
+---
+
+**Recommendation:**
+
+For this specific blog post, **Option 1 is the strongest choice.** It directly and elegantly visualizes the "Think inside the box" title and the concept of cosmic variance, which are the main framing devices of the article. It's clear, on-topic, and provides a powerful visual metaphor for the science being discussed.
+{% endraw %}

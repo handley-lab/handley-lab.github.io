@@ -1,0 +1,45 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from the more metaphorical to the more abstract, designed to capture the essence of the blog post. Each prompt explains the reasoning behind its imagery.
+
+### Option 1 (Metaphorical & Direct)
+
+This prompt uses the classic metaphor of scales to represent Bayesian model selection—literally weighing the evidence for two competing theories.
+
+> **Prompt:**
+> An abstract digital painting of cosmic scales of justice, suspended in the void of space. On one pan of the scales rests a swirling, chaotic nebula representing "dynamic dark energy." On the other pan rests a simple, perfect crystal that has a single, subtle, glowing crack or flaw in it, representing a "systematic offset." The scales are tipped decisively in favor of the flawed crystal, which glows more brightly, illuminating the scene. The aesthetic is cinematic, with deep blues, purples, and golden light, evoking a sense of profound cosmic discovery.
+
+**Why it works:**
+*   **Bayesian Selection:** The scales are a direct and intuitive visual for "model selection" and "weighing evidence."
+*   **The Two Models:** It clearly visualizes the two competing ideas: the complex, "new physics" of dynamic dark energy (chaotic nebula) versus the simpler model with a hidden flaw (the crystal with a crack).
+*   **The Result:** The tipping of the scales and the brighter glow clearly communicate the paper's conclusion that the systematic offset is the preferred explanation.
+
+---
+
+### Option 2 (Conceptual & Dynamic)
+
+This prompt focuses on the idea of data, pathways, and disentangling a true signal from a systematic "glitch."
+
+> **Prompt:**
+> A conceptual visualization of two intertwining pathways of light traveling through the fabric of spacetime. One path is complex and dynamically weaving, representing a theory of evolving dark energy. The other path is much simpler and straighter, but it contains a single, sharp 'glitch' or 'offset'—a small, abrupt jump. A luminous, ethereal glow representing 'Bayesian evidence' is selectively illuminating the simpler path with the glitch, showing it to be the correct route. The style is minimalist and elegant, with vibrant neon lines against a dark, starry background.
+
+**Why it works:**
+*   **Disentangling Signals:** The idea of two paths captures the core problem of distinguishing between two explanations for the same data.
+*   **Visualizing the Models:** "Dynamically weaving" vs. "simpler... with a glitch" is a great abstract representation of the two models.
+*   **Highlights the Conclusion:** The "glow of evidence" lighting up the simpler, glitched path makes the paper's finding the central theme of the image.
+
+---
+
+### Option 3 (Purely Abstract & Ethereal)
+
+This prompt is less literal and aims for a more atmospheric and mysterious image that captures the "ghost in the machine" idea mentioned in the post.
+
+> **Prompt:**
+> An abstract, ethereal representation of the expanding universe, visualized as a smooth, orderly grid of spacetime receding into the distance. Superimposed on this clean structure is a subtle, ghostly shimmer—a data artifact or glitch that locally distorts the grid. This shimmering distortion is the focal point, rendered with a faint, eerie light, while in the far background, a much larger, more dramatic warping of spacetime is hinted at, but remains dark and unfavored. The overall mood is one of quiet revelation and scientific clarity. Digital art, high contrast, atmospheric, minimalist.
+
+**Why it works:**
+*   **"Ghost of a systematic":** This directly visualizes the key phrase from the text, representing the systematic as a non-physical artifact overlaid on reality.
+*   **Simplicity vs. Complexity:** It contrasts the small, local glitch (the favored explanation) with the large, fundamental warp (the rejected dark energy model).
+*   **Visually Striking:** The minimalist, high-contrast style can be very compelling for a headline image, drawing the eye to the central "glitch."
+
+For a general-purpose AI image generator, **Option 1** is likely the most reliable as it uses a very strong, clear metaphor that the AI can easily interpret.
+{% endraw %}

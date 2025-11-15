@@ -1,0 +1,3 @@
+{% raw %}
+An abstract, sophisticated digital art piece visualizing the intersection of cosmology and high-performance computing. The central focus is a complex, luminous, multi-layered geometric structure made of nested, translucent shells, representing a high-dimensional parameter space. Thousands of parallel, glowing streams of light, forming intricate neural network and circuit-like patterns, flow through and explore these nested layers, symbolizing a massively parallel GPU-accelerated algorithm. The background is a dark, deep space with the faint, ethereal structure of the cosmic web. The aesthetic is clean, futuristic, and minimalist, with a color palette of deep blues, electric cyans, and vibrant purples. Cinematic lighting, highly detailed.
+{% endraw %}

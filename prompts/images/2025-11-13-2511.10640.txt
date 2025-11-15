@@ -1,0 +1,27 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a visually compelling, abstract headline image that captures the essence of the blog post. It focuses on the core concepts: the vastness of galaxy data, the role of neural networks, and the extraction of complex information.
+
+### Primary Prompt
+
+This prompt is designed to be detailed and evocative, guiding the AI to create a rich, thematic image.
+
+**An abstract and artistic representation of Simulation-Based Inference for astrophysics. A vast deep-field of countless distant galaxies serves as the background. From this cosmic tapestry, streams of multi-colored light and data converge upon a central, luminous, and ethereal neural network structure. The network, composed of glowing nodes and interconnected synapses, processes this torrent of information. On the output side, the network transforms the light into shimmering, multi-dimensional, and translucent shapes, abstractly representing the posterior distributions of galaxy properties. The style is futuristic and elegant, with the dark vacuum of space contrasting with the vibrant, glowing light of the galaxies and the AI. Cinematic, high-contrast lighting. No text or graphs. Digital art.**
+
+---
+
+### Alternative Prompts
+
+Here are a few variations with slightly different focuses, in case the first one doesn't produce the desired result or if you want to explore different artistic metaphors.
+
+**Alternative 1 (Focus on Speed and Transformation):**
+
+**A conceptual image symbolizing a computational breakthrough in astronomy. A massive river of light, composed of the blended colors of millions of distant galaxies, flows from the background. This river, previously a tangled bottleneck, now passes effortlessly through a sleek, crystalline prism that subtly evokes the architecture of a neural network. As the light exits the structure, it is elegantly resolved into millions of individual, distinct, and organized glowing glyphs, each representing a fully analyzed galaxy. The aesthetic is minimalist and futuristic, emphasizing the speed and clarity of the transformation. Dark background, high contrast, digital art.**
+
+**Alternative 2 (Focus on the "Synthesizer" and Learning):**
+
+**An abstract digital painting showing the synthesis of cosmic knowledge. On one side, a nebula of stardust and gas is being computationally forged into simulated galaxies by a glowing, intricate schematic. This simulated light merges with light from a field of real galaxies. This combined stream of information feeds into a central, brain-like neural network, which illuminates with understanding. The output is a clear, stable, and intricate map of cosmic properties, visualized as a softly glowing, multi-layered tapestry. The artwork should feel epic and convey a sense of intellectual discovery on a cosmic scale.**
+
+**Alternative 3 (A more concise version):**
+
+**A vast, dark cosmic starfield containing thousands of colorful, distant galaxies. A luminous, abstract neural network floats in the center. Thin lines of light flow from each galaxy into the network's input nodes. From the output nodes, more complex, soft, multi-colored clouds of light emerge, representing the inferred physical properties. The image should be beautiful, futuristic, and mysterious. Photorealistic style with ethereal, glowing elements.**
+{% endraw %}

@@ -1,0 +1,5 @@
+{% raw %}
+**Prompt for AI Image Generator:**
+
+An abstract, epic digital artwork symbolizing the unimpeded flow of cosmological data. In the vastness of space, a luminous river of light and data flows through the cosmic web, connecting glowing nodes and filaments of galaxies. The river overcomes a dissolving barrier, representing a computational bottleneck being removed. The style is cinematic and ethereal, with a rich color palette of deep blues, purples, and shimmering gold. The image should evoke a sense of discovery, interconnectedness, and progress. No text, numbers, or graphs.
+{% endraw %}

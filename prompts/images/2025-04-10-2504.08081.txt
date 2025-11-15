@@ -1,0 +1,3 @@
+{% raw %}
+An abstract digital art piece visually representing the intersection of astrophysics and modern machine learning. A central, stylized supernova explosion radiates brilliant light. This light is elegantly captured and transformed into a complex, glowing network of parallel data streams and smooth, interconnected pathways, symbolizing the processing power of a GPU and the concept of a differentiable computational graph. The color palette is rich and cosmic, featuring deep violets, blues, and radiant oranges, reminiscent of a celestial nebula. The overall feeling is one of speed, precision, and futuristic elegance. The image should be clean, high-resolution, and contain no text, numbers, or graph axes.
+{% endraw %}

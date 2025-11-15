@@ -1,0 +1,28 @@
+{% raw %}
+Of course. Here are a few prompt options, ranging from more literal to more abstract, all designed to create a visually striking and relevant headline image.
+
+### Option 1 (Recommended)
+
+This prompt combines the key concepts: gravitational waves, parallel processing, and speed. It's the most direct and balanced representation of the paper's topic.
+
+> **Prompt:**
+> An abstract, artistic representation of gravitational waves being processed by a massively parallel system. At the center, two swirling cosmic vortices hint at merging black holes, sending out ripples across a dark spacetime grid. These ripples transform into a vast number of bright, parallel, glowing data streams that race forward with immense speed. The aesthetic is futuristic and digital, with a color palette of deep blues, purples, and vibrant cyan or gold for the data streams, evoking the architecture of a GPU. The image should be cinematic, high-contrast, and convey a sense of breakthrough and acceleration. Digital art, no text or numbers.
+
+---
+
+### Option 2 (Focus on the Algorithm)
+
+This prompt focuses more on the "nested sampling" concept itself, visualizing the exploration of a parameter space. It's more conceptual and abstract.
+
+> **Prompt:**
+> An abstract visualization of Bayesian parameter estimation accelerated on a GPU. In the center is a complex, multi-layered, translucent object made of nested, glowing shells, representing a likelihood surface in a cosmic setting. A massive swarm of thousands of tiny, coherent points of light simultaneously explore these nested layers in parallel. The background is a dark nebula. The feeling is one of meticulous, large-scale exploration and discovery. Use a palette of deep space blues and purples, with the nested object and points glowing in white and electric blue. Digital art, high-resolution, no text or graphs.
+
+---
+
+### Option 3 (Metaphorical Breakthrough)
+
+This prompt is a strong metaphor for the paper's core achievement: overcoming a computational bottleneck. It's dynamic and action-oriented.
+
+> **Prompt:**
+> A powerful, metaphorical image representing a computational breakthrough. On the left, a single, slow, dim thread of light enters a dark, complex bottleneck. On the right, it explodes out of the bottleneck into a massive, brilliant, and highly-organized beam composed of thousands of parallel neon rays. The emergent beam subtly forms the shape of a gravitational wave signal as it speeds across a dark, cosmic background. The style is abstract, energetic, and high-contrast, using deep violets and intensely bright cyan light. Digital art, cinematic lighting, no text.
+{% endraw %}

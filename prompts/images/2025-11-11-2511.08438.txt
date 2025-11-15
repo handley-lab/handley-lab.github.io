@@ -1,0 +1,51 @@
+{% raw %}
+Excellent. The goal is to create a prompt that visually captures the essence of "painting" galaxies onto a dark matter "canvas" using AI. The prompt needs to be abstract, visually stunning, and avoid literal representations like graphs or text.
+
+Here are a few options, from the most direct interpretation to more abstract ones.
+
+### Option 1 (Recommended - The Cosmic Artist)
+
+This prompt directly uses the "painting" metaphor from the paper's title in a visually rich way.
+
+**Prompt:**
+```
+A vast and intricate cosmic web of dark matter, rendered in deep blues and purples, serves as a dark canvas. From an unseen source, ethereal streams of liquid light, representing an artificial intelligence, flow like a celestial paintbrush. Where these streams of light touch the dark matter filaments, they blossom into vibrant, glowing spiral galaxies and nebulae, 'painting' the universe with stellar light. The style is a beautiful, abstract fusion of cosmic art and digital energy. Cinematic lighting, high detail.
+```
+
+**Why it works:**
+*   **Metaphor:** Directly translates "painting galaxies onto dark matter" into a visual concept.
+*   **Key Elements:** Includes the dark matter web (canvas), the AI (paintbrush/light), and the galaxies (paint).
+*   **Aesthetics:** Aims for a "beautiful, abstract fusion," hitting the user's requirements for a visually appealing, non-quantitative image.
+
+---
+
+### Option 2 (The Digital Weaver)
+
+This prompt focuses on the AI's role as a constructor or architect, bridging the gap between two states of the universe.
+
+**Prompt:**
+```
+An abstract, dual-reality cosmic scene. On one side, a ghostly, three-dimensional lattice of dark matter filaments, rendered in monochromatic, subtle light. On the other side, the same structure is brilliantly illuminated, populated by a rich tapestry of colorful, detailed galaxies. Bridging the two halves is a glowing, complex neural network of light, its tendrils connecting the dark matter nodes to the newly formed galaxies, symbolizing the process of AI-driven creation. The image should be epic in scale and visually seamless.
+```
+
+**Why it works:**
+*   **Process-Oriented:** Visually explains the "before" (dark matter only) and "after" (galaxies), with the AI as the clear catalyst.
+*   **High-Tech Feel:** The "neural network of light" strongly suggests the AI component.
+*   **Clarity:** The concept is very clear while remaining abstract and artistic.
+
+---
+
+### Option 3 (The Transformer Core)
+
+This prompt centers the AI model itself (the "transformer") as the source of cosmic creation.
+
+**Prompt:**
+```
+At the center of the image, a complex, glowing geometric structure, representing a transformer AI core, pulses with soft, internal light. From this core, two realities emanate. On the left, it projects a faint, 3D grid of data representing a dark matter simulation. On the right, this data is transformed into a breathtaking, fully realized portion of the universe filled with vibrant nebulae and swirling galaxies, whose positions align with the data grid. The aesthetic is a clean, futuristic fusion of digital information and cosmic beauty.
+```
+
+**Why it works:**
+*   **AI-Centric:** Puts the technology front and center in a visually interesting way.
+*   **Input/Output:** Clearly visualizes the transformation from input (data) to output (cosmos).
+*   **Modern Aesthetic:** Leans into a "futuristic," "digital" look that aligns well with the topic of AI research.
+{% endraw %}

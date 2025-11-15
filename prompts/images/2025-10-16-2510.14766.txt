@@ -1,0 +1,7 @@
+{% raw %}
+Of course. Here is a prompt designed to generate a visually appealing and conceptually relevant image for the blog post.
+
+### The Prompt
+
+**A conceptual, abstract digital art piece illustrating the connection between a galaxy's visible appearance and its invisible dark matter substructure. On one side of the image, show a luminous and detailed spiral galaxy. The light and structure of its spiral arms elegantly dissolve and transform, flowing across the image into a vast, ethereal web of faint purple and blue filaments representing a dark matter halo. This dark matter web is populated with numerous small, bright, distinct clumps, symbolizing the predicted subhalos. The transition between the galaxy and the dark matter web should be highlighted by a subtle, glowing, geometric pattern, suggesting an AI neural network interpreting the visual data. The overall style should be futuristic and sleek, like a high-end scientific illustration, evoking a sense of discovery and mystery. Use a dark, cosmic color palette—deep blues, purples, and blacks—contrasted with the glowing light of the galaxy and the subhalo clumps. The image must be purely visual and symbolic, with no text, numbers, or data plots.**
+{% endraw %}

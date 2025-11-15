@@ -1,0 +1,37 @@
+{% raw %}
+Of course. Here are several prompt options, ranging from more conceptual to more literal, designed to generate a compelling and relevant image for the post.
+
+### Option 1 (Recommended)
+
+This prompt focuses on the core idea of the `unimpeded` library: providing a pre-computed grid to allow for the smooth, unhindered flow of scientific inquiry. It combines the concepts of the "grid" and the "unimpeded" flow.
+
+**Prompt:**
+> Abstract digital art representing cosmological data analysis. A vast, glowing cosmic lattice structure floats in deep space. From the nodes of this grid, intricate, thread-like chains of light flow outwards smoothly and without obstruction, exploring the surrounding darkness. The overall aesthetic is clean, futuristic, and ethereal, conveying a sense of clarity and accelerated discovery. Cinematic lighting, deep blues and luminous golds, high detail.
+
+---
+
+### Option 2 (Focus on Tensions)
+
+This prompt is more dramatic and visualizes the central conflict discussed in the paper: the different "natures" of the Hubble and S_8 tensions.
+
+**Prompt:**
+> A conceptual, abstract image visualizing cosmological tensions. A dark, smooth fabric representing spacetime is being pulled in two different ways. On one side, the tension creates a single, sharp, brilliant line of light, like a focused tear. On the other side, the tension causes the fabric to fray into a complex, multi-threaded, messy web of glowing light. The style is minimalist and highly symbolic, set against a dark cosmic background.
+
+---
+
+### Option 3 (Focus on Nested Sampling)
+
+This prompt visualizes the "nested" aspect of the statistical method, framing it in a cosmological context.
+
+**Prompt:**
+> Abstract art inspired by nested sampling in cosmology. A series of luminous, translucent, concentric spheres or shells float in the void of space. The shells contain faint, intricate patterns reminiscent of the cosmic web and galactic filaments. At the very center is a bright, condensed point of light, representing the highest likelihood. The image should feel deep, layered, and analytical. Digital painting, high resolution.
+
+---
+
+### Option 4 (Simple & Elegant)
+
+This is a more minimalist and direct interpretation of the paper's title and purpose.
+
+**Prompt:**
+> A minimalist, abstract visualization of unimpeded exploration. A single, elegant, glowing path of light traces a complex but smooth and continuous trajectory through a dark, deep-space environment dotted with faint, out-of-focus stars. The feeling is one of effortless movement and precision. High contrast, clean lines, digital art.
+{% endraw %}

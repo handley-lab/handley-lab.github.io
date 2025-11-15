@@ -7,8 +7,8 @@ from datetime import datetime, date
 df = DataFrame()
 df['data'] = people
 df['level'] = df.data.apply(lambda x: min(x.levels).key)
-df['present'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start <= date.today())
-df['future'] = df.data.apply(lambda x: x.end()==None and min(x.levels).start > date.today()) 
+df['present'] = df.data.apply(lambda x: min(x.levels).start <= date.today() and (x.end()==None or x.end() >= date.today()))
+df['future'] = df.data.apply(lambda x: min(x.levels).start > date.today()) 
 
 html_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.html')
 
@@ -33,7 +33,7 @@ css = """
 }
 """
 
-ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz"]
+ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz", "Rose Luo", "Alex Drane", "Farah Wallauer", "Ajinkya Naik"]
 
 with open(html_file, 'w') as f:
     doc = Doc()
@@ -90,16 +90,22 @@ with open(html_file, 'w') as f:
                                                         for cs in l.supervisors:
                                                             if cs != 'Will Handley':
                                                                 text.append(f'<a href="{supervisors[cs]}">{cs}</a>')
-                                                        text = ', '.join(text)
-                                                        with doc.tag('li'):
-                                                            doc.asis(f"co-supervised with {text}")
+                                                        if text:  # Only display if there are co-supervisors
+                                                            text = ', '.join(text)
+                                                            with doc.tag('li'):
+                                                                doc.asis(f"co-supervised with {text}")
                                                     if l.thesis:
                                                         doc.line('li', f'Thesis: {l.thesis}')
 
                                         joint_papers = person.joint_papers()
                                         if joint_papers:
-                                            with doc.tag('li'):
+                                            # Check if it's just a link (PI) or a full list (others)
+                                            if joint_papers.startswith('<ul>'):
+                                                doc.line('li', 'Group research papers:')
                                                 doc.asis(joint_papers)
+                                            else:
+                                                with doc.tag('li'):
+                                                    doc.asis(joint_papers)
 
                                         if person.links:
                                             doc.line('li', 'Links:')

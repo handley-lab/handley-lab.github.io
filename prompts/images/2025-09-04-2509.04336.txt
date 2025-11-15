@@ -1,0 +1,13 @@
+{% raw %}
+```
+An abstract digital art visualization of gravitational wave analysis accelerated by parallel computing.
+
+In the center, a swirling vortex of iridescent ripples, representing the complex spacetime data from a binary black hole merger, dominates the scene. This wave structure should feel organic and powerful.
+
+This vortex is being probed and deconstructed by a vast, intricate grid of glowing computational nodes, symbolizing a GPU. Thousands of fine, sharp streams of light, representing parallel processing threads, flow from the grid, tracing and defining the structure within the waves. The interaction should convey the idea of a complex, chaotic signal being transformed into structured understanding.
+
+The overall aesthetic is sleek, dark, and futuristic, with a color palette of deep blues, purples, and vibrant cyan highlights for the computational threads. The image should convey a sense of immense computational power being brought to bear on a complex cosmic phenomenon through massive parallelism.
+
+There should be no text, numbers, graphs, or literal representations of hardware.
+```
+{% endraw %}
