@@ -81,6 +81,11 @@ a:hover {
   align-items: center;
   justify-content: space-between;
   gap: 1rem;
+  background: transparent !important;
+  border-radius: 0 !important;
+  opacity: 1 !important;
+  padding-top: 0.82rem;
+  padding-bottom: 0.82rem;
 }
 
 .site-title {
