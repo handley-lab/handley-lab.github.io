@@ -1,0 +1,23 @@
+- theme: "GPU Nested Sampling"
+  title: "Scaling Bayesian inference for real workloads"
+  summary: "We accelerate nested sampling and posterior exploration to make previously expensive analyses practical."
+  examples: "Nested sampling speedups, BlackJAX workflows, accelerated inference pipelines."
+  link: "https://arxiv.org/abs/1506.00171"
+
+- theme: "Gravitational-Wave Inference"
+  title: "Fast and reliable parameter inference for transients"
+  summary: "We build and validate methods that improve turnaround and reliability in GW parameter estimation."
+  examples: "Emulation workflows, robust validation, reproducible code paths."
+  link: "https://arxiv.org/abs/2411.17663"
+
+- theme: "Cosmology and Fundamental Physics"
+  title: "Confronting models with high-precision cosmological data"
+  summary: "We test inflation, dark energy, and beyond-LambdaCDM scenarios with modern Bayesian tooling."
+  examples: "CMB, LSS, 21-cm, and cross-probe analyses."
+  link: "https://arxiv.org/abs/2503.08658"
+
+- theme: "AI for Scientists"
+  title: "Methodology that reduces overhead without reducing rigor"
+  summary: "We apply supervised execution to compress implementation overhead while preserving scientific judgement."
+  examples: "Rapid tool construction, context engineering, reproducible review loops."
+  link: "https://arxiv.org/abs/2504.10230"

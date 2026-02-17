@@ -1,0 +1,23 @@
+- name: "Inference Skill Packs"
+  category: "Bayesian Methods"
+  maturity: "Active"
+  description: "Reusable descriptions for model setup, priors, diagnostics, and posterior checks."
+  url: "https://github.com/fundamental-physics/marketplace"
+
+- name: "Context Engineering Templates"
+  category: "Research Workflow"
+  maturity: "Active"
+  description: "Structured context patterns for reproducible planning, implementation, and review loops."
+  url: "https://github.com/fundamental-physics/marketplace"
+
+- name: "MCP Tooling for Scientific Work"
+  category: "Tool Interfaces"
+  maturity: "Active"
+  description: "Task-focused tool interfaces for code review, document handling, and repository automation."
+  url: "https://github.com/fundamental-physics/marketplace"
+
+- name: "Group Method Playbooks"
+  category: "Team Operations"
+  maturity: "Drafting"
+  description: "Codified patterns for supervised execution in collaborative research settings."
+  url: "https://github.com/fundamental-physics/marketplace"

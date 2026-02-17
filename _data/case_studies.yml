@@ -1,0 +1,29 @@
+- id: jim-emulators
+  title: "jim-emulators: from blank slate to working package in one day"
+  timebox: "9:00 to 18:00"
+  status: "Demo available"
+  summary: "Rapidly built a gravitational-wave emulator workflow using supervised execution."
+  outcome: "A functioning package with tests and documentation by end of day."
+  evidence: "Live build session with working output and reproducible repository state."
+  demo_url:
+  repo_url: "https://github.com/fundamental-physics"
+
+- id: live-five-minute-deck
+  title: "Six-slide scientific presentation generated live in five minutes"
+  timebox: "5 minutes"
+  status: "Demo available"
+  summary: "Constructed a coherent six-slide narrative from source notes and meeting context."
+  outcome: "Audience-ready deck assembled and iterated in real time."
+  evidence: "Recorded live build demonstrating context assembly and supervision."
+  demo_url:
+  repo_url:
+
+- id: cosmosis-cobaya-port
+  title: "Cosmosis to Cobaya likelihood port with floating-point validation"
+  timebox: "Single focused sprint"
+  status: "In progress"
+  summary: "Ported inference components and benchmarked numerical agreement."
+  outcome: "Precision checks refined from rough agreement to floating-point-level parity."
+  evidence: "Cross-framework comparison tests and review-driven bug isolation."
+  demo_url:
+  repo_url:
