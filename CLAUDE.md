@@ -4,149 +4,90 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 ## Overview
 
-This is the Handley Research Group website, a Jekyll-based GitHub Pages site for the University of Cambridge research group. The site showcases research papers, group members, and academic activities with content automatically generated using Large Language Models.
+Handley Research Group website — a Jekyll (4.4, minima theme) GitHub Pages site for the University of Cambridge research group. Content (blog posts, homepage, images) is generated using Google Gemini API. Group member data is managed as structured YAML.
+
+**Domain:** handley-lab.co.uk | **Deploy:** push to `main` triggers GitHub Pages rebuild.
 
 ## Essential Commands
 
-### Development Server
 ```bash
-# Start local Jekyll development server
-script/server
-
-# Alternative: bundle exec jekyll serve
-bundle exec jekyll serve
+script/bootstrap          # Install Ruby dependencies (bundler + gems)
+script/server             # Start local dev server (bundle exec jekyll serve)
+script/build              # Build site to _site/
+script/cibuild            # Build + validate _site/index.html exists
+script/calculate          # Regenerate group timeline.py + html_table.py
 ```
 
-### Build & Deploy
+### Content Generation (requires `GEMINI_API_KEY`)
+
 ```bash
-# Build the site
-script/build
-
-# CI build (includes validation)
-script/cibuild
-
-# Bootstrap dependencies
-script/bootstrap
+python script/posts/arxiv.py <arxiv_id>   # Generate blog post from arXiv paper
+python script/index.py                      # Regenerate homepage content
+python script/background.py                 # Regenerate landing page background image
 ```
 
-### Setup Dependencies
-```bash
-# Install Ruby gems
-gem install bundler
-bundle install
-```
+## Architecture
 
-## Architecture & Structure
+### Content Generation Pipeline
 
-### Jekyll Configuration
-- **Site Configuration**: `_config.yml` - Main Jekyll configuration with theme (minima), plugins, and site metadata
-- **Dependencies**: `Gemfile` - Ruby gem dependencies including Jekyll 3.10.0 and minima theme
-- **Custom Styling**: `_sass/minima/` - SCSS overrides for the minima theme
+`script/posts/arxiv.py` is the primary content pipeline:
+1. Fetches paper metadata from arXiv API (feedparser) and LaTeX source from arxiv.org/src/
+2. Cross-references authors against `assets/group/group.yaml` using surname matching
+3. Calls Gemini (`gemini-2.5-pro`) to generate blog post narrative
+4. Calls Imagen (`imagen-4.0-generate-001`) to generate accompanying image
+5. Outputs: post in `_posts/YYYY-MM-DD-<arxiv_id>.md`, image in `assets/images/posts/`, prompts saved to `prompts/content/` and `prompts/images/` for reproducibility
 
-### Content Organization
-- **Posts**: `_posts/` - Academic paper blog posts with standardized naming: `YYYY-MM-DD-ARXIV_ID.md`
-- **Layouts**: `_layouts/` - Jekyll templates (base, home, post, page, group)
-- **Includes**: `_includes/` - Reusable components (header, footer, social icons)
-- **Static Assets**: `assets/` - Images, CSS, and group-related content
+Posts are generated on demand (not automated) and require human review before committing.
 
-### Automated Content Generation
+### Group Data System
 
-#### Paper Posts (`script/posts/arxiv.py`)
-Generates blog posts from arXiv papers using Google's Gemini API:
-- **Usage**: `python script/posts/arxiv.py <arxiv_id>`
-- **Process**: Fetches paper metadata, LaTeX source, extracts author info from `group.yaml`, generates content and accompanying image
-- **Dependencies**: Requires `GEMINI_API_KEY` environment variable
-- **Output**: Creates post in `_posts/`, image in `assets/images/posts/`, and prompts in `prompts/`
+**Single source of truth:** `assets/group/group.yaml`
 
-#### Group Management
-- **Data Source**: `assets/group/group.yaml` - Central YAML database of all group members with roles, dates, images, and links
-- **HTML Generation**: `assets/group/html_table.py` - Generates responsive HTML grid layout for group page
-- **Python Classes**: `assets/group/group.py` - Object model for managing academic roles (PI, PostDoc, PhD, etc.) with chronological sorting
-
-### Academic Role Hierarchy
-```python
-# Seniority levels (lower number = higher seniority)
-PI: -1
-Co-I: -1  
-PostDoc: 0
-PhD: 1
-MPhil: 2
-PartIII: 3
-Summer: 4
-```
-
-### Group Member Data Structure
 ```yaml
 Person Name:
   role_type:                    # pi, coi, postdoc, phd, mphil, partiii, summer
     start: YYYY-MM-DD
-    end: YYYY-MM-DD            # Optional, null for current
-    supervisors: [list]        # Optional
-    thesis: "Title"            # Optional
+    end: YYYY-MM-DD            # null = current member
+    supervisors: [list]
+    thesis: "Title"
   image: path/to/image.jpg
-  original_image: path/to/original.jpg  # Before processing
   links:
     Description: URL
-  destination:                 # Post-group career tracking
-    YYYY-MM-DD: Position
+  destination:
+    YYYY-MM-DD: Position       # Post-group career tracking
 ```
 
-## Python Environment & Dependencies
+**Processing pipeline:**
+- `assets/group/group.py` — Python classes (`Student`, `Level`) that load YAML, sort by seniority then date, and re-serialize. Seniority: PI/Co-I (-1) > PostDoc (0) > PhD (1) > MPhil (2) > PartIII (3) > Summer (4)
+- `assets/group/html_table.py` — Generates `assets/group/group.html` (responsive grid via yattag), separating current vs past members
+- `assets/group/timeline.py` — Generates `assets/group/group.png` (matplotlib Gantt chart)
 
-### Required Python Packages
-```python
-# Core dependencies for group management
-import yaml          # Group data parsing
-import pandas        # Data manipulation
-import datetime      # Date handling
+**Workflow to add a member:** edit `group.yaml` → add photo to `assets/group/images/originals/` → run `script/calculate`
 
-# Web generation
-from yattag import Doc  # HTML generation
+### Jekyll Layouts
 
-# arXiv post generation
-from google import genai     # Gemini API
-import requests             # HTTP requests  
-import feedparser          # RSS/Atom feeds
-import tarfile, io         # arXiv source extraction
-from PIL import Image      # Image processing
-```
+| Layout | Purpose |
+|--------|---------|
+| `base.html` | Root HTML shell (all others inherit from this) |
+| `landing.html` | Homepage — hero section + panel grid, reads from `_data/*.yml` |
+| `home.html` | Blog listing with pagination |
+| `post.html` | Individual post with MathJax support |
+| `group.html` | Embeds generated `assets/group/group.html` via `include_relative` |
+| `page.html` | Generic page |
 
-### Environment Variables
-- `GEMINI_API_KEY` - Required for automated post generation via Gemini API
+### Data Files (`_data/`)
 
-## Content Management Workflows
+- `science.yml` — Research themes displayed on science page and landing panels
+- `case_studies.yml` — Case studies with evidence links and status
+- `skills.yml` — Skills marketplace entries
 
-### Adding Group Members
-1. Update `assets/group/group.yaml` with new member data
-2. Add member photo to `assets/group/images/originals/`
-3. Run `python assets/group/group.py` to process and sort data
-4. Run `python assets/group/html_table.py` to regenerate group page HTML
+### Styling
 
-### Creating Paper Posts
-1. Get arXiv ID for the paper
-2. Run: `python script/posts/arxiv.py <arxiv_id>`
-3. Review generated content in `_posts/YYYY-MM-DD-<arxiv_id>.md`
-4. Check generated image in `assets/images/posts/`
+Customized minima theme (classic skin). Key overrides in `_sass/minima/custom-styles.scss`:
+- Fonts: EB Garamond (headings), Crimson Pro (body), IBM Plex Mono (code) — loaded in `_includes/custom-head.html`
+- Color palette: dark teal accent (`#133844`), cyan highlight (`#00bdb6`), off-white panels
+- Sticky nav with backdrop blur, animated panel cards, responsive 3→2→1 column grid
 
-### Site Deployment
-- **Automatic**: Pushes to `main` branch trigger GitHub Pages rebuild
-- **Manual**: Run `script/build` locally to test before pushing
+### Key Excluded Files
 
-## File Organization Logic
-
-### Generated Content Tracking
-- `prompts/content/` - Text prompts used for post generation
-- `prompts/images/` - Image prompts used for visual generation  
-- `_site/` - Jekyll build output (auto-generated, not tracked)
-
-### Image Management
-- `assets/group/images/originals/` - Source images before processing
-- `assets/group/images/` - Processed member photos (standardized size/format)
-- `assets/images/posts/` - AI-generated paper post images
-- `assets/images/` - General site images and backgrounds
-
-### Academic Integration Features
-- **ArXiv Integration**: Automatic paper metadata extraction and bibliography formatting
-- **Author Linking**: Cross-references group members with paper authors
-- **Citation Formatting**: Converts LaTeX citations to Markdown links (DOI/arXiv)
-- **Timeline Management**: Tracks member academic progressions and career destinations
+`_config.yml` excludes from build: `CLAUDE.md`, `script/`, `venv/`, `requirements.txt`, `README.md`
