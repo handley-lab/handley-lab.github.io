@@ -8,7 +8,7 @@ These examples show the lab's practical workflow: supervised execution where hum
 <section class="feature-list">
   {% for study in site.data.case_studies %}
     <article class="feature-card">
-      <p class="feature-card-meta">{{ study.timebox }} · {{ study.status }}</p>
+      <p class="feature-card-meta">{{ study.category }} · {{ study.timebox }} · {{ study.status }}</p>
       <h2>{{ study.title }}</h2>
       <p>{{ study.summary }}</p>
       <p><strong>Outcome:</strong> {{ study.outcome }}</p>

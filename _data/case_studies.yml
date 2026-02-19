@@ -1,17 +1,63 @@
+- id: camb-torsion
+  title: "CAMB torsion condensation: tracing Fortran dependencies with LLMs"
+  category: "Legacy Code Navigation"
+  timebox: "Multi-session"
+  status: "Complete"
+  summary: "Used LLMs to trace the dependency chain in legacy Fortran code and implement torsion condensation in CAMB."
+  outcome: "Identified a likely N_eff double-counting issue and a missing massive-neutrino evolution pathway, subsequently checked via targeted tests against reference outputs."
+  evidence: "Systematic LLM-guided code archaeology with reference-output validation."
+  demo_url:
+  repo_url:
+
+- id: class-discrete-k
+  title: "Discrete k-quantisation in CLASS: deep C surgery with LLM code-mapping"
+  category: "Legacy Code Navigation"
+  timebox: "Multi-session"
+  status: "Complete"
+  summary: "Modified CLASS to handle discrete k-modes in closed-universe cosmologies, a boundary value problem requiring matching at Big Bang and Future Conformal Boundary."
+  outcome: "LLM mapped the integration logic and identified a sign inconsistency in the analytic FCB expansion, validated against independent analytic checks."
+  evidence: "Boundary condition matching validated against independent analytic checks."
+  demo_url:
+  repo_url:
+
+- id: emcee-blackjax
+  title: "emcee in BlackJAX: two months of work in fifteen minutes"
+  category: "Rapid Development"
+  timebox: "15 minutes"
+  status: "Complete"
+  summary: "Implemented the emcee ensemble sampler within the BlackJAX framework using supervised execution."
+  outcome: "A working, tested implementation produced in minutes rather than the months it originally took."
+  evidence: "Numerical agreement with reference emcee outputs."
+  demo_url:
+  repo_url: "https://github.com/blackjax-devs/blackjax"
+
+- id: covariance-optimisation
+  title: "Covariance matrix optimisation: 24 hours to 2 minutes"
+  category: "Rapid Development"
+  timebox: "1-2 minutes"
+  status: "Complete"
+  summary: "Vectorisation and JIT compilation of covariance matrix calculations, collapsing a day-long computation."
+  outcome: "Three orders of magnitude speedup through AI-guided code transformation."
+  evidence: "Numerical parity with original implementation."
+  demo_url:
+  repo_url:
+
 - id: jim-emulators
   title: "jim-emulators: from blank slate to working package in one day"
+  category: "Rapid Development"
   timebox: "9:00 to 18:00"
-  status: "Demo available"
-  summary: "Rapidly built a gravitational-wave emulator workflow using supervised execution."
+  status: "Complete"
+  summary: "Built a gravitational-wave emulator workflow from scratch using supervised execution."
   outcome: "A functioning package with tests and documentation by end of day."
   evidence: "Live build session with working output and reproducible repository state."
   demo_url:
-  repo_url: "https://github.com/fundamental-physics"
+  repo_url:
 
 - id: live-five-minute-deck
   title: "Six-slide scientific presentation generated live in five minutes"
+  category: "Context Engineering"
   timebox: "5 minutes"
-  status: "Demo available"
+  status: "Complete"
   summary: "Constructed a coherent six-slide narrative from source notes and meeting context."
   outcome: "Audience-ready deck assembled and iterated in real time."
   evidence: "Recorded live build demonstrating context assembly and supervision."
@@ -19,11 +65,23 @@
   repo_url:
 
 - id: cosmosis-cobaya-port
-  title: "Cosmosis to Cobaya likelihood port with floating-point validation"
+  title: "CosmoSIS to Cobaya likelihood port with floating-point validation"
+  category: "Adversarial Review"
   timebox: "Single focused sprint"
   status: "In progress"
-  summary: "Ported inference components and benchmarked numerical agreement."
+  summary: "Ported inference components between frameworks using adversarial review: one model writes, another critiques."
   outcome: "Precision checks refined from rough agreement to floating-point-level parity."
   evidence: "Cross-framework comparison tests and review-driven bug isolation."
+  demo_url:
+  repo_url:
+
+- id: gw-emulator-jim
+  title: "Gravitational-wave emulator: nothing to working in eight hours"
+  category: "Rapid Development"
+  timebox: "8 hours"
+  status: "Complete"
+  summary: "Built a complete gravitational-wave emulator prototype from an empty repository using supervised execution."
+  outcome: "Working emulator with validation against reference waveforms."
+  evidence: "Timestamped development log and test suite."
   demo_url:
   repo_url:
