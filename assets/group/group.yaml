@@ -172,12 +172,15 @@ Chris Lovell:
 Jiamin Hou:
   postdoc:
     start: 2025-06-18
+    end: 2025-12-31
     thesis: null
   original_image: images/originals/jiamin_hou.jpg
   image: images/jiamin_hou.jpg
   links:
     ORCiD: https://orcid.org/0000-0001-6083-1947
     Webpage: https://www.mpe.mpg.de/~octobers/
+  destination:
+    2026-01-01: LMU Munich
 George Carter:
   postdoc:
     start: 2024-08-12
@@ -246,6 +249,18 @@ Kamran Javid:
     2023-01-01: Quantitative Research & Development (systematic trading), ADIA, United
       Arab Emirates
     2019-10-01: AI Researcher (systematic trading), Arabesque AI, London
+Lawrence Berry:
+  phd:
+    start: 2025-10-01
+    supervisors:
+    - Will Handley
+    - Nils Schoneberg
+    - Oliver Hahn
+    thesis: null
+  original_image: images/originals/lawrence_berry.JPG
+  image: images/lawrence_berry.jpg
+  links:
+    linkedin: https://www.linkedin.com/in/lawrencejb
 Charlotte Priestley:
   phd:
     start: 2025-10-01

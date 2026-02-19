@@ -1,0 +1,161 @@
+---
+layout: base
+---
+<div class="landing">
+  <section class="hero">
+    <div class="hero-copy">
+      <p class="kicker">Handley Research Group · Kavli Institute for Cosmology, University of Cambridge</p>
+      <h1>Let AI build the tools.<br>You do the science.</h1>
+      <p class="lead">
+        Code is cheap. Truth is expensive. We work at the boundary between high-performance Bayesian inference and practical AI workflows for researchers — with verification at the centre.
+      </p>
+      <div class="cta-row">
+        <a class="button button-primary" href="{{ '/method/' | relative_url }}">Read the Method</a>
+        <a class="button button-subtle" href="{{ '/case-studies/' | relative_url }}">See Case Studies</a>
+      </div>
+    </div>
+    <div class="hero-visual">
+      <img src="{{ '/assets/images/landing_image.png' | relative_url }}" alt="Abstract illustration of computational cosmology and AI-assisted scientific workflows">
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Core Framing</p>
+    <h2>Two Revolutions, Two Acceleration Modes</h2>
+    <table class="comparison-table">
+      <thead>
+        <tr>
+          <th>Revolution</th>
+          <th>What it accelerates</th>
+          <th>Examples</th>
+        </tr>
+      </thead>
+      <tbody>
+        <tr>
+          <td>GPUs for Science</td>
+          <td>The calculation</td>
+          <td>Nested sampling speedups, BlackJAX, JAX emulators</td>
+        </tr>
+        <tr>
+          <td>AI for Scientists</td>
+          <td>The researcher</td>
+          <td>Reducing overhead, building infrastructure, rapid tooling</td>
+        </tr>
+      </tbody>
+    </table>
+    <p class="section-note">One accelerates the calculation; the other accelerates the researcher.</p>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Methodology</p>
+    <h2>Supervised Execution</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Foundation Models</h3>
+        <p>General surrogates trained on large corpora. Useful for brainstorming, but physics is about compression, not just prediction.</p>
+      </article>
+      <article class="card">
+        <h3>Autonomous Agents</h3>
+        <p>End-to-end generation of research artefacts. Science is a culture of critique and accountability, not a pipeline to automate.</p>
+      </article>
+      <article class="card">
+        <h3>Augmented Humans</h3>
+        <p>Human intent and verification, AI implementation. We permit cheap generation, but we make selection expensive and deliberate.</p>
+      </article>
+    </div>
+    <div class="split-notes">
+      <p><strong>80/20:</strong> most research time is consumed by tasks that are necessary but not intrinsically scientific. AI collapses the overhead; the scientist focuses on selection and interpretation.</p>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Principles</p>
+    <h2>Six Principles</h2>
+    <div class="card-grid">
+      <article class="card">
+        <h3>Capture content</h3>
+        <p>Transcribe, photograph, archive. Build a knowledge base that extends the context window.</p>
+      </article>
+      <article class="card">
+        <h3>Engineer context</h3>
+        <p>Organise knowledge — skills, conventions, physics — rather than perfecting prompt syntax.</p>
+      </article>
+      <article class="card">
+        <h3>Specify physics, not code</h3>
+        <p>State the physical intent. Treat generated code as a product to be tested.</p>
+      </article>
+      <article class="card">
+        <h3>Verify rigorously</h3>
+        <p>Reference outputs, simulation-based calibration, adversarial review. Verification is the method.</p>
+      </article>
+      <article class="card">
+        <h3>Use multiple models</h3>
+        <p>One implements, another critiques. No single channel of generation.</p>
+      </article>
+      <article class="card">
+        <h3>Stay the scientist</h3>
+        <p>Define the questions, choose the methods, take responsibility for the answers.</p>
+      </article>
+    </div>
+    <a class="text-link" href="{{ '/method/' | relative_url }}">Read the full methodology</a>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Emerging Practice</p>
+    <h2>From Prompt Engineering to Context Engineering</h2>
+    <p>
+      Skills are compact, reusable knowledge units. MCPs are executable tool interfaces. Knowledge becomes skills;
+      actions become MCPs.
+    </p>
+    <div class="mini-links">
+      <a href="{{ '/skills/' | relative_url }}">Skills marketplace</a>
+      <a href="https://github.com/fundamental-physics/marketplace" target="_blank" rel="noopener noreferrer">Marketplace repository</a>
+    </div>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Walk The Walk</p>
+    <h2>Case Studies</h2>
+    <div class="card-grid">
+      {%- for study in site.data.case_studies limit:3 -%}
+        <article class="card">
+          <p class="card-meta">{{ study.timebox }}</p>
+          <h3>{{ study.title }}</h3>
+          <p>{{ study.summary }}</p>
+          <p class="evidence"><strong>Evidence:</strong> {{ study.evidence }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+    <a class="text-link" href="{{ '/case-studies/' | relative_url }}">Open full case study archive</a>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Group Science</p>
+    <h2>Physics and Inference Outputs</h2>
+    <div class="card-grid">
+      {%- for item in site.data.science limit:3 -%}
+        <article class="card">
+          <p class="card-meta">{{ item.theme }}</p>
+          <h3>{{ item.title }}</h3>
+          <p>{{ item.summary }}</p>
+        </article>
+      {%- endfor -%}
+    </div>
+    <a class="text-link" href="{{ '/science/' | relative_url }}">Read the full science summary</a>
+  </section>
+
+  <section class="panel">
+    <p class="kicker">Latest Updates</p>
+    <h2>Recent Blog Posts</h2>
+    <ul class="post-list refined-list">
+      {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
+      {%- for post in site.posts limit:5 -%}
+        <li class="refined-list-item">
+          <span class="post-meta">{{ post.date | date: date_format }}</span>
+          <h3><a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a></h3>
+        </li>
+      {%- endfor -%}
+    </ul>
+    <a class="text-link" href="{{ '/blog/' | relative_url }}">View all posts</a>
+  </section>
+</div>
