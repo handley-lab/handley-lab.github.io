@@ -33,7 +33,7 @@ css = """
 }
 """
 
-ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz", "Rose Luo", "Alex Drane", "Farah Wallauer", "Ajinkya Naik"]
+ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz", "Farah Wallauer", "Ajinkya Naik"]
 
 with open(html_file, 'w') as f:
     doc = Doc()
@@ -89,7 +89,10 @@ with open(html_file, 'w') as f:
                                                         text = []
                                                         for cs in l.supervisors:
                                                             if cs != 'Will Handley':
-                                                                text.append(f'<a href="{supervisors[cs]}">{cs}</a>')
+                                                                if cs in supervisors:
+                                                                    text.append(f'<a href="{supervisors[cs]}">{cs}</a>')
+                                                                else:
+                                                                    text.append(cs)
                                                         if text:  # Only display if there are co-supervisors
                                                             text = ', '.join(text)
                                                             with doc.tag('li'):
