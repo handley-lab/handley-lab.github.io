@@ -27,6 +27,7 @@ exclude:
   - CLAUDE.md
   - script/
   - venv/
+  - vendor/
   - requirements.txt
   - .git/
   - .gitignore

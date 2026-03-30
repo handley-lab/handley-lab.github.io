@@ -12,7 +12,7 @@ from PIL import Image
 # Algorithm parameters
 basic_model = "gemini-2.5-flash-preview-04-17"
 text_model = "gemini-2.5-pro-preview-05-06"
-image_model = "imagen-3.0-generate-002"
+image_model = "imagen-4.0-generate-001"
 url_model = "https://deepmind.google/technologies/gemini/"
 client = genai.Client(api_key=os.environ["GEMINI_API_KEY"])
 
