@@ -108,7 +108,7 @@ The key enabler is step 4(b): an *objective* quality signal. Unlike novel code w
 
 ## 5. What happened
 
-The session began during a live supervision meeting with PhD student Chris Lovell, who was using PyWavelets for wavelet decomposition of cosmological fields. The question *"how jaxable is pywt?"* led to discovering that the existing JAX wavelet library ([`jax-wavelet-toolbox`](https://github.com/v0lta/Jax-Wavelet-Toolbox)) was unmaintained (last updated 2023). Within 20 minutes we decided to build a fresh implementation.
+The session began during a live supervision meeting with postdoc Chris Lovell, who was using PyWavelets for wavelet decomposition of cosmological fields. The question *"how jaxable is pywt?"* led to discovering that the existing JAX wavelet library ([`jax-wavelet-toolbox`](https://github.com/v0lta/Jax-Wavelet-Toolbox)) was unmaintained (last updated 2023). Within 20 minutes we decided to build a fresh implementation.
 
 - Wall-clock span: ~46 hours, Tuesday afternoon to Thursday afternoon.
 - Active computation: **4.7 hours** (sum of adjacent-message gaps in the JSONL transcript, excluding any gap >5 minutes — see [Methods note](#methods-note)).
