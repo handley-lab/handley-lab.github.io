@@ -273,8 +273,13 @@ The headline metric is **active computation**, defined as the sum of adjacent-me
 
    **User messages**:
    - If `message.content` (string or list) contains any `tool_result` block, classify as `user(tool_result)`.
-   - Otherwise strip `<system-reminder>...</system-reminder>` from string/list text. If non-empty real text remains, classify as `user(prompt)`.
-   - If only system reminders remain (no real content), classify as `user(system-only)`.
+   - Otherwise strip `<system-reminder>...</system-reminder>` from string/list text.
+   - If the remaining text matches a **runtime-injection pattern**, classify as `user(system-only)` — these are not real human turns:
+     - `[Request interrupted by user]` (and the `for tool use` variant) — emitted when the user hits Esc, not typed.
+     - `<task-notification>...</task-notification>` — background-task system message.
+     - Content starting with `<command-message>` — slash-command body injected when a `/foo` skill is invoked.
+   - If non-empty real text remains, classify as `user(prompt)`.
+   - If only system reminders / injections remain, classify as `user(system-only)`.
 
 3. **Remove `user(system-only)` entries from the timing timeline.** They are runtime injections, not turns. Including them would split or extend gaps incorrectly.
 
@@ -284,17 +289,20 @@ The headline metric is **active computation**, defined as the sum of adjacent-me
 
 6. If `Δt > 5 min`, **exclude from the active-computation total** but log it separately for the user to inspect (see Stall detection below). The long-tool exception applies — see below.
 
-7. For retained pairs, split into **two distinct groups**:
+7. For retained pairs, split into **five reported categories** — three count toward the active-computation headline, two are reported alongside but not summed into it:
 
    **Headline active computation** (sum these for the headline figure):
    - `assistant(tool_use) → user(tool_result)` = **tool execution**
-   - `user(prompt or tool_result) → assistant(text)` = **AI thinking → text response**
-   - `user(prompt or tool_result) → assistant(tool_use)` = **AI thinking → tool call**
+   - `user(tool_result) → assistant(text)` = **AI thinking → text response**
+   - `user(tool_result) → assistant(tool_use)` = **AI thinking → tool call**
 
-   **Human attention** (computed separately, **not** included in active computation):
-   - `assistant(text) → user(real prompt)` = **human response gap**
+   **Reported alongside, but NOT in active computation**:
+   - `user(prompt) → assistant(text or tool_use)` = **AI continuation after a human prompt**. This is *AI* work, but it's the response to a human turn. Counting it as "active computation" double-counts the AI side of the human–AI exchange. Report it as its own line.
+   - `assistant(text) → user(prompt)` = **human response gap**. This is the human side of the same exchange. Use it for the percentile distribution and the 30-second-cap attention estimate (see below).
 
-8. Sum minutes per group. The headline "active computation" figure is the sum of the three computation categories only. The human-attention figure is reported alongside but is a different quantity.
+8. Sum minutes per group. The headline "active computation" figure is the sum of the three computation categories only. The other two are reported as separate lines, not folded into the headline.
+
+This split — three headline categories plus two reported-alongside categories — is what produced the canonical 4.7h figure for the jaxwavelets case study (140 min tool exec + 72 min thinking → text + 72 min thinking → tool = 284 min). The "AI continuation" and "human response" lines accounted for the rest of the retained-pair total.
 
 ### Long-tool-execution exception
 
@@ -307,6 +315,8 @@ For each such gap > 5 min:
 - **Ask the user**: "Tool `X` ran from Y to Z (Δ=hh:mm) producing N bytes of output. Real long-running tool, or stalled session?"
 
 Only after the user confirms is it included in the headline number.
+
+**Subtle case: session suspension at the tool boundary.** A `assistant(tool_use) → user(tool_result)` pair can have a multi-hour gap even when the tool itself ran in milliseconds — if the Claude Code session is suspended between the agent emitting the `tool_use` block and the runtime recording the `tool_result` entry. The canonical example is the jaxwavelets overnight stall: a `Write` call for `_cwt.py` whose tool_use timestamp is 22:39:51 and whose tool_result timestamp is 04:00:59 the next morning. The Write itself ran instantly; the 5h22m gap is session suspension. The methodology must **not** report this as productive autonomous work just because the boundary pair type *could* be a long tool. Inspect the tool_result content: if it's an instant success message (e.g. "File created successfully at..."), the gap is a stall, not a long tool.
 
 ### Human-response percentile
 
@@ -323,23 +333,56 @@ The original jaxwavelets analysis: median 23s, p90 3m38s, capped sum ~22 min, un
 
 ## Stall detection
 
-Any gap > 30 minutes is a candidate stall. The gap is between two adjacent JSONL entries — by definition there are no entries inside it. What matters is the **pair type** at the boundary.
+Any gap > 30 minutes is a candidate stall. The gap is between two adjacent JSONL entries — by definition there are no entries inside it. What matters is the **pair type** at the boundary *and* the actual content either side.
 
 For each gap > 30 minutes:
 
-1. Quote the entries immediately before and after the gap.
+1. **Quote the entries immediately before and after the gap.** Do not paraphrase. The skill must surface verbatim text (or `tool_use` name + truncated input, or `tool_result` summary) so the user can classify the gap with full context.
 2. Identify the pair type:
-   - `assistant(tool_use) → user(tool_result)` — possible long-running tool. Inspect the `tool_use` input and the `tool_result` content (length, exit code, error). Route through the long-tool-execution exception above.
+   - `assistant(tool_use) → user(tool_result)` — *possible* long-running tool, but also possibly a session suspension at the tool boundary (see Subtle case above). Inspect both: tool name, tool input length, tool_result content. An instant-success result on a multi-hour gap = stall, not a long tool.
    - `assistant(text) → user(prompt)` — likely human break / sleep / attention gap.
    - `user(prompt or tool_result) → assistant(*)` — possible suspended AI response (idle timeout, network drop). The agent had a turn to take but didn't take it for hours.
+   - `user(tool_result) → user(prompt)` — the tool result was recorded, but the assistant did not take the next turn before the human came back. Treat as possible suspended assistant response / idle session; ask the user.
+   - any other `user(*) → user(*)` or `assistant(*) → assistant(*)` ordering — unusual; quote both and ask.
 3. Report Δ in hours:minutes.
 4. **Pause and ask the user** to classify it: "Was this productive autonomous work, a stall, or sleep/break?"
 
-Do not silently classify. The original jaxwavelets analysis confidently reported a productive overnight session and was corrected by the user's memory ("I remember waking up sighing"). The Methods note in the published case study now reads:
+Do not silently classify. Do not label a long unconfirmed gap with the same category name as a retained active-computation pair (e.g., a 5h `assistant(tool_use) → user(tool_result)` gap is not "tool execution" until the user confirms the tool genuinely ran for 5 hours). The original jaxwavelets analysis confidently reported a productive overnight session and was corrected by the user's memory ("I remember waking up sighing"). The Methods note in the published case study now reads:
 
 > *The agent did not work continuously overnight: after I asked it to continue while I slept, it stalled for 5h22m, then completed an 18-minute autonomous burst at 4am.*
 
 That honesty is the case study's credibility. The Socratic correction is the methodology — encode it as a behavioural rule, not as a one-off anecdote.
+
+## Review verdict extraction
+
+`mcp__llm__review` calls don't always end with a literal `APPROVED` or `FIXES REQUIRED` string — early sessions used colloquial verdicts ("not approved yet", "this needs work", "looks good to me"). The skill must:
+
+1. Match against a literal-string allowlist first (`APPROVED`, `FIXES REQUIRED`).
+2. Apply a fallback regex set for colloquial language (`not approved`, `required fixes`, `not ready`, `rejected`, etc.).
+3. Classify any review whose verdict can't be determined as `unknown` rather than guessing.
+4. **Surface the unknowns to the user.** Phase 1 inventory must include the count and a *human-readable, verdict-relevant* excerpt from each unknown verdict — not provider metadata, token counts, timing fields, or raw JSON wrappers. If the review result is JSON-encoded (e.g. `{"content": "...", "usage": {...}, ...}`), parse out the `content` (or equivalent text) field first, then truncate to the closing prose. Phase 4 must ask the user to adjudicate before any "rejection rate" claim is published.
+
+Do not publish a rejection percentage unless every review's verdict is either confirmed by the regex set or hand-classified by the user.
+
+## Prompt-count audit
+
+Once user-message classification has filtered runtime injections, Phase 1 inventory must report:
+
+```
+Real prompts (user(prompt)):  N
+Excluded by reason:
+  [Request interrupted by user]:    n_1
+  <task-notification>:               n_2
+  <command-message>:                 n_3
+  system-reminder-only:              n_4
+  tool_result:                       n_5
+```
+
+Print every category, including zero-valued ones, so the user sees the full taxonomy.
+
+Then Phase 3 / Phase 4 must ask the user whether any excluded class should be folded back into the published prompt count. (E.g., a workshop attendee may want to count `<command-message>` slash-command invocations as user actions; another may not.)
+
+Do not publish a prompt count without showing the audit and getting the user to confirm the categorisation.
 
 ## Revision log format
 

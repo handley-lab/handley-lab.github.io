@@ -52,7 +52,8 @@ Read the chosen JSONL using the parsing rules in `methodology.md`. Save to `/tmp
 - Breakdown of assistant content blocks (`text` / `tool_use` / `thinking`).
 - Wall-clock span (first → last timestamp).
 - Tool-call counts by tool name.
-- Count of `mcp__llm__review` calls and their result if extractable (`APPROVED` / `FIXES REQUIRED`).
+- `mcp__llm__review` verdict counts: `APPROVED` / `FIXES REQUIRED` (literal) plus colloquial-fallback bucket (`not approved`, `not ready`, `rejected`) and an `unknown` bucket. Include a short excerpt from each `unknown` review so the user can adjudicate (see [methodology.md Review verdict extraction](methodology.md#review-verdict-extraction)).
+- **Prompt-count audit**: real `user(prompt)` count, plus a breakdown of excluded entries by reason (`[Request interrupted by user]`, `<task-notification>`, `<command-message>`, system-reminder-only, `tool_result`). See [methodology.md Prompt-count audit](methodology.md#prompt-count-audit).
 
 **Pause.** Ask the user to confirm this is the session they meant.
 
@@ -60,11 +61,17 @@ Read the chosen JSONL using the parsing rules in `methodology.md`. Save to `/tmp
 
 Apply the 5-minute-cap pair-timing methodology (see `methodology.md`). Headline outputs:
 
-- Total active computation, broken into the three categories (tool execution, AI thinking → text, AI thinking → tool).
+- **Active computation** — sum of three retained-pair categories (≤ 5 min):
+  - tool execution (`assistant(tool_use) → user(tool_result)`)
+  - AI thinking → text (`user(tool_result) → assistant(text)`)
+  - AI thinking → tool (`user(tool_result) → assistant(tool_use)`)
+- **Reported alongside, NOT in active total**:
+  - AI continuation after human prompt (`user(prompt) → assistant(*)`)
+  - human response gap (`assistant(text) → user(prompt)`)
 - Wall-clock span and (active / wall-clock) ratio.
 - Percentile distribution of human-response gaps; a 30-second-cap "attention" estimate as a separate, lower-bound figure.
-- Long-tool-execution exceptions: any `assistant(tool_use) → user(tool_result)` gap > 5 min, with the `tool_use` input and `tool_result` content.
-- Candidate stalls/breaks: any gap > 30 min, with start/end, Δ, and the messages immediately either side. **Quote them.**
+- Long-tool-execution exceptions: any `assistant(tool_use) → user(tool_result)` gap > 5 min, with the `tool_use` input and the `tool_result` content. **Watch the subtle case**: an instant-success `tool_result` on a multi-hour gap means the session suspended at the tool boundary — *not* a long tool. See methodology.md.
+- Candidate stalls/breaks: any gap > 30 min, with start/end, Δ, and the messages immediately either side. **Quote them verbatim.** Long-gap entries must NOT be labelled with retained-pair category names (e.g. don't call a 5h gap "tool execution"; label it "candidate stall, requires user adjudication").
 
 **Pause for each long gap.** Quote the entry immediately before and the entry immediately after, identify the boundary pair type, and ask the user to classify it (real long-running tool, suspended/stalled session, or human break/sleep). See [`methodology.md`](methodology.md#stall-detection) for the pair-type taxonomy and why this Socratic pause is required, not optional.
 

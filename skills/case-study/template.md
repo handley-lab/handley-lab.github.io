@@ -100,10 +100,12 @@ TODO: move the timing detail, percentile distribution, tool-call counts, and sta
 
 | Category | Time | Count | What it measures |
 |----------|------|-------|-----------------|
-| Tool execution (assistant→tool result) | TODO | TODO | Wall-clock time for Bash, reviews, file I/O |
-| AI thinking → text response | TODO | TODO | Token generation producing text output |
-| AI thinking → tool call | TODO | TODO | Token generation producing next action |
+| Tool execution (assistant(tool_use) → user(tool_result)) | TODO | TODO | Wall-clock time for Bash, reviews, file I/O |
+| AI thinking → text (user(tool_result) → assistant(text)) | TODO | TODO | Token generation producing text output after a tool result |
+| AI thinking → tool (user(tool_result) → assistant(tool_use)) | TODO | TODO | Token generation producing the next tool call after a tool result |
 | **Total active computation** | **TODO** | | |
+| AI continuation after human prompt (user(prompt) → assistant(*)) | TODO | TODO | Reported separately; not in active total |
+| Human response gap (assistant(text) → user(prompt)) | TODO | TODO | Used for attention estimate; not in active total |
 
 | Percentile | Human-response time |
 |-----------|--------------|
