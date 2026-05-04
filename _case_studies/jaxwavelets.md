@@ -47,7 +47,7 @@ The session used **65 external LLM reviews** (GPT-5.4 via [`mcp__llm__review`](h
 Reviews operated at multiple levels:
 
 1. **Plan review** (8 iterations) before any implementation, catching incorrect boundary-mode mappings, confusion between `vmap` semantics and structural axis operations, and incorrect convolution conventions.
-2. **Implementation review** of each phase against both correctness and the codebase philosophy — a [`CLAUDE.md`](https://github.com/handley-lab/jaxwavelets/blob/main/CLAUDE.md) demanding no defensive programming, no overengineering, no input validation, let-it-crash semantics. This is scientific code, not web services.
+2. **Implementation review** of each phase against both correctness and the codebase philosophy — a [`CLAUDE.md`](https://github.com/handley-lab/jaxwavelets/blob/master/CLAUDE.md) demanding no defensive programming, no overengineering, no input validation, let-it-crash semantics. This is scientific code, not web services.
 3. **Targeted debugging** when implementations produced wrong values: the agent consulted GPT as a *consultant* on specific numerical issues, ultimately fixed by reading PyWavelets' C source directly.
 4. **Philosophy enforcement passes** specifically targeting anti-scientific patterns: defensive guards, string-dispatch tables, and unnecessary indirection were caught and removed.
 
@@ -121,8 +121,8 @@ The agent did not work continuously overnight: after I asked it to continue whil
 
 - Library: [github.com/handley-lab/jaxwavelets](https://github.com/handley-lab/jaxwavelets) · [pypi.org/project/jaxwavelets](https://pypi.org/project/jaxwavelets/)
 - Test suite: 1,177 parametrised cases at `atol=1e-14` (direct) and `atol=1e-11` (roundtrip) against PyWavelets.
-- Philosophy document: [`CLAUDE.md`](https://github.com/handley-lab/jaxwavelets/blob/main/CLAUDE.md).
-- Filter coefficients (build-time-extracted from PyWavelets): [`scripts/extract_filters.py`](https://github.com/handley-lab/jaxwavelets/blob/main/scripts/extract_filters.py) → [`jaxwavelets/_filters.py`](https://github.com/handley-lab/jaxwavelets/blob/main/jaxwavelets/_filters.py).
+- Philosophy document: [`CLAUDE.md`](https://github.com/handley-lab/jaxwavelets/blob/master/CLAUDE.md).
+- Filter coefficients (build-time-extracted from PyWavelets): [`scripts/extract_filters.py`](https://github.com/handley-lab/jaxwavelets/blob/master/scripts/extract_filters.py) → [`jaxwavelets/_filters.py`](https://github.com/handley-lab/jaxwavelets/blob/master/jaxwavelets/_filters.py).
 - Session JSONL (4,221 entries, 95 prompts, 65 review calls): available on request — please [email](mailto:wh260@cam.ac.uk).
 
 ## 7. Limitations
