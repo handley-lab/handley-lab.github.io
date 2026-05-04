@@ -72,14 +72,30 @@ Person Name:
 | `landing.html` | Homepage — hero section + panel grid, reads from `_data/*.yml` |
 | `home.html` | Blog listing with pagination |
 | `post.html` | Individual post with MathJax support |
+| `case_study.html` | Long-form case study page (collection `_case_studies/`, MathJax v3) |
 | `group.html` | Embeds generated `assets/group/group.html` via `include_relative` |
 | `page.html` | Generic page |
 
 ### Data Files (`_data/`)
 
 - `science.yml` — Research themes displayed on science page and landing panels
-- `case_studies.yml` — Case studies with evidence links and status
+- `case_studies.yml` — Case-study cards. When a card's `id` matches a file in `_case_studies/<id>.md`, the include adds a "Read more" link to the long-form page.
 - `skills.yml` — Skills marketplace entries
+
+### Case Studies
+
+Case studies have two halves:
+
+- **Card** — an entry in `_data/case_studies.yml`, rendered on `/case-studies/` and the homepage preview block via `_includes/case_study_card.html`.
+- **Long-form page** — a file at `_case_studies/<id>.md`, rendered at `/case-studies/<id>/` by `_layouts/case_study.html`.
+
+The include matches long-form pages to cards by collection `slug` (Jekyll auto-derives `slug` from filename), so the **filename, the card's `id` field, and the collection-page frontmatter `id` must all agree**.
+
+Card schema for new case studies: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `demo_url`, `repo_url`. **`outcome` and `evidence` must be non-empty** for published cards — if you can't write them, the case study isn't ready to ship.
+
+Long-form pages should use a clean modern MathJax v3 block (already in `_layouts/case_study.html`). **Do not write a leading body H1** — the layout renders `{{ page.title }}` as the H1. The body should start with `## Section`.
+
+Workflow for adding a case study: see [`skills/website/SKILL.md`](skills/website/SKILL.md). Reference template: [`_case_studies/jaxwavelets.md`](_case_studies/jaxwavelets.md).
 
 ### Styling
 
@@ -90,4 +106,6 @@ Customized minima theme (classic skin). Key overrides in `_sass/minima/custom-st
 
 ### Key Excluded Files
 
-`_config.yml` excludes from build: `CLAUDE.md`, `script/`, `venv/`, `requirements.txt`, `README.md`
+`_config.yml` excludes from build: `CLAUDE.md`, `script/`, `venv/`, `vendor/`, `requirements.txt`, `.git/`, `.gitignore`, `README.md`, `skills/`.
+
+The `skills/` directory holds in-repo Claude skills (see `skills/README.md`). It is **not** published — anyone cloning the repo can point Claude Code at it locally.

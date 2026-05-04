@@ -22,12 +22,28 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
+# Long-form case-study pages (cards still come from _data/case_studies.yml).
+# Each _case_studies/<id>.md is rendered at /case-studies/<id>/.
+collections:
+  case_studies:
+    output: true
+    permalink: /case-studies/:path/
+
+defaults:
+  - scope:
+      path: ""
+      type: case_studies
+    values:
+      layout: case_study
+
 # Exclude files from Jekyll build
 exclude:
   - CLAUDE.md
   - script/
   - venv/
+  - vendor/
   - requirements.txt
   - .git/
   - .gitignore
   - README.md
+  - skills/                         # in-repo Claude skills, not for publishing

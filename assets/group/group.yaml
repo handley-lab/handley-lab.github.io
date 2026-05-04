@@ -259,9 +259,10 @@ Kamran Javid:
     Google scholar: https://scholar.google.com/citations?user=USKsovMAAAAJ
     linkedin: https://www.linkedin.com/in/kamranjavid91
   destination:
-    2023-01-01: Quantitative Research & Development (systematic trading), ADIA, United
-      Arab Emirates
-    2019-10-01: AI Researcher (systematic trading), Arabesque AI, London
+    2019-10-01: <a href="https://www.linkedin.com/in/kamranjavid91">AI Researcher (systematic
+      trading), Arabesque AI</a>, London
+    2023-01-01: <a href="https://theorg.com/org/abu-dhabi-investment-authority/org-chart/kamran-javid">Quantitative
+      Research & Development (systematic trading), ADIA</a>, United Arab Emirates
 Lawrence Berry:
   phd:
     start: 2025-10-01
@@ -406,7 +407,8 @@ Adam Ormondroyd:
     linkedin: https://www.linkedin.com/in/adam-ormondroyd/
     GitHub: https://github.com/AdamOrmondroyd
   destination:
-    2025-10-01: Data Scientist at PolyChord Ltd
+    2025-10-01: <a href="https://www.linkedin.com/in/adam-ormondroyd/">Data Scientist
+      at PolyChord Ltd</a>
 Ayngaran Thavanesan:
   phd:
     start: 2021-10-01
@@ -431,7 +433,8 @@ Kilian Scheutwinkel:
     C2D3 profile: https://www.c2d3.cam.ac.uk/directory/8681/mr-kilian-scheutwinkel
     Group webpage: https://www.cavendishradiocosmology.com/
   destination:
-    2024-09-01: TRGC (Venture fund focussed on digital assets)
+    2024-09-01: <a href="https://www.linkedin.com/in/kilianhscheutwinkel/">TRGC
+      (Venture fund focussed on digital assets)</a>
 Thomas Mcaloone:
   phd:
     start: 2020-06-10
@@ -444,7 +447,8 @@ Thomas Mcaloone:
   original_image: images/originals/thomas_mcaloone.jpg
   image: images/thomas_mcaloone.jpg
   destination:
-    2021-10-01: Data scientist (PolyChord Ltd)
+    2021-10-01: <a href="https://uk.linkedin.com/in/thomas-mcaloone">Data scientist
+      (PolyChord Ltd)</a>
 Isidro Gomez Vargas:
   phd:
     start: 2020-03-16
@@ -549,7 +553,7 @@ Ed Higson:
     linkedin: https://www.linkedin.com/in/ejhigson
   destination:
     2017-10-01: Goldman Sachs (UK finance)
-    2020-05-01: DE Shaw (US finance)
+    2020-05-01: <a href="https://www.linkedin.com/in/ejhigson">VP Quantitative Analyst, DE Shaw</a> (US finance)
 Danielle Dineen:
   mphil:
     start: 2022-10-01
@@ -771,6 +775,8 @@ Oliver Normand:
   image: images/oliver_normand.jpg
   destination:
     2022-10-01: Management consultancy
+    2025-01-01: <a href="https://www.linkedin.com/in/oliver-normand-44b486149/">Entrepreneurs
+      First / AI Acquisition (AI tools startup)</a>
 Xy Wang:
   partiii:
     start: 2021-10-01
@@ -803,7 +809,8 @@ Yi Jer Loh:
   original_image: images/originals/yi_jer_loh.jpg
   image: images/yi_jer_loh.jpg
   destination:
-    2021-10-01: Data Scientist, Spotify
+    2021-10-01: <a href="https://uk.linkedin.com/in/yi-jer-loh">Data Scientist,
+      Spotify</a>
 Aleksandr Petrosyan:
   partiii:
     start: 2019-10-01
@@ -814,7 +821,10 @@ Aleksandr Petrosyan:
   original_image: images/originals/aleksandr_petrosyan.jpeg
   image: images/aleksandr_petrosyan.jpg
   destination:
-    2020-10-01: Lead cryptography engineer, Armenia
+    2020-10-01: <a href="https://medium.com/@soranews/hyperledger-iroha-2-let-it-shine-310291e8cd2e">Technical
+      Lead, Hyperledger Iroha (Soramitsu)</a>
+    2024-01-01: <a href="https://www.linkedin.com/in/alexander-petrosyan-50150abb/">Senior
+      Distributed Systems Consultant, Eclipse Labs</a>
 Deaglan Bartlett:
   partiii:
     start: 2018-10-01
@@ -883,7 +893,8 @@ Daniel Manela:
   destination:
     2019-10-01: Msc Computational stats & ML, UCL
     2021-01-01: statistical/ML engineer at UCB Pharmaceuticals
-    2022-10-01: PhD in ML, Oxford
+    2022-10-01: <a href="https://www.stats.ox.ac.uk/people/daniel-de-vassimon-manela">PhD
+      in ML, Oxford</a>
 Bob Knighton:
   partiii:
     start: 2016-10-01
@@ -906,7 +917,9 @@ Stephen Pickman:
   original_image: images/originals/stephen_pickman.jpeg
   image: images/stephen_pickman.jpg
   destination:
-    2017-10-01: Software developer at DarkTrace
+    2017-10-01: Software developer at <a href="https://www.darktrace.com">Darktrace</a>
+    2024-01-01: <a href="https://www.darktrace.com/people/stephen-pickman">SVP Engineering
+      at Darktrace</a>
 Fedir Boreiko:
   summer:
     start: 2025-06-30
@@ -934,6 +947,8 @@ Artyom Baryshnikov:
     linkedin: https://www.linkedin.com/in/artem-baryshnikov-4b31a6189
   destination:
     2022-10-01: MSc in Cyber Security in Edinburgh
+    2023-10-01: <a href="https://itarle.com/">Itarle (fintech, algorithmic trading)</a>,
+      London
 Beichen Xu:
   summer:
     start: 2022-06-27
@@ -943,6 +958,8 @@ Beichen Xu:
   image: images/beichen_xu.jpg
   destination:
     2022-10-01: Physics in Birmingham
+    2025-10-01: MSc at Imperial College London
+    2026-10-01: Cavendish Laboratory, Cambridge
 Mary Letey:
   summer:
     start: 2022-06-24
@@ -962,6 +979,8 @@ Mattia Varrone:
     thesis: null
   original_image: images/originals/mattia_varrone.jpg
   image: images/mattia_varrone.jpg
+  destination:
+    2022-10-01: PhD in Quantum Gravity & Cosmology, EPFL
 Zak Shumaylov:
   summer:
     start: 2021-06-21
@@ -971,6 +990,8 @@ Zak Shumaylov:
   image: images/zak_shumaylov.jpg
   destination:
     2022-10-01: PhD in machine learning, DAMTP
+    2026-01-01: <a href="https://www.linkedin.com/in/zakshumaylov/">Senior Researcher,
+      Google DeepMind</a>
 Denis Werth:
   summer:
     start: 2019-06-01
@@ -981,6 +1002,7 @@ Denis Werth:
   destination:
     2019-10-01: Masters in Sorbonne, Paris
     2021-10-01: PhD in Astrophysics, Paris (IAP & Sorbonne)
+    2025-07-01: Postdoc, Max Planck Institute for Physics, Munich
 Liam L.H. Lau:
   summer:
     start: 2019-06-01
@@ -1002,6 +1024,8 @@ Maxime Jabarian:
     ResearchGate: https://www.researchgate.net/profile/Maxime-Jabarian-2
   destination:
     2022-01-01: AI/Cybersecurity startup, Paris
+    2023-11-01: <a href="https://www.linkedin.com/in/maxime-jabarian/">Lead AI Engineer,
+      Assurant</a>
 Elizabeth Guest:
   summer:
     start: 2018-06-01
@@ -1021,3 +1045,4 @@ Shu-Fan Chen:
   image: images/shu-fan_chen.jpg
   destination:
     2019-10-01: PhD in Cosmology, Harvard
+    2024-01-01: Postdoc, Columbia University Astrophysics
