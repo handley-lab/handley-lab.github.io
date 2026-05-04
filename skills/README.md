@@ -6,10 +6,10 @@ These skills live inside the website source so anyone who clones the repo can po
 
 ## Available skills
 
-| Skill | Status | What it does |
-|---|---|---|
-| [`website`](website/SKILL.md) | Available | Build and serve the Jekyll site, edit `_data/*.yml`, add a long-form page to the `_case_studies/` collection, commit on a feature branch and open a PR. |
-| `case-study` | Coming | Discover one of your past Claude Code sessions (no UUID required), analyse its JSONL with a 5-minute-cap pair-timing methodology, and emit a draft long-form page + card matching the [jaxwavelets exemplar](../_case_studies/jaxwavelets.md). Hands off to the `website` skill to preview. |
+| Skill | What it does |
+|---|---|
+| [`website`](website/SKILL.md) | Build and serve the Jekyll site, edit `_data/*.yml`, add a long-form page to the `_case_studies/` collection, commit on a feature branch and open a PR. |
+| [`case-study`](case-study/SKILL.md) | Discover one of your past Claude Code sessions (no UUID required), analyse its JSONL with a 5-minute-cap pair-timing methodology (see [`methodology.md`](case-study/methodology.md)), and emit a draft matching the [jaxwavelets exemplar](../_case_studies/jaxwavelets.md) into a [`template`](case-study/template.md). Hands off to the `website` skill to preview. |
 
 ## Conventions
 
