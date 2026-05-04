@@ -10,8 +10,10 @@ layout: base
         {%- if page.author -%}{{ page.author }}{%- endif -%}
         {%- if page.author and page.timebox %} · {% endif -%}
         {%- if page.timebox -%}{{ page.timebox }}{%- endif -%}
-        {%- if (page.author or page.timebox) and page.status %} · {% endif -%}
-        {%- if page.status -%}{{ page.status }}{%- endif -%}
+        {%- if page.status -%}
+          {%- if page.author or page.timebox %} · {% endif -%}
+          {{ page.status }}
+        {%- endif -%}
       </p>
     {%- endif -%}
   </header>
