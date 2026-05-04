@@ -1,9 +1,9 @@
 - id: jaxwavelets
-  title: "Vibe Coding a Scientific Library: Building jaxwavelets in a Single Session"
+  title: "Not Vibes: How an AI Coding Agent Reproduced a Scientific Library to Machine Precision"
   category: "Rapid Development"
   timebox: "4.7 hours active computation"
   status: "Complete"
-  summary: "JAX-native wavelet transform library with full PyWavelets feature parity, built in a single Claude Code session — 4.7 hours of active computation, ~25 minutes of human attention, 100% test coverage, matching PyWavelets to atol=1e-14."
+  summary: "JAX-native wavelet transform library reproducing PyWavelets to atol=1e-14 across 1,177 tests, built in a single AI-assisted Claude Code session under adversarial external review (65 reviews, 60% rejected before merge)."
   outcome: "Production-quality library with PyPI release, 1,177 parametrised tests, 100% coverage, and floating-point parity with the C reference implementation."
   evidence: "Complete session JSONL (4,221 entries, 95 prompts); 65 external LLM reviews (60% rejection rate); test suite verifying numerical parity to atol=1e-14; published at github.com/handley-lab/jaxwavelets."
   demo_url:
