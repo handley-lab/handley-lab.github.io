@@ -118,12 +118,7 @@ layout: base
     <h2>Case Studies</h2>
     <div class="card-grid">
       {%- for study in site.data.case_studies limit:3 -%}
-        <article class="card">
-          <p class="card-meta">{{ study.timebox }}</p>
-          <h3>{{ study.title }}</h3>
-          <p>{{ study.summary }}</p>
-          <p class="evidence"><strong>Evidence:</strong> {{ study.evidence }}</p>
-        </article>
+        {% include case_study_card.html study=study variant="landing" %}
       {%- endfor -%}
     </div>
     <a class="text-link" href="{{ '/case-studies/' | relative_url }}">Open full case study archive</a>

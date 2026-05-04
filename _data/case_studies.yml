@@ -1,3 +1,14 @@
+- id: jaxwavelets
+  title: "Vibe Coding a Scientific Library: Building jaxwavelets in a Single Session"
+  category: "Rapid Development"
+  timebox: "4.7 hours active computation"
+  status: "Complete"
+  summary: "JAX-native wavelet transform library with full PyWavelets feature parity, built in a single Claude Code session — 4.7 hours of active computation, ~25 minutes of human attention, 100% test coverage, matching PyWavelets to atol=1e-14."
+  outcome: "Production-quality library with PyPI release, 1,177 parametrised tests, 100% coverage, and floating-point parity with the C reference implementation."
+  evidence: "Complete session JSONL (4,221 entries, 95 prompts); 65 external LLM reviews (60% rejection rate); test suite verifying numerical parity to atol=1e-14; published at github.com/handley-lab/jaxwavelets."
+  demo_url:
+  repo_url: "https://github.com/handley-lab/jaxwavelets"
+
 - id: camb-torsion
   title: "CAMB torsion condensation: tracing Fortran dependencies with LLMs"
   category: "Legacy Code Navigation"
