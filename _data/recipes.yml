@@ -22,12 +22,19 @@
   repo_url: "https://github.com/handley-lab/jaxwavelets"
 
 - id: camb-torsion
-  title: "Tracing Fortran dependencies in CAMB with LLMs"
+  title: "Propagating torsional gravity modified N_eff into CAMB's primordial helium calculation"
   category: "Legacy Code Navigation"
-  timebox: "Multi-session"
-  status: "Complete"
-  summary: "Used LLMs to trace the dependency chain in legacy Fortran code and implement torsion condensation in CAMB."
-  outcome: "Identified a likely N_eff double-counting issue and a missing massive-neutrino evolution pathway, subsequently checked via targeted tests against reference outputs."
+  timebox: "one session"
+  status: "Draft"
+  proposer: "Sinah Legner"
+  summary: "In Poincaré gauge torsion gravity, a single parameter (cpr) implicitly modifies
+    the effective number of relativistic species. Feeding the resulting dark energy into CAMB
+    without propagating that modification to the BBN helium predictor silently biases the CMB
+    damping tail. Claude traced the parameter through three modules to identify the
+    inconsistency and implement the fix."
+  outcome: "A corrected Cobaya theory class that computes delta_N_eff from cpr and passes
+    the consistent Y_He to CAMB, enabling trustworthy CMB power spectrum constraints on the
+    torsion parameter."
   evidence: "Systematic LLM-guided code archaeology with reference-output validation."
   demo_url:
   repo_url:
