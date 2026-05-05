@@ -198,3 +198,15 @@
   evidence: "Stub: Otter transcripts, orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
   demo_url:
   repo_url: "https://github.com/handley-lab/handley-lab.github.io/issues/3"
+
+- id: coating-sampler-blackjax
+  title: "Updating a coating sampler for the current BlackJAX nested-sampling API"
+  category: "Legacy Code Navigation"
+  timebox: "15 minutes active computation"
+  status: "Draft"
+  proposer: "Namu Kroupa"
+  summary: "A single supervised Claude Code session updated an optical-coating nested-sampling script for the current BlackJAX API, built a fresh GPU-capable Python environment, smoke-tested the result on CPU, and ran it on an A100 to produce the requested optimisation plot."
+  outcome: "Working `sampler.py` run against the current `blackjax-ns` interface, with a generated `ar_coating_blackjax_optimization.png` from an interactive GPU job."
+  evidence: "A private Claude Code transcript records 32 tool calls over a 20-minute wall-clock session; the final run used an interactive GPU job on an A100 and reported an output PNG plus final log-evidence around -42664."
+  demo_url:
+  repo_url: "https://github.com/zwei-beiner/Code"
