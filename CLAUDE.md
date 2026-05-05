@@ -91,7 +91,9 @@ The site has two long-form content channels:
 
 The cookbook include matches companion pages to cards by collection `slug` (Jekyll auto-derives `slug` from filename), so the **filename, the card's `id` field, and the companion page's frontmatter `id` must all agree**.
 
-Recipe card schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `proposer`, `demo_url`, `repo_url`.
+Recipe card schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `proposer`, `image`, `image_alt`, `demo_url`, `repo_url`.
+
+`image` is a site-root-relative path to an image file (e.g. `assets/images/recipes/my-recipe.jpg`). Images are manually chosen — open-source photos, paper figures, or other existing artefacts. No auto-generation. `image_alt` provides the alt text; falls back to the recipe title if omitted. Images are displayed as a bleed header on the archive card; the compact landing card does not show them. Store image files in `assets/images/recipes/`.
 
 `status` may be `Stub`, `Draft`, `In progress`, or `Complete`. Public workshop stubs are acceptable when honestly labelled — the lab is publicly funded and shipping live work-in-progress is on-brand. **`outcome` and `evidence` must be non-empty**; for stubs, lead the field with `Stub: ...` rather than leaving it blank.
 

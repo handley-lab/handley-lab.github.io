@@ -35,6 +35,11 @@
   </article>
 {%- else -%}
   <article class="feature-card recipe-card">
+    {%- if recipe.image -%}
+      <img src="{{ recipe.image | relative_url }}"
+           alt="{{ recipe.image_alt | default: recipe.title }}"
+           class="recipe-card-image">
+    {%- endif -%}
     <p class="feature-card-meta">
       {%- if recipe.category -%}{{ recipe.category }}{%- endif -%}
       {%- if recipe.timebox -%}{% if recipe.category %} · {% endif %}{{ recipe.timebox }}{%- endif -%}
