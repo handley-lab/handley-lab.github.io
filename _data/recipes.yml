@@ -128,16 +128,16 @@
   repo_url:
 
 - id: voice-note-paper-debate
-  title: "Voice-note paper debate with transcription and Claude"
-  category: "Context Engineering"
-  timebox: "Workshop candidate"
-  status: "Stub"
+  title: "Real-time research dialogue"
+  category: "Research Workflow"
+  timebox: "One session"
+  status: "Complete"
   proposer: "Toby Lovick"
-  summary: "Record a spoken research argument over a paper, transcribe it, and use Claude as a third voice that has actually read the paper. Coffee-shop-grade ambient setup, no friction."
-  outcome: "Stub: intended recipe for using voice transcription and Claude as a structured paper-debate partner. Replace with the blended-light-curves worked example."
-  evidence: "Stub: to be filled with the blended-light-curves transcript, the resulting analysis decisions, and notes on what the conversation surfaced that solo reading did not."
+  summary: "Feed a live-transcribed conversation into Claude sentence-by-sentence for immediate feedback on research discussions. Enables three-way debates between researchers and Claude in real-time, without context-switching or friction."
+  outcome: "Understand papers and discuss methodology in real-time, generating novel research directions within the flow of conversation."
+  evidence: "2026-05-01 session: Discussed Park et al. blended light curves paper with Alex in a cafe using Whisper transcription + Claude hooks. Generated novel analysis direction (forward-modeling expected time delays from large-scale structure) during the debate."
   demo_url:
-  repo_url:
+  repo_url: "https://github.com/tobyLovick/recordCLI"
 
 - id: interview-mode-learning
   title: "Interview-mode prompting for clarifying scientific intent"
