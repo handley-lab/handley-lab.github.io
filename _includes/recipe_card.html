@@ -43,6 +43,12 @@
 
     <h2>{{ recipe.title }}</h2>
 
+    {%- if recipe.image -%}
+      <img src="{{ recipe.image | relative_url }}"
+           alt="{{ recipe.image_alt | default: recipe.title }}"
+           class="recipe-card-image">
+    {%- endif -%}
+
     {%- if recipe.proposer -%}
       <p class="card-proposer">Proposed by {{ recipe.proposer }}</p>
     {%- endif -%}
