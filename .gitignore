@@ -6,3 +6,9 @@ vendor
 Gemfile.lock
 .bundle
 vendor/
+
+# Workshop-day orchestrator scratch (transcripts, reports, exports, screenshots)
+context/
+
+# Playwright MCP scratch
+.playwright-mcp/
