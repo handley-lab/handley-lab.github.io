@@ -47,9 +47,6 @@ layout: base
             {%- if post.authors -%}
               <p class="paper-list-authors">{% for a in post.authors %}{{ a }}{%- unless forloop.last %}, {% endunless -%}{% endfor %}</p>
             {%- endif -%}
-            {%- if post.excerpt -%}
-              <div class="paper-list-excerpt">{{ post.excerpt | strip_html | truncate: 220 }}</div>
-            {%- endif -%}
           </div>
         </li>
       {%- endfor -%}
