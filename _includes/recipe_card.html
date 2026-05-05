@@ -38,7 +38,6 @@
     <p class="feature-card-meta">
       {%- if recipe.category -%}{{ recipe.category }}{%- endif -%}
       {%- if recipe.timebox -%}{% if recipe.category %} · {% endif %}{{ recipe.timebox }}{%- endif -%}
-      {%- if recipe.status -%}{% if recipe.category or recipe.timebox %} · {% endif %}{{ recipe.status }}{%- endif -%}
     </p>
 
     <h2>{{ recipe.title }}</h2>
