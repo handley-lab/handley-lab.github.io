@@ -80,8 +80,6 @@ arxiv: <arxiv-id>
 authors: ["<lab member 1>", "<lab member 2>", ...]
 ---
 
-[arXiv:<arxiv-id>](https://arxiv.org/abs/<arxiv-id>) — *<exact paper title>*.
-
 By <list lab authors with links to their pages> with <co-authors>.
 
 ## What the paper does
@@ -101,6 +99,8 @@ If a recipe in /cookbook/ matches the workflow used, link it.>
 - Related recipe: [<title>](/cookbook/<id>/) (TODO or omit)
 ```
 
+The `arxiv:` frontmatter field is **load-bearing**: `_layouts/post.html` reads it and renders a clickable arXiv badge near the top, plus auto-includes the first-page screenshot (see Step 5) as a figure. **Do not** repeat the arXiv link in the first body line — the badge handles it.
+
 ### Tone constraints
 
 - **Plain descriptive titles** — exactly the paper's. No clever rewrites.
@@ -108,21 +108,24 @@ If a recipe in /cookbook/ matches the workflow used, link it.>
 - **No AI-generated text in the body**. The post can be drafted with AI assistance but the words shipped to `main` should have been read and chosen by a human. The "How AI helped" section is the only place the AI lives in the post; it lives as a description, not as the writer.
 - **Length**: 200–500 words is plenty. The paper itself is the long-form artefact; the post is the human-flavoured pointer to it.
 
-### Step 5 — Optional: image
+### Step 5 — First-page screenshot (auto-included if present)
 
-If a single figure from the paper makes the post substantively clearer, add it:
+The post layout auto-includes `assets/images/papers/<arxiv-id>.png` as a figure if the file exists. Generate it from the paper PDF:
 
 ```bash
-# Save the figure manually (e.g. crop from PDF) to assets/images/papers/<arxiv-id>.png
+# Download the PDF (skip if already on disk)
+curl -sL "https://arxiv.org/pdf/<arxiv-id>" -o /tmp/<arxiv-id>.pdf
+# Or via the arxiv MCP if available:
+# mcp__arxiv__download arxiv_id=<arxiv-id> format=pdf output_path=/tmp/<arxiv-id>.pdf
+
+# Render page 1 at 150 DPI; pdftoppm produces firstpage-01.png
+pdftoppm -png -f 1 -l 1 -r 150 /tmp/<arxiv-id>.pdf /tmp/firstpage
+mv /tmp/firstpage-01.png assets/images/papers/<arxiv-id>.png
 ```
 
-Reference it in the post:
+This is a *screenshot*, not an illustration. Do **not** generate a synthetic "AI illustration" of the paper; the legacy auto-pipeline did that and the room rejected it as slop.
 
-```markdown
-![<descriptive alt text>](/assets/images/papers/<arxiv-id>.png)
-```
-
-Skip this if the figure is decorative. Do not generate a synthetic "AI illustration"; the legacy auto-pipeline did that and the room rejected it as slop.
+If you want to add a *substantive* internal figure (a key plot, a method diagram), do so in the body markdown with a normal `![alt](/assets/images/papers/<arxiv-id>-figure-<n>.png)`. Keep these to figures that are actually load-bearing for the post; readers can find decorative ones in the paper.
 
 ### Step 6 — Build, preview, PR
 
