@@ -1,6 +1,17 @@
+# AI Cookbook recipes.
+#
+# Each entry is a card on /cookbook/. If a matching _recipes/<id>.md
+# exists, the card adds a "Read full recipe" link to /cookbook/<id>/.
+#
+# Required: id, title, category, timebox, status, summary, outcome, evidence
+# Optional: proposer, demo_url, repo_url
+#
+# `status` is one of: Stub, Draft, In progress, Complete.
+# `outcome` and `evidence` must be non-empty (`Stub: ...` is acceptable
+# for public stubs).
+
 - id: jaxwavelets
-  format: long-form
-  title: "Not Vibes: How an AI Coding Agent Reproduced a Scientific Library to Machine Precision"
+  title: "Reproducing PyWavelets in JAX to machine precision"
   category: "Rapid Development"
   timebox: "4.7 hours active computation"
   status: "Complete"
@@ -11,8 +22,7 @@
   repo_url: "https://github.com/handley-lab/jaxwavelets"
 
 - id: camb-torsion
-  format: long-form
-  title: "CAMB torsion condensation: tracing Fortran dependencies with LLMs"
+  title: "Tracing Fortran dependencies in CAMB with LLMs"
   category: "Legacy Code Navigation"
   timebox: "Multi-session"
   status: "Complete"
@@ -23,8 +33,7 @@
   repo_url:
 
 - id: class-discrete-k
-  format: long-form
-  title: "Discrete k-quantisation in CLASS: deep C surgery with LLM code-mapping"
+  title: "Discrete k-quantisation in CLASS via deep C surgery"
   category: "Legacy Code Navigation"
   timebox: "Multi-session"
   status: "Complete"
@@ -35,8 +44,7 @@
   repo_url:
 
 - id: emcee-blackjax
-  format: long-form
-  title: "emcee in BlackJAX: two months of work in fifteen minutes"
+  title: "Implementing emcee in BlackJAX"
   category: "Rapid Development"
   timebox: "15 minutes"
   status: "Complete"
@@ -47,8 +55,7 @@
   repo_url: "https://github.com/blackjax-devs/blackjax"
 
 - id: covariance-optimisation
-  format: long-form
-  title: "Covariance matrix optimisation: 24 hours to 2 minutes"
+  title: "Vectorising a 24-hour covariance computation to 1-2 minutes"
   category: "Rapid Development"
   timebox: "1-2 minutes"
   status: "Complete"
@@ -59,8 +66,7 @@
   repo_url:
 
 - id: jim-emulators
-  format: long-form
-  title: "jim-emulators: from blank slate to working package in one day"
+  title: "From blank slate to a working GW emulator package in one day"
   category: "Rapid Development"
   timebox: "9:00 to 18:00"
   status: "Complete"
@@ -71,8 +77,7 @@
   repo_url:
 
 - id: live-five-minute-deck
-  format: long-form
-  title: "Six-slide scientific presentation generated live in five minutes"
+  title: "A six-slide scientific deck assembled live in five minutes"
   category: "Context Engineering"
   timebox: "5 minutes"
   status: "Complete"
@@ -83,8 +88,7 @@
   repo_url:
 
 - id: cosmosis-cobaya-port
-  format: long-form
-  title: "CosmoSIS to Cobaya likelihood port with floating-point validation"
+  title: "Porting CosmoSIS likelihoods to Cobaya with floating-point validation"
   category: "Adversarial Review"
   timebox: "Single focused sprint"
   status: "In progress"
@@ -95,8 +99,7 @@
   repo_url:
 
 - id: gw-emulator-jim
-  format: long-form
-  title: "Gravitational-wave emulator: nothing to working in eight hours"
+  title: "Building a gravitational-wave emulator from nothing in eight hours"
   category: "Rapid Development"
   timebox: "8 hours"
   status: "Complete"
@@ -106,14 +109,11 @@
   demo_url:
   repo_url:
 
-# Recipe cards — short browseable workflow patterns.
-# Stubs surfaced during the 5 May 2026 workshop discussion. Stub status is
-# public-on-purpose: this lab is publicly funded and the workshop is itself
-# a case study of ambient-AI orchestration. Replace stub text with the real
-# write-up when you claim the card.
+# Workshop seeds — surfaced during the 5 May 2026 workshop discussion.
+# Public stubs are intentional: the lab is publicly funded and shipping
+# live workshop output is itself a recipe-of-recipes.
 
 - id: slide-deck-from-corpus
-  format: recipe
   title: "Building a scientific slide deck from a lab corpus"
   category: "Context Engineering"
   timebox: "Workshop candidate"
@@ -126,7 +126,6 @@
   repo_url:
 
 - id: voice-note-paper-debate
-  format: recipe
   title: "Voice-note paper debate with transcription and Claude"
   category: "Context Engineering"
   timebox: "Workshop candidate"
@@ -139,7 +138,6 @@
   repo_url:
 
 - id: interview-mode-learning
-  format: recipe
   title: "Interview-mode prompting for clarifying scientific intent"
   category: "Context Engineering"
   timebox: "Workshop candidate"
@@ -152,7 +150,6 @@
   repo_url:
 
 - id: matplotlib-infographics
-  format: recipe
   title: "Scientific flowcharts and infographics in Matplotlib"
   category: "Research Communication"
   timebox: "Workshop candidate"
@@ -165,7 +162,6 @@
   repo_url:
 
 - id: matplotlib-stylefiles
-  format: recipe
   title: "Consistent Matplotlib style files with AI assistance"
   category: "Research Communication"
   timebox: "Workshop candidate"
@@ -178,7 +174,6 @@
   repo_url:
 
 - id: beamer-colour-porting
-  format: recipe
   title: "Porting Matplotlib colours into Beamer and LaTeX templates"
   category: "Research Communication"
   timebox: "Workshop candidate"
@@ -191,7 +186,6 @@
   repo_url:
 
 - id: ambient-ai-website-workshop
-  format: recipe
   title: "Ambient AI orchestration during a live website workshop"
   category: "Ambient AI"
   timebox: "10:00–13:00 workshop"
@@ -199,6 +193,6 @@
   proposer: "Will Handley / orchestrator"
   summary: "A Claude Code orchestrator listens to a live Otter transcript, maintains GitHub coordination state, ships site scaffolding during a coffee break, and helps a room of researchers produce parallel PRs. Meta example of the lab's ambient-AI thesis."
   outcome: "Stub: meta recipe documenting the workshop itself as an example of ambient AI-assisted research infrastructure. To be expanded after the session with the full audit trail."
-  evidence: "Stub: Otter transcript (otid PIeuXe-3sy3Sx-pUd9YloU8md58), orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
+  evidence: "Stub: Otter transcripts, orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
   demo_url:
   repo_url: "https://github.com/handley-lab/handley-lab.github.io/issues/3"

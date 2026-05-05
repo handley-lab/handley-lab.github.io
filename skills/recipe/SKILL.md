@@ -1,34 +1,31 @@
 ---
-name: case-study
-description: Convert a past Claude Code session JSONL into a long-form case study + card for handley-lab.github.io. Includes session discovery (no UUID required), JSONL analysis with the 5-minute-cap pair-timing methodology, and Socratic verification before publishing. Hands off to the website skill for preview.
+name: recipe
+description: Draft an AI Cookbook recipe for handley-lab.github.io. Two paths — short (interview-driven YAML card only) and long-form (forensic JSONL analysis with the 5-minute-cap pair-timing methodology and a Socratic verification loop). Hands off to the website skill for preview.
 allowed-tools: []
 ---
 
-# Case-study skill
+# Recipe skill
 
-Use this skill to turn a past Claude Code session into a publishable case study at `/case-studies/<id>/`. The reference template is [`_case_studies/jaxwavelets.md`](../../_case_studies/jaxwavelets.md), produced by exactly this methodology.
+Use this skill to add a recipe to the AI Cookbook at `/cookbook/`. The reference long-form companion page is [`_recipes/jaxwavelets.md`](../../_recipes/jaxwavelets.md), produced by the long-form path below.
 
 ## When to use
 
-- The user wants to write a long-form case study but doesn't know (or remember) which session UUID to use.
-- The user has a session in mind and wants to turn it into a long-form post + card.
+- The user wants to draft a short recipe card for the AI Cookbook (use the **short path** below — interview-driven, no JSONL forensics).
+- The user wants a fuller forensic write-up of a past Claude Code session (use the **long-form path** — Phases 0–6 below).
 - A workshop attendee is sitting next to a freshly-cloned `handley-lab.github.io` and wants Claude to produce a draft from one of their past sessions.
-- The user wants to draft a short recipe card for the case-study gallery (use the **Lane A lite** path below — skip Phases 0–3).
 
-## Two lanes
+## Two paths
 
-The `/case-studies/` archive renders two formats:
+The AI Cookbook is a single content channel; recipes vary in depth.
 
-- **Recipe cards** (`format: recipe` in `_data/case_studies.yml`) — short browseable patterns. No long-form page, no JSONL forensics, no Phases 0–3. Lane A lite, below.
-- **Long-form case studies** (`format: long-form`) — full audit trails with timing analysis, prompt classification, and stall reconstruction. Phases 0–6 below.
+- **Short recipes** — interview the user, draft a YAML card. No `~/.claude/projects/` search, no JSONL parsing, no active-time statistics. Most workshop submissions are this shape.
+- **Long-form recipes** — full audit trails with timing analysis, prompt classification, and stall reconstruction. Phases 0–6 below. Use when the session itself is the subject of scrutiny.
 
-If unsure, ask the user. Recipe cards are the default for "this is a workflow pattern"; long-form is the default for "this is a session that warrants forensic depth."
+If unsure, ask the user. Short recipes are the default for "this is a workflow pattern"; long-form is the default for "this is a session that warrants forensic depth."
 
-## Lane A lite — recipe card
+## Short path — interview to YAML card
 
-Use this path when the user wants a short recipe card rather than a full forensic write-up.
-
-This path **deliberately skips Phases 0–3**. Do not search `~/.claude/projects/`, do not parse JSONL, and do not compute active-time statistics unless the user explicitly asks. A recipe card is a reusable pattern, not an audited session report. Forcing it through Phase 0–6 is a category error.
+This path **deliberately skips Phases 0–3**. Do not search `~/.claude/projects/`, do not parse JSONL, and do not compute active-time statistics unless the user explicitly asks. A short recipe is a reusable pattern, not an audited session report. Forcing it through Phase 0–6 is a category error.
 
 ### Workflow
 
@@ -48,7 +45,6 @@ Keep the draft short. Avoid "look how efficient we are" framing. Prefer "this in
 
 ```yaml
 - id: <id>
-  format: recipe
   title: "<plain descriptive title>"
   category: "<e.g. Context Engineering, Research Communication, Ambient AI>"
   timebox: "<e.g. 10 minutes, one afternoon, multi-session>"
@@ -63,20 +59,20 @@ Keep the draft short. Avoid "look how efficient we are" framing. Prefer "this in
 
 ### Publishing during a workshop
 
-Post the YAML to the coordination issue (e.g. issue #3 for the 5 May 2026 workshop) for the orchestrator to batch-merge into `_data/case_studies.yml`. Multiple parallel direct edits to that file create avoidable merge conflicts.
+Post the YAML to the coordination issue (e.g. issue #3 for the 5 May 2026 workshop) for the orchestrator to batch-merge into `_data/recipes.yml`. Multiple parallel direct edits to that file create avoidable merge conflicts.
 
 Outside a workshop context, hand off to the [`website` skill](../website/SKILL.md) to commit the card on a feature branch and open a PR.
 
-## Long-form case study (Phases 0–6)
+## Long-form path (Phases 0–6)
 
 ## What this skill is and is not
 
-- **It is** documentation that orchestrates a phased workflow with Socratic verification at each step. It instructs Claude to write and run analysis scripts under `/tmp/case-study-<id>/` and to pause for user confirmation between phases.
+- **It is** documentation that orchestrates a phased workflow with Socratic verification at each step. It instructs Claude to write and run analysis scripts under `/tmp/recipe-<id>/` and to pause for user confirmation between phases.
 - **It is not** committed code. Each invocation generates its own analysis scripts in `/tmp` so the user's clone is never mutated during analysis.
 
 ## Two companion files
 
-- [`methodology.md`](methodology.md) — the JSONL parsing rules, the 5-minute-cap active-time analysis, the Socratic verification rules. **Read it before running any analysis** — these rules are the hard-won output of the original jaxwavelets case study.
+- [`methodology.md`](methodology.md) — the JSONL parsing rules, the 5-minute-cap active-time analysis, the Socratic verification rules. **Read it before running any analysis** — these rules are the hard-won output of the original jaxwavelets recipe.
 - [`template.md`](template.md) — the section scaffold to fill at Phase 4.
 
 ## Phases
@@ -85,23 +81,23 @@ The phases are run in order. Each one produces output and **pauses for user conf
 
 ### Phase 0 — Session discovery (no UUID required)
 
-The publication `<id>` is not chosen yet at Phase 0. Use scratch directory `/tmp/case-study-discovery/` until the user picks an `<id>` (Phase 1 onward); then move scratch into `/tmp/case-study-<id>/`.
+The publication `<id>` is not chosen yet at Phase 0. Use scratch directory `/tmp/recipe-discovery/` until the user picks an `<id>` (Phase 1 onward); then move scratch into `/tmp/recipe-<id>/`.
 
-Use the cross-platform Python discovery script in [`methodology.md`](methodology.md#session-discovery-cross-platform). Save it to `/tmp/case-study-discovery/discover.py` and run with `python3 /tmp/case-study-discovery/discover.py 30` (the argument is the recency window in days). The script avoids GNU-only flags and Python ≥3.10-only syntax, so it runs on macOS and on Python 3.8+.
+Use the cross-platform Python discovery script in [`methodology.md`](methodology.md#session-discovery-cross-platform). Save it to `/tmp/recipe-discovery/discover.py` and run with `python3 /tmp/recipe-discovery/discover.py 30` (the argument is the recency window in days). The script avoids GNU-only flags and Python ≥3.10-only syntax, so it runs on macOS and on Python 3.8+.
 
 The script lists Claude Code session JSONLs across `~/.claude/projects/*/` modified in the configured window, skipping `/subagents/` paths, and prints a numbered table with index, modification date, `cwd`, line count, and a short excerpt of the first and last real user prompts (system reminders stripped).
 
 The user can:
 
-- **pick a number** from the listing. The default run writes `/tmp/case-study-discovery/candidates.json`; resolve the picked index with `python3 /tmp/case-study-discovery/discover.py --index N` which prints the JSONL path.
-- **supply a UUID/session id**. Run `python3 /tmp/case-study-discovery/discover.py --uuid <uuid>` — the script first looks for an exact filename match, then scans for `sessionId == <uuid>`.
+- **pick a number** from the listing. The default run writes `/tmp/recipe-discovery/candidates.json`; resolve the picked index with `python3 /tmp/recipe-discovery/discover.py --index N` which prints the JSONL path.
+- **supply a UUID/session id**. Run `python3 /tmp/recipe-discovery/discover.py --uuid <uuid>` — the script first looks for an exact filename match, then scans for `sessionId == <uuid>`.
 - **supply an absolute JSONL path** directly.
 
 ### Phase 1 — Inventory
 
-Once the user has chosen a session, ask them for an `<id>` (kebab-case, will become the URL slug `/case-studies/<id>/`). Move scratch from `/tmp/case-study-discovery/` to `/tmp/case-study-<id>/`. From here on, all scratch files live under `/tmp/case-study-<id>/`.
+Once the user has chosen a session, ask them for an `<id>` (kebab-case, will become the URL slug `/cookbook/<id>/`). Move scratch from `/tmp/recipe-discovery/` to `/tmp/recipe-<id>/`. From here on, all scratch files live under `/tmp/recipe-<id>/`.
 
-Read the chosen JSONL using the parsing rules in `methodology.md`. Save to `/tmp/case-study-<id>/inventory.md`:
+Read the chosen JSONL using the parsing rules in `methodology.md`. Save to `/tmp/recipe-<id>/inventory.md`:
 
 - Total messages by top-level `type`.
 - Breakdown of assistant content blocks (`text` / `tool_use` / `thinking`).
@@ -130,19 +126,19 @@ Apply the 5-minute-cap pair-timing methodology (see `methodology.md`). Headline 
 
 **Pause for each long gap.** Quote the entry immediately before and the entry immediately after, identify the boundary pair type, and ask the user to classify it (real long-running tool, suspended/stalled session, or human break/sleep). See [`methodology.md`](methodology.md#stall-detection) for the pair-type taxonomy and why this Socratic pause is required, not optional.
 
-Save the analysis script to `/tmp/case-study-<id>/timing.py` and the report to `/tmp/case-study-<id>/timing.md`.
+Save the analysis script to `/tmp/recipe-<id>/timing.py` and the report to `/tmp/recipe-<id>/timing.md`.
 
 ### Phase 3 — Tool & prompt classification
 
-Tool-call counts by name, and human-prompt classification (rough categories: `strategic / review-trigger / design-decision / quality-challenge / operational / continuation`). Heuristic — keyword + length. Output as a frequency table to `/tmp/case-study-<id>/classification.md`. **The user can override classifications.**
+Tool-call counts by name, and human-prompt classification (rough categories: `strategic / review-trigger / design-decision / quality-challenge / operational / continuation`). Heuristic — keyword + length. Output as a frequency table to `/tmp/recipe-<id>/classification.md`. **The user can override classifications.**
 
 ### Phase 4 — Narrative scaffold
 
-Copy `template.md` to `/tmp/case-study-<id>/draft.md` and fill it with the computed numbers and lifted excerpts. Save the proposed card YAML separately to `/tmp/case-study-<id>/card.yml`.
+Copy `template.md` to `/tmp/recipe-<id>/draft.md` and fill it with the computed numbers and lifted excerpts. Save the proposed card YAML separately to `/tmp/recipe-<id>/card.yml`.
 
-**Do not edit `_case_studies/` or `_data/case_studies.yml` until Phase 6.** Phase 4 is non-mutating: all output stays under `/tmp/case-study-<id>/`.
+**Do not edit `_recipes/` or `_data/recipes.yml` until Phase 6.** Phase 4 is non-mutating: all output stays under `/tmp/recipe-<id>/`.
 
-Sections (matching the jaxwavelets exemplar):
+Sections (matching the jaxwavelets exemplar; see also the 5 May 2026 workshop critique that long forms should aim for 3–4 minute reads with forensic detail in the Methods note):
 
 1. Abstract
 2. Motivation (the *embodied intelligence* idea, or the project-specific intellectual hook)
@@ -173,18 +169,18 @@ Default: draft only. Don't escalate without explicit user opt-in.
 
 ### Phase 6 — Publish
 
-Hand off to the [`website` skill](../website/SKILL.md). Inputs from Phase 4: `/tmp/case-study-<id>/draft.md` and `/tmp/case-study-<id>/card.yml`.
+Hand off to the [`website` skill](../website/SKILL.md). Inputs from Phase 4: `/tmp/recipe-<id>/draft.md` and `/tmp/recipe-<id>/card.yml`.
 
 The website skill is responsible for:
 
 - Running its scripted duplicate-ID check (yml + filename + frontmatter).
-- Creating the `case-study/<id>` feature branch.
-- Writing `_case_studies/<id>.md` from the Phase 4 draft.
-- Appending the card to `_data/case_studies.yml` from the Phase 4 card.yml using the **full schema** (`id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`, optional `demo_url`, `repo_url`).
-- Building, leak-checking, previewing at `/case-studies/<id>/`.
+- Creating the `recipe/<id>` feature branch.
+- Writing `_recipes/<id>.md` from the Phase 4 draft.
+- Appending the card to `_data/recipes.yml` from the Phase 4 card.yml using the **full schema** (`id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`, optional `demo_url`, `repo_url`).
+- Building, leak-checking, previewing at `/cookbook/<id>/`.
 - Committing and opening a PR.
 
-Until Phase 6 is invoked, **nothing under the website's tracked source has been mutated** — the case-study skill alone never edits `_case_studies/` or `_data/case_studies.yml`.
+Until Phase 6 is invoked, **nothing under the website's tracked source has been mutated** — the recipe skill alone never edits `_recipes/` or `_data/recipes.yml`.
 
 ## Edge cases
 
@@ -192,12 +188,12 @@ Until Phase 6 is invoked, **nothing under the website's tracked source has been 
 - **Compacted sessions**: the first user message may be a context summary, not the original prompt. Detect `<command-name>` or `Caveat:` markers and warn.
 - **Subagent JSONLs**: under `<session>/subagents/agent-*.jsonl`. Excluded from Phase 0 listing.
 - **PII / credentials**: see Phase 5. Default opt-out for JSONL escalation.
-- **Non-handley-lab sessions**: ask the user whether the case study should still publish to `handley-lab.github.io` or be kept private/local.
+- **Non-handley-lab sessions**: ask the user whether the recipe should still publish to `handley-lab.github.io` or be kept private/local.
 - **Long-running tool execution mistaken for stall**: methodology distinguishes `tool_use→tool_result` gaps from text→prompt gaps. Inspect tool input/output before classifying.
 
 ## Cautionary tale
 
-The original jaxwavelets case study went through several Socratic corrections before reaching the published numbers. From session `180860e2` (the analysis session that produced [`_case_studies/jaxwavelets.md`](../../_case_studies/jaxwavelets.md)):
+The original jaxwavelets long-form went through several Socratic corrections before reaching the published numbers. From session `180860e2` (the analysis session that produced [`_recipes/jaxwavelets.md`](../../_recipes/jaxwavelets.md)):
 
 - *"When you say 46 hours — there were plenty of pauses there. Is there a way to determine how long it actually took?"* — forced the introduction of the 5-min-cap method. Wall-clock 46h → active 4.7h.
 - *"are you _sure_ about the overnight thing? I remember waking up and sighing because all it had done was written a plan."* — corrected an over-confident "productive overnight" narrative to a 5h22m stall + 18m burst.

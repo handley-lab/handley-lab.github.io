@@ -14,16 +14,16 @@ date: TODO-YYYY-MM-DD
 ---
 
 <!--
-  Case-study template for _case_studies/<id>.md.
+  Long-form recipe template for _recipes/<id>.md.
 
   WARNING: collection-page frontmatter (above) is NOT automatically
-  synced with _data/case_studies.yml. The card and the long-form
+  synced with _data/recipes.yml. The card and the long-form
   page have parallel schemas; you must keep id / title / summary /
   outcome / evidence in sync manually (or via the website skill's
   publish step).
 
   See ../website/SKILL.md for the publish workflow.
-  See ../../_case_studies/jaxwavelets.md for a worked example.
+  See ../../_recipes/jaxwavelets.md for a worked example.
 
   Replace every TODO marker before publishing.
   Do NOT write a leading body H1 — the layout renders {{ page.title }}.

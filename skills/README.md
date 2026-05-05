@@ -8,14 +8,14 @@ These skills live inside the website source so anyone who clones the repo can po
 
 | Skill | What it does |
 |---|---|
-| [`website`](website/SKILL.md) | Build and serve the Jekyll site, edit `_data/*.yml`, add a long-form page to the `_case_studies/` collection, commit on a feature branch and open a PR. |
-| [`case-study`](case-study/SKILL.md) | Discover one of your past Claude Code sessions (no UUID required), analyse its JSONL with a 5-minute-cap pair-timing methodology (see [`methodology.md`](case-study/methodology.md)), and emit a draft matching the [jaxwavelets exemplar](../_case_studies/jaxwavelets.md) into a [`template`](case-study/template.md). Hands off to the `website` skill to preview. |
+| [`website`](website/SKILL.md) | Build and serve the Jekyll site, edit `_data/*.yml`, add a long-form companion page to the `_recipes/` collection, commit on a feature branch and open a PR. |
+| [`recipe`](recipe/SKILL.md) | Two paths: (a) interview-driven short recipe card; (b) forensic long-form recipe — discover a past Claude Code session (no UUID required), analyse its JSONL with a 5-minute-cap pair-timing methodology (see [`methodology.md`](recipe/methodology.md)), and emit a draft matching the [jaxwavelets exemplar](../_recipes/jaxwavelets.md) into a [`template`](recipe/template.md). Hands off to the `website` skill to preview. |
 
 ## Conventions
 
-- A long-form case study lives at `_case_studies/<id>.md` and is rendered at `/case-studies/<id>/`.
-- The matching card is a row in `_data/case_studies.yml` whose `id:` field equals `<id>` (and matches the filename).
-- The card include (`_includes/case_study_card.html`) finds long-form pages by collection `slug`, which Jekyll auto-derives from filename — so the filename, the card `id`, and the collection-page frontmatter `id` must all agree.
-- Cards have a strict schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`, optional `demo_url`, `repo_url`. **`outcome` and `evidence` must be non-empty** for published cards — they're surfaced as labelled rows in the card UI.
+- A long-form companion page lives at `_recipes/<id>.md` and is rendered at `/cookbook/<id>/`.
+- The matching card is a row in `_data/recipes.yml` whose `id:` field equals `<id>` (and matches the filename).
+- The card include (`_includes/recipe_card.html`) finds companion pages by collection `slug`, which Jekyll auto-derives from filename — so the filename, the card `id`, and the collection-page frontmatter `id` must all agree.
+- Cards have a strict schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`, optional `proposer`, `demo_url`, `repo_url`. **`outcome` and `evidence` must be non-empty** for published cards — they're surfaced as labelled rows in the card UI. For workshop stubs, `Stub: ...` is acceptable.
 
-See repo-root [`CLAUDE.md`](../CLAUDE.md) for site conventions and [the jaxwavelets case study](../_case_studies/jaxwavelets.md) as the reference template.
+See repo-root [`CLAUDE.md`](../CLAUDE.md) for site conventions and [the jaxwavelets recipe](../_recipes/jaxwavelets.md) as the reference template.

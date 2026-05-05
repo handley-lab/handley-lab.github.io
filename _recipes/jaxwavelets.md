@@ -1,6 +1,6 @@
 ---
 id: jaxwavelets
-title: "Not Vibes: How an AI Coding Agent Reproduced a Scientific Library to Machine Precision"
+title: "Reproducing PyWavelets in JAX to machine precision"
 category: "Rapid Development"
 timebox: "4.7 hours active computation"
 status: "Complete"
