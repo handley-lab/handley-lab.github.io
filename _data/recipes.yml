@@ -119,6 +119,8 @@
   timebox: "one session"
   status: "Draft"
   proposer: "Natalie Hogg"
+  image: assets/images/recipes/slide-deck-from-corpus.png
+  image_alt: "Slide titled 'Things that may concern you' from a talk on LLM use in cosmology"
   summary: "Giving a first talk on an unfamiliar topic is now easier: paste your previous Beamer slides as a style reference, add the .tex file and figures from the paper you want to present, name the time constraints, and get back a structured baseline deck to tune from rather than a blank slide."
   outcome: "A complete set of Beamer slides with your own style, ready to tune and trim — in this case, a 15-minute talk on LLM use in cosmology; a topic the speaker had never presented before."
   evidence: "Input paper .tex files, figures, and previous Beamer slides; Claude-generated draft deck; final edited slides — all available from Natalie Hogg on request."
