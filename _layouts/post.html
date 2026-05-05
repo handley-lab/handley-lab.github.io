@@ -23,9 +23,6 @@ layout: base
           {{ mdate | date: date_format }}
         </time>
       {%- endif -%}
-      {%- if page.authors -%}
-        · {% for author in page.authors %}<span class="p-author h-card" itemprop="author">{{ author }}</span>{%- unless forloop.last %}, {% endunless -%}{% endfor %}
-      {%- endif -%}
     </p>
   </header>
 
