@@ -569,6 +569,16 @@ a:hover {
   border-left: 4px solid var(--accent-2);
 }
 
+.recipe-page-image {
+  display: block;
+  max-width: 100%;
+  max-height: 420px;
+  object-fit: contain;
+  border-radius: 8px;
+  margin: 0 auto 2rem;
+  background: var(--panel-strong);
+}
+
 .card-proposer {
   margin: -0.15rem 0 0.5rem;
   color: var(--ink-soft);

@@ -18,6 +18,12 @@ layout: base
     {%- endif -%}
   </header>
 
+  {%- if page.image -%}
+    <img src="{{ page.image | relative_url }}"
+         alt="{{ page.image_alt | default: page.title }}"
+         class="recipe-page-image">
+  {%- endif -%}
+
   <div class="post-content">
     {{ content }}
   </div>
