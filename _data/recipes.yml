@@ -196,3 +196,15 @@
   evidence: "Stub: Otter transcripts, orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
   demo_url:
   repo_url: "https://github.com/handley-lab/handley-lab.github.io/issues/3"
+
+- id: socratic-deep-dive
+  title: "Building technical understanding through Socratic AI dialogue"
+  category: "Context Engineering"
+  timebox: "One focused session"
+  status: "Complete"
+  proposer: "Lawrence Berry"
+  summary: "Eighteen targeted exchanges with an AI, starting from a high-level question about IMEX Runge-Kutta solvers, built precise connected understanding of a topic scattered across specialist literature — ending in a publishable reference document."
+  outcome: "A comprehensive 4,000-word technical document on IMEX-Rosenbrock-Wanner methods, covering theory, derivation, and application to CMB Einstein-Boltzmann equations — a document no single reference contains."
+  evidence: "Full conversation transcript (18 exchanges). Terminal artefact: structured markdown synthesising IMEX-RK foundations, Rosenbrock linearisation, W-methods, coefficient derivation, and CMB application, commissioned directly from the dialogue."
+  demo_url:
+  repo_url:
