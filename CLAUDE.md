@@ -72,30 +72,32 @@ Person Name:
 | `landing.html` | Homepage — hero section + panel grid, reads from `_data/*.yml` |
 | `home.html` | Blog listing with pagination |
 | `post.html` | Individual post with MathJax support |
-| `case_study.html` | Long-form case study page (collection `_case_studies/`, MathJax v3) |
+| `recipe.html` | Long-form companion page for an AI Cookbook recipe (collection `_recipes/`, MathJax v3) |
 | `group.html` | Embeds generated `assets/group/group.html` via `include_relative` |
 | `page.html` | Generic page |
 
 ### Data Files (`_data/`)
 
 - `science.yml` — Research themes displayed on science page and landing panels
-- `case_studies.yml` — Case-study cards. When a card's `id` matches a file in `_case_studies/<id>.md`, the include adds a "Read more" link to the long-form page.
+- `recipes.yml` — AI Cookbook recipes. When a card's `id` matches a file in `_recipes/<id>.md`, the include adds a "Read full recipe" link to /cookbook/<id>/.
 - `skills.yml` — Skills marketplace entries
 
-### Case Studies
+### AI Cookbook and Papers
 
-Case studies have two halves:
+The site has two long-form content channels:
 
-- **Card** — an entry in `_data/case_studies.yml`, rendered on `/case-studies/` and the homepage preview block via `_includes/case_study_card.html`.
-- **Long-form page** — a file at `_case_studies/<id>.md`, rendered at `/case-studies/<id>/` by `_layouts/case_study.html`.
+- **AI Cookbook** at `/cookbook/` — recipes for doing science with AI assistance. Each recipe is an entry in `_data/recipes.yml`. Some recipes have a fuller companion page at `_recipes/<id>.md`, rendered at `/cookbook/<id>/`; cards without a companion page render only the card.
+- **Papers** at `/papers/` — short summaries of group papers, with the AI-assisted context that produced them. Each entry links prominently to the published paper. Posts are now reviewed via PR before publishing; the existing `_posts/` backlog is being audited and re-introduced piecemeal rather than staying live unreviewed.
 
-The include matches long-form pages to cards by collection `slug` (Jekyll auto-derives `slug` from filename), so the **filename, the card's `id` field, and the collection-page frontmatter `id` must all agree**.
+The cookbook include matches companion pages to cards by collection `slug` (Jekyll auto-derives `slug` from filename), so the **filename, the card's `id` field, and the companion page's frontmatter `id` must all agree**.
 
-Card schema for new case studies: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `demo_url`, `repo_url`. **`outcome` and `evidence` must be non-empty** for published cards — if you can't write them, the case study isn't ready to ship.
+Recipe card schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `proposer`, `demo_url`, `repo_url`.
 
-Long-form pages should use a clean modern MathJax v3 block (already in `_layouts/case_study.html`). **Do not write a leading body H1** — the layout renders `{{ page.title }}` as the H1. The body should start with `## Section`.
+`status` may be `Stub`, `Draft`, `In progress`, or `Complete`. Public workshop stubs are acceptable when honestly labelled — the lab is publicly funded and shipping live work-in-progress is on-brand. **`outcome` and `evidence` must be non-empty**; for stubs, lead the field with `Stub: ...` rather than leaving it blank.
 
-Workflow for adding a case study: see [`skills/website/SKILL.md`](skills/website/SKILL.md). Reference template: [`_case_studies/jaxwavelets.md`](_case_studies/jaxwavelets.md).
+Companion pages should use a clean modern MathJax v3 block (already in `_layouts/recipe.html`). **Do not write a leading body H1** — the layout renders `{{ page.title }}` as the H1. The body should start with `## Section`.
+
+Workflow for adding a recipe: see [`skills/website/SKILL.md`](skills/website/SKILL.md). Reference companion page: [`_recipes/jaxwavelets.md`](_recipes/jaxwavelets.md).
 
 ### Styling
 

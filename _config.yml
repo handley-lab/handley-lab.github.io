@@ -8,10 +8,10 @@ github_username:  handley-lab
 header_pages:
   - method.md
   - science.md
-  - case-studies.md
+  - cookbook.md
   - skills.md
   - group.md
-  - blog.md
+  - papers.md
 minima:
   skin: classic
 
@@ -22,19 +22,20 @@ plugins:
   - jekyll-feed
   - jekyll-seo-tag
 
-# Long-form case-study pages (cards still come from _data/case_studies.yml).
-# Each _case_studies/<id>.md is rendered at /case-studies/<id>/.
+# AI Cookbook recipes. Cards come from _data/recipes.yml; the collection
+# in _recipes/ provides optional long-form companion pages rendered at
+# /cookbook/<id>/.
 collections:
-  case_studies:
+  recipes:
     output: true
-    permalink: /case-studies/:path/
+    permalink: /cookbook/:path/
 
 defaults:
   - scope:
       path: ""
-      type: case_studies
+      type: recipes
     values:
-      layout: case_study
+      layout: recipe
 
 # Exclude files from Jekyll build
 exclude:
@@ -47,3 +48,4 @@ exclude:
   - .gitignore
   - README.md
   - skills/                         # in-repo Claude skills, not for publishing
+  - context/                        # workshop-day orchestrator scratch

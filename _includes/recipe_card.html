@@ -1,0 +1,72 @@
+{%- comment -%}
+  Renders a recipe card from _data/recipes.yml.
+
+  Required:
+    recipe    a hash from _data/recipes.yml
+
+  Optional:
+    variant   "archive" (full archive page, default) or "landing" (compact)
+
+  When a matching companion page exists at _recipes/<id>.md, the card
+  appends a "Read full recipe" link to /cookbook/<id>/.
+
+  For backward compatibility, the include also accepts `study` as the
+  parameter name (legacy callers).
+{%- endcomment -%}
+
+{%- assign variant = include.variant | default: "archive" -%}
+{%- assign recipe = include.recipe | default: include.study -%}
+{%- assign long_form = site.recipes | where: "slug", recipe.id | first -%}
+
+{%- if variant == "landing" -%}
+  <article class="card recipe-card">
+    <p class="card-meta">
+      {%- if recipe.category -%}{{ recipe.category }}{%- endif -%}
+      {%- if recipe.timebox -%}{% if recipe.category %} · {% endif %}{{ recipe.timebox }}{%- endif -%}
+    </p>
+    <h3>{{ recipe.title }}</h3>
+    <p>{{ recipe.summary }}</p>
+    {%- if recipe.evidence -%}
+      <p class="evidence"><strong>Evidence:</strong> {{ recipe.evidence }}</p>
+    {%- endif -%}
+    {%- if long_form -%}
+      <p><a href="{{ long_form.url | relative_url }}">Read full recipe</a></p>
+    {%- endif -%}
+  </article>
+{%- else -%}
+  <article class="feature-card recipe-card">
+    <p class="feature-card-meta">
+      {%- if recipe.category -%}{{ recipe.category }}{%- endif -%}
+      {%- if recipe.timebox -%}{% if recipe.category %} · {% endif %}{{ recipe.timebox }}{%- endif -%}
+      {%- if recipe.status -%}{% if recipe.category or recipe.timebox %} · {% endif %}{{ recipe.status }}{%- endif -%}
+    </p>
+
+    <h2>{{ recipe.title }}</h2>
+
+    {%- if recipe.proposer -%}
+      <p class="card-proposer">Proposed by {{ recipe.proposer }}</p>
+    {%- endif -%}
+
+    <p>{{ recipe.summary }}</p>
+
+    {%- if recipe.outcome -%}
+      <p><strong>Outcome:</strong> {{ recipe.outcome }}</p>
+    {%- endif -%}
+
+    {%- if recipe.evidence -%}
+      <p><strong>Evidence:</strong> {{ recipe.evidence }}</p>
+    {%- endif -%}
+
+    <div class="feature-links">
+      {%- if long_form -%}
+        <a href="{{ long_form.url | relative_url }}">Read full recipe</a>
+      {%- endif -%}
+      {%- if recipe.demo_url -%}
+        <a href="{{ recipe.demo_url }}" target="_blank" rel="noopener noreferrer">Demo</a>
+      {%- endif -%}
+      {%- if recipe.repo_url -%}
+        <a href="{{ recipe.repo_url }}" target="_blank" rel="noopener noreferrer">Repository</a>
+      {%- endif -%}
+    </div>
+  </article>
+{%- endif -%}

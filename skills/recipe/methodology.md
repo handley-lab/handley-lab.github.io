@@ -6,9 +6,9 @@ These rules are imperative, not background. They were derived from the correctio
 
 1. **All headline numbers are provisional** until the user confirms them.
 2. **Show the formula and the script output** for every number you publish. Don't quote a figure without showing how it was computed.
-3. **Keep generated analysis under `/tmp/case-study-discovery/` until an `<id>` is chosen, then under `/tmp/case-study-<id>/`.** Never mutate the user's clone during analysis. The repo is for publish-time output only.
-4. **When challenged, rerun.** Do not defend a number; recompute it. Save the new computation alongside the old one in `/tmp/case-study-<id>/revisions.md`.
-5. **Maintain a revision log** at `/tmp/case-study-<id>/revisions.md` recording every challenge from the user and the corrected number.
+3. **Keep generated analysis under `/tmp/recipe-discovery/` until an `<id>` is chosen, then under `/tmp/recipe-<id>/`.** Never mutate the user's clone during analysis. The repo is for publish-time output only.
+4. **When challenged, rerun.** Do not defend a number; recompute it. Save the new computation alongside the old one in `/tmp/recipe-<id>/revisions.md`.
+5. **Maintain a revision log** at `/tmp/recipe-<id>/revisions.md` recording every challenge from the user and the corrected number.
 6. **Never infer "overnight productive work" from wall-clock span.** Do not call a long gap productive unless its boundary pair is `assistant(tool_use) → user(tool_result)` and the user confirms it was a real long-running tool. A long gap whose boundary is `assistant(text) → user(prompt)` or `user(*) → assistant(*)` is a stall or break, not autonomous work.
 7. **Quote the messages either side of any gap** when reporting it. Don't summarise — paste the actual prompt text and tool outputs.
 8. **Adversarial questions to ask the user** before finalising any number:
@@ -24,10 +24,10 @@ The Phase 0 discovery script must run on Linux *and* macOS. Avoid GNU-only flags
 Setup:
 
 ```bash
-mkdir -p /tmp/case-study-discovery
+mkdir -p /tmp/recipe-discovery
 ```
 
-Then save the script below as `/tmp/case-study-discovery/discover.py` and run with `python3 /tmp/case-study-discovery/discover.py 30` (the argument is the recency window in days). Once the user has chosen their session and an `<id>` (Phase 1), scratch files move to `/tmp/case-study-<id>/`.
+Then save the script below as `/tmp/recipe-discovery/discover.py` and run with `python3 /tmp/recipe-discovery/discover.py 30` (the argument is the recency window in days). Once the user has chosen their session and an `<id>` (Phase 1), scratch files move to `/tmp/recipe-<id>/`.
 
 ```python
 from pathlib import Path
@@ -142,7 +142,7 @@ def resolve_uuid(uuid_str):
 
 
 def _candidates_index_path():
-    return Path("/tmp/case-study-discovery/candidates.json")
+    return Path("/tmp/recipe-discovery/candidates.json")
 
 
 def write_candidates_index(rows):
@@ -201,15 +201,15 @@ if __name__ == "__main__":
         print("      last:  " + last)
 ```
 
-The default run also writes `/tmp/case-study-discovery/candidates.json`, so once the user picks index `N` you can resolve it with:
+The default run also writes `/tmp/recipe-discovery/candidates.json`, so once the user picks index `N` you can resolve it with:
 
 ```bash
-python3 /tmp/case-study-discovery/discover.py --index N
+python3 /tmp/recipe-discovery/discover.py --index N
 ```
 
 which prints the JSONL path on stdout.
 
-If the user supplies a UUID/session id, run `python3 /tmp/case-study-discovery/discover.py --uuid <uuid>`:
+If the user supplies a UUID/session id, run `python3 /tmp/recipe-discovery/discover.py --uuid <uuid>`:
 
 - One match → use that JSONL path.
 - Multiple matches → present numbered candidates and ask the user to choose.
@@ -386,7 +386,7 @@ Do not publish a prompt count without showing the audit and getting the user to 
 
 ## Revision log format
 
-Save to `/tmp/case-study-<id>/revisions.md`. One entry per correction:
+Save to `/tmp/recipe-<id>/revisions.md`. One entry per correction:
 
 ```markdown
 ## 2026-04-17 06:49 — overnight productive work claim
