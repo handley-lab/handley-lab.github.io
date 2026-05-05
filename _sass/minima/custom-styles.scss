@@ -562,3 +562,46 @@ a:hover {
     animation: none;
   }
 }
+
+/* Case-study gallery formats */
+
+.case-study-section {
+  margin-bottom: 2.4rem;
+}
+
+.case-study-card-recipe {
+  border-left: 4px solid var(--accent-2);
+}
+
+.case-study-card-long-form {
+  border-left: 4px solid var(--accent);
+}
+
+.format-badge {
+  display: inline-block;
+  padding: 0.12rem 0.5rem;
+  border-radius: 999px;
+  font-family: "IBM Plex Mono", monospace;
+  font-size: 0.7rem;
+  line-height: 1.5;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  vertical-align: baseline;
+}
+
+.format-badge-recipe {
+  background: rgba(0, 189, 182, 0.14);
+  color: #006d68;
+}
+
+.format-badge-long-form {
+  background: rgba(19, 56, 68, 0.10);
+  color: var(--accent);
+}
+
+.card-proposer {
+  margin: -0.15rem 0 0.5rem;
+  color: var(--ink-soft);
+  font-style: italic;
+  font-size: 0.92em;
+}

@@ -1,43 +1,77 @@
 {%- comment -%}
-  Renders a case-study card for a study from _data/case_studies.yml.
+  Renders a case-study or recipe card from _data/case_studies.yml.
 
-  Parameters:
-    study:    a hash from _data/case_studies.yml (required)
-    variant:  "archive" (full archive page, default) or "landing" (compact)
+  Required:
+    study     a hash from _data/case_studies.yml
 
-  When a matching long-form page exists at _case_studies/<id>.md,
-  a "Read more" link is appended pointing at /case-studies/<id>/.
+  Optional:
+    variant   "archive" (full archive page, default) or "landing" (compact)
+
+  Format model:
+    study.format == "recipe"     short browseable pattern, card-only
+    study.format == "long-form"  full audit trail; may have _case_studies/<id>.md
+    Missing format defaults to "long-form" for backward compatibility with
+    existing cards and in-flight PRs.
+
+  When a matching long-form page exists at _case_studies/<id>.md the
+  card adds a "Read long-form case study" link; cards without a matching
+  page render without that link (no broken affordance for stubs).
 {%- endcomment -%}
 
 {%- assign variant = include.variant | default: "archive" -%}
 {%- assign study = include.study -%}
-{%- comment -%}
-  Match the long-form page by its filename slug.
-  Jekyll auto-sets `slug` from the _case_studies/<id>.md filename,
-  and we adopt the convention that <id> matches the card's id field.
-{%- endcomment -%}
+{%- assign format = study.format | default: "long-form" -%}
 {%- assign cs = site.case_studies | where: "slug", study.id | first -%}
 
+{%- if format == "recipe" -%}
+  {%- assign format_label = "Recipe card" -%}
+{%- else -%}
+  {%- assign format_label = "Long-form case study" -%}
+{%- endif -%}
+
 {%- if variant == "landing" -%}
-  <article class="card">
-    <p class="card-meta">{{ study.timebox }}</p>
+  <article class="card case-study-card case-study-card-{{ format | slugify }}">
+    <p class="card-meta">
+      <span class="format-badge format-badge-{{ format | slugify }}">{{ format_label }}</span>
+      {%- if study.timebox %} · {{ study.timebox }}{% endif -%}
+    </p>
     <h3>{{ study.title }}</h3>
     <p>{{ study.summary }}</p>
-    <p class="evidence"><strong>Evidence:</strong> {{ study.evidence }}</p>
+    {%- if study.evidence -%}
+      <p class="evidence"><strong>Evidence:</strong> {{ study.evidence }}</p>
+    {%- endif -%}
     {%- if cs -%}
-      <p><a href="{{ cs.url | relative_url }}">Read more</a></p>
+      <p><a href="{{ cs.url | relative_url }}">Read long-form case study</a></p>
     {%- endif -%}
   </article>
 {%- else -%}
-  <article class="feature-card">
-    <p class="feature-card-meta">{{ study.category }} · {{ study.timebox }} · {{ study.status }}</p>
+  <article class="feature-card case-study-card case-study-card-{{ format | slugify }}">
+    <p class="feature-card-meta">
+      <span class="format-badge format-badge-{{ format | slugify }}">{{ format_label }}</span>
+      {%- if study.category %} · {{ study.category }}{% endif -%}
+      {%- if study.timebox %} · {{ study.timebox }}{% endif -%}
+      {%- if study.status %} · {{ study.status }}{% endif -%}
+    </p>
+
     <h2>{{ study.title }}</h2>
+
+    {%- if study.proposer -%}
+      <p class="card-proposer">Proposed by {{ study.proposer }}</p>
+    {%- endif -%}
+
     <p>{{ study.summary }}</p>
-    <p><strong>Outcome:</strong> {{ study.outcome }}</p>
-    <p><strong>Evidence:</strong> {{ study.evidence }}</p>
+
+    {%- if study.outcome -%}
+      <p><strong>Outcome:</strong> {{ study.outcome }}</p>
+    {%- endif -%}
+
+    {%- if study.evidence -%}
+      <p><strong>Evidence:</strong> {{ study.evidence }}</p>
+    {%- endif -%}
+
     <div class="feature-links">
       {%- if cs -%}
-        <a href="{{ cs.url | relative_url }}">Read more</a>
+        <a href="{{ cs.url | relative_url }}">Read long-form case study</a>
       {%- endif -%}
       {%- if study.demo_url -%}
         <a href="{{ study.demo_url }}" target="_blank" rel="noopener noreferrer">Demo</a>

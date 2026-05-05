@@ -79,19 +79,23 @@ Person Name:
 ### Data Files (`_data/`)
 
 - `science.yml` — Research themes displayed on science page and landing panels
-- `case_studies.yml` — Case-study cards. When a card's `id` matches a file in `_case_studies/<id>.md`, the include adds a "Read more" link to the long-form page.
+- `case_studies.yml` — Unified data file for recipe cards (`format: recipe`) and long-form case studies (`format: long-form`). When a card's `id` matches a file in `_case_studies/<id>.md`, the include adds a "Read long-form case study" link to the page.
 - `skills.yml` — Skills marketplace entries
 
 ### Case Studies
 
-Case studies have two halves:
+Case studies use a unified data file with two public formats:
 
-- **Card** — an entry in `_data/case_studies.yml`, rendered on `/case-studies/` and the homepage preview block via `_includes/case_study_card.html`.
-- **Long-form page** — a file at `_case_studies/<id>.md`, rendered at `/case-studies/<id>/` by `_layouts/case_study.html`.
+- **Recipe cards** — short browseable patterns in `_data/case_studies.yml` with `format: recipe`. Card-only; no matching `_case_studies/<id>.md`. Used for reusable workflow patterns (3–4 minute reads).
+- **Long-form case studies** — fuller audit trails with a card in `_data/case_studies.yml` using `format: long-form` and, when available, a matching collection page at `_case_studies/<id>.md`.
+
+The archive page `/case-studies/` renders both formats with a visual distinction (recipe cards above long-form). The include defaults missing `format` to `long-form` for compatibility with older PRs, but new cards should set `format` explicitly.
 
 The include matches long-form pages to cards by collection `slug` (Jekyll auto-derives `slug` from filename), so the **filename, the card's `id` field, and the collection-page frontmatter `id` must all agree**.
 
-Card schema for new case studies: `id`, `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `demo_url`, `repo_url`. **`outcome` and `evidence` must be non-empty** for published cards — if you can't write them, the case study isn't ready to ship.
+Card schema: `id`, `format` (`recipe` or `long-form`), `title`, `category`, `timebox`, `status`, `summary`, `outcome`, `evidence`; optional: `proposer`, `demo_url`, `repo_url`.
+
+`status` may be `Stub`, `Draft`, `In progress`, or `Complete`. Public workshop stubs are acceptable when honestly labelled — the lab is publicly funded and shipping live work-in-progress is on-brand. **`outcome` and `evidence` must be non-empty**; for stubs, lead the field with `Stub: ...` rather than leaving it blank.
 
 Long-form pages should use a clean modern MathJax v3 block (already in `_layouts/case_study.html`). **Do not write a leading body H1** — the layout renders `{{ page.title }}` as the H1. The body should start with `## Section`.
 

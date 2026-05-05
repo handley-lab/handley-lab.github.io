@@ -1,4 +1,5 @@
 - id: jaxwavelets
+  format: long-form
   title: "Not Vibes: How an AI Coding Agent Reproduced a Scientific Library to Machine Precision"
   category: "Rapid Development"
   timebox: "4.7 hours active computation"
@@ -10,6 +11,7 @@
   repo_url: "https://github.com/handley-lab/jaxwavelets"
 
 - id: camb-torsion
+  format: long-form
   title: "CAMB torsion condensation: tracing Fortran dependencies with LLMs"
   category: "Legacy Code Navigation"
   timebox: "Multi-session"
@@ -21,6 +23,7 @@
   repo_url:
 
 - id: class-discrete-k
+  format: long-form
   title: "Discrete k-quantisation in CLASS: deep C surgery with LLM code-mapping"
   category: "Legacy Code Navigation"
   timebox: "Multi-session"
@@ -32,6 +35,7 @@
   repo_url:
 
 - id: emcee-blackjax
+  format: long-form
   title: "emcee in BlackJAX: two months of work in fifteen minutes"
   category: "Rapid Development"
   timebox: "15 minutes"
@@ -43,6 +47,7 @@
   repo_url: "https://github.com/blackjax-devs/blackjax"
 
 - id: covariance-optimisation
+  format: long-form
   title: "Covariance matrix optimisation: 24 hours to 2 minutes"
   category: "Rapid Development"
   timebox: "1-2 minutes"
@@ -54,6 +59,7 @@
   repo_url:
 
 - id: jim-emulators
+  format: long-form
   title: "jim-emulators: from blank slate to working package in one day"
   category: "Rapid Development"
   timebox: "9:00 to 18:00"
@@ -65,6 +71,7 @@
   repo_url:
 
 - id: live-five-minute-deck
+  format: long-form
   title: "Six-slide scientific presentation generated live in five minutes"
   category: "Context Engineering"
   timebox: "5 minutes"
@@ -76,6 +83,7 @@
   repo_url:
 
 - id: cosmosis-cobaya-port
+  format: long-form
   title: "CosmoSIS to Cobaya likelihood port with floating-point validation"
   category: "Adversarial Review"
   timebox: "Single focused sprint"
@@ -87,6 +95,7 @@
   repo_url:
 
 - id: gw-emulator-jim
+  format: long-form
   title: "Gravitational-wave emulator: nothing to working in eight hours"
   category: "Rapid Development"
   timebox: "8 hours"
@@ -96,3 +105,100 @@
   evidence: "Timestamped development log and test suite."
   demo_url:
   repo_url:
+
+# Recipe cards — short browseable workflow patterns.
+# Stubs surfaced during the 5 May 2026 workshop discussion. Stub status is
+# public-on-purpose: this lab is publicly funded and the workshop is itself
+# a case study of ambient-AI orchestration. Replace stub text with the real
+# write-up when you claim the card.
+
+- id: slide-deck-from-corpus
+  format: recipe
+  title: "Building a scientific slide deck from a lab corpus"
+  category: "Context Engineering"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Will Handley / workshop discussion"
+  summary: "Use a corpus of past talks, notes, and local context to draft a new presentation that respects the lab's existing narrative and visual conventions."
+  outcome: "Stub: intended recipe for turning an existing talk corpus into a first-pass deck. Replace with a concrete worked example when claimed."
+  evidence: "Stub: to be filled with a concrete deck, source corpus description, and a short before/after or prompt-transcript summary."
+  demo_url:
+  repo_url:
+
+- id: voice-note-paper-debate
+  format: recipe
+  title: "Voice-note paper debate with transcription and Claude"
+  category: "Context Engineering"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Toby Lovick"
+  summary: "Record a spoken research argument over a paper, transcribe it, and use Claude as a third voice that has actually read the paper. Coffee-shop-grade ambient setup, no friction."
+  outcome: "Stub: intended recipe for using voice transcription and Claude as a structured paper-debate partner. Replace with the blended-light-curves worked example."
+  evidence: "Stub: to be filled with the blended-light-curves transcript, the resulting analysis decisions, and notes on what the conversation surfaced that solo reading did not."
+  demo_url:
+  repo_url:
+
+- id: interview-mode-learning
+  format: recipe
+  title: "Interview-mode prompting for clarifying scientific intent"
+  category: "Context Engineering"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Will Handley / workshop discussion"
+  summary: "Ask the model to interview the scientist before writing code or text. Intent is elicited rather than guessed, especially when the user is at the edge of their own capability."
+  outcome: "Stub: intended recipe for question-first prompting to specify a research task before execution. Replace with a worked example showing the initial vague request, the interview, and the improved output."
+  evidence: "Stub: to be filled with a concrete example transcript and the resulting artefact."
+  demo_url:
+  repo_url:
+
+- id: matplotlib-infographics
+  format: recipe
+  title: "Scientific flowcharts and infographics in Matplotlib"
+  category: "Research Communication"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Matt Grayling"
+  summary: "Produce publication- and fellowship-style diagrams in Matplotlib with Claude assistance, instead of switching to generic flowchart tools that produce non-editable output."
+  outcome: "Stub: intended recipe for generating editable scientific infographics in the same Python stack as the analysis."
+  evidence: "Stub: to be filled with a concrete figure, source code, and comparison to the previous manual or flowchart-tool workflow."
+  demo_url:
+  repo_url:
+
+- id: matplotlib-stylefiles
+  format: recipe
+  title: "Consistent Matplotlib style files with AI assistance"
+  category: "Research Communication"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Natalie Hogg"
+  summary: "Codify visual taste as a Matplotlib style file and have Claude apply it consistently across a project's plots. The habit is easier to build with AI than alone."
+  outcome: "Stub: intended recipe for turning visual taste into a reusable plotting style applied automatically by an AI agent."
+  evidence: "Stub: to be filled with an example style file, before/after plots, and notes on where AI helped enforce consistency."
+  demo_url:
+  repo_url:
+
+- id: beamer-colour-porting
+  format: recipe
+  title: "Porting Matplotlib colours into Beamer and LaTeX templates"
+  category: "Research Communication"
+  timebox: "Workshop candidate"
+  status: "Stub"
+  proposer: "Will Handley"
+  summary: "Keep plot colours, Beamer themes, and lab presentation templates in sync across Python and LaTeX so the visual identity carries from analysis figure to slide."
+  outcome: "Stub: intended recipe for preserving visual identity across analysis figures and slides."
+  evidence: "Stub: to be filled with a concrete colour palette, generated LaTeX definitions, and an example deck or figure."
+  demo_url:
+  repo_url:
+
+- id: ambient-ai-website-workshop
+  format: recipe
+  title: "Ambient AI orchestration during a live website workshop"
+  category: "Ambient AI"
+  timebox: "10:00–13:00 workshop"
+  status: "Stub"
+  proposer: "Will Handley / orchestrator"
+  summary: "A Claude Code orchestrator listens to a live Otter transcript, maintains GitHub coordination state, ships site scaffolding during a coffee break, and helps a room of researchers produce parallel PRs. Meta example of the lab's ambient-AI thesis."
+  outcome: "Stub: meta recipe documenting the workshop itself as an example of ambient AI-assisted research infrastructure. To be expanded after the session with the full audit trail."
+  evidence: "Stub: Otter transcript (otid PIeuXe-3sy3Sx-pUd9YloU8md58), orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
+  demo_url:
+  repo_url: "https://github.com/handley-lab/handley-lab.github.io/issues/3"

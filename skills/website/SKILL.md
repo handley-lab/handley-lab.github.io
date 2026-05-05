@@ -60,14 +60,46 @@ script/cibuild              # builds, asserts _site/index.html exists, then dele
 
 If `script/cibuild` exits 0 (printing "It builds!"), the site builds.
 
+## Two formats: recipe cards and long-form case studies
+
+`_data/case_studies.yml` is a single data file with two formats:
+
+- **Recipe cards** (`format: recipe`) — short browseable workflow patterns; card-only, no long-form page.
+- **Long-form case studies** (`format: long-form`) — full audit trails; card plus a matching `_case_studies/<id>.md` page.
+
+Missing `format` is rendered as `long-form` for backward compatibility, but new cards should set it explicitly.
+
+`/case-studies/` renders both formats with a visual distinction. Recipe cards appear above long-form cards.
+
+## Adding or editing a recipe card
+
+Recipe cards live only in `_data/case_studies.yml`. They do not require a file in `_case_studies/`.
+
+```yaml
+- id: <id>
+  format: recipe
+  title: "..."                           # plain descriptive — say what it is, not how clever it is
+  category: "..."                        # e.g. Context Engineering, Research Communication
+  timebox: "..."                         # e.g. 10 minutes, one afternoon, multi-session
+  status: "Draft"                        # Stub | Draft | In progress | Complete
+  proposer: "..."                        # optional; useful for workshop attribution
+  summary: "..."                         # 1–2 sentences. Lead with what became possible, not what was efficient.
+  outcome: "..."                         # required, must be non-empty (Stub: ... is acceptable)
+  evidence: "..."                        # required, must be non-empty (Stub: ... is acceptable)
+  demo_url:
+  repo_url: "..."
+```
+
+During the 5 May 2026 workshop and any successor workshop, prefer posting recipe-card YAML to the coordination issue for orchestrator batch-merge rather than opening many competing PRs against `_data/case_studies.yml` — the file is a merge-conflict magnet under parallel edits.
+
 ## Adding a long-form case study
 
-A case study has **two halves** that must stay in sync:
+A long-form case study has **two halves** that must stay in sync:
 
-1. **Card** — an entry in `_data/case_studies.yml`. Renders on `/case-studies/` and the homepage preview block.
+1. **Card** — an entry in `_data/case_studies.yml` with `format: long-form`. Renders on `/case-studies/` and the homepage preview block.
 2. **Long-form page** — a file at `_case_studies/<id>.md`. Renders at `/case-studies/<id>/`.
 
-The card include (`_includes/case_study_card.html`) discovers a matching long-form page by collection `slug` — Jekyll auto-derives `slug` from the filename. **So `<id>` (the card field, the collection frontmatter field, and the filename) must all agree.** Otherwise the "Read more" link won't appear.
+The card include (`_includes/case_study_card.html`) discovers a matching long-form page by collection `slug` — Jekyll auto-derives `slug` from the filename. **So `<id>` (the card field, the collection frontmatter field, and the filename) must all agree.** Otherwise the "Read long-form case study" link won't appear.
 
 ### Step 1 — Pick `<id>` and check it's unused
 
@@ -115,10 +147,11 @@ Frontmatter must include the full card schema (so the page is self-documenting a
 ```yaml
 ---
 id: <id>
+format: long-form
 title: "..."
 category: "..."
 timebox: "..."
-status: "Draft"            # or "In progress" or "Complete"
+status: "Draft"            # Stub | Draft | In progress | Complete
 summary: "..."
 outcome: "..."
 evidence: "..."
@@ -129,7 +162,7 @@ date: YYYY-MM-DD
 ---
 ```
 
-`status` accepts `"Draft"`, `"In progress"`, or `"Complete"`. `outcome` and `evidence` must be non-empty.
+`status` accepts `"Stub"`, `"Draft"`, `"In progress"`, or `"Complete"`. `outcome` and `evidence` must be non-empty (for stubs, lead with `Stub: ...` rather than leaving blank).
 
 Then the long-form body. **Do not write a leading body H1** — `_layouts/case_study.html` renders `{{ page.title }}` as the H1. Start the body with `## Section`.
 
@@ -139,6 +172,7 @@ Use the [jaxwavelets case study](../../_case_studies/jaxwavelets.md) as the refe
 
 ```yaml
 - id: <id>                              # MUST match _case_studies/<id>.md
+  format: long-form
   title: "..."
   category: "..."
   timebox: "..."
@@ -172,7 +206,7 @@ gh pr create                            # or open the PR in the GitHub web UI if
 
 ## Editing a card without long-form
 
-If you want a card-only entry (no `/case-studies/<id>/` page yet), edit `_data/case_studies.yml` only. The "Read more" link is conditional and will not appear.
+A card-only entry is the recipe-card format. Set `format: recipe`. No long-form page is required; the "Read long-form case study" link is conditional and will only appear if `_case_studies/<id>.md` exists.
 
 ## Files this skill MUST NOT modify without explicit user OK
 

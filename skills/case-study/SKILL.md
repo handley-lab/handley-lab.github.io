@@ -10,9 +10,64 @@ Use this skill to turn a past Claude Code session into a publishable case study 
 
 ## When to use
 
-- The user wants to write a case study but doesn't know (or remember) which session UUID to use.
+- The user wants to write a long-form case study but doesn't know (or remember) which session UUID to use.
 - The user has a session in mind and wants to turn it into a long-form post + card.
 - A workshop attendee is sitting next to a freshly-cloned `handley-lab.github.io` and wants Claude to produce a draft from one of their past sessions.
+- The user wants to draft a short recipe card for the case-study gallery (use the **Lane A lite** path below — skip Phases 0–3).
+
+## Two lanes
+
+The `/case-studies/` archive renders two formats:
+
+- **Recipe cards** (`format: recipe` in `_data/case_studies.yml`) — short browseable patterns. No long-form page, no JSONL forensics, no Phases 0–3. Lane A lite, below.
+- **Long-form case studies** (`format: long-form`) — full audit trails with timing analysis, prompt classification, and stall reconstruction. Phases 0–6 below.
+
+If unsure, ask the user. Recipe cards are the default for "this is a workflow pattern"; long-form is the default for "this is a session that warrants forensic depth."
+
+## Lane A lite — recipe card
+
+Use this path when the user wants a short recipe card rather than a full forensic write-up.
+
+This path **deliberately skips Phases 0–3**. Do not search `~/.claude/projects/`, do not parse JSONL, and do not compute active-time statistics unless the user explicitly asks. A recipe card is a reusable pattern, not an audited session report. Forcing it through Phase 0–6 is a category error.
+
+### Workflow
+
+1. Pick an `<id>` (kebab-case).
+2. Interview the user with these prompts:
+   - What were you trying to do?
+   - What context did you give the model?
+   - What did the model produce?
+   - What became *newly possible* — not just faster?
+   - What evidence could we show publicly?
+   - What should another researcher copy?
+3. Draft the YAML card.
+
+Keep the draft short. Avoid "look how efficient we are" framing. Prefer "this interface made a new kind of scientific work possible." Plain descriptive titles, not clever ones.
+
+### Output schema
+
+```yaml
+- id: <id>
+  format: recipe
+  title: "<plain descriptive title>"
+  category: "<e.g. Context Engineering, Research Communication, Ambient AI>"
+  timebox: "<e.g. 10 minutes, one afternoon, multi-session>"
+  status: "Draft"                   # Stub | Draft | In progress | Complete
+  proposer: "<full name>"
+  summary: "<1–2 sentences. Lead with what became possible, not what was efficient.>"
+  outcome: "<concrete artefact or capability. Required, non-empty.>"
+  evidence: "<how a sceptic could verify it. Required, non-empty.>"
+  demo_url:
+  repo_url:
+```
+
+### Publishing during a workshop
+
+Post the YAML to the coordination issue (e.g. issue #3 for the 5 May 2026 workshop) for the orchestrator to batch-merge into `_data/case_studies.yml`. Multiple parallel direct edits to that file create avoidable merge conflicts.
+
+Outside a workshop context, hand off to the [`website` skill](../website/SKILL.md) to commit the card on a feature branch and open a PR.
+
+## Long-form case study (Phases 0–6)
 
 ## What this skill is and is not
 
