@@ -52,11 +52,24 @@
       <p class="card-proposer">Proposed by {{ recipe.proposer }}</p>
     {%- endif -%}
 
-    <p>{{ recipe.summary }}</p>
-
-    {%- if recipe.outcome -%}
-      <p><strong>Outcome:</strong> {{ recipe.outcome }}</p>
+    {%- if recipe.image_before or recipe.image_after -%}
+      <div style="display:flex; gap:0.6rem; margin:0.8rem 0;">
+        {%- if recipe.image_before -%}
+          <div style="flex:1; text-align:center;">
+            <p style="font-size:0.8em; color:#666; margin-bottom:0.3rem;">{{ recipe.image_before_caption | default: "Before" }}</p>
+            <img src="{{ recipe.image_before }}" style="width:100%; border-radius:4px;">
+          </div>
+        {%- endif -%}
+        {%- if recipe.image_after -%}
+          <div style="flex:1; text-align:center;">
+            <p style="font-size:0.8em; color:#666; margin-bottom:0.3rem;">{{ recipe.image_after_caption | default: "After" }}</p>
+            <img src="{{ recipe.image_after }}" style="width:100%; border-radius:4px;">
+          </div>
+        {%- endif -%}
+      </div>
     {%- endif -%}
+
+    <p>{{ recipe.summary }}</p>
 
     {%- if recipe.evidence -%}
       <p><strong>Evidence:</strong> {{ recipe.evidence }}</p>
