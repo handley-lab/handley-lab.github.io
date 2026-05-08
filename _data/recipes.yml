@@ -22,22 +22,23 @@
   repo_url: "https://github.com/handley-lab/jaxwavelets"
 
 - id: camb-torsion
-  title: "Propagating torsional gravity modified N_eff into CAMB's primordial helium calculation"
+  title: "Navigating CAMB's BBN Pipeline for Modified $N_{\\rm eff}$"
   category: "Legacy Code Navigation"
   timebox: "one session"
-  status: "Draft"
-  proposer: "Sinah Legner"
-  summary: "In Poincaré gauge torsion gravity, a single parameter (cpr) implicitly modifies
-    the effective number of relativistic species. Feeding the resulting dark energy into CAMB
-    without propagating that modification to the BBN helium predictor silently biases the CMB
-    damping tail. Claude traced the parameter through three modules to identify the
-    inconsistency and implement the fix."
-  outcome: "A corrected Cobaya theory class that computes delta_N_eff from cpr and passes
-    the consistent Y_He to CAMB, enabling trustworthy CMB power spectrum constraints on the
-    torsion parameter."
-  evidence: "Systematic LLM-guided code archaeology with reference-output validation."
+  status: "Complete"
+  summary: "The TorC parameter $\\varpi_r$ changes the early Universe expansion rate, similar
+    to modifying the effective number of neutrinos, and therefore affects the predicted helium
+    abundance. Passing this change directly into CAMB accidentally double-counted the effect of
+    $\\varpi_r$, since it was already included in the expansion history. Claude traced the issue
+    through the legacy code and proposed a cleaner helium calculation that avoids this double
+    counting."
+  evidence: "Legacy code tracing combined with reference-output validation."
   demo_url:
   repo_url:
+  image_before: /assets/images/recipes/recipe_before.png
+  image_before_caption: "Modified $N_{\\rm eff}$ (inconsistent)"
+  image_after: /assets/images/recipes/recipe_after.png
+  image_after_caption: "Modified $Y_{\\rm He}$ (corrected)"
 
 - id: class-discrete-k
   title: "Discrete k-quantisation in CLASS via deep C surgery"
