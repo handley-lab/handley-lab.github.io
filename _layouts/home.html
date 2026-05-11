@@ -1,9 +1,9 @@
 ---
 layout: base
 ---
-<section class="blog-page">
+<section class="blog-page papers-page">
   <header class="blog-header">
-    <p class="kicker">Research Log</p>
+    <p class="kicker">Papers</p>
     {%- if page.title -%}
       <h1 class="page-heading">{{ page.title }}</h1>
     {%- endif -%}
@@ -17,16 +17,37 @@ layout: base
   {% endif %}
 
   {%- if posts.size > 0 -%}
-    <ul class="post-list refined-list">
+    <ul class="paper-list">
       {%- assign date_format = site.minima.date_format | default: "%b %-d, %Y" -%}
       {%- for post in posts -%}
-        <li class="refined-list-item">
-          <span class="post-meta">{{ post.date | date: date_format }}</span>
-          <h2>
-            <a class="post-link" href="{{ post.url | relative_url }}">
-              {{ post.title | escape }}
-            </a>
-          </h2>
+        {%- assign img_path = "/assets/images/papers/" | append: post.arxiv | append: ".png" -%}
+        {%- assign img_match = site.static_files | where: "path", img_path | first -%}
+        <li class="paper-list-item">
+          <a class="paper-list-thumb" href="{{ post.url | relative_url }}" aria-hidden="{% if img_match %}false{% else %}true{% endif %}" tabindex="-1">
+            {%- if img_match -%}
+              <img src="{{ img_path | relative_url }}" alt="First page of arXiv:{{ post.arxiv }}">
+            {%- else -%}
+              <div class="paper-list-thumb-placeholder">{{ post.arxiv | default: '—' }}</div>
+            {%- endif -%}
+          </a>
+          <div class="paper-list-body">
+            <p class="paper-list-meta">
+              <time datetime="{{ post.date | date_to_xmlschema }}">{{ post.date | date: date_format }}</time>
+              {%- if post.arxiv -%}
+                <span aria-hidden="true"> · </span>
+                <a class="arxiv-badge arxiv-badge-inline" href="https://arxiv.org/abs/{{ post.arxiv }}" target="_blank" rel="noopener noreferrer" aria-label="Open arXiv:{{ post.arxiv }}">
+                  <span class="arxiv-badge-label">arXiv</span>
+                  <span class="arxiv-badge-id">{{ post.arxiv }}</span>
+                </a>
+              {%- endif -%}
+            </p>
+            <h2 class="paper-list-title">
+              <a class="post-link" href="{{ post.url | relative_url }}">{{ post.title | escape }}</a>
+            </h2>
+            {%- if post.authors -%}
+              <p class="paper-list-authors">{% for a in post.authors %}{{ a }}{%- unless forloop.last %}, {% endunless -%}{% endfor %}</p>
+            {%- endif -%}
+          </div>
         </li>
       {%- endfor -%}
     </ul>

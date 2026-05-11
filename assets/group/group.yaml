@@ -240,7 +240,7 @@ David Yallup:
   original_image: images/originals/david_yallup.jpg
   image: images/david_yallup.jpg
   links:
-    ORCiD: https://orcid.org/0000-0003-4716-5817
+    Webpage: https://yallup.github.io
     linkedin: https://www.linkedin.com/in/dyallup/
 Kamran Javid:
   postdoc:
@@ -259,8 +259,8 @@ Kamran Javid:
     Google scholar: https://scholar.google.com/citations?user=USKsovMAAAAJ
     linkedin: https://www.linkedin.com/in/kamranjavid91
   destination:
-    2019-10-01: <a href="https://www.linkedin.com/in/kamranjavid91">AI Researcher (systematic
-      trading), Arabesque AI</a>, London
+    2019-10-01: <a href="https://www.linkedin.com/in/kamranjavid91">AI Researcher
+      (systematic trading), Arabesque AI</a>, London
     2023-01-01: <a href="https://theorg.com/org/abu-dhabi-investment-authority/org-chart/kamran-javid">Quantitative
       Research & Development (systematic trading), ADIA</a>, United Arab Emirates
 Lawrence Berry:
@@ -433,8 +433,8 @@ Kilian Scheutwinkel:
     C2D3 profile: https://www.c2d3.cam.ac.uk/directory/8681/mr-kilian-scheutwinkel
     Group webpage: https://www.cavendishradiocosmology.com/
   destination:
-    2024-09-01: <a href="https://www.linkedin.com/in/kilianhscheutwinkel/">TRGC
-      (Venture fund focussed on digital assets)</a>
+    2024-09-01: <a href="https://www.linkedin.com/in/kilianhscheutwinkel/">TRGC (Venture
+      fund focussed on digital assets)</a>
 Thomas Mcaloone:
   phd:
     start: 2020-06-10
@@ -553,7 +553,8 @@ Ed Higson:
     linkedin: https://www.linkedin.com/in/ejhigson
   destination:
     2017-10-01: Goldman Sachs (UK finance)
-    2020-05-01: <a href="https://www.linkedin.com/in/ejhigson">VP Quantitative Analyst, DE Shaw</a> (US finance)
+    2020-05-01: <a href="https://www.linkedin.com/in/ejhigson">VP Quantitative Analyst,
+      DE Shaw</a> (US finance)
 Danielle Dineen:
   mphil:
     start: 2022-10-01
@@ -809,8 +810,7 @@ Yi Jer Loh:
   original_image: images/originals/yi_jer_loh.jpg
   image: images/yi_jer_loh.jpg
   destination:
-    2021-10-01: <a href="https://uk.linkedin.com/in/yi-jer-loh">Data Scientist,
-      Spotify</a>
+    2021-10-01: <a href="https://uk.linkedin.com/in/yi-jer-loh">Data Scientist, Spotify</a>
 Aleksandr Petrosyan:
   partiii:
     start: 2019-10-01
