@@ -272,11 +272,25 @@ Kamran Javid:
       (systematic trading), Arabesque AI</a>, London
     2023-01-01: <a href="https://theorg.com/org/abu-dhabi-investment-authority/org-chart/kamran-javid">Quantitative
       Research & Development (systematic trading), ADIA</a>, United Arab Emirates
+Farah Wallauer:
+  phd:
+    start: 2026-10-01
+    supervisors:
+    - Will Handley
+    - James Alvey
+    thesis: null
+  partiii:
+    start: 2025-10-01
+    end: 2026-06-01
+    supervisors:
+    - Will Handley
+    thesis: null
 Lawrence Berry:
   phd:
     start: 2025-10-01
     supervisors:
     - Will Handley
+    - James Alvey
     - Nils Schoneberg
     - Oliver Hahn
     thesis: null
@@ -642,13 +656,6 @@ Alex Drane:
     - Namu Kroupa
     thesis: null
   image: images/alex_drane.jpg
-Farah Wallauer:
-  partiii:
-    start: 2025-10-01
-    end: 2026-06-01
-    supervisors:
-    - Will Handley
-    thesis: null
 Harvey Williams:
   partiii:
     start: 2024-10-01
