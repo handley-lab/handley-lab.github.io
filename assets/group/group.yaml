@@ -175,6 +175,15 @@ Matt Grayling:
     start: 2025-10-01
     thesis: null
   image: images/matt_grayling.jpg
+Melis Irfan:
+  postdoc:
+    start: 2025-08-14
+    end: 2026-07-07
+    thesis: null
+  links:
+    GitHub: https://github.com/melisirfan
+  destination:
+    2026-07-07: Left academia
 Chris Lovell:
   postdoc:
     start: 2025-07-17
@@ -259,15 +268,29 @@ Kamran Javid:
     Google scholar: https://scholar.google.com/citations?user=USKsovMAAAAJ
     linkedin: https://www.linkedin.com/in/kamranjavid91
   destination:
-    2019-10-01: <a href="https://www.linkedin.com/in/kamranjavid91">AI Researcher (systematic
-      trading), Arabesque AI</a>, London
+    2019-10-01: <a href="https://www.linkedin.com/in/kamranjavid91">AI Researcher
+      (systematic trading), Arabesque AI</a>, London
     2023-01-01: <a href="https://theorg.com/org/abu-dhabi-investment-authority/org-chart/kamran-javid">Quantitative
       Research & Development (systematic trading), ADIA</a>, United Arab Emirates
+Farah Wallauer:
+  phd:
+    start: 2026-10-01
+    supervisors:
+    - Will Handley
+    - James Alvey
+    thesis: null
+  partiii:
+    start: 2025-10-01
+    end: 2026-06-01
+    supervisors:
+    - Will Handley
+    thesis: null
 Lawrence Berry:
   phd:
     start: 2025-10-01
     supervisors:
     - Will Handley
+    - James Alvey
     - Nils Schoneberg
     - Oliver Hahn
     thesis: null
@@ -433,8 +456,8 @@ Kilian Scheutwinkel:
     C2D3 profile: https://www.c2d3.cam.ac.uk/directory/8681/mr-kilian-scheutwinkel
     Group webpage: https://www.cavendishradiocosmology.com/
   destination:
-    2024-09-01: <a href="https://www.linkedin.com/in/kilianhscheutwinkel/">TRGC
-      (Venture fund focussed on digital assets)</a>
+    2024-09-01: <a href="https://www.linkedin.com/in/kilianhscheutwinkel/">TRGC (Venture
+      fund focussed on digital assets)</a>
 Thomas Mcaloone:
   phd:
     start: 2020-06-10
@@ -553,7 +576,8 @@ Ed Higson:
     linkedin: https://www.linkedin.com/in/ejhigson
   destination:
     2017-10-01: Goldman Sachs (UK finance)
-    2020-05-01: <a href="https://www.linkedin.com/in/ejhigson">VP Quantitative Analyst, DE Shaw</a> (US finance)
+    2020-05-01: <a href="https://www.linkedin.com/in/ejhigson">VP Quantitative Analyst,
+      DE Shaw</a> (US finance)
 Danielle Dineen:
   mphil:
     start: 2022-10-01
@@ -611,6 +635,11 @@ Rose Luo:
     supervisors:
     - Will Handley
     thesis: null
+  summer:
+    start: 2026-07-06
+    supervisors:
+    - Will Handley
+    thesis: null
   image: images/rose_luo.jpg
 Alex Drane:
   partiii:
@@ -620,14 +649,13 @@ Alex Drane:
     - Will Handley
     - Namu Kroupa
     thesis: null
-  image: images/alex_drane.jpg
-Farah Wallauer:
-  partiii:
-    start: 2025-10-01
-    end: 2026-06-01
+  summer:
+    start: 2026-07-06
     supervisors:
     - Will Handley
+    - Namu Kroupa
     thesis: null
+  image: images/alex_drane.jpg
 Harvey Williams:
   partiii:
     start: 2024-10-01
@@ -809,8 +837,7 @@ Yi Jer Loh:
   original_image: images/originals/yi_jer_loh.jpg
   image: images/yi_jer_loh.jpg
   destination:
-    2021-10-01: <a href="https://uk.linkedin.com/in/yi-jer-loh">Data Scientist,
-      Spotify</a>
+    2021-10-01: <a href="https://uk.linkedin.com/in/yi-jer-loh">Data Scientist, Spotify</a>
 Aleksandr Petrosyan:
   partiii:
     start: 2019-10-01
@@ -920,6 +947,19 @@ Stephen Pickman:
     2017-10-01: Software developer at <a href="https://www.darktrace.com">Darktrace</a>
     2024-01-01: <a href="https://www.darktrace.com/people/stephen-pickman">SVP Engineering
       at Darktrace</a>
+Sienna Folkes-Miller:
+  summer:
+    start: 2026-07-06
+    supervisors:
+    - Will Handley
+    thesis: null
+Ayush Singh:
+  summer:
+    start: 2026-07-06
+    supervisors:
+    - Will Handley
+    - David Yallup
+    thesis: null
 Fedir Boreiko:
   summer:
     start: 2025-06-30
