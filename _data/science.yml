@@ -57,7 +57,7 @@
 - area: "GPUs for Science"
   theme: "Satellites"
   title: "Mega-constellation propagation with JAX-SGP4"
-  people: "Charlotte Ward"
+  people: "Charlotte Priestley"
   claims: "9,550 Starlinks propagated in 0.5ms (1,550x speedup)"
   summary: "GPU-native orbital propagation for satellite mega-constellations, enabling real-time interference prediction for radio astronomy."
   examples: "GLITTER project, Starlink RFI modelling."

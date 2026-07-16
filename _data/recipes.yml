@@ -65,17 +65,6 @@
   demo_url:
   repo_url:
 
-- id: jim-emulators
-  title: "From blank slate to a working GW emulator package in one day"
-  category: "Rapid Development"
-  timebox: "9:00 to 18:00"
-  status: "Complete"
-  summary: "Built a gravitational-wave emulator workflow from scratch using supervised execution."
-  outcome: "A functioning package with tests and documentation by end of day."
-  evidence: "Live build session with working output and reproducible repository state."
-  demo_url:
-  repo_url:
-
 - id: live-five-minute-deck
   title: "A six-slide scientific deck assembled live in five minutes"
   category: "Context Engineering"
@@ -152,26 +141,14 @@
   repo_url:
 
 - id: matplotlib-infographics
-  title: "Scientific flowcharts and infographics in Matplotlib"
+  title: "Plots, flowcharts, and infographics in Matplotlib"
   category: "Research Communication"
   timebox: "Workshop candidate"
   status: "Stub"
   proposer: "Matt Grayling"
-  summary: "Produce publication- and fellowship-style diagrams in Matplotlib with Claude assistance, instead of switching to generic flowchart tools that produce non-editable output."
-  outcome: "Stub: intended recipe for generating editable scientific infographics in the same Python stack as the analysis."
+  summary: "Three layers of AI-assisted plotting: routine Matplotlib wrangling ('fix the ticks, I don't care how'); publication- and fellowship-style diagrams without leaving the Python stack; and maintaining a library of past plot scripts as context so the agent starts from your established visual style rather than defaults."
+  outcome: "Stub: intended recipe covering plot iteration, editable scientific infographics, and the plot-library-as-context pattern."
   evidence: "Stub: to be filled with a concrete figure, source code, and comparison to the previous manual or flowchart-tool workflow."
-  demo_url:
-  repo_url:
-
-- id: matplotlib-stylefiles
-  title: "Consistent Matplotlib style files with AI assistance"
-  category: "Research Communication"
-  timebox: "Workshop candidate"
-  status: "Stub"
-  proposer: "Natalie Hogg"
-  summary: "Codify visual taste as a Matplotlib style file and have Claude apply it consistently across a project's plots. The habit is easier to build with AI than alone."
-  outcome: "Stub: intended recipe for turning visual taste into a reusable plotting style applied automatically by an AI agent."
-  evidence: "Stub: to be filled with an example style file, before/after plots, and notes on where AI helped enforce consistency."
   demo_url:
   repo_url:
 
@@ -198,3 +175,39 @@
   evidence: "Stub: Otter transcripts, orchestrator JSONL, GitHub issue #3 thread, this scaffold PR, and attendee PRs together provide the audit trail."
   demo_url:
   repo_url: "https://github.com/handley-lab/handley-lab.github.io/issues/3"
+
+- id: talk-rehearsal-loop
+  title: "Rehearsing a talk aloud with live transcription and an agent taking notes"
+  category: "Research Communication"
+  timebox: "Three to four rehearsal passes"
+  status: "Stub"
+  proposer: "Toby Lovick"
+  summary: "Practise a presentation out loud with transcription running; say the corrections as you go ('on slide three, change this'). After a few passes the agent turns the accumulated transcript into a proper speaker script plus a TODO list of every slide fix you mentioned — so rehearsal and revision become the same activity."
+  outcome: "Stub: intended recipe for the rehearse-transcribe-revise loop. Replace with a worked example from a real talk."
+  evidence: "Stub: to be filled with a rehearsal transcript excerpt, the generated TODO list, and the before/after slides."
+  demo_url:
+  repo_url:
+
+- id: llm-hpc-hyperparameter-search
+  title: "LLM-managed HPC jobs for hyperparameter exploration"
+  category: "Autonomous Workflows"
+  timebox: "Overnight"
+  status: "Stub"
+  proposer: "Namu Kroupa"
+  summary: "Instead of grid-searching hyperparameters by hand, instruct an agent to manage the whole HPC loop: submit jobs, diagnose the failures, resubmit, iterate on the model between runs — overnight, unattended. Wake up to a better model. Where each loop iteration needs code or architecture changes, an LLM can do what gradient descent and Bayesian optimisation cannot."
+  outcome: "Stub: intended recipe for agent-managed cluster job iteration. Replace with the worked neural-network example."
+  evidence: "Stub: to be filled with the job-management transcript, the loss-vs-iteration record, and notes on what the agent changed between runs."
+  demo_url:
+  repo_url:
+
+- id: writing-voice-new-phd
+  title: "Developing a writer's voice while AI writes everything else"
+  category: "Perspective"
+  timebox: "Ongoing"
+  status: "Stub"
+  proposer: "Charlotte Priestley"
+  summary: "A perspective piece from a PhD student who started when these tools were already everywhere: using AI for inspiration and scaffolding while deliberately doing the writing yourself, and knowing which skills to keep doing the hard way so you can supervise the tools later. Partly an anti-AI piece — which is exactly why it belongs here."
+  outcome: "Stub: commissioned perspective on self-regulation and skill formation for researchers who never knew the before-times."
+  evidence: "Stub: to be filled by the author; the value is the first-person account, not a transcript."
+  demo_url:
+  repo_url:
