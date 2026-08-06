@@ -22,15 +22,23 @@
   repo_url: "https://github.com/handley-lab/jaxwavelets"
 
 - id: camb-torsion
-  title: "Tracing Fortran dependencies in CAMB with LLMs"
+  title: "Navigating CAMB's BBN Pipeline for Modified $N_{\\rm eff}$"
   category: "Legacy Code Navigation"
-  timebox: "Multi-session"
+  timebox: "one session"
   status: "Complete"
-  summary: "Used LLMs to trace the dependency chain in legacy Fortran code and implement torsion condensation in CAMB."
-  outcome: "Identified a likely N_eff double-counting issue and a missing massive-neutrino evolution pathway, subsequently checked via targeted tests against reference outputs."
-  evidence: "Systematic LLM-guided code archaeology with reference-output validation."
+  summary: "The TorC parameter $\\varpi_r$ changes the early Universe expansion rate, similar
+    to modifying the effective number of neutrinos, and therefore affects the predicted helium
+    abundance. Passing this change directly into CAMB accidentally double-counted the effect of
+    $\\varpi_r$, since it was already included in the expansion history. Claude traced the issue
+    through the legacy code and proposed a cleaner helium calculation that avoids this double
+    counting."
+  evidence: "Legacy code tracing combined with reference-output validation."
   demo_url:
   repo_url:
+  image_before: /assets/images/recipes/recipe_before.png
+  image_before_caption: "Modified $N_{\\rm eff}$ (inconsistent)"
+  image_after: /assets/images/recipes/recipe_after.png
+  image_after_caption: "Modified $Y_{\\rm He}$ (corrected)"
 
 - id: class-discrete-k
   title: "Discrete k-quantisation in CLASS via deep C surgery"
