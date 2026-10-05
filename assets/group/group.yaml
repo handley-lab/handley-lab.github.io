@@ -245,6 +245,7 @@ Thomas Gessey-Jones:
 David Yallup:
   postdoc:
     start: 2021-01-10
+    end: 2026-09-30
     thesis: null
   original_image: images/originals/david_yallup.jpg
   image: images/david_yallup.jpg
@@ -284,6 +285,31 @@ Farah Wallauer:
     end: 2026-06-01
     supervisors:
     - Will Handley
+    thesis: null
+Selma Vangstein:
+  phd:
+    start: 2026-10-01
+    supervisors:
+    - Will Handley
+    - Mike Hobson
+    thesis: null
+Samuel Hewson:
+  phd:
+    start: 2026-10-01
+    supervisors:
+    - Will Handley
+    thesis: null
+  partiii:
+    start: 2023-10-01
+    end: 2024-06-01
+    supervisors:
+    - Will Handley
+    thesis: Galaxies, snails and parity violation
+  summer:
+    start: 2024-06-24
+    end: 2024-08-01
+    supervisors:
+    - Chris Lester
     thesis: null
 Lawrence Berry:
   phd:
@@ -720,19 +746,6 @@ Felicity Ibrahim:
     thesis: Higher order solvers for cosmological perturbations
   original_image: images/originals/felicity_ibrahim.png
   image: images/felicity_ibrahim.jpg
-Samuel Hewson:
-  partiii:
-    start: 2023-10-01
-    end: 2024-06-01
-    supervisors:
-    - Will Handley
-    thesis: Galaxies, snails and parity violation
-  summer:
-    start: 2024-06-24
-    end: 2024-08-01
-    supervisors:
-    - Chris Lester
-    thesis: null
 Nicolas Mediato Diaz:
   partiii:
     start: 2023-10-01
