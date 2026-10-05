@@ -33,7 +33,7 @@ css = """
 }
 """
 
-ignore = ["George Carter", "Stephen Pickman", "Patrick Lau","Nicolas Mediato Diaz", "Ajinkya Naik"]
+ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz", "Ajinkya Naik"]
 
 with open(html_file, 'w') as f:
     doc = Doc()
