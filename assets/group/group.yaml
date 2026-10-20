@@ -628,6 +628,37 @@ Panagiotis Mavrogiannis:
   image: images/panagiotis_mavrogiannis.jpg
   destination:
     2018-10-01: PhD in Astrophysics, Thessaloniki, Greece
+Jaiman Lad:
+  partiii:
+    start: 2026-10-01
+    end: 2027-06-01
+    supervisors:
+    - Will Handley
+    - Namu Kroupa
+    thesis: GPU-Accelerated Bayesian Inference for Quasar Time Delay Cosmography
+"Jes\xFAs Girones Fraile":
+  partiii:
+    start: 2026-10-01
+    end: 2027-06-01
+    supervisors:
+    - Will Handley
+    - Namu Kroupa
+    thesis: GPU-Accelerated Bayesian Inference for Gravitationally Lensed Supernova
+      Time Delays
+David Parodi:
+  partiii:
+    start: 2026-10-01
+    end: 2027-06-01
+    supervisors:
+    - Will Handley
+    thesis: Which Cosmological Tensions Are Real?
+Manaal Khan:
+  partiii:
+    start: 2026-10-01
+    end: 2027-06-01
+    supervisors:
+    - Will Handley
+    thesis: 'Shadow Sirens: Population Cosmology from Subthreshold Gravitational Waves'
 Rose Luo:
   partiii:
     start: 2025-10-01
