@@ -2,6 +2,11 @@
 layout: base
 ---
 <section class="blog-page papers-page">
+  {%- if page.paper_map -%}
+    {% include paper_map.html %}
+  {%- endif -%}
+
+  {%- unless page.paper_map -%}
   <header class="blog-header">
     <p class="kicker">Papers</p>
     {%- if page.title -%}
@@ -9,6 +14,7 @@ layout: base
     {%- endif -%}
     {{ content }}
   </header>
+  {%- endunless -%}
 
   {% if site.paginate %}
     {% assign posts = paginator.posts %}
