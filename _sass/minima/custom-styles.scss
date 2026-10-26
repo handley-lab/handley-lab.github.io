@@ -1,15 +1,17 @@
 :root {
-  color-scheme: light;
-  --canvas: #ffffff;
-  --ink: #232830;
-  --ink-soft: #546072;
-  --accent: #133844;
-  --accent-2: #00bdb6;
-  --line: #b5bdc8;
-  --panel: #f4fcfb;
-  --panel-strong: #ffffff;
-  --shadow: 0 14px 36px rgba(19, 56, 68, 0.14);
+  color-scheme: dark;
+  --canvas: #101C24;
+  --ink: #EDF2F0;
+  --ink-soft: #B1BEC4;
+  --accent: #81BCE0;
+  --accent-2: #78C6AF;
+  --accent-3: #D7AF7F;
+  --line: #344851;
+  --panel: #172A33;
+  --panel-strong: #101C24;
+  --shadow: 0 14px 36px rgba(0, 0, 0, 0.35);
   --radius: 18px;
+  --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 @keyframes riseIn {
@@ -24,12 +26,12 @@
 }
 
 body {
-  font-family: "Crimson Pro", serif;
+  font-family: var(--font);
   color: var(--ink);
   background:
-    radial-gradient(circle at 7% -10%, #d1f9f1 0%, transparent 34%),
-    radial-gradient(circle at 90% 0%, #ebedfb 0%, transparent 28%),
-    linear-gradient(180deg, #f8fdfd 0%, #ffffff 62%, #f5fbfb 100%);
+    radial-gradient(circle at 7% -10%, rgba(120, 198, 175, 0.10) 0%, transparent 34%),
+    radial-gradient(circle at 90% 0%, rgba(129, 188, 224, 0.08) 0%, transparent 28%),
+    var(--canvas);
 }
 
 a {
@@ -39,11 +41,11 @@ a {
 }
 
 a:visited {
-  color: #29347a;
+  color: var(--accent);
 }
 
 a:hover {
-  color: #00a9a2;
+  color: var(--accent-2);
 }
 
 .wrapper {
@@ -57,8 +59,8 @@ a:hover {
 }
 
 .site-header {
-  background: rgba(19, 56, 68, 0.96);
-  border-bottom: 1px solid #0d2730;
+  background: rgba(16, 28, 36, 0.92);
+  border-bottom: 1px solid var(--line);
   border-top: 0;
   min-height: auto;
   line-height: 1.3;
@@ -96,19 +98,19 @@ a:hover {
 }
 
 .site-title {
-  font-family: "EB Garamond", serif;
-  font-weight: 600;
-  font-size: clamp(1.05rem, 1.8vw, 1.32rem);
+  font-family: var(--font);
+  font-weight: 700;
+  font-size: clamp(1.05rem, 1.8vw, 1.25rem);
   letter-spacing: 0.01em;
   float: none;
   margin: 0;
   line-height: 1.2;
-  color: #ffffff !important;
+  color: var(--ink) !important;
 }
 
 .site-title:visited,
 .site-title:hover {
-  color: #ffffff !important;
+  color: var(--ink) !important;
 }
 
 .site-nav {
@@ -161,8 +163,8 @@ a:hover {
   padding: 0.44rem 0.68rem;
   border-radius: 999px;
   border: 1px solid transparent;
-  color: #d1f9f1;
-  font-family: "IBM Plex Mono", monospace;
+  color: var(--ink-soft);
+  font-family: var(--font);
   font-size: 0.74rem;
   letter-spacing: 0.03em;
   text-transform: uppercase;
@@ -171,19 +173,19 @@ a:hover {
 }
 
 .site-nav .page-link:visited {
-  color: #d1f9f1;
+  color: var(--ink-soft);
 }
 
 .site-nav .page-link:hover {
-  background: rgba(255, 255, 255, 0.08);
-  border-color: rgba(255, 255, 255, 0.12);
-  color: #8ee8d8;
+  background: rgba(237, 242, 240, 0.06);
+  border-color: var(--line);
+  color: var(--ink);
 }
 
 .site-nav .page-link.is-active {
-  background: rgba(0, 189, 182, 0.2);
-  border-color: rgba(0, 189, 182, 0.45);
-  color: #ffffff;
+  background: rgba(120, 198, 175, 0.14);
+  border-color: rgba(120, 198, 175, 0.5);
+  color: var(--ink);
 }
 
 .landing {
@@ -213,29 +215,46 @@ a:hover {
 
 .hero {
   display: grid;
-  grid-template-columns: 1.1fr 0.9fr;
+  grid-template-columns: 1.5fr 1fr;
   gap: 1.8rem;
   padding: 2rem;
   border: 1px solid var(--line);
   border-radius: calc(var(--radius) + 8px);
-  background: linear-gradient(135deg, #ffffff 0%, #ecfaf8 72%);
+  background: linear-gradient(135deg, var(--panel) 0%, #13232C 100%);
   box-shadow: var(--shadow);
 }
 
 .hero-copy h1 {
   margin: 0.4rem 0 1rem;
   line-height: 1.05;
-  font-size: clamp(2rem, 4vw, 3.3rem);
-  font-family: "EB Garamond", serif;
+  font-size: clamp(2.1rem, 4.2vw, 3.5rem);
+  font-family: var(--font);
 }
 
 .kicker {
   margin: 0;
-  color: var(--accent-2);
-  font-family: "IBM Plex Mono", monospace;
+  color: var(--accent-3);
+  font-family: var(--font);
   font-size: 0.78rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
+}
+
+/* Each half of the strapline stays on one line; the size scales to fit. */
+.hero-line {
+  display: block;
+  white-space: nowrap;
+}
+
+.hero .kicker {
+  white-space: nowrap;
+  letter-spacing: 0.06em;
+}
+
+@media (max-width: 720px) {
+  .hero .kicker {
+    white-space: normal;
+  }
 }
 
 .lead {
@@ -249,7 +268,20 @@ a:hover {
   width: 100%;
   border-radius: var(--radius);
   border: 1px solid var(--line);
-  background: #fff;
+  background: var(--panel);
+}
+
+.hero-emblem {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.hero-emblem img {
+  width: min(100%, 320px);
+  border: 0;
+  border-radius: 50%;
+  background: transparent;
 }
 
 .cta-row {
@@ -268,19 +300,22 @@ a:hover {
   font-weight: 600;
 }
 
-.button-primary {
+.button-primary,
+.button-primary:visited {
   background: var(--accent);
-  color: #fff;
+  color: var(--canvas);
 }
 
 .button-primary:hover {
-  background: #0d2730;
+  background: var(--accent-2);
+  color: var(--canvas);
 }
 
-.button-subtle {
+.button-subtle,
+.button-subtle:visited {
   border-color: var(--line);
-  color: var(--ink-soft);
-  background: #dff2ea;
+  color: var(--ink);
+  background: transparent;
 }
 
 .button-subtle:hover {
@@ -298,7 +333,7 @@ a:hover {
 .panel h2 {
   margin-top: 0.35rem;
   margin-bottom: 0.8rem;
-  font-family: "EB Garamond", serif;
+  font-family: var(--font);
 }
 
 .section-note {
@@ -321,8 +356,8 @@ a:hover {
 }
 
 .comparison-table th {
-  background: #d1f9f1;
-  font-family: "IBM Plex Mono", monospace;
+  background: var(--panel);
+  font-family: var(--font);
   font-size: 0.8rem;
   text-transform: uppercase;
 }
@@ -343,7 +378,7 @@ a:hover {
 .card h3 {
   margin-top: 0;
   margin-bottom: 0.45rem;
-  font-family: "EB Garamond", serif;
+  font-family: var(--font);
 }
 
 .card p {
@@ -353,7 +388,7 @@ a:hover {
 
 .card-meta {
   color: var(--accent-2);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font);
   font-size: 0.77rem;
   text-transform: uppercase;
   letter-spacing: 0.03em;
@@ -385,7 +420,7 @@ a:hover {
 
 .mini-links a:hover,
 .text-link:hover {
-  color: #00a9a2;
+  color: var(--accent-2);
 }
 
 .blog-page {
@@ -433,7 +468,7 @@ a:hover {
 
 .page-heading,
 .post-title {
-  font-family: "EB Garamond", serif;
+  font-family: var(--font);
   letter-spacing: 0;
 }
 
@@ -472,7 +507,7 @@ a:hover {
 .feature-card-meta {
   margin: 0;
   color: var(--accent-2);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font);
   font-size: 0.75rem;
   text-transform: uppercase;
 }
@@ -490,7 +525,7 @@ a:hover {
 
 .site-footer {
   border-top: 1px solid var(--line);
-  background: #f3f6f8;
+  background: var(--panel);
 }
 
 @media (max-width: 980px) {
@@ -541,7 +576,7 @@ a:hover {
   }
 
   .hero-copy h1 {
-    font-size: clamp(1.75rem, 8vw, 2.35rem);
+    font-size: clamp(1.25rem, 5.8vw, 2.35rem);
   }
 
   .card-grid,
@@ -605,16 +640,16 @@ a:hover {
   padding: 0.18rem 0.6rem;
   margin: 0 0 0.6rem;
   border-radius: 999px;
-  background: rgba(19, 56, 68, 0.08);
+  background: rgba(129, 188, 224, 0.12);
   color: var(--accent);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font);
   font-size: 0.78rem;
   text-decoration: none;
   letter-spacing: 0.02em;
 }
 
 .arxiv-badge:hover {
-  background: rgba(0, 189, 182, 0.18);
+  background: rgba(120, 198, 175, 0.18);
   color: var(--accent);
 }
 
@@ -643,7 +678,7 @@ a:hover {
   height: auto;
   border: 1px solid var(--line);
   border-radius: 4px;
-  box-shadow: 0 4px 14px rgba(19, 56, 68, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
   background: #fff;
 }
 
@@ -697,7 +732,7 @@ a:hover {
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
-  box-shadow: 0 4px 14px rgba(19, 56, 68, 0.08);
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.3);
 }
 
 .paper-list-thumb img {
@@ -712,7 +747,7 @@ a:hover {
   justify-content: center;
   height: 140px;
   color: var(--ink-soft);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font);
   font-size: 0.75rem;
   text-align: center;
   padding: 0.5rem;
@@ -731,7 +766,7 @@ a:hover {
   flex-wrap: wrap;
   gap: 0.45rem;
   color: var(--ink-soft);
-  font-family: "IBM Plex Mono", monospace;
+  font-family: var(--font);
   font-size: 0.78rem;
 }
 
@@ -745,7 +780,7 @@ a:hover {
   margin: 0;
   font-size: 1.15rem;
   line-height: 1.3;
-  font-family: "EB Garamond", serif;
+  font-family: var(--font);
 }
 
 .paper-list-title .post-link,
@@ -776,5 +811,338 @@ a:hover {
     grid-template-columns: 80px 1fr;
     gap: 0.8rem;
     padding: 0.75rem 0.8rem;
+  }
+}
+
+/* Group page: big cards in role sections (generated by assets/group/html_table.py) */
+
+.group-timeline {
+  margin: 0.5rem 0 0;
+  padding: 1rem;
+  border-radius: 12px;
+  background: #E4EAEC;  /* soft off-white, gentler than pure white on the dark page */
+}
+
+.group-timeline img {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+.group-filters {
+  display: grid;
+  gap: 0.6rem;
+  margin-top: 1.6rem;
+}
+
+.group-filter-row {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.45rem;
+}
+
+.group-chip {
+  padding: 0.4rem 0.85rem;
+  border: 1px solid var(--line);
+  border-radius: 999px;
+  background: var(--panel-strong);
+  color: var(--ink-soft);
+  font: inherit;
+  font-size: 0.85rem;
+  cursor: pointer;
+}
+
+.group-chip:hover {
+  color: var(--ink);
+}
+
+.group-chip[aria-pressed="true"] {
+  border-color: var(--accent-2);
+  background: rgba(120, 198, 175, 0.14);
+  color: var(--ink);
+}
+
+.group-chip[hidden],
+.group-section[hidden] {
+  display: none;
+}
+
+.group-section {
+  margin-top: 2rem;
+}
+
+.group-section h2 {
+  margin: 0 0 0.9rem;
+  font-size: 1.5rem;
+}
+
+.group-card {
+  display: grid;
+  grid-template-columns: 180px 1fr;
+  gap: 1.4rem;
+  align-items: start;
+  margin-bottom: 1rem;
+  padding: 1.2rem;
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  background: var(--panel-strong);
+}
+
+.group-card img {
+  width: 180px;
+  height: 180px;
+  border-radius: 20%;
+  object-fit: cover;
+  background: var(--panel);
+}
+
+.group-card h3 {
+  margin: 0 0 0.5rem;
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.group-card-body ul {
+  margin: 0 0 0.6rem 1.1rem;
+  line-height: 1.55;
+}
+
+.group-card-body ul ul {
+  margin-bottom: 0.2rem;
+  color: var(--ink-soft);
+}
+
+.group-card-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 1rem;
+  margin: 0.4rem 0 0;
+}
+
+.group-card-links a {
+  font-weight: 700;
+  text-decoration: none;
+}
+
+.group-card-now {
+  margin: 0.5rem 0 0.2rem;
+  color: var(--accent-3);
+}
+
+.group-card-career {
+  margin: 0 0 0 1.1rem;
+  line-height: 1.55;
+}
+
+@media (max-width: 600px) {
+  .group-card {
+    grid-template-columns: 1fr;
+    justify-items: start;
+  }
+
+  .group-card img {
+    width: 140px;
+    height: 140px;
+  }
+}
+
+/* Homepage "Meet the group" banner: faint photo wall (assets/group/collage.html) */
+
+.group-collage {
+  position: relative;
+  margin-top: 1.4rem;
+  height: 300px;
+  overflow: hidden;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel-strong);
+}
+
+.group-collage-tiles {
+  position: absolute;
+  inset: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(92px, 1fr));
+  grid-auto-rows: 92px;
+  gap: 4px;
+  opacity: 0.28;
+  filter: grayscale(35%);
+}
+
+.group-collage-tiles img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 8px;
+}
+
+.group-collage-overlay {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  text-align: center;
+  background: radial-gradient(ellipse at center, rgba(16, 28, 36, 0.85) 0%, rgba(16, 28, 36, 0.35) 70%);
+}
+
+.group-collage-overlay h2 {
+  margin: 0;
+  font-size: clamp(1.5rem, 3vw, 2.1rem);
+}
+
+.group-collage-overlay .button {
+  padding: 0.85rem 1.6rem;
+  font-size: 1.05rem;
+}
+
+@media (max-width: 720px) {
+  .group-collage {
+    height: 240px;
+  }
+
+  .group-collage-tiles {
+    grid-template-columns: repeat(auto-fill, minmax(70px, 1fr));
+    grid-auto-rows: 70px;
+  }
+}
+
+/* Homepage "What we work on": Bayesian methods as a circle in the middle, the
+   paper-map science themes stacked either side (_data/research_areas.yml).
+   Each node row has equal height, so the SVG lines meet their centres. */
+
+.research-areas {
+  margin-top: 1.4rem;
+  padding: 2rem;
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  background: var(--panel);
+}
+
+.research-areas .kicker {
+  margin-bottom: 1rem;
+}
+
+.research-star {
+  display: grid;
+  grid-template-columns: 1fr minmax(30px, 60px) 320px minmax(30px, 60px) 1fr;
+  align-items: center;
+  margin-bottom: 1.2rem;
+}
+
+.research-star-lines {
+  align-self: stretch;
+  width: 100%;
+  height: 100%;
+}
+
+.research-star-lines line {
+  stroke-width: 1.5;
+  stroke-dasharray: 4 5;
+  opacity: 0.6;
+}
+
+.research-hub,
+.research-node {
+  display: flex;
+  flex-direction: column;
+  text-decoration: none;
+  background: var(--canvas);
+  transition: border-color 0.2s ease, transform 0.2s ease;
+}
+
+.research-hub {
+  box-sizing: border-box;
+  width: 320px;
+  aspect-ratio: 1;
+  align-items: center;
+  justify-content: center;
+  padding: 1.2rem;
+  text-align: center;
+  border: 2px solid var(--area);
+  border-radius: 50%;
+  background: radial-gradient(circle, #1E3A48 0%, var(--canvas) 100%);
+  box-shadow: 0 0 40px rgba(129, 188, 224, 0.18);
+}
+
+.research-hub strong {
+  margin-bottom: 0.7rem;
+  color: var(--area);
+  font-size: 1.55rem;
+  line-height: 1.2;
+}
+
+.research-hub ul {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink);
+  font-size: 1rem;
+  line-height: 1.55;
+}
+
+/* Stretch to the circle's height, so the top and bottom cards line up with it */
+.research-nodes {
+  align-self: stretch;
+  display: grid;
+  grid-auto-rows: 1fr;
+  gap: 1rem;
+}
+
+.research-node {
+  justify-content: center;
+  padding: 0.9rem 1.1rem;
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--area);
+  border-radius: var(--radius);
+}
+
+.research-node strong {
+  color: var(--area);
+  font-size: 1.15rem;
+  line-height: 1.25;
+}
+
+.research-node ul {
+  margin: 0.35rem 0 0;
+  padding: 0;
+  list-style: none;
+  color: var(--ink);
+  font-size: 0.85rem;
+  line-height: 1.45;
+}
+
+.research-node li::before {
+  content: "· ";
+  color: var(--area);
+  font-weight: 700;
+}
+
+.research-hub:hover,
+.research-node:hover {
+  border-color: var(--area);
+  transform: scale(1.02);
+}
+
+@media (max-width: 860px) {
+  .research-areas {
+    padding: 1.2rem;
+  }
+
+  .research-star {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .research-star-lines {
+    display: none;
+  }
+
+  .research-hub {
+    order: -1;
+    justify-self: center;
+    width: 220px;
   }
 }

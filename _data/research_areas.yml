@@ -1,0 +1,47 @@
+# Homepage "What we work on" star diagram. The five entries are exactly the
+# paper-map themes in assets/papers/papers.json (same `key` and colour; the centre label is shortened),
+# so each links to /papers/#theme=<key>.
+# Methods is the circle in the middle; the first two science themes stack on
+# its left, the last two on its right.
+
+centre:
+  key: methods
+  label: Bayesian methods
+  colour: "#81BCE0"
+  topics:
+    - GPU nested sampling
+    - Simulation-based inference
+    - Anomaly detection
+
+fields:
+  - key: cosmo
+    label: Cosmology & dark energy
+    colour: "#78C6AF"
+    topics:
+      - Evolving dark energy
+      - Tensions and H₀
+      - Curvature and inflation
+
+  - key: 21cm
+    label: 21-cm & radio cosmology
+    colour: "#D7AF7F"
+    topics:
+      - The REACH experiment
+      - Foregrounds and calibration
+      - The first stars
+
+  - key: astro
+    label: Gravitational waves & astrophysics
+    colour: "#C99AA5"
+    topics:
+      - Gravitational-wave inference
+      - Quasars and galaxy clusters
+      - Exoplanets
+
+  - key: other
+    label: Particle physics & beyond
+    colour: "#B1BEC4"
+    topics:
+      - Dark matter global fits
+      - Neutrinos and axions
+      - Modified gravity

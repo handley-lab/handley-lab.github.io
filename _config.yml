@@ -1,7 +1,7 @@
 title: The Handley Research Group
 email: wh260@cam.ac.uk
 description: >- # this means to ignore newlines until "baseurl:"
-  Let AI build the tools. You do the science.
+  When the code writes itself, how should we do science? Bayesian inference for cosmology and gravitational waves at the Kavli Institute for Cosmology, Cambridge.
 domain: "handley-lab.co.uk"
 url: "https://handley-lab.co.uk" # the base hostname & protocol for your site, e.g. http://example.com
 github_username:  handley-lab
@@ -13,7 +13,7 @@ header_pages:
   - group.md
   - papers.md
 minima:
-  skin: classic
+  skin: handley
 
 # Build settings
 theme: minima
@@ -40,6 +40,7 @@ defaults:
 # Exclude files from Jekyll build
 exclude:
   - CLAUDE.md
+  - AGENTS.md
   - script/
   - venv/
   - vendor/

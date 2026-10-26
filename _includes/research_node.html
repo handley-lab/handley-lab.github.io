@@ -1,0 +1,8 @@
+<a class="research-node" style="--area:{{ include.area.colour }}" href="{{ '/papers/' | relative_url }}#theme={{ include.area.key }}">
+  <strong>{{ include.area.label }}</strong>
+  <ul>
+    {%- for t in include.area.topics %}
+    <li>{{ t }}</li>
+    {%- endfor %}
+  </ul>
+</a>
