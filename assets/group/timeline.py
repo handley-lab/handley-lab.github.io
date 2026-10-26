@@ -5,7 +5,7 @@ import matplotlib.pyplot as plt
 import os
 import datetime
 import numpy as np
-grey = '#bbbbbb'
+grey = '#8a969c'  # a touch darker so names read on the light panel
 plt.rcParams['axes.edgecolor'] = grey
 plt.rcParams['xtick.color'] = grey
 plt.rcParams['ytick.color'] = grey

@@ -1,0 +1,31 @@
+<script>
+(function () {
+  const chips = document.querySelectorAll(".group-chip");
+  const sections = [...document.querySelectorAll(".group-section")];
+  if (!sections.length) return;
+  let status = "current";
+  let role = "all";
+
+  function apply() {
+    sections.forEach((s) => { s.hidden = s.dataset.status !== status || (role !== "all" && s.dataset.role !== role); });
+    // Only offer roles that have someone in the current/alumni view.
+    document.querySelectorAll(".group-chip[data-role]").forEach((chip) => {
+      chip.hidden = chip.dataset.role !== "all" && !sections.some((s) => s.dataset.status === status && s.dataset.role === chip.dataset.role);
+    });
+  }
+
+  chips.forEach((chip) => chip.addEventListener("click", () => {
+    const attr = chip.dataset.status ? "status" : "role";
+    document.querySelectorAll(`.group-chip[data-${attr}]`).forEach((c) => c.setAttribute("aria-pressed", String(c === chip)));
+    if (attr === "status") status = chip.dataset.status;
+    else role = chip.dataset.role;
+    if (role !== "all" && !sections.some((s) => s.dataset.status === status && s.dataset.role === role)) {
+      role = "all";
+      document.querySelectorAll(".group-chip[data-role]").forEach((c) => c.setAttribute("aria-pressed", String(c.dataset.role === "all")));
+    }
+    apply();
+  }));
+
+  apply();
+})();
+</script>
