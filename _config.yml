@@ -12,6 +12,7 @@ header_pages:
   - skills.md
   - group.md
   - papers.md
+  - authorship.md
 minima:
   skin: handley
 
