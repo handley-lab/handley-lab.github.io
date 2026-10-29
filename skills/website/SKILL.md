@@ -158,7 +158,7 @@ date: YYYY-MM-DD
 ---
 ```
 
-`status` accepts `"Stub"`, `"Draft"`, `"In progress"`, or `"Complete"`. `outcome` and `evidence` must be non-empty (for stubs, lead with `Stub: ...` rather than leaving blank).
+`status` accepts `"Stub"`, `"Draft"`, `"In progress"`, or `"Complete"`. On `/cookbook/`, `Complete` recipes are listed first; every other status follows, dimmed and labelled "In development…". `outcome` and `evidence` must be non-empty (for stubs, lead with `Stub: ...` rather than leaving blank).
 
 Then the long-form body. **Do not write a leading body H1** — `_layouts/recipe.html` renders `{{ page.title }}` as the H1. Start the body with `## Section`.
 
@@ -209,6 +209,19 @@ gh pr create                            # or open the PR in the GitHub web UI if
 ## Papers (`_posts/`)
 
 The `_posts/` directory historically held auto-generated arXiv summaries from `script/posts/arxiv.py`. As of 5 May 2026 these are being audited: nothing in `_posts/` should be assumed to be human-reviewed, and the `/papers/` page is being rebuilt to surface only PR-reviewed entries. When in doubt, do not add to `_posts/` directly — open a PR and request human review.
+
+## Paper map (`assets/papers/papers.json`)
+
+The bubble map on `/papers/` (`_includes/paper_map.html`) is drawn from `assets/papers/papers.json`, which `script/papers.py` builds. The script searches arXiv for Will and every PhD student and postdoc in `assets/group/group.yaml`, keeps papers written during each person's time in the group (plus a year's grace), drops large collaboration papers not led by a group member, then adds Semantic Scholar citations, group-author photos and a keyword-based theme.
+
+- **Refresh:** `.github/workflows/papers.yml` runs weekly and opens a PR listing added and removed papers. To run it by hand: `python script/papers.py --summary /tmp/papers-summary.md` (about five minutes; arXiv allows one request every three seconds).
+- **Corrections:** never hand-edit `papers.json`. Put false name matches in `exclude`, pre-group papers worth showing in `include`, and misclassified papers in `theme` in `_data/paper_overrides.yml`, then rerun.
+- **Review:** when reviewing a refresh PR, check the "Added" list for name collisions (common surnames match strangers).
+- **People faces:** under the theme filters, the map shows faces of group members (no Co-Is), with a Current/Past toggle; picking a theme narrows it to people with papers in that theme plus current members whose focus includes it. Faces link to the person's card on `/group/` (`/group/#first-last`). The data is `assets/papers/people.json`, built offline by `python script/people.py` (also run by `script/calculate`) from `group.yaml`, `group.html` and `assets/group/focus.yaml`. Edit `focus.yaml` to set what each current member works on (`themes`, `tags`), then rerun the script.
+
+## Colours
+
+Use the colour tokens, never hex values, in pages, includes, recipe companion pages and new CSS rules. The full card with live swatches is at `/colours/`; `CLAUDE.md` § Styling lists where each group of tokens is defined. Inline styles can use them too, e.g. `style="border-color: var(--topic-cosmo)"`. For a recipe that needs accent colours, use the topic tokens (`--topic-methods`, `--topic-cosmo`, `--topic-astro`, `--topic-21cm`, `--topic-other`) so the page works in dark mode.
 
 ## Common failure modes
 

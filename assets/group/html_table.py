@@ -13,7 +13,7 @@ from datetime import date
 
 html_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.html')
 
-ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Samuel Hewson", "Nicolas Mediato Diaz", "Ajinkya Naik"]
+ignore = ["George Carter", "Stephen Pickman", "Patrick Lau", "Nicolas Mediato Diaz", "Ajinkya Naik"]
 
 today = date.today()
 sections = [key for key in levels if key != 'coi']

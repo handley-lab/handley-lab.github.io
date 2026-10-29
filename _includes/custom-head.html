@@ -1,1 +1,46 @@
-<meta name="theme-color" content="#101C24">
+<meta name="theme-color" content="#173F4F" media="(prefers-color-scheme: light)">
+<meta name="theme-color" content="#101C24" media="(prefers-color-scheme: dark)">
+<script>
+  // Set the theme before first paint: the visitor's saved choice, else the system setting.
+  (function () {
+    var root = document.documentElement;
+    var media = window.matchMedia("(prefers-color-scheme: dark)");
+    var saved = null;
+    try { saved = localStorage.getItem("theme"); } catch (e) {}
+    root.dataset.theme = saved || (media.matches ? "dark" : "light");
+    media.addEventListener("change", function (e) {
+      var stored = null;
+      try { stored = localStorage.getItem("theme"); } catch (err) {}
+      if (!stored) root.dataset.theme = e.matches ? "dark" : "light";
+    });
+  })();
+</script>
+{%- comment -%}
+  Topic colours for the whole site, generated from _data/research_areas.yml
+  (the colour card: see /colours/). Use these tokens, never raw hex values.
+    --topic-<key>          text, headings, borders (deep in light, bright in dark)
+    --topic-<key>-mark     dots, bars, bubbles, lines
+    --topic-<key>-colour / -accent / -fill / -bubble   the raw data values
+{%- endcomment -%}
+{%- assign ra = site.data.research_areas -%}
+{%- assign topics = ra.fields | unshift: ra.centre -%}
+<style>
+  :root {
+    {%- for t in topics %}
+    --topic-{{ t.key }}-colour: {{ t.colour }}; --topic-{{ t.key }}-accent: {{ t.accent }}; --topic-{{ t.key }}-fill: {{ t.fill }}; --topic-{{ t.key }}-bubble: {{ t.bubble }};
+    --topic-{{ t.key }}: var(--topic-{{ t.key }}-accent); --topic-{{ t.key }}-mark: var(--topic-{{ t.key }}-bubble);
+    {%- endfor %}
+  }
+  @media (prefers-color-scheme: dark) {
+    :root:not([data-theme="light"]) {
+      {%- for t in topics %}
+      --topic-{{ t.key }}: var(--topic-{{ t.key }}-colour); --topic-{{ t.key }}-mark: var(--topic-{{ t.key }}-colour);
+      {%- endfor %}
+    }
+  }
+  :root[data-theme="dark"] {
+    {%- for t in topics %}
+    --topic-{{ t.key }}: var(--topic-{{ t.key }}-colour); --topic-{{ t.key }}-mark: var(--topic-{{ t.key }}-colour);
+    {%- endfor %}
+  }
+</style>

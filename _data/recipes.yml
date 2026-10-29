@@ -10,6 +10,30 @@
 # `outcome` and `evidence` must be non-empty (`Stub: ...` is acceptable
 # for public stubs).
 
+- id: voice-note-paper-debate
+  title: "Real-time research dialogue"
+  category: "Research Workflow"
+  timebox: "One session"
+  status: "Complete"
+  proposer: "Toby Lovick"
+  summary: "Feed a live-transcribed conversation into Claude sentence-by-sentence for immediate feedback on research discussions. Enables three-way debates between researchers and Claude in real-time, without context-switching or friction."
+  outcome: "Understand papers and discuss methodology in real-time, generating novel research directions within the flow of conversation."
+  evidence: "2026-05-01 session: Discussed Park et al. blended light curves paper with Alex in a cafe using Whisper transcription + Claude hooks. Generated novel analysis direction (forward-modeling expected time delays from large-scale structure) during the debate."
+  demo_url:
+  repo_url: "https://github.com/tobyLovick/recordCLI"
+
+- id: coating-sampler-blackjax
+  title: "Updating a coating sampler for the current BlackJAX nested-sampling API"
+  category: "Legacy Code Navigation"
+  timebox: "15 minutes active computation"
+  status: "Complete"
+  proposer: "Namu Kroupa"
+  summary: "A single supervised Claude Code session updated an optical-coating nested-sampling script for the current BlackJAX API, built a fresh GPU-capable Python environment, smoke-tested the result on CPU, and ran it on an A100 to produce the requested optimisation plot."
+  outcome: "Working `sampler.py` run against the current `blackjax-ns` interface, with a generated `ar_coating_blackjax_optimization.png` from an interactive GPU job."
+  evidence: "A private Claude Code transcript records 32 tool calls over a 20-minute wall-clock session; the final run used an interactive GPU job on an A100 and reported an output PNG plus final log-evidence around -42664."
+  demo_url:
+  repo_url: "https://github.com/zwei-beiner/Code"
+
 - id: jaxwavelets
   title: "Reproducing PyWavelets in JAX to machine precision"
   category: "Rapid Development"
@@ -24,21 +48,19 @@
 - id: camb-torsion
   title: "Navigating CAMB's BBN Pipeline for Modified $N_{\\rm eff}$"
   category: "Legacy Code Navigation"
-  timebox: "one session"
+  timebox: "One session"
   status: "Complete"
+  proposer: "Sinah Legner"
   summary: "The TorC parameter $\\varpi_r$ changes the early Universe expansion rate, similar
     to modifying the effective number of neutrinos, and therefore affects the predicted helium
     abundance. Passing this change directly into CAMB accidentally double-counted the effect of
     $\\varpi_r$, since it was already included in the expansion history. Claude traced the issue
     through the legacy code and proposed a cleaner helium calculation that avoids this double
     counting."
+  outcome: "A corrected Cobaya theory class that computes the $N_{\\rm eff}$ shift from $\\varpi_r$ and passes a consistent $Y_{\\rm He}$ to CAMB, so the expansion history is modified only once."
   evidence: "Legacy code tracing combined with reference-output validation."
   demo_url:
   repo_url:
-  image_before: /assets/images/recipes/recipe_before.png
-  image_before_caption: "Modified $N_{\\rm eff}$ (inconsistent)"
-  image_after: /assets/images/recipes/recipe_after.png
-  image_after_caption: "Modified $Y_{\\rm He}$ (corrected)"
 
 - id: class-discrete-k
   title: "Discrete k-quantisation in CLASS via deep C surgery"
@@ -124,18 +146,6 @@
   demo_url:
   repo_url:
 
-- id: voice-note-paper-debate
-  title: "Real-time research dialogue"
-  category: "Research Workflow"
-  timebox: "One session"
-  status: "Complete"
-  proposer: "Toby Lovick"
-  summary: "Feed a live-transcribed conversation into Claude sentence-by-sentence for immediate feedback on research discussions. Enables three-way debates between researchers and Claude in real-time, without context-switching or friction."
-  outcome: "Understand papers and discuss methodology in real-time, generating novel research directions within the flow of conversation."
-  evidence: "2026-05-01 session: Discussed Park et al. blended light curves paper with Alex in a cafe using Whisper transcription + Claude hooks. Generated novel analysis direction (forward-modeling expected time delays from large-scale structure) during the debate."
-  demo_url:
-  repo_url: "https://github.com/tobyLovick/recordCLI"
-
 - id: interview-mode-learning
   title: "Interview-mode prompting for clarifying scientific intent"
   category: "Context Engineering"
@@ -219,15 +229,3 @@
   evidence: "Stub: to be filled by the author; the value is the first-person account, not a transcript."
   demo_url:
   repo_url:
-
-- id: coating-sampler-blackjax
-  title: "Updating a coating sampler for the current BlackJAX nested-sampling API"
-  category: "Legacy Code Navigation"
-  timebox: "15 minutes active computation"
-  status: "Draft"
-  proposer: "Namu Kroupa"
-  summary: "A single supervised Claude Code session updated an optical-coating nested-sampling script for the current BlackJAX API, built a fresh GPU-capable Python environment, smoke-tested the result on CPU, and ran it on an A100 to produce the requested optimisation plot."
-  outcome: "Working `sampler.py` run against the current `blackjax-ns` interface, with a generated `ar_coating_blackjax_optimization.png` from an interactive GPU job."
-  evidence: "A private Claude Code transcript records 32 tool calls over a 20-minute wall-clock session; the final run used an interactive GPU job on an A100 and reported an output PNG plus final log-evidence around -42664."
-  demo_url:
-  repo_url: "https://github.com/zwei-beiner/Code"

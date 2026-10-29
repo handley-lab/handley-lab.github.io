@@ -1,10 +1,33 @@
 @charset "utf-8";
 
-// Handley Lab dark skin: minima's dark scheme with the lab palette.
+// Handley Lab skin: minima's auto scheme, light (the original lab palette)
+// and dark. The header toggle can force either; see custom-styles.scss.
 // Site-specific component styles live in custom-styles.scss.
 
-$color-scheme-auto: false;
-$color-scheme-dark: true;
+$color-scheme-auto: true;
+
+$lm-brand-color:           #52636D;
+$lm-brand-color-light:     #b5bdc8;
+$lm-brand-color-dark:      #173F4F;
+$lm-site-title-color:      #ffffff;
+
+$lm-text-color:            #20313B;
+$lm-background-color:      #ffffff;
+$lm-code-background-color: #f4fcfb;
+
+$lm-link-base-color:       #173F4F;
+$lm-link-visited-color:    #173F4F;
+$lm-link-hover-color:      #00a9a2;
+
+$lm-border-color-01:       #b5bdc8;
+$lm-border-color-02:       #b5bdc8;
+$lm-border-color-03:       #52636D;
+
+$lm-table-text-color:      #20313B;
+$lm-table-zebra-color:     #f4fcfb;
+$lm-table-header-bg-color: #e6f4f2;
+$lm-table-header-border:   #b5bdc8;
+$lm-table-border-color:    #b5bdc8;
 
 $dm-brand-color:           #B1BEC4;
 $dm-brand-color-light:     #EDF2F0;

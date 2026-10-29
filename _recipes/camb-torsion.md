@@ -2,7 +2,7 @@
 id: camb-torsion
 title: "Navigating CAMB's BBN Pipeline for Modified $N_\\text{eff}$"
 category: "Legacy Code Navigation"
-timebox: "one session"
+timebox: "One session"
 status: "Complete"
 summary: "In Poincaré gauge torsion gravity, the torsion parameter ϖ_r implicitly modifies
   the effective number of relativistic species. Feeding the resulting dark energy into CAMB
@@ -19,7 +19,7 @@ date: 2026-05-05
 
 ## Torsion Condensation
 
-[Torsion Condensation (TorC)](/papers/2025/07/12/2507.09228.html) is a one-parameter extension of ΛCDM arising from Poincaré gauge
+[Torsion Condensation (TorC)](https://arxiv.org/abs/2507.09228) is a one-parameter extension of ΛCDM arising from Poincaré gauge
 theory — a formulation of gravity motivated by the gauge field theories of the Standard Model
 ([Barker et al. 2020](https://arxiv.org/abs/2003.02690)). Unlike general relativity, the
 theory incorporates intrinsic torsion degrees of freedom which modifies the
@@ -61,10 +61,10 @@ early expansion rate, a consistent analysis must propagate this modification thr
 
 ## Claude's assistance
 
-<div style="display:flex; gap:0.6rem; margin:2rem 0; align-items:stretch;">
+<div style="display:flex; flex-wrap:wrap; gap:0.6rem; margin:2rem 0; align-items:stretch;">
 
-<div style="flex:1; border:2px solid #DC267F; border-radius:8px; padding:0.8rem 0.8rem; background:rgba(220,38,127,0.04);">
-<h4 style="color:#DC267F; margin-top:0; border-bottom:1px solid #DC267F; padding-bottom:0.4rem;">① Human attempt</h4>
+<div style="flex:1 1 240px; border:2px solid var(--topic-astro); border-radius:8px; padding:0.8rem 0.8rem; background:color-mix(in srgb, var(--topic-astro) 7%, transparent);">
+<h4 style="color:var(--topic-astro); margin-top:0; border-bottom:1px solid var(--topic-astro); padding-bottom:0.4rem;">① Human attempt</h4>
 
 <p><strong>Goal:</strong> Inform CAMB of $\varpi_r$'s effect on the CMB damping tail through BBN.</p>
 
@@ -72,11 +72,11 @@ early expansion rate, a consistent analysis must propagate this modification thr
 
 <p><strong>Result:</strong> $\varpi_r$ is pulled tighter towards 1 relative to the baseline.</p>
 
-<img src="/assets/images/recipes/recipe_before.png" style="width:100%; margin-top:0.8rem; border-radius:4px;">
+<img src="/assets/images/recipes/camb-torsion-before.png" alt="Posterior of varpi_r against H0 when the modified N_eff is passed straight to CAMB" style="width:100%; margin-top:0.8rem; border-radius:4px;">
 </div>
 
-<div style="flex:1; border:2px solid #648FFF; border-radius:8px; padding:1.2rem 0.8rem; background:rgba(100,143,255,0.04);">
-<h4 style="color:#648FFF; margin-top:0; border-bottom:1px solid #648FFF; padding-bottom:0.4rem;">② AI-assisted diagnosis</h4>
+<div style="flex:1 1 240px; border:2px solid var(--topic-methods); border-radius:8px; padding:1.2rem 0.8rem; background:color-mix(in srgb, var(--topic-methods) 7%, transparent);">
+<h4 style="color:var(--topic-methods); margin-top:0; border-bottom:1px solid var(--topic-methods); padding-bottom:0.4rem;">② AI-assisted diagnosis</h4>
 
 <p><strong>1. Understanding the pipeline.</strong></p>
 <ul>
@@ -89,42 +89,42 @@ early expansion rate, a consistent analysis must propagate this modification thr
 
 <div style="margin:0.8rem 0; font-size:0.92em; line-height:1.8;">
   <div style="margin-bottom:0.6rem;">
-    <span style="font-weight:600; color:#648FFF;">Route A</span><br>
+    <span style="font-weight:600; color:var(--topic-methods);">Route A</span><br>
     $\varpi_r \;\to\; \rho(a),\, P(a) \;\to\; H(a)$
   </div>
   <div style="margin-bottom:0.8rem;">
-    <span style="font-weight:600; color:#648FFF;">Route B</span><br>
+    <span style="font-weight:600; color:var(--topic-methods);">Route B</span><br>
     $\varpi_r \;\to\; \Delta N_{\rm eff} \;\to\; \Omega_r \;\to\; H(a)$<br>
     $\phantom{\varpi_r \;\to\; \Delta N_{\rm eff} \;\to\;} \hookrightarrow\; Y_{\rm He}$
   </div>
-  <div style="text-align:center; border:2px solid #c0392b; border-radius:6px; padding:0.3rem 0.6rem; color:#c0392b; font-weight:600; display:inline-block;">
+  <div style="text-align:center; border:2px solid var(--topic-astro); border-radius:6px; padding:0.3rem 0.6rem; color:var(--topic-astro); font-weight:600; display:inline-block;">
     $H(a)$ double counts $\varpi_r$'s effect
   </div>
 </div>
 </div>
 
-<div style="flex:1; border:2px solid #1a7a4a; border-radius:8px; padding:1.2rem 0.8rem; background:rgba(26,122,74,0.04);">
-<h4 style="color:#1a7a4a; margin-top:0; border-bottom:1px solid #1a7a4a; padding-bottom:0.4rem;">③ AI-proposed fix</h4>
+<div style="flex:1 1 240px; border:2px solid var(--topic-cosmo); border-radius:8px; padding:1.2rem 0.8rem; background:color-mix(in srgb, var(--topic-cosmo) 7%, transparent);">
+<h4 style="color:var(--topic-cosmo); margin-top:0; border-bottom:1px solid var(--topic-cosmo); padding-bottom:0.4rem;">③ AI-proposed fix</h4>
 
 <p>Keep the expansion history entirely in $\rho(a)$ and $P(a)$. Compute $\Delta N_{\rm eff}(\varpi_r)$ separately and compute $Y_{\rm He}$ through the BBN predictor, and pass this corrected $Y_{\rm He}$ directly to CAMB.</p>
 
 <div style="margin:0.8rem 0; font-size:0.92em; line-height:1.8;">
   <div style="margin-bottom:0.6rem;">
-    <span style="font-weight:600; color:#1a7a4a;">Expansion history</span><br>
+    <span style="font-weight:600; color:var(--topic-cosmo);">Expansion history</span><br>
     $\varpi_r \;\to\; \rho(a),\, P(a) \;\to\; H(a)$
   </div>
   <div style="display:flex; align-items:center; gap:0.6rem; flex-wrap:wrap;">
     <div>
-      <span style="font-weight:600; color:#1a7a4a;">BBN correction</span><br>
+      <span style="font-weight:600; color:var(--topic-cosmo);">BBN correction</span><br>
       $\varpi_r \;\to\; \Delta N_{\rm eff} \;\to\; Y_{\rm He}$
     </div>
-    <div style="border:2px solid #1a7a4a; border-radius:6px; padding:0.3rem 0.6rem; color:#1a7a4a; font-weight:600; white-space:nowrap;">
+    <div style="border:2px solid var(--topic-cosmo); border-radius:6px; padding:0.3rem 0.6rem; color:var(--topic-cosmo); font-weight:600; white-space:nowrap;">
       $H(a)$ modified once
     </div>
   </div>
 </div>
 
-<img src="/assets/images/recipes/recipe_after.png" style="width:100%; margin-top:0.8rem; border-radius:4px;">
+<img src="/assets/images/recipes/camb-torsion-after.png" alt="Posterior of varpi_r against H0 with the corrected helium abundance" style="width:100%; margin-top:0.8rem; border-radius:4px;">
 </div>
 
 </div>

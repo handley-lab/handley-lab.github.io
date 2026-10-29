@@ -26,6 +26,15 @@ python script/index.py                      # Regenerate homepage content
 python script/background.py                 # Regenerate landing page background image
 ```
 
+### Paper map (no API key needed)
+
+```bash
+python script/papers.py                     # Find group papers on arXiv → assets/papers/papers.json
+python script/people.py                     # Group faces for the map → assets/papers/people.json (offline)
+```
+
+Runs weekly via `.github/workflows/papers.yml`, which opens a PR for review. Corrections go in `_data/paper_overrides.yml`. See `skills/website/SKILL.md` § Paper map.
+
 ## Architecture
 
 ### Content Generation Pipeline
@@ -95,7 +104,7 @@ Recipe card schema: `id`, `title`, `category`, `timebox`, `status`, `summary`, `
 
 `image` is a site-root-relative path to an image file (e.g. `assets/images/recipes/my-recipe.jpg`). Images are manually chosen — open-source photos, paper figures, or other existing artefacts. No auto-generation. `image_alt` provides the alt text; falls back to the recipe title if omitted. Images are displayed as a bleed header on the archive card; the compact landing card does not show them. Store image files in `assets/images/recipes/`.
 
-`status` may be `Stub`, `Draft`, `In progress`, or `Complete`. Public workshop stubs are acceptable when honestly labelled — the lab is publicly funded and shipping live work-in-progress is on-brand. **`outcome` and `evidence` must be non-empty**; for stubs, lead the field with `Stub: ...` rather than leaving it blank.
+`status` may be `Stub`, `Draft`, `In progress`, or `Complete`. On `/cookbook/`, `Complete` recipes are listed first; every other status follows, dimmed and labelled "In development…". **`outcome` and `evidence` must be non-empty**; for stubs, lead the field with `Stub: ...` rather than leaving it blank.
 
 Companion pages should use a clean modern MathJax v3 block (already in `_layouts/recipe.html`). **Do not write a leading body H1** — the layout renders `{{ page.title }}` as the H1. The body should start with `## Section`.
 
@@ -103,10 +112,14 @@ Workflow for adding a recipe: see [`skills/website/SKILL.md`](skills/website/SKI
 
 ### Styling
 
-Customized minima theme (classic skin). Key overrides in `_sass/minima/custom-styles.scss`:
-- Fonts: EB Garamond (headings), Crimson Pro (body), IBM Plex Mono (code) — loaded in `_includes/custom-head.html`
-- Color palette: dark teal accent (`#133844`), cyan highlight (`#00bdb6`), off-white panels
-- Sticky nav with backdrop blur, animated panel cards, responsive 3→2→1 column grid
+Customized minima theme (classic skin) with light and dark modes. Key overrides in `_sass/minima/custom-styles.scss`.
+
+**Colour card — use tokens, never hex values.** Every colour comes from a CSS token so pages stay consistent in both themes; the live swatches are at `/colours/` (`colours.md`, not in the nav).
+- Neutrals and brand (`--canvas`, `--panel`, `--ink`, `--ink-soft`, `--line`, `--accent`, `--accent-2`, `--accent-3`, `--tint`, …): the `theme-light` / `theme-dark` mixins at the top of `custom-styles.scss`.
+- Feature (`--feature-bg`, `--feature-ink`, …): the homepage statement block, same in both themes, in `:root`.
+- Topics (`--topic-<key>` for text/borders, `--topic-<key>-mark` for dots/bars/bubbles): one family per research theme, generated from `_data/research_areas.yml` in `_includes/custom-head.html`. Change a topic colour in that YAML file and it updates the homepage diagram, the papers map and recipe accents together.
+
+If a new colour is genuinely needed, add a token rather than writing a hex value into a page, include or rule.
 
 ### Key Excluded Files
 

@@ -27,5 +27,27 @@
   }));
 
   apply();
+
+  // Each card gets an id from the person's name, so other pages (e.g. the
+  // faces on /papers/) can link to /group/#first-last. Arriving with such a
+  // hash switches to that card's current/past view and scrolls to it.
+  const slug = (name) => name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+  document.querySelectorAll(".group-card").forEach((card) => {
+    const h = card.querySelector("h3");
+    if (h && !card.id) card.id = slug(h.textContent);
+  });
+  function reveal() {
+    const card = location.hash && document.getElementById(decodeURIComponent(location.hash.slice(1)));
+    if (!card || !card.classList.contains("group-card")) return;
+    const section = card.closest(".group-section");
+    const chip = document.querySelector(`.group-chip[data-status="${section.dataset.status}"]`);
+    if (chip && status !== section.dataset.status) chip.click();
+    if (role !== "all") document.querySelector('.group-chip[data-role="all"]').click();
+    card.scrollIntoView({ block: "center" });
+    card.classList.add("is-linked");
+    setTimeout(() => card.classList.remove("is-linked"), 2500);
+  }
+  window.addEventListener("hashchange", reveal);
+  reveal();
 })();
 </script>

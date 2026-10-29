@@ -1,0 +1,58 @@
+{%- comment -%}
+  Renders a /science/ vignette from _data/science.yml in the same card style
+  as the AI Cookbook recipes (reuses the recipe-card classes).
+
+  Required:
+    item    a hash from _data/science.yml
+
+  People names link to their card on /group/ (/group/#first-last).
+  A lone card in its section (e.g. Methodology) spans the full width.
+{%- endcomment -%}
+{%- assign item = include.item -%}
+<article class="feature-card recipe-card science-card">
+  <div class="recipe-card-top">
+    <span class="recipe-tag">{{ item.theme }}</span>
+  </div>
+
+  <h2 class="recipe-title">
+    {%- if item.link and item.link != "" -%}
+      <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ item.title }}</a>
+    {%- else -%}
+      {{ item.title }}
+    {%- endif -%}
+  </h2>
+
+  {%- if item.people and item.people != "" -%}
+    <dl class="recipe-facts">
+      <div><dt>People</dt><dd>
+        {%- assign names = item.people | split: "," -%}
+        {%- for name in names -%}
+          {%- assign n = name | strip -%}
+          <a href="{{ '/group/' | relative_url }}#{{ n | slugify: 'latin' }}">{{ n }}</a>{% unless forloop.last %}, {% endunless %}
+        {%- endfor -%}
+      </dd></div>
+    </dl>
+  {%- endif -%}
+
+  <p class="recipe-summary">{{ item.summary }}</p>
+
+  {%- if item.claims and item.claims != "" -%}
+    <div class="recipe-section">
+      <h3 class="recipe-step">Key result</h3>
+      <p>{{ item.claims }}</p>
+    </div>
+  {%- endif -%}
+
+  {%- if item.examples and item.examples != "" -%}
+    <div class="recipe-section">
+      <h3 class="recipe-step">Tools and examples</h3>
+      <p>{{ item.examples }}</p>
+    </div>
+  {%- endif -%}
+
+  {%- if item.link and item.link != "" -%}
+    <div class="feature-links recipe-links">
+      <a class="recipe-cta" href="{{ item.link }}" target="_blank" rel="noopener noreferrer">{{ include.cta | default: "Representative reference" }} →</a>
+    </div>
+  {%- endif -%}
+</article>

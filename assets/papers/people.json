@@ -1,0 +1,1682 @@
+{
+ "people": [
+  {
+   "name": "Nils Schoneberg",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2025-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Oliver Hahn",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2025-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Suhail Dhawan",
+   "image": "https://www.lucy.cam.ac.uk/sites/default/files/styles/650x650_scale_and_crop/public/fellow-images/Suhail%20Dhawan.jpg?itok=IinGhbdp",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2024-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Type Ia supernovae",
+    "Dark energy"
+   ]
+  },
+  {
+   "name": "James Alvey",
+   "image": "/assets/group/images/james_alvey.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2024-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "astro",
+    "methods"
+   ],
+   "tags": [
+    "Gravitational-wave inference",
+    "Simulation-based inference"
+   ]
+  },
+  {
+   "name": "Gábor Csányi",
+   "image": "https://www.eng.cam.ac.uk/sites/www.eng.cam.ac.uk/files/styles/small_events_search_results_profile/public/uploads/profiles/images/Gabor-kalapos-square-400.png?itok=GszDCAc9",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2023-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Chris Lester",
+   "image": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/lester-150x150.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2023-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "other"
+   ],
+   "tags": [
+    "Parity violation",
+    "Unsupervised searches"
+   ]
+  },
+  {
+   "name": "Harry Bevins",
+   "image": "/assets/group/images/harry_bevins.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2023-10-01",
+     "end": null
+    },
+    {
+     "role": "PhD student",
+     "start": "2019-10-01",
+     "end": "2023-03-31"
+    }
+   ],
+   "themes": [
+    "21cm",
+    "methods"
+   ],
+   "tags": [
+    "21-cm global signal",
+    "Neural emulators",
+    "Anomaly detection"
+   ]
+  },
+  {
+   "name": "Will Barker",
+   "image": "/assets/group/images/will_barker.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2022-10-01",
+     "end": null
+    },
+    {
+     "role": "PhD student",
+     "start": "2017-10-01",
+     "end": "2021-08-25"
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "other"
+   ],
+   "tags": [
+    "Gauge theories of gravity",
+    "Torsion cosmology"
+   ]
+  },
+  {
+   "name": "Mark Ashdown",
+   "image": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/mark-ashdown-150x150.png",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2021-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "21cm"
+   ],
+   "tags": [
+    "Global sky models"
+   ]
+  },
+  {
+   "name": "David Stefanyszyn",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2021-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Will Handley",
+   "image": "/assets/group/images/will_handley.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PI",
+     "start": "2020-10-01",
+     "end": null
+    },
+    {
+     "role": "Postdoc",
+     "start": "2016-10-01",
+     "end": "2020-10-01"
+    },
+    {
+     "role": "PhD student",
+     "start": "2012-10-01",
+     "end": "2016-09-30"
+    }
+   ],
+   "themes": [
+    "methods",
+    "cosmo",
+    "21cm",
+    "astro",
+    "other"
+   ],
+   "tags": [
+    "Nested sampling",
+    "GPU inference",
+    "AI for science"
+   ]
+  },
+  {
+   "name": "Keith Grainge",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2020-06-10",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Malak Olamaie",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2020-06-10",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Jose Alberto Vazquez",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2020-03-16",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Anastasia Fialkov",
+   "image": "https://www.ast.cam.ac.uk/sites/default/files/styles/inline/public/anastasia-fialkov-20180213-sq2.jpg?itok=am4DF9YQ",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2019-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "21cm"
+   ],
+   "tags": [
+    "21-cm cosmology",
+    "First stars"
+   ]
+  },
+  {
+   "name": "Nima Razavi-Ghods",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2019-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "21cm"
+   ],
+   "tags": [
+    "Radiometer calibration",
+    "REACH"
+   ]
+  },
+  {
+   "name": "Eloy de Lera Acedo",
+   "image": "https://www.astro.phy.cam.ac.uk/sites/default/files/styles/inline/public/images/profile/headshotlow.jpg?itok=RMrJ4zTa",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2018-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "21cm"
+   ],
+   "tags": [
+    "REACH",
+    "Radio instrumentation"
+   ]
+  },
+  {
+   "name": "Mike Hobson",
+   "image": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/hobson-150x150.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2012-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Dynamical dark energy",
+    "Model comparison"
+   ]
+  },
+  {
+   "name": "Anthony Lasenby",
+   "image": "https://www.phy.cam.ac.uk/wp-content/uploads/2025/04/lasenby-150x150.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Co-I",
+     "start": "2012-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Dynamical dark energy",
+    "Gauge theory gravity"
+   ]
+  },
+  {
+   "name": "Natalie Hogg",
+   "image": "/assets/group/images/natalie_hogg.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2025-10-06",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "astro"
+   ],
+   "tags": [
+    "Strong lensing",
+    "JAX tools",
+    "AI and research practice"
+   ]
+  },
+  {
+   "name": "Matt Grayling",
+   "image": "/assets/group/images/matt_grayling.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2025-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "methods"
+   ],
+   "tags": [
+    "Type Ia supernovae",
+    "Simulation-based inference",
+    "BayeSN"
+   ]
+  },
+  {
+   "name": "Melis Irfan",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2025-08-14",
+     "end": "2026-07-07"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Chris Lovell",
+   "image": "/assets/group/images/chris_lovell.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2025-07-17",
+     "end": null
+    }
+   ],
+   "themes": [
+    "astro",
+    "methods"
+   ],
+   "tags": [
+    "Galaxy formation",
+    "JWST",
+    "Field-level emulators"
+   ]
+  },
+  {
+   "name": "Jiamin Hou",
+   "image": "/assets/group/images/jiamin_hou.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2025-06-18",
+     "end": "2025-12-31"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "George Carter",
+   "image": "/assets/group/images/george_carter.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2024-08-12",
+     "end": "2024-11-12"
+    },
+    {
+     "role": "PhD student",
+     "start": "2020-10-01",
+     "end": "2024-08-11"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Thomas Gessey-Jones",
+   "image": "/assets/group/images/thomas_gessey-jones.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2024-04-01",
+     "end": "2024-08-04"
+    },
+    {
+     "role": "PhD student",
+     "start": "2020-10-01",
+     "end": "2024-03-31"
+    },
+    {
+     "role": "Part III student",
+     "start": "2019-10-01",
+     "end": "2020-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "David Yallup",
+   "image": "/assets/group/images/david_yallup.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2021-01-10",
+     "end": "2026-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Kamran Javid",
+   "image": "/assets/group/images/kamran_javid.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Postdoc",
+     "start": "2018-10-01",
+     "end": "2019-10-01"
+    },
+    {
+     "role": "PhD student",
+     "start": "2017-10-01",
+     "end": "2018-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Farah Wallauer",
+   "image": "/assets/group/images/farah_wallauer.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2026-10-01",
+     "end": null
+    },
+    {
+     "role": "Part III student",
+     "start": "2025-10-01",
+     "end": "2026-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Selma Vangstein",
+   "image": "/assets/group/images/selma_vangstein.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2026-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Samuel Hewson",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2026-10-01",
+     "end": null
+    },
+    {
+     "role": "Part III student",
+     "start": "2023-10-01",
+     "end": "2024-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2024-06-24",
+     "end": "2024-08-01"
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Parity violation",
+    "Large-scale structure"
+   ]
+  },
+  {
+   "name": "Lawrence Berry",
+   "image": "/assets/group/images/lawrence_berry.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2025-10-01",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Charlotte Priestley",
+   "image": "/assets/group/images/charlotte_priestley.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2025-10-01",
+     "end": null
+    },
+    {
+     "role": "Part III student",
+     "start": "2024-10-01",
+     "end": "2025-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2024-07-01",
+     "end": "2024-08-30"
+    }
+   ],
+   "themes": [
+    "astro"
+   ],
+   "tags": [
+    "Satellite orbits",
+    "GPU acceleration"
+   ]
+  },
+  {
+   "name": "Toby Lovick",
+   "image": "/assets/group/images/toby_lovick.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2024-10-01",
+     "end": null
+    },
+    {
+     "role": "Part III student",
+     "start": "2022-10-01",
+     "end": "2023-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2023-07-24",
+     "end": "2023-09-15"
+    }
+   ],
+   "themes": [
+    "methods",
+    "cosmo"
+   ],
+   "tags": [
+    "GPU nested sampling",
+    "Model comparison",
+    "Marginalisation"
+   ]
+  },
+  {
+   "name": "Namu Kroupa",
+   "image": "/assets/group/images/namu_kroupa.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2023-10-01",
+     "end": null
+    },
+    {
+     "role": "Summer student",
+     "start": "2023-06-12",
+     "end": "2023-09-30"
+    }
+   ],
+   "themes": [
+    "methods",
+    "astro"
+   ],
+   "tags": [
+    "Quasar time delays",
+    "Nested slice sampling",
+    "Hamiltonian Monte Carlo"
+   ]
+  },
+  {
+   "name": "Dily Ong",
+   "image": "/assets/group/images/dily_ong.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2023-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "methods"
+   ],
+   "tags": [
+    "Evolving dark energy",
+    "DESI",
+    "Nested sampling database"
+   ]
+  },
+  {
+   "name": "Sam Leeney",
+   "image": "/assets/group/images/sam_leeney.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2023-10-01",
+     "end": null
+    },
+    {
+     "role": "MPhil student",
+     "start": "2022-04-11",
+     "end": "2022-12-30"
+    }
+   ],
+   "themes": [
+    "21cm",
+    "methods"
+   ],
+   "tags": [
+    "RFI mitigation",
+    "Radiometer calibration",
+    "Anomaly detection"
+   ]
+  },
+  {
+   "name": "Sinah Legner",
+   "image": "/assets/group/images/sinah_legner.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2022-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo",
+    "other"
+   ],
+   "tags": [
+    "Torsion condensation",
+    "Hubble tension"
+   ]
+  },
+  {
+   "name": "Metha Prathaban",
+   "image": "/assets/group/images/metha_prathaban.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2022-10-01",
+     "end": null
+    },
+    {
+     "role": "Part III student",
+     "start": "2020-10-01",
+     "end": "2021-06-01"
+    }
+   ],
+   "themes": [
+    "astro"
+   ],
+   "tags": [
+    "Gravitational-wave inference",
+    "GPU nested sampling",
+    "Hubble constant"
+   ]
+  },
+  {
+   "name": "Wei-Ning Deng",
+   "image": "/assets/group/images/wei-ning_deng.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2022-10-01",
+     "end": null
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Spatial curvature",
+    "CPT-symmetric universe"
+   ]
+  },
+  {
+   "name": "Adam Ormondroyd",
+   "image": "/assets/group/images/adam_ormondroyd.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2021-10-01",
+     "end": "2025-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ayngaran Thavanesan",
+   "image": "/assets/group/images/ayngaran_thavanesan.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2021-10-01",
+     "end": "2023-01-19"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Kilian Scheutwinkel",
+   "image": "/assets/group/images/kilian_scheutwinkel.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2020-12-01",
+     "end": "2024-08-09"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Thomas Mcaloone",
+   "image": "/assets/group/images/thomas_mcaloone.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2020-06-10",
+     "end": "2021-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Isidro Gomez Vargas",
+   "image": "/assets/group/images/isidro_gomez_vargas.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2020-03-16",
+     "end": "2020-12-04"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ian Roque",
+   "image": "/assets/group/images/ian_roque.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2019-10-01",
+     "end": "2023-12-31"
+    },
+    {
+     "role": "MPhil student",
+     "start": "2018-10-01",
+     "end": "2019-09-15"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Dominic Anstey",
+   "image": "/assets/group/images/dominic_anstey.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2018-10-01",
+     "end": "2022-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Fruzsina Agocs",
+   "image": "/assets/group/images/fruzsina_agocs.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2017-10-01",
+     "end": "2021-09-01"
+    },
+    {
+     "role": "Part III student",
+     "start": "2016-10-01",
+     "end": "2017-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Lukas Hergt",
+   "image": "/assets/group/images/lukas_hergt.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2017-01-01",
+     "end": "2021-01-08"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ed Higson",
+   "image": "/assets/group/images/ed_higson.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "PhD student",
+     "start": "2016-10-01",
+     "end": "2018-10-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Danielle Dineen",
+   "image": "/assets/group/images/danielle_dineen.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "MPhil student",
+     "start": "2022-10-01",
+     "end": "2023-09-15"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Allahyar Sahibzada",
+   "image": "/assets/group/images/allahyar_sahibzada.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "MPhil student",
+     "start": "2021-10-01",
+     "end": "2022-12-19"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Emma Shen",
+   "image": "/assets/group/images/emma_shen.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "MPhil student",
+     "start": "2019-10-01",
+     "end": "2020-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Panagiotis Mavrogiannis",
+   "image": "/assets/group/images/panagiotis_mavrogiannis.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "MPhil student",
+     "start": "2017-10-01",
+     "end": "2018-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Jaiman Lad",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2026-10-01",
+     "end": "2027-06-01"
+    }
+   ],
+   "themes": [
+    "astro",
+    "methods"
+   ],
+   "tags": [
+    "Quasar time delays",
+    "GPU inference"
+   ]
+  },
+  {
+   "name": "Jesús Girones Fraile",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2026-10-01",
+     "end": "2027-06-01"
+    }
+   ],
+   "themes": [
+    "astro",
+    "cosmo"
+   ],
+   "tags": [
+    "Lensed supernovae",
+    "Time delays"
+   ]
+  },
+  {
+   "name": "David Parodi",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2026-10-01",
+     "end": "2027-06-01"
+    }
+   ],
+   "themes": [
+    "cosmo"
+   ],
+   "tags": [
+    "Cosmological tensions"
+   ]
+  },
+  {
+   "name": "Manaal Khan",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2026-10-01",
+     "end": "2027-06-01"
+    }
+   ],
+   "themes": [
+    "astro",
+    "cosmo"
+   ],
+   "tags": [
+    "Gravitational-wave cosmology",
+    "Dark sirens"
+   ]
+  },
+  {
+   "name": "Rose Luo",
+   "image": "/assets/group/images/rose_luo.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2025-10-01",
+     "end": "2026-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2026-07-06",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Alex Drane",
+   "image": "/assets/group/images/alex_drane.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2025-10-01",
+     "end": "2026-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2026-07-06",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Harvey Williams",
+   "image": "/assets/group/images/harvey_williams.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2024-10-01",
+     "end": "2025-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Krish Nanavati",
+   "image": "/assets/group/images/krish_nanavati.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2024-10-01",
+     "end": "2025-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ming Yang",
+   "image": "/assets/group/images/ming_yang.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2024-10-01",
+     "end": "2025-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Will Templeton",
+   "image": "/assets/group/images/will_templeton.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2024-10-01",
+     "end": "2025-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Tze Goh",
+   "image": "/assets/group/images/tze_goh.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2023-10-01",
+     "end": "2024-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Patrick Lau",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2023-10-01",
+     "end": "2024-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Felicity Ibrahim",
+   "image": "/assets/group/images/felicity_ibrahim.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2023-10-01",
+     "end": "2024-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Nicolas Mediato Diaz",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2023-10-01",
+     "end": "2024-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2024-07-22",
+     "end": "2024-09-13"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Zixiao Hu",
+   "image": "/assets/group/images/zixiao_hu.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2022-10-01",
+     "end": "2023-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2023-06-26",
+     "end": "2023-08-18"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Sankalan Bhattacharyya",
+   "image": "/assets/group/images/sankalan_bhattacharyya.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2022-10-01",
+     "end": "2023-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Cole Meldorf",
+   "image": "/assets/group/images/cole_meldorf.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2022-10-01",
+     "end": "2023-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Carola Zanoletti",
+   "image": "/assets/group/images/carola_zanoletti.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2021-10-01",
+     "end": "2022-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Oliver Normand",
+   "image": "/assets/group/images/oliver_normand.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2021-10-01",
+     "end": "2022-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Xy Wang",
+   "image": "/assets/group/images/xy_wang.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2021-10-01",
+     "end": "2022-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Yoann Launay",
+   "image": "/assets/group/images/yoann_launay.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2021-10-01",
+     "end": "2022-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Yi Jer Loh",
+   "image": "/assets/group/images/yi_jer_loh.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2020-10-01",
+     "end": "2021-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Aleksandr Petrosyan",
+   "image": "/assets/group/images/aleksandr_petrosyan.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2019-10-01",
+     "end": "2020-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Deaglan Bartlett",
+   "image": "/assets/group/images/deaglan_bartlett.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2018-10-01",
+     "end": "2019-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Jamie Bamber",
+   "image": "/assets/group/images/jamie_bamber.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2018-10-01",
+     "end": "2019-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Jessica Rigley",
+   "image": "/assets/group/images/jessica_rigley.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2017-10-01",
+     "end": "2018-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ward Haddadin",
+   "image": "/assets/group/images/ward_haddadin.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2017-10-01",
+     "end": "2018-06-01"
+    },
+    {
+     "role": "Summer student",
+     "start": "2018-06-01",
+     "end": "2018-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Daniel Manela",
+   "image": "/assets/group/images/daniel_manela.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2016-10-01",
+     "end": "2017-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Bob Knighton",
+   "image": "/assets/group/images/bob_knighton.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2016-10-01",
+     "end": "2017-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Stephen Pickman",
+   "image": "/assets/group/images/stephen_pickman.jpg",
+   "card": false,
+   "roles": [
+    {
+     "role": "Part III student",
+     "start": "2016-10-01",
+     "end": "2017-06-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Logan Crawford",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2026-07-13",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Sienna Folkes-Miller",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2026-07-06",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ayush Singh",
+   "image": null,
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2026-07-06",
+     "end": null
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Fedir Boreiko",
+   "image": "/assets/group/images/fedir_boreiko.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2025-06-30",
+     "end": "2025-08-22"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Ajinkya Naik",
+   "image": null,
+   "card": false,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2025-06-30",
+     "end": "2025-08-22"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Artyom Baryshnikov",
+   "image": "/assets/group/images/artyom_baryshnikov.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2022-06-27",
+     "end": "2022-08-26"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Beichen Xu",
+   "image": "/assets/group/images/beichen_xu.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2022-06-27",
+     "end": "2022-09-16"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Mary Letey",
+   "image": "/assets/group/images/mary_letey.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2022-06-24",
+     "end": "2022-08-22"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Mattia Varrone",
+   "image": "/assets/group/images/mattia_varrone.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2021-06-21",
+     "end": "2021-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Zak Shumaylov",
+   "image": "/assets/group/images/zak_shumaylov.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2021-06-21",
+     "end": "2021-09-30"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Denis Werth",
+   "image": "/assets/group/images/denis_werth.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2019-06-01",
+     "end": "2019-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Liam L.H. Lau",
+   "image": "/assets/group/images/liam_lau.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2019-06-01",
+     "end": "2019-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Maxime Jabarian",
+   "image": "/assets/group/images/maxime_jabarian.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2019-06-01",
+     "end": "2019-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Elizabeth Guest",
+   "image": "/assets/group/images/elizabeth_guest.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2018-06-01",
+     "end": "2018-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  },
+  {
+   "name": "Shu-Fan Chen",
+   "image": "/assets/group/images/shu-fan_chen.jpg",
+   "card": true,
+   "roles": [
+    {
+     "role": "Summer student",
+     "start": "2018-06-01",
+     "end": "2018-09-01"
+    }
+   ],
+   "themes": [],
+   "tags": []
+  }
+ ]
+}

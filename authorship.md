@@ -1,6 +1,6 @@
 ---
 layout: page
-title: Authorship
+title: Authorship & Publication Policy
 permalink: /authorship/
 ---
 *Handley Lab Publishing & Authorship Policy. Adopted 28 August 2025.*

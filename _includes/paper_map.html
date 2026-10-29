@@ -11,7 +11,19 @@
     </div>
   </header>
   <div class="paper-map-layout">
-    <ul class="paper-map-legend" aria-label="Filter by theme"></ul>
+    <div class="paper-map-side">
+      <ul class="paper-map-legend" aria-label="Filter by theme"></ul>
+      <section class="paper-map-team" aria-labelledby="paper-map-team-title" hidden>
+        <div class="paper-map-team-bar">
+          <h3 id="paper-map-team-title">Current group</h3>
+          <div class="paper-map-team-when" role="group" aria-label="Current or past members">
+            <button type="button" data-when="current" aria-pressed="true">Current</button>
+            <button type="button" data-when="past" aria-pressed="false">Past</button>
+          </div>
+        </div>
+        <ul class="paper-map-team-list"></ul>
+      </section>
+    </div>
     <div class="paper-map-main">
       <div class="paper-map-stage">
         <svg class="paper-map-svg" role="img" aria-label="Bubble chart of group papers, coloured by theme"></svg>
@@ -38,16 +50,23 @@
 </section>
 
 <style>
+  {%- assign ra = site.data.research_areas %}
+  {%- assign areas = ra.fields | unshift: ra.centre %}
+  /* Theme colours are the site-wide topic tokens (_includes/custom-head.html),
+     which already switch between light and dark. */
   .paper-map {
-    --pm-bg: #101C24;
-    --pm-panel: #172A33;
-    --pm-text: #EDF2F0;
-    --pm-muted: #B1BEC4;
-    --pm-blue: #81BCE0;
-    --pm-teal: #78C6AF;
-    --pm-tan: #D7AF7F;
-    --pm-pink: #C99AA5;
-    --pm-line: #344851;
+    {%- for a in areas %}
+    --pm-{{ a.key }}: var(--topic-{{ a.key }});
+    --pm-fill-{{ a.key }}: var(--topic-{{ a.key }}-mark);
+    {%- endfor %}
+  }
+  .paper-map {
+    --pm-bg: var(--canvas);
+    --pm-panel: var(--panel);
+    --pm-text: var(--ink);
+    --pm-muted: var(--ink-soft);
+    --pm-blue: var(--accent);
+    --pm-line: var(--line);
     margin: 0 0 1rem;
     padding: 1.5rem;
     border-radius: 18px;
@@ -169,6 +188,23 @@
   .paper-map-pager button { min-width: 2.3rem; padding: 0.4rem 0.7rem; border: 1px solid var(--pm-line); border-radius: 8px; background: var(--pm-bg); color: var(--pm-text); font: inherit; font-size: 0.85rem; cursor: pointer; }
   .paper-map-pager button[aria-current="page"] { border-color: var(--pm-blue); background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
   .paper-map-pager button:disabled { opacity: 0.4; cursor: default; }
+  .paper-map-side { min-width: 0; }
+  .paper-map-team { margin-top: 1.8rem; }
+  .paper-map-team-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+  .paper-map-team-bar h3 { margin: 0; font-size: 0.95rem; font-weight: 700; }
+  .paper-map-team-when { display: inline-flex; border: 1px solid var(--pm-line); border-radius: 999px; overflow: hidden; }
+  .paper-map-team-when button { padding: 0.2rem 0.7rem; border: 0; background: var(--pm-bg); color: var(--pm-muted); font: inherit; font-size: 0.75rem; cursor: pointer; }
+  .paper-map-team-when button[aria-pressed="true"] { background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
+  .paper-map-team-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+  .paper-map-team-list a, .paper-map-team-list span[role="img"] { display: block; border-radius: 50%; }
+  .paper-map-team-list img, .paper-map-team-list .initials { display: flex; width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--pm-line); object-fit: cover; background: var(--pm-bg); transition: border-color 0.15s ease, transform 0.15s ease; }
+  .paper-map-team-list .initials { align-items: center; justify-content: center; color: var(--pm-text); font-weight: 700; font-size: 0.8rem; }
+  .paper-map-team-list a:hover img, .paper-map-team-list a:hover .initials,
+  .paper-map-team-list a:focus-visible img, .paper-map-team-list a:focus-visible .initials { border-color: var(--pm-text); transform: scale(1.08); }
+  .paper-map-team-list a:focus-visible { outline: none; }
+  .paper-map-team-list .new img, .paper-map-team-list .new .initials { border-style: dashed; }
+  .paper-map-team-empty { color: var(--pm-muted); font-size: 0.82rem; font-style: italic; }
+  @media (prefers-reduced-motion: reduce) { .paper-map-team-list img, .paper-map-team-list .initials { transition: none; transform: none !important; } }
   @media (max-width: 720px) {
     .paper-map { padding: 1rem; border-radius: 14px; }
     .paper-map-cards > li { padding: 1rem; }
@@ -182,7 +218,9 @@
   const root = document.querySelector(".paper-map");
   if (!root || !window.d3) return;
 
-  const COLOURS = { methods: "#81BCE0", cosmo: "#78C6AF", "21cm": "#D7AF7F", astro: "#C99AA5", other: "#B1BEC4" };
+  // Theme colours come from CSS variables (--pm-<key>, set per light/dark theme above)
+  const COLOURS = new Proxy({}, { get: (_, key) => `var(--pm-${String(key)})` });
+  const FILLS = new Proxy({}, { get: (_, key) => `var(--pm-fill-${String(key)})` });
   const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
   const svg = d3.select(root.querySelector(".paper-map-svg"));
   const tooltip = root.querySelector(".paper-map-tooltip");
@@ -190,12 +228,15 @@
   const legend = root.querySelector(".paper-map-legend");
   const EMPTY = '<p class="paper-map-empty">Select a paper to see its title, abstract and the group members who wrote it.</p>';
 
-  fetch("{{ '/assets/papers/papers.json' | relative_url }}")
-    .then((r) => r.json())
-    .then(init)
+  // people.json is optional: without it the map works, just with no people panel
+  Promise.all([
+    fetch("{{ '/assets/papers/papers.json' | relative_url }}").then((r) => r.json()),
+    fetch("{{ '/assets/papers/people.json' | relative_url }}").then((r) => r.json()).catch(() => null),
+  ])
+    .then(([data, people]) => init(data, people))
     .catch((err) => { console.error(err); detail.innerHTML = '<p class="paper-map-empty">The paper map could not be loaded.</p>'; });
 
-  function init(data) {
+  function init(data, peopleData) {
     const themes = data.themes.filter((t) => data.papers.some((p) => p.theme === t.key));
     const highlighted = new Set();
     const years = data.papers.map((p) => +p.date.slice(0, 4));
@@ -205,12 +246,12 @@
     const base = d3.scaleLog().domain([1, (d3.max(data.papers, (p) => p.citations) || 1) + 1]).range([10, 30]);
     const nodes = data.papers.map((p) => ({ ...p, year: +p.date.slice(0, 4), phase: Math.random() * Math.PI * 2 }));
     let selected = null;
-    let width, height, cy, radius, sim;
+    let width, height, cy, radius, sim, edge;
 
     themes.forEach((t) => {
       const li = document.createElement("li");
       const count = nodes.filter((n) => n.theme === t.key).length;
-      li.innerHTML = `<button type="button" aria-pressed="false"><span class="swatch" style="background:${COLOURS[t.key]}"></span>${t.label} <span class="count">${count}</span></button>`;
+      li.innerHTML = `<button type="button" aria-pressed="false"><span class="swatch" style="background:${FILLS[t.key]}"></span>${t.label} <span class="count">${count}</span></button>`;
       li.firstChild.addEventListener("click", (e) => {
         const on = highlighted.has(t.key);
         on ? highlighted.delete(t.key) : highlighted.add(t.key);
@@ -220,8 +261,13 @@
       legend.appendChild(li);
     });
 
+    // Themes cluster like slices of a pie: each gets a wedge of the ball sized
+    // by its bubbles' total area, and each paper is pulled to its own fixed
+    // spot inside that wedge.
+    nodes.forEach((d) => { d.u = Math.random(); d.v = Math.random(); });
+
     const circles = svg.append("g").selectAll("circle").data(nodes).join("circle")
-      .attr("fill", (d) => COLOURS[d.theme])
+      .style("fill", (d) => FILLS[d.theme])
       .attr("tabindex", 0)
       .attr("role", "button")
       .attr("aria-label", (d) => `${d.title} (${d.year}, ${d.citations} citations)`)
@@ -244,16 +290,56 @@
       cy = R + 20;
       svg.attr("viewBox", `0 0 ${width} ${height}`);
       circles.attr("r", radius);
+
+      const cx = width / 2;
+      edge = R * 1.03;  // boundary circle: a little slack over the packed cloud
+      const area = d3.rollup(nodes, (v) => d3.sum(v, (n) => (radius(n) + 1.5) ** 2), (n) => n.theme);
+      const total = d3.sum(area.values());
+      let a0 = -Math.PI / 2;
+      const wedges = new Map(themes.map((t) => {
+        const span = (2 * Math.PI * area.get(t.key)) / total;
+        const w = { a0, span };
+        a0 += span;
+        return [t.key, w];
+      }));
+      nodes.forEach((d) => {
+        const w = wedges.get(d.theme);
+        const pad = Math.min(0.12, w.span * 0.15);
+        const angle = w.a0 + pad + d.v * (w.span - 2 * pad);
+        const r = R * 0.9 * Math.sqrt(0.05 + 0.95 * d.u);
+        d.tx = cx + r * Math.cos(angle);
+        d.ty = cy + r * Math.sin(angle);
+      });
+
       if (!sim) {
-        nodes.forEach((d) => { d.x = width / 2 + (Math.random() - 0.5) * width * 0.4; d.y = cy + (Math.random() - 0.5) * height * 0.4; });
+        // Start each bubble at its spot: the cloud is too densely packed for
+        // bubbles to push past each other into their wedges from random starts.
+        nodes.forEach((d) => { d.x = d.tx; d.y = d.ty; });
         sim = d3.forceSimulation(nodes).alphaDecay(0.03).on("tick", render);
       }
       sim
-        .force("x", d3.forceX(width / 2).strength(0.05))
-        .force("y", d3.forceY(cy).strength(0.05))
+        .force("x", d3.forceX((d) => d.tx).strength(0.12))
+        .force("y", d3.forceY((d) => d.ty).strength(0.12))
         .force("collide", d3.forceCollide((d) => radius(d) + 1.5).iterations(2))
+        .force("contain", contain)
         .alpha(0.8)
         .restart();
+    }
+
+    // Keep every bubble inside the boundary circle, so the cloud stays round
+    function contain() {
+      const cx = width / 2;
+      nodes.forEach((d) => {
+        const dx = d.x - cx, dy = d.y - cy;
+        const dist = Math.hypot(dx, dy) || 1;
+        const max = edge - radius(d);
+        if (dist > max) {
+          d.x = cx + (dx / dist) * max;
+          d.y = cy + (dy / dist) * max;
+          d.vx *= 0.5;
+          d.vy *= 0.5;
+        }
+      });
     }
 
     function faded(d) {
@@ -267,7 +353,7 @@
         .attr("cx", (d) => d.x + (reduceMotion ? 0 : Math.sin(t * 0.6 + d.phase) * 1.6))
         .attr("cy", (d) => d.y + (reduceMotion ? 0 : Math.cos(t * 0.5 + d.phase) * 1.6))
         .attr("opacity", (d) => opacity(d.year) * (faded(d) ? 0.2 : 1))
-        .attr("stroke", (d) => (selected === d ? "#EDF2F0" : null))
+        .style("stroke", (d) => (selected === d ? "var(--pm-text)" : null))
         .attr("stroke-width", (d) => (selected === d ? 2.5 : null));
     }
 
@@ -286,12 +372,15 @@
       return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
     }
 
-    function person(m) {
+    function face(m) {
       const initials = m.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("");
-      const face = m.image
+      return m.image
         ? `<img src="${esc(m.image)}" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;initials&quot;>${esc(initials)}</span>'">`
         : `<span class="initials">${esc(initials)}</span>`;
-      return `<li>${face}<span>${esc(m.name)}</span></li>`;
+    }
+
+    function person(m) {
+      return `<li>${face(m)}<span>${esc(m.name)}</span></li>`;
     }
 
     function select(d) {
@@ -321,6 +410,67 @@
         </p>`;
     }
 
+    // People panel (left column): faces of group members, without Co-Is.
+    // With themes highlighted it narrows to people who wrote papers there,
+    // plus current members whose focus (assets/group/focus.yaml) includes it.
+    // Current/past comes from role dates, so it never goes stale.
+    const team = root.querySelector(".paper-map-team");
+    const teamList = root.querySelector(".paper-map-team-list");
+    const today = new Date().toISOString().slice(0, 10);
+    const GROUP_URL = "{{ '/group/' | relative_url }}";
+    // Same slug as the card ids on the group page (_includes/group_cards.html)
+    const slug = (name) => name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    let when = "current";
+    const people = (peopleData ? peopleData.people : []).map((p) => {
+      const roles = p.roles.filter((r) => r.role !== "Co-I");
+      if (!roles.length) return null;
+      const now = roles.filter((r) => r.start <= today && (!r.end || r.end >= today));
+      const counts = {};
+      nodes.forEach((n) => { if (n.group.some((g) => g.name === p.name)) counts[n.theme] = (counts[n.theme] || 0) + 1; });
+      const first = d3.min(roles, (r) => r.start).slice(0, 4);
+      const last = roles.some((r) => !r.end) ? null : d3.max(roles, (r) => r.end).slice(0, 4);
+      const lastRole = roles.slice().sort((a, b) => (b.end || "9999").localeCompare(a.end || "9999"))[0];
+      const total = d3.sum(Object.values(counts));
+      return { ...p, current: now.length > 0, role: (now[0] || lastRole).role, total, counts,
+               years: last ? (first === last ? first : `${first}–${last}`) : `${first}–` };
+    }).filter((p) => p && p.roles[0].start <= today);
+    if (people.length) team.hidden = false;
+
+    function papersIn(p) {
+      return highlighted.size ? d3.sum([...highlighted], (k) => p.counts[k] || 0) : p.total;
+    }
+
+    function renderTeam() {
+      if (!people.length) return;
+      const keys = [...highlighted];
+      const label = when === "current" ? "Current" : "Past";
+      root.querySelector("#paper-map-team-title").textContent = keys.length
+        ? `${label} people here`
+        : `${label} group`;
+      root.querySelectorAll(".paper-map-team-when button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.when === when)));
+      const shown = people
+        .filter((p) => (when === "current") === p.current)
+        .filter((p) => !keys.length || papersIn(p) > 0 || (p.current && p.themes.some((k) => highlighted.has(k))))
+        .sort((a, b) => papersIn(b) - papersIn(a) || b.tags.length - a.tags.length || a.name.localeCompare(b.name));
+      teamList.innerHTML = shown.length
+        ? shown.map((p) => {
+            const inner = p.card
+              ? `<a href="${GROUP_URL}#${slug(p.name)}" title="${esc(p.name)}" aria-label="${esc(p.name)}">${face(p)}</a>`
+              : `<span title="${esc(p.name)}" role="img" aria-label="${esc(p.name)}">${face(p)}</span>`;
+            return `<li${papersIn(p) ? "" : ' class="new"'}>${inner}</li>`;
+          }).join("")
+        : `<li class="paper-map-team-empty">No ${when} members here.</li>`;
+    }
+
+    root.querySelector(".paper-map-team-when").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-when]");
+      if (!b) return;
+      when = b.dataset.when;
+      renderTeam();
+    });
+    legend.addEventListener("click", renderTeam);
+    renderTeam();
+
     // List view: every paper as a card, PAGE_SIZE per page, filtered by the
     // highlighted themes.
     const PAGE_SIZE = 20;
@@ -340,7 +490,7 @@
       root.querySelector(".paper-map-list-count").textContent =
         `${shown.length} papers · showing ${shown.length ? first + 1 : 0}–${Math.min(first + PAGE_SIZE, shown.length)}`;
       cards.innerHTML = shown.slice(first, first + PAGE_SIZE)
-        .map((d) => `<li style="--card-colour:${COLOURS[d.theme]}">${paperHTML(d, true)}</li>`).join("");
+        .map((d) => `<li style="--card-colour:${FILLS[d.theme]}">${paperHTML(d, true)}</li>`).join("");
       const button = (label, target, attrs = "") => `<button type="button" data-page="${target}" ${attrs}>${label}</button>`;
       let html = button("Previous", page - 1, page === 1 ? "disabled" : "");
       for (let i = 1; i <= pages; i++) html += button(i, i, i === page ? 'aria-current="page"' : "");

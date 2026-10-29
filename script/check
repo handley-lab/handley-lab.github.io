@@ -1,0 +1,68 @@
+#!/usr/bin/env ruby
+# Site checks, run by .github/workflows/ci.yml on every PR (and locally after
+# script/build). Exits non-zero and lists every problem found.
+#
+#   script/build && script/check
+#
+# Checks:
+#   - _data/recipes.yml: unique ids, required fields non-empty, valid status
+#   - _recipes/<id>.md: a matching card exists and the frontmatter id agrees
+#   - assets/papers/*.json parse
+#   - the built _site: home page exists, raw skills/ files did not leak
+require "yaml"
+require "json"
+require "date"
+
+ROOT = File.expand_path("..", __dir__)
+errors = []
+
+# Recipes
+REQUIRED = %w[id title category timebox status summary outcome evidence].freeze
+STATUSES = ["Stub", "Draft", "In progress", "Complete"].freeze
+recipes = YAML.safe_load(File.read(File.join(ROOT, "_data/recipes.yml")), permitted_classes: [Date]) || []
+ids = recipes.map { |r| r["id"] }
+ids.tally.each { |id, n| errors << "recipes.yml: id '#{id}' appears #{n} times" if n > 1 }
+recipes.each do |r|
+  REQUIRED.each do |field|
+    errors << "recipes.yml: '#{r["id"]}' has an empty #{field}" if r[field].to_s.strip.empty?
+  end
+  unless STATUSES.include?(r["status"])
+    errors << "recipes.yml: '#{r["id"]}' has status '#{r["status"]}' (expected one of #{STATUSES.join(", ")})"
+  end
+end
+
+Dir[File.join(ROOT, "_recipes/*.md")].each do |path|
+  slug = File.basename(path, ".md")
+  front = File.read(path)[/\A---\s*\n(.*?)\n---/m, 1]
+  meta = front ? (YAML.safe_load(front, permitted_classes: [Date]) || {}) : {}
+  errors << "_recipes/#{slug}.md: no card with id '#{slug}' in recipes.yml" unless ids.include?(slug)
+  errors << "_recipes/#{slug}.md: frontmatter id '#{meta["id"]}' should be '#{slug}'" unless meta["id"] == slug
+end
+
+# Paper map data
+Dir[File.join(ROOT, "assets/papers/*.json")].each do |path|
+  JSON.parse(File.read(path))
+rescue JSON::ParserError => e
+  errors << "#{path.delete_prefix("#{ROOT}/")}: invalid JSON (#{e.message[0, 80]})"
+end
+
+# Built site
+site = File.join(ROOT, "_site")
+if Dir.exist?(site)
+  errors << "_site/index.html missing: the site did not build" unless File.exist?(File.join(site, "index.html"))
+  errors << "_site/skills/index.html missing: the public /skills/ page did not build" unless File.exist?(File.join(site, "skills/index.html"))
+  # The in-repo skills/ directory is for agents and must never be published
+  leaked = Dir[File.join(site, "skills/**/*")].reject do |f|
+    File.directory?(f) || File.basename(f) == "index.html" || f.end_with?(".css", ".js")
+  end
+  leaked.each { |f| errors << "#{f.delete_prefix("#{ROOT}/")}: raw skills/ file leaked into the built site" }
+else
+  puts "Note: no _site/ yet, so the built-site checks were skipped (run script/build first)."
+end
+
+if errors.empty?
+  puts "All checks passed (#{recipes.size} recipes)."
+else
+  puts errors.map { |e| "  ✗ #{e}" }
+  abort "#{errors.size} problem(s) found."
+end

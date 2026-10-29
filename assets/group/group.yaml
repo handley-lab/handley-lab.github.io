@@ -286,6 +286,10 @@ Farah Wallauer:
     supervisors:
     - Will Handley
     thesis: null
+  original_image: images/originals/farah_wallauer.jpeg
+  image: images/farah_wallauer.jpg
+  links:
+    LinkedIn: https://www.linkedin.com/in/farah-victoria-wallauer-0a26a121b
 Selma Vangstein:
   phd:
     start: 2026-10-01
@@ -293,6 +297,8 @@ Selma Vangstein:
     - Will Handley
     - Mike Hobson
     thesis: null
+  original_image: images/originals/selma_vangstein.jpeg
+  image: images/selma_vangstein.jpg
 Samuel Hewson:
   phd:
     start: 2026-10-01
@@ -311,6 +317,9 @@ Samuel Hewson:
     supervisors:
     - Chris Lester
     thesis: null
+  links:
+    GitHub: https://github.com/sh2099
+    LinkedIn: https://www.linkedin.com/in/sam-hewson-755112223
 Lawrence Berry:
   phd:
     start: 2025-10-01
@@ -712,6 +721,7 @@ Alex Drane:
     - Will Handley
     - Namu Kroupa
     thesis: null
+  original_image: images/originals/alex_drane.jpg
   image: images/alex_drane.jpg
 Harvey Williams:
   partiii:

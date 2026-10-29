@@ -4,3 +4,5 @@ echo "Generating group timeline"
 assets/group/timeline.py
 echo "Generating group table"
 assets/group/html_table.py
+echo "Generating people for the paper map"
+python3 script/people.py

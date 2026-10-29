@@ -1,4 +1,4 @@
-<a class="research-node" style="--area:{{ include.area.colour }}" href="{{ '/papers/' | relative_url }}#theme={{ include.area.key }}">
+<a class="research-node" style="--area:{{ include.area.colour }}; --area-accent:{{ include.area.accent }}; --area-fill:{{ include.area.fill }}; --area-bubble:{{ include.area.bubble }}" href="{{ '/papers/' | relative_url }}#theme={{ include.area.key }}">
   <strong>{{ include.area.label }}</strong>
   <ul>
     {%- for t in include.area.topics %}
