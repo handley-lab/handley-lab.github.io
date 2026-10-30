@@ -1,6 +1,8 @@
-# Weekly refresh of the paper map on /papers/. Finds group papers on arXiv with
-# script/papers.py and opens a pull request for a human to review; nothing is
-# published until that PR is merged.
+# Weekly update of the paper map on /papers/. Looks for new group papers from
+# the last 10 days (a little over a week, so a late or failed run misses nothing)
+# with script/papers.py and refreshes citation counts. If anything changed, it
+# opens a pull request for a human to review; nothing is published until that PR
+# is merged, and nothing is removed.
 #
 # Needs Settings > Actions > General > "Allow GitHub Actions to create and
 # approve pull requests" to be enabled.
@@ -28,7 +30,7 @@ jobs:
 
       - run: pip install requests pyyaml
 
-      - run: python script/papers.py --summary "$RUNNER_TEMP/papers-summary.md"
+      - run: python script/papers.py --days 10 --summary "$RUNNER_TEMP/papers-summary.md"
 
       - id: summary
         run: |

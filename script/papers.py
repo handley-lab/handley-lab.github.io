@@ -13,6 +13,8 @@ broad theme. No API keys needed.
     python script/papers.py                    # full live run (~5 min, arXiv is slow)
     python script/papers.py --summary out.md   # also write a change summary for a PR
     python script/papers.py --feed feed.atom   # reuse a downloaded copy of Will's feed
+    python script/papers.py --days 10          # weekly job: add new group papers from the last
+                                               # 10 days to the existing list; removes nothing
 """
 import argparse
 import datetime as dt
@@ -38,6 +40,8 @@ S2_URL = "https://api.semanticscholar.org/graph/v1/paper/batch"
 SEARCHED_ROLES = ("pi", "postdoc", "phd")
 GRACE = dt.timedelta(days=365)
 COLLABORATION_SIZE = 15
+NICKNAMES = {"mike": ["michael"], "artyom": ["artem"]}  # group.yaml name -> names used on papers
+ARXIV_DEADLINE = 90  # seconds per request, however slowly the data trickles in
 CATEGORIES = ("astro-ph", "gr-qc", "hep-", "physics.", "stat.", "cs.LG", "cs.AI", "math.ST", "quant-ph")
 NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/atom"}
 
@@ -84,6 +88,19 @@ def key(name):
     return (parts[-1], parts[0][0]) if len(parts) > 1 else None
 
 
+def find(members, author):
+    """The group member this author is, if any. Surname and initial alone match
+    strangers (Junpeng Hou for Jiamin Hou), so a spelled-out first name must agree."""
+    member = members.get(key(author))
+    if not member:
+        return None
+    given, first = norm(author)[0], norm(member["name"])[0]
+    names = [first] + NICKNAMES.get(first, [])
+    if len(given) > 1 and not any(given.startswith(n) or n.startswith(given) for n in names):
+        return None
+    return member
+
+
 def to_date(value):
     return value if isinstance(value, dt.date) else None
 
@@ -121,9 +138,15 @@ def in_tenure(member, date, start):
 def arxiv_get(params):
     for attempt in range(4):
         try:
-            r = requests.get(ARXIV_API, params=params, timeout=180)
-            r.raise_for_status()
-            return r.content
+            deadline = time.monotonic() + ARXIV_DEADLINE
+            content = b""
+            with requests.get(ARXIV_API, params=params, timeout=60, stream=True) as r:
+                r.raise_for_status()
+                for chunk in r.iter_content(65536):
+                    content += chunk
+                    if time.monotonic() > deadline:
+                        raise requests.Timeout("arXiv download took too long")
+            return content
         except requests.RequestException:
             time.sleep(10 * (attempt + 1))
     raise RuntimeError(f"arXiv request failed: {params}")
@@ -189,6 +212,8 @@ def citations(ids):
                 continue
             r.raise_for_status()
             break
+        else:
+            r.raise_for_status()
         for arxiv, hit in zip(chunk, r.json()):
             counts[arxiv] = (hit or {}).get("citationCount") or 0
     return counts
@@ -199,7 +224,7 @@ def is_group_paper(paper, members, start):
     date = dt.date.fromisoformat(paper["date"])
     if not any(c.startswith(CATEGORIES) for c in paper["categories"]):
         return []
-    authors = [members.get(key(a)) for a in paper["authors"]]
+    authors = [find(members, a) for a in paper["authors"]]
     active = [m for m in authors if m and m["tenures"] and in_tenure(m, date, start)]
     if not active:
         return []
@@ -214,8 +239,54 @@ def is_group_paper(paper, members, start):
     return active
 
 
+def search_window(member, start):
+    """The dates to search for one member, from their first role to their last."""
+    first = min(s for s, _ in member["tenures"])
+    if member["name"] == PI:
+        return start, None
+    ends = [e for _, e in member["tenures"]]
+    return first, None if None in ends else max(ends)
+
+
+def enrich(paper, members, theme_fix):
+    everyone = [find(members, a) for a in paper["authors"]]
+    paper["group"] = [{"name": m["name"], "image": m["image"]} for m in everyone if m]
+    paper["theme"] = theme_fix.get(paper["arxiv"]) or classify(paper["title"], paper["abstract"])
+
+
+def recent_papers(members, start, days, known, include, theme_fix):
+    """New group papers from the last few days, searching only people who can
+    still count: anyone in the group, or within a year of leaving, in that window."""
+    since = dt.date.today() - dt.timedelta(days=days)
+    searched = [m for m in members.values()
+                if any(e is None or e >= since for _, e in m["tenures"])
+                and any(s <= dt.date.today() for s, _ in m["tenures"])]
+    found, failed = {}, []
+    for i, m in enumerate(searched, 1):
+        print(f"[{i}/{len(searched)}] {m['name']}...", flush=True)
+        try:
+            hits = arxiv_query(m["name"], since, None)
+        except RuntimeError as e:
+            print(f"  failed: {e}", flush=True)
+            failed.append(m["name"])
+            continue
+        for p in hits:
+            if p["arxiv"] not in known and is_group_paper(p, members, start):
+                found[p["arxiv"]] = p
+    for arxiv in include - known:
+        found.update({p["arxiv"]: p for p in parse_feed(arxiv_get({"id_list": arxiv}))})
+    for p in found.values():
+        enrich(p, members, theme_fix)
+    counts = citations(list(found))
+    for p in found.values():
+        p["citations"] = counts.get(p["arxiv"], 0)
+        del p["categories"]
+    return list(found.values()), failed
+
+
 def main():
     parser = argparse.ArgumentParser()
+    parser.add_argument("--days", type=int, help="only add new group papers from the last DAYS days")
     parser.add_argument("--summary", help="write a markdown summary of changes to this path")
     parser.add_argument("--feed", help="reuse a downloaded copy of the PI's arXiv feed")
     args = parser.parse_args()
@@ -228,19 +299,31 @@ def main():
     exclude = {str(i) for i in overrides.get("exclude") or []}
     theme_fix = {str(k): v for k, v in (overrides.get("theme") or {}).items()}
 
+    failed = []
+    if args.days:
+        current = [p for p in json.loads(OUT.read_text())["papers"] if p["arxiv"] not in exclude]
+        for p in current:
+            p["theme"] = theme_fix.get(p["arxiv"], p["theme"])
+        known = {p["arxiv"] for p in current} | exclude
+        new, failed = recent_papers(members, start, args.days, known, include, theme_fix)
+        # Keep the old count if Semantic Scholar is down or doesn't know the paper
+        try:
+            counts = citations([p["arxiv"] for p in current])
+        except requests.RequestException as e:
+            print(f"Citation refresh failed, keeping old counts: {e}")
+            counts = {}
+        for p in current:
+            p["citations"] = counts.get(p["arxiv"]) or p["citations"]
+        write_output(current + new, args, failed)
+        return
+
     # Will's claimed-papers feed is the most complete record of his work.
     feed = Path(args.feed).read_bytes() if args.feed else requests.get(PI_FEED, timeout=900).content
     candidates = {p["arxiv"]: p for p in parse_feed(feed)}
     print(f"{PI} arXiv feed: {len(candidates)} papers")
     searched = [m for m in members.values() if m["tenures"]]
     for i, m in enumerate(searched, 1):
-        first = min(s for s, _ in m["tenures"])
-        if m["name"] == PI:
-            first, last = start, None
-        else:
-            ends = [e for _, e in m["tenures"]]
-            last = None if None in ends else max(ends)
-        found = arxiv_query(m["name"], first, last)
+        found = arxiv_query(m["name"], *search_window(m, start))
         print(f"[{i}/{len(searched)}] {m['name']}: {len(found)} arXiv hits")
         for p in found:
             candidates[p["arxiv"]] = p
@@ -255,15 +338,17 @@ def main():
         active = is_group_paper(p, members, start)
         if not active and arxiv not in include:
             continue
-        everyone = [members.get(key(a)) for a in p["authors"]]
-        p["group"] = [{"name": m["name"], "image": m["image"]} for m in everyone if m]
-        p["theme"] = theme_fix.get(arxiv) or classify(p["title"], p["abstract"])
+        enrich(p, members, theme_fix)
         papers.append(p)
 
     counts = citations([p["arxiv"] for p in papers])
     for p in papers:
         p["citations"] = counts.get(p["arxiv"], 0)
         del p["categories"]
+    write_output(papers, args, failed)
+
+
+def write_output(papers, args, failed):
     papers.sort(key=lambda p: p["date"], reverse=True)
 
     previous = set()
@@ -280,6 +365,9 @@ def main():
     for t in themes:
         print(f"  {t['label']}: {sum(p['theme'] == t['key'] for p in papers)}")
 
+    if failed:
+        print(f"Search failed for: {', '.join(failed)}")
+
     if args.summary:
         lines = [f"Paper map refresh: {len(papers)} group papers, {len(added)} added, {len(removed)} removed.", ""]
         if added:
@@ -289,6 +377,8 @@ def main():
                       f"group authors: {', '.join(m['name'] for m in p['group'])}" for p in added]
         if removed:
             lines += ["", "## Removed", ""] + [f"- arXiv:{a}" for a in sorted(removed)]
+        if failed:
+            lines += ["", "## Search failed, rerun to pick these up", ""] + [f"- {n}" for n in failed]
         Path(args.summary).write_text("\n".join(lines) + "\n")
 
 
