@@ -39,20 +39,11 @@ Before committing:
 script/build                # bundle exec jekyll build → _site/
 ```
 
-If you've touched anything that could expose `skills/`, also run the leak checks. The repo intentionally has both a public `skills.md` page (which publishes to `/skills/`) and a private `skills/` source directory (excluded from build). The combination is subtle — these checks make the distinction explicit:
+If you've touched anything that could expose `skills/`, also run the leak check. The private `skills/` source directory is excluded from the build, and there is no public `/skills/` page, so nothing at all should appear under `_site/skills/`:
 
 ```bash
-# Public marketplace page must exist.
-test -f _site/skills/index.html
-# Raw skill files must NOT leak.
-test ! -e _site/skills/website
-test ! -e _site/skills/recipe
-test ! -e _site/skills/README.md
-# Anything else under _site/skills/ besides index.html and built assets is a leak.
-find _site/skills -mindepth 1 ! -name index.html ! -name '*.css' ! -name '*.js' -print
+test ! -e _site/skills
 ```
-
-The final `find` should print nothing.
 
 ```bash
 script/cibuild              # builds, asserts _site/index.html exists, then deletes _site

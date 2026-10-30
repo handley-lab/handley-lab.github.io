@@ -330,7 +330,7 @@ a:hover {
   color: var(--header-ink);
 }
 
-/* Top-right tools: the authorship policy link and the theme toggle */
+/* Top-right tools: the theme toggle */
 .header-tools {
   display: flex;
   align-items: center;
@@ -338,57 +338,75 @@ a:hover {
   flex-shrink: 0;
 }
 
+/* Right of the bar: the authorship policy line above the menu and toggle */
+.header-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 0.45rem;
+}
+
+.header-main {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
 .policy-link {
   display: inline-flex;
   align-items: center;
-  gap: 0.35rem;
-  padding: 0.38rem 0.75rem;
-  border: 1px solid var(--nav-hover-line);
-  border-radius: 999px;
+  gap: 0.4rem;
   color: var(--nav-ink);
   font-family: var(--font);
   font-size: 0.72rem;
-  letter-spacing: 0.03em;
+  letter-spacing: 0.01em;
   text-decoration: none;
-  white-space: nowrap;
 
   svg {
-    width: 0.95rem;
-    height: 0.95rem;
+    width: 0.9rem;
+    height: 0.9rem;
+    flex-shrink: 0;
   }
 
-  &:hover,
-  &:visited:hover {
-    background: var(--nav-hover-bg);
-    color: var(--nav-hover-ink);
-    text-decoration: none;
+  .policy-arrow {
+    transition: transform 0.15s ease;
   }
 
   &:visited {
     color: var(--nav-ink);
   }
 
+  &:hover,
+  &:visited:hover,
   &.is-active {
-    background: var(--nav-active-bg);
-    border-color: var(--nav-active-line);
+    color: var(--header-ink);
+    text-decoration: none;
+  }
+
+  &:hover .policy-arrow {
+    transform: translateX(2px);
   }
 }
 
-/* Small phones: just the document icon, so the site title keeps its room */
-@media (max-width: 560px) {
-  .policy-link {
-    padding: 0;
-    width: 2rem;
-    height: 2rem;
-    justify-content: center;
+/* Only breaks on wide screens, where the line sits in the margin as two lines */
+.policy-break {
+  display: none;
+}
 
-    span {
-      position: absolute;
-      width: 1px;
-      height: 1px;
-      overflow: hidden;
-      clip: rect(0 0 0 0);
-    }
+/* Wide screens: the policy line moves into the empty margin right of the toggle,
+   so the bar keeps its single-row height */
+@media (min-width: 1600px) {
+  .policy-link {
+    position: absolute;
+    top: 50%;
+    right: 1.2rem;
+    transform: translateY(-50%);
+    line-height: 1.25;
+    white-space: nowrap;
+  }
+
+  .policy-break {
+    display: inline;
   }
 }
 
@@ -763,6 +781,17 @@ a:hover {
   }
 
   .site-nav {
+    width: 100%;
+  }
+
+  /* Menu first, then the policy line; the toggle stays pinned top right */
+  .header-right {
+    width: 100%;
+    flex-direction: column-reverse;
+    align-items: flex-start;
+  }
+
+  .header-main {
     width: 100%;
   }
 

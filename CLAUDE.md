@@ -89,7 +89,6 @@ Person Name:
 
 - `science.yml` — Research themes displayed on science page and landing panels
 - `recipes.yml` — AI Cookbook recipes. When a card's `id` matches a file in `_recipes/<id>.md`, the include adds a "Read full recipe" link to /cookbook/<id>/.
-- `skills.yml` — Skills marketplace entries
 
 ### AI Cookbook and Papers
 

@@ -50,11 +50,8 @@ end
 site = File.join(ROOT, "_site")
 if Dir.exist?(site)
   errors << "_site/index.html missing: the site did not build" unless File.exist?(File.join(site, "index.html"))
-  errors << "_site/skills/index.html missing: the public /skills/ page did not build" unless File.exist?(File.join(site, "skills/index.html"))
   # The in-repo skills/ directory is for agents and must never be published
-  leaked = Dir[File.join(site, "skills/**/*")].reject do |f|
-    File.directory?(f) || File.basename(f) == "index.html" || f.end_with?(".css", ".js")
-  end
+  leaked = Dir[File.join(site, "skills/**/*")].reject { |f| File.directory?(f) }
   leaked.each { |f| errors << "#{f.delete_prefix("#{ROOT}/")}: raw skills/ file leaked into the built site" }
 else
   puts "Note: no _site/ yet, so the built-site checks were skipped (run script/build first)."
