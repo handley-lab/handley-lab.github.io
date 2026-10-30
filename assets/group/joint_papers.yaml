@@ -1,0 +1,324 @@
+# Snapshot of each member's group papers, from ../general/data/papers.yaml filtered
+# by the group-paper rule in group.py. group.py uses this only when that file is
+# not available, so regenerating elsewhere keeps the lists. Refresh it whenever
+# group.html is regenerated with the real file present.
+Will Handley:
+  author_page: https://arxiv.org/a/handley_w_1.html
+  count: 143
+Natalie Hogg:
+- arxiv: '2608.31161'
+  title: Agentic research is oxymoronic
+- arxiv: '2606.01547'
+  title: 'JAXtronomy: A JAX port of lenstronomy'
+- arxiv: '2603.03441'
+  title: Cosmology with the line-of-sight shear of strong gravitational lenses
+- arxiv: '2601.17239'
+  title: An ultra-high-resolution map of (dark) matter
+- arxiv: '2512.16416'
+  title: Transformational astrophysics and exoplanet science with Habitable Worlds Observatory's High Resolution Imager
+- arxiv: '2512.05050'
+  title: 'Line-of-sight shear in SLACS strong lenses II: validation tests with an extended sample'
+Matt Grayling:
+- arxiv: '2607.28725'
+  title: A Simulation Based Inference Approach to Modelling of Type Ia Supernova Populations
+- arxiv: '2606.19429'
+  title: 'BayeSN $\times$ Dovekie: Joint Photometric Cross-calibration and SED Modelling of Type Ia Supernovae'
+- arxiv: '2605.06799'
+  title: 'On the origin of the environmental step: A BayeSN view of the ZTF SN Ia DR2'
+- arxiv: '2603.11165'
+  title: 'FlowSN: Neural Simulation-Based Inference under Realistic Selection Effects applied to Supernova Cosmology'
+- arxiv: '2602.02677'
+  title: 'Lightcurve Modelling of 2,205 ZTF DR2 Type~Ia Supernovae: Implications for SN Ia Physics and Cosmology'
+- arxiv: '2601.14235'
+  title: Opportunities in AI/ML for the Rubin LSST Dark Energy Science Collaboration
+- arxiv: '2512.06319'
+  title: 'A Fully Photometric Approach to Type Ia Supernova Cosmology in the LSST Era: Host Galaxy Redshifts and Supernova Classification'
+- arxiv: '2511.07517'
+  title: 'The Dark Energy Survey Supernova Program: A Reanalysis Of Cosmology Results And Evidence For Evolving Dark Energy With An Updated Type Ia Supernova Calibration'
+- arxiv: '2510.11719'
+  title: 'BayeSN-TD: Time Delay and $H_0$ Estimation for Lensed SN H0pe'
+- arxiv: '2510.07637'
+  title: Testing Lens Models of PLCK G165.7+67.0 Using Lensed SN H0pe
+Chris Lovell:
+- arxiv: '2609.24589'
+  title: 'LATED: JWST integral field spectroscopy of a galaxy caught in chemical infancy at $z=4.8$ behind Abell 2744'
+- arxiv: '2609.24588'
+  title: 'LATED: Ly$α$-anchored photometric selection of candidate metal-free and extremely metal-poor star formation from the end of reionisation to cosmic noon'
+- arxiv: '2609.10709'
+  title: 'BIND (Baryonic INpainting with Deep learning): A Field-level Emulator for Galaxy Groups and Clusters'
+- arxiv: '2607.27467'
+  title: Stellar photoionisation modelling in SYNTHESIZER
+- arxiv: '2606.30750'
+  title: A Pixel-by-Pixel Path to Population III Discovery with JWST
+- arxiv: '2606.10038'
+  title: 'Learning the Universe with the 2nd Generation of CAMELS: Varying 35 parameters of the IllustrisTNG model in (50Mpc/h)^3 boxes'
+- arxiv: '2606.10027'
+  title: 'Learning the Universe: The Structure of Dust Attenuation Curves in Galaxy Simulations'
+- arxiv: '2605.27370'
+  title: 'First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust spatial offsets at the Epoch of Reionisation'
+- arxiv: '2605.00092'
+  title: 'The LISA Astrophysics MBHcatalogues Project: A comparison of predictions of simulated massive black hole binaries'
+- arxiv: '2604.17981'
+  title: Efficiently emulating distribution functions in gigaparsec volumes for varying cosmological parameters
+- arxiv: '2604.06318'
+  title: 'Introducing sapphire: Towards Hybrid Physics-Informed, Data-Driven Modeling of Galaxy Formation'
+- arxiv: '2601.06290'
+  title: 'CAMELS Environments: The Impact of Local Neighbours on Galaxy Evolution across the SIMBA, IllustrisTNG, ASTRID, and Swift-EAGLE Simulations'
+- arxiv: '2601.06258'
+  title: Cosmological back-reaction of baryons on dark matter in the CAMELS simulations
+- arxiv: '2512.03038'
+  title: 'A new constraint on the $y$-distortion with FIRAS: implications for feedback models in galaxy formation and cosmic shear measurements'
+- arxiv: '2512.01489'
+  title: 'Euclid: The first statistical census of dusty and massive objects in the ERO/Perseus field'
+- arxiv: '2511.11982'
+  title: 'First Light And Reionisation Epoch Simulations (FLARES) XX: Comparing semi-analytic models at high-redshift'
+- arxiv: '2511.11943'
+  title: 'Euclid Quick Data Release (Q1): Identification of massive galaxy candidates at the end of the Epoch of Reionisation'
+- arxiv: '2511.10640'
+  title: Flexible Simulation Based Inference for Galaxy Photometric Fitting with Synthesizer
+- arxiv: '2511.09618'
+  title: 'Think inside the box: cosmic variance and large-scale conformity of high-redshift massive galaxies in the FLAMINGO simulations'
+- arxiv: '2511.08438'
+  title: 'Galactification: painting galaxies onto dark matter only simulations using a transformer-based model'
+- arxiv: '2510.14766'
+  title: Predicting the Subhalo Mass Functions in Simulations from Galaxy Images
+- arxiv: '2509.16111'
+  title: The nature of high-redshift massive quiescent galaxies ─ searching for RUBIES-UDS-QG-z7 in FLARES
+- arxiv: '2509.10117'
+  title: Impact of stochastic star-formation histories and dust on selecting quiescent galaxies with JWST photometry
+- arxiv: '2509.10079'
+  title: ALMA reveals diverse dust-to-gas mass ratios and quenching modes in old quiescent galaxies
+- arxiv: '2508.21152'
+  title: How does feedback affect the star formation histories of galaxies?
+- arxiv: '2508.03888'
+  title: 'Synthesizer: a Software Package for Synthetic Astronomical Observables'
+Charlotte Priestley:
+- arxiv: '2603.27830'
+  title: 'jaxsgp4: GPU-accelerated mega-constellation propagation with batch parallelism'
+Toby Lovick:
+- arxiv: '2603.26644'
+  title: 'Automatic Laplace Collapsed Sampling: Scalable Marginalisation of Latent Parameters via Automatic Differentiation'
+- arxiv: '2509.13307'
+  title: High-Dimensional Bayesian Model Comparison in Cosmology with GPU-accelerated Nested Sampling and Neural Emulators
+- arxiv: '2312.02075'
+  title: 'Non-Gaussian Likelihoods for Type Ia Supernovae Cosmology: Implications for Dark Energy and $H_0$'
+Namu Kroupa:
+- arxiv: '2602.22307'
+  title: The global structure of the time delay likelihood
+- arxiv: '2602.11264'
+  title: Time delays and stationarity in quasar light curves
+- arxiv: '2601.23252'
+  title: 'Nested Slice Sampling: Vectorized Nested Sampling for GPU-Accelerated Inference'
+- arxiv: '2504.12374'
+  title: Resonances in reflective Hamiltonian Monte Carlo
+- arxiv: '2311.04153'
+  title: Kernel-, mean- and noise-marginalised Gaussian processes for exoplanet transits and $H_0$ inference
+Dily Ong:
+- arxiv: '2603.05472'
+  title: 'The Bayesian view of DESI DR2: Evidence and tension in a combined analysis with CMB and supernovae across cosmological models'
+- arxiv: '2511.10631'
+  title: A Bayesian Perspective on Evidence for Evolving Dark Energy
+- arxiv: '2511.05470'
+  title: '$\texttt{unimpeded}$: A Public Nested Sampling Database for Bayesian Cosmology'
+- arxiv: '2511.04661'
+  title: '$\texttt{unimpeded}$: A Public Grid of Nested Sampling Chains for Cosmological Model Comparison and Tension Analysis'
+Sam Leeney:
+- arxiv: '2606.16524'
+  title: 'Neural Bayesian Anomaly Mitigation: A Robust Loss that Doubles as an Unsupervised Contamination Classifier'
+- arxiv: '2604.00105'
+  title: 'Optimisation of calibration sources for global 21-cm experiments: the REACH case'
+- arxiv: '2603.26489'
+  title: Conditional Neural Bayes Ratio Estimation for Experimental Design Optimisation
+- arxiv: '2603.15072'
+  title: Circuit Modeling for In Situ 21 cm Radiometer Calibration
+- arxiv: '2603.13196'
+  title: Optimising Foreground Modelling for Global 21cm Cosmology with GPU-Accelerated Nested Sampling
+- arxiv: '2509.13394'
+  title: 'Bayesian Anomaly Detection for Ia Cosmology: Automating SALT3 Data Curation'
+- arxiv: '2503.11740'
+  title: 'Square Kilometre Array Science Data Challenge 3a: foreground removal for an EoR experiment'
+- arxiv: '2412.14023'
+  title: Accounting for Noise and Singularities in Bayesian Calibration Methods for Global 21-cm Cosmology Experiments
+- arxiv: '2211.15448'
+  title: Bayesian approach to radio frequency interference mitigation
+Sinah Legner:
+- arxiv: '2507.09228'
+  title: Alleviating the Hubble tension with Torsion Condensation (TorC)
+Metha Prathaban:
+- arxiv: '2607.28265'
+  title: Ab Initio Real-Time Gravitational-Wave Parameter Estimation
+- arxiv: '2606.30504'
+  title: 'Rapid Hubble constant inference from GW170817 using GPU-accelerated nested sampling: prior sensitivity and the limits of post-hoc reweighting'
+- arxiv: '2509.24949'
+  title: Parallel Nested Slice Sampling for Gravitational Wave Parameter Estimation
+- arxiv: '2509.04336'
+  title: 'Gravitational-wave inference at GPU speed: A bilby-like nested sampling kernel within blackjax-ns'
+- arxiv: '2411.17663'
+  title: Accelerated nested sampling with $β$-flows for gravitational waves
+- arxiv: '2404.16428'
+  title: Costless correction of chain based nested sampling parameter estimation in gravitational wave data and beyond
+- arxiv: '2111.14588'
+  title: Rescuing Palindromic Universes with Improved Recombination Modelling
+Wei-Ning Deng:
+- arxiv: '2509.10379'
+  title: CMB Constraints on Quantized Spatial Curvature $Ω_K$ in globally CPT-symmetric universes
+- arxiv: '2407.18225'
+  title: Predicting spatial curvature $Ω_K$ in globally $CPT$-symmetric universes
+Jiamin Hou:
+- arxiv: '2508.09070'
+  title: Study of the Connected Four-Point Correlation Function of Galaxies from DESI Data Release 1 Luminous Red Galaxy Sample
+Thomas Gessey-Jones:
+- arxiv: '2508.13761'
+  title: Narrowing the discovery space of the cosmological 21-cm signal using multi-wavelength constraints
+- arxiv: '2503.13263'
+  title: On the accuracy of posterior recovery with neural network emulators
+- arxiv: '2503.11740'
+  title: 'Square Kilometre Array Science Data Challenge 3a: foreground removal for an EoR experiment'
+- arxiv: '2502.18098'
+  title: The mass distribution of the first stars can be determined via the 21-cm signal
+- arxiv: '2407.15478'
+  title: Calibrating Bayesian Tension Statistics using Neural Ratio Estimation
+- arxiv: '2312.08828'
+  title: On the Constraints on Superconducting Cosmic Strings from 21-cm Cosmology
+- arxiv: '2309.06942'
+  title: Fully Bayesian Forecasts with Evidence Networks
+- arxiv: '2305.02930'
+  title: Piecewise Normalizing Flows
+- arxiv: '2304.07201'
+  title: Signatures of Cosmic Ray Heating in 21-cm Observables
+- arxiv: '2202.02099'
+  title: Impact of the Primordial Stellar Initial Mass Function on the 21-cm Signal
+- arxiv: '2104.03016'
+  title: Constraining Quantum Initial Conditions before Inflation
+David Yallup:
+- arxiv: '2609.29413'
+  title: Neural Transport Nested Sampling
+- arxiv: '2609.15894'
+  title: Quenched Ensemble Sampling
+- arxiv: '2607.28265'
+  title: Ab Initio Real-Time Gravitational-Wave Parameter Estimation
+- arxiv: '2606.30504'
+  title: 'Rapid Hubble constant inference from GW170817 using GPU-accelerated nested sampling: prior sensitivity and the limits of post-hoc reweighting'
+- arxiv: '2603.26644'
+  title: 'Automatic Laplace Collapsed Sampling: Scalable Marginalisation of Latent Parameters via Automatic Differentiation'
+- arxiv: '2603.05472'
+  title: 'The Bayesian view of DESI DR2: Evidence and tension in a combined analysis with CMB and supernovae across cosmological models'
+- arxiv: '2602.17414'
+  title: 'Nested Sampling with Slice-within-Gibbs: Efficient Evidence Calculation for Hierarchical Bayesian Models'
+- arxiv: '2602.11264'
+  title: Time delays and stationarity in quasar light curves
+- arxiv: '2601.23252'
+  title: 'Nested Slice Sampling: Vectorized Nested Sampling for GPU-Accelerated Inference'
+- arxiv: '2511.15196'
+  title: Particle Monte Carlo methods for Lattice Field Theory
+- arxiv: '2511.10631'
+  title: A Bayesian Perspective on Evidence for Evolving Dark Energy
+- arxiv: '2509.24949'
+  title: Parallel Nested Slice Sampling for Gravitational Wave Parameter Estimation
+- arxiv: '2509.13307'
+  title: High-Dimensional Bayesian Model Comparison in Cosmology with GPU-accelerated Nested Sampling and Neural Emulators
+- arxiv: '2509.04336'
+  title: 'Gravitational-wave inference at GPU speed: A bilby-like nested sampling kernel within blackjax-ns'
+- arxiv: '2311.04153'
+  title: Kernel-, mean- and noise-marginalised Gaussian processes for exoplanet transits and $H_0$ inference
+- arxiv: '2211.10391'
+  title: Hunting for bumps in the margins
+- arxiv: '2205.15570'
+  title: Nested sampling for physical scientists
+- arxiv: '2205.11151'
+  title: 'Split personalities in Bayesian Neural Networks: the case for full marginalisation'
+- arxiv: '2205.02030'
+  title: Exploring phase space with Nested Sampling
+Kamran Javid:
+- arxiv: '2004.12211'
+  title: Compromise-free Bayesian neural networks
+Adam Ormondroyd:
+- arxiv: '2509.13220'
+  title: Dynamic or Systematic? Bayesian model selection between dark energy and supernova biases
+- arxiv: '2507.09228'
+  title: Alleviating the Hubble tension with Torsion Condensation (TorC)
+- arxiv: '2503.17342'
+  title: Comparison of dynamical dark energy with ΛCDM in light of DESI DR2
+- arxiv: '2503.08658'
+  title: Nonparametric reconstructions of dynamical dark energy via flexknots
+- arxiv: '2310.08490'
+  title: 'Balancing ACT: weighing prior dependency and global tensions of DR6 lensing with other datasets'
+Kilian Scheutwinkel:
+- arxiv: '2204.04491'
+  title: Bayesian evidence-driven likelihood selection for sky-averaged 21-cm signal extraction
+- arxiv: '2204.04445'
+  title: Bayesian evidence-driven diagnosis of instrumental systematics for sky-averaged 21-cm cosmology experiments
+Ian Roque:
+- arxiv: '2412.14023'
+  title: Accounting for Noise and Singularities in Bayesian Calibration Methods for Global 21-cm Cosmology Experiments
+- arxiv: '2011.14052'
+  title: Bayesian noise wave calibration for 21-cm global experiments
+Dominic Anstey:
+- arxiv: '2211.10448'
+  title: A General Bayesian Framework to Account for Foreground Map Errors in Global 21-cm Experiments
+- arxiv: '2210.04707'
+  title: Use of Time Dependent Data in Bayesian Global 21cm Foreground and Signal Modelling
+- arxiv: '2106.10193'
+  title: Informing antenna design for sky-averaged 21-cm experiments using a simulated Bayesian data analysis pipeline
+- arxiv: '2011.10517'
+  title: Quantifying Ionospheric Effects on Global 21-cm Observations
+- arxiv: '2010.09644'
+  title: A General Bayesian Framework for Foreground Modelling and Chromaticity Correction for Global 21cm Experiments
+Fruzsina Agocs:
+- arxiv: '2205.07374'
+  title: Finite inflation in curved space
+- arxiv: '2007.05013'
+  title: Dense output for highly oscillatory numerical solutions
+- arxiv: '2002.07042'
+  title: Quantum initial conditions for inflation and canonical invariance
+- arxiv: '1906.01421'
+  title: An efficient method for solving highly oscillatory ordinary differential equations with applications to physical systems
+Lukas Hergt:
+- arxiv: '2102.11511'
+  title: 'Bayesian evidence for the tensor-to-scalar ratio $r$ and neutrino masses $m_ν$: Effects of uniform vs logarithmic priors'
+- arxiv: '2002.07042'
+  title: Quantum initial conditions for inflation and canonical invariance
+- arxiv: '1809.07737'
+  title: Constraining the kinetically dominated Universe
+- arxiv: '1809.07185'
+  title: A case for kinetically dominated initial conditions for inflation
+Ed Higson:
+- arxiv: '1809.04598'
+  title: 'Bayesian sparse reconstruction: a brute-force approach to astronomical imaging and machine learning'
+- arxiv: '1804.06406'
+  title: 'nestcheck: diagnostic tests for nested sampling calculations'
+- arxiv: '1803.10210'
+  title: Towards a framework for testing general relativity with extreme-mass-ratio-inspiral observations
+- arxiv: '1704.03459'
+  title: 'Dynamic nested sampling: an improved algorithm for parameter estimation and evidence calculation'
+- arxiv: '1703.09701'
+  title: Sampling Errors in Nested Sampling Parameter Estimation
+Danielle Dineen:
+- arxiv: '2309.15984'
+  title: Analytic Approximations for the Primordial Power Spectrum with Israel Junction Conditions
+Emma Shen:
+- arxiv: '2011.10517'
+  title: Quantifying Ionospheric Effects on Global 21-cm Observations
+Ming Yang:
+- arxiv: '2606.30504'
+  title: 'Rapid Hubble constant inference from GW170817 using GPU-accelerated nested sampling: prior sensitivity and the limits of post-hoc reweighting'
+- arxiv: '2509.04336'
+  title: 'Gravitational-wave inference at GPU speed: A bilby-like nested sampling kernel within blackjax-ns'
+Will Templeton:
+- arxiv: '2509.04336'
+  title: 'Gravitational-wave inference at GPU speed: A bilby-like nested sampling kernel within blackjax-ns'
+Zixiao Hu:
+- arxiv: '2312.00294'
+  title: 'aeons: approximating the end of nested sampling'
+Jamie Bamber:
+- arxiv: '1907.11638'
+  title: Beyond the Runge-Kutta-Wentzel-Kramers-Brillouin method
+Ward Haddadin:
+- arxiv: '1809.11095'
+  title: Rapid numerical solutions for the Mukhanov-Sasaki equation
+Mary Letey:
+- arxiv: '2211.17248'
+  title: Quantum initial conditions for curved inflating universes
+Zak Shumaylov:
+- arxiv: '2112.07547'
+  title: Primordial power spectra from $k$-inflation with curvature

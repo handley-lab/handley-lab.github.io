@@ -1,4 +1,5 @@
 import datetime
+import html
 import yaml
 import os
 import re
@@ -64,6 +65,34 @@ class Summer(Level):
 levels = {p.key:p for p in [PI, CoI, PostDoc, PhD, MPhil, PartIII, Summer]}
 
 
+def author_key(name):
+    """(surname, first initial), accent- and case-insensitive; handles "Surname, First"."""
+    import unicodedata
+    if ',' in name:
+        surname, first = name.split(',', 1)
+        name = f'{first} {surname}'
+    name = unicodedata.normalize('NFKD', name).encode('ascii', 'ignore').decode()
+    parts = re.sub(r'[^a-z ]', '', name.lower().replace('-', '')).split()
+    return (parts[-1], parts[0][0]) if len(parts) > 1 else None
+
+
+def paper_authors(paper):
+    import ast
+    authors = paper.get('authors') or []
+    if isinstance(authors, str):
+        try:
+            authors = ast.literal_eval(authors)
+        except (ValueError, SyntaxError):
+            authors = [authors]
+    return authors
+
+
+def arxiv_date(arxiv_id):
+    """First of the month an arXiv paper was submitted, from its new-style ID."""
+    m = re.match(r'(\d\d)(\d\d)\.\d+', str(arxiv_id))
+    return datetime.date(2000 + int(m.group(1)), int(m.group(2)), 1) if m else None
+
+
 class Student(object):
     def __init__(self, name, **kwargs):
         self.levels = [levels[level](**kwargs.pop(level)) for level in levels if level in kwargs]
@@ -110,6 +139,16 @@ class Student(object):
         else:
             return min(self.levels).start > min(other.levels).start
 
+    def in_group_on(self, day):
+        """True if day falls in any of this person's roles, plus a year after it ended."""
+        grace = datetime.timedelta(days=365)
+        return any(l.start <= day and (l.end is None or day <= l.end + grace) for l in self.levels)
+
+    def postdoc_on(self, day):
+        """True if day falls within one of this person's postdoc roles."""
+        return any(isinstance(l, PostDoc) and l.start <= day and (l.end is None or day <= l.end)
+                   for l in self.levels)
+
     def joint_papers(self):
         import yaml
         import re
@@ -120,35 +159,41 @@ class Student(object):
             with open(papers_file) as f:
                 papers = yaml.safe_load(f)
         except FileNotFoundError:
-            return None
+            return self.cached_joint_papers()
 
-        # Extract surname and first initial for matching
         name_parts = self.name.split(' ')
         surname = name_parts[-1].lower()
         first_initial = name_parts[0][0].lower()
 
-        # Find papers where this person is an author
+        # Group-paper rule (as for the map on /papers/, script/papers.py): the
+        # paper must be from this person's time in the group (plus a year's
+        # grace) and involve Will or another group member, except that a
+        # postdoc's own papers while a postdoc always count. The PI's entry is
+        # a link to their whole arXiv record, so it counts everything. Authors
+        # match on surname and first initial, not surname alone.
+        is_pi = any(isinstance(level, PI) for level in self.levels)
+        me = author_key(self.name)
+        others = {author_key(n) for n in data} - {me}
         person_papers = []
         for paper in papers:
-            authors = paper.get('authors', [])
-            # Join list of authors into a single string
-            if isinstance(authors, list):
-                authors_str = ' '.join(authors).lower()
-            else:
-                authors_str = str(authors).lower()
-
-            # Use word boundary matching to avoid false positives
-            # Match surname as a complete word (not substring)
-            if re.search(r'\b' + re.escape(surname) + r'\b', authors_str):
-                arxiv_id = paper.get('arxiv', '')
-                title = paper.get('title', 'Untitled')
-                if arxiv_id:
-                    person_papers.append({'arxiv': arxiv_id, 'title': title})
+            arxiv_id = paper.get('arxiv', '')
+            keys = [author_key(a) for a in paper_authors(paper)]
+            date = arxiv_date(arxiv_id)
+            if not arxiv_id or me not in keys:
+                continue
+            if is_pi:
+                person_papers.append({'arxiv': arxiv_id, 'title': paper.get('title', 'Untitled')})
+                continue
+            if date is None or not self.in_group_on(date):
+                continue
+            # A postdoc's own papers while here count as group output; anyone
+            # else's need a second group author.
+            if not self.postdoc_on(date) and not others.intersection(keys):
+                continue
+            person_papers.append({'arxiv': arxiv_id, 'title': paper.get('title', 'Untitled')})
 
         if len(person_papers) > 0:
-            # Check if this is the PI - if so, just link to author page
-            is_pi = any(isinstance(level, PI) for level in self.levels)
-
+            # The PI gets a link to their arXiv author page instead of a list
             if is_pi:
                 # For PI, link to arXiv author page
                 author_url = f'https://arxiv.org/a/{surname}_{first_initial}_1.html'
@@ -158,11 +203,28 @@ class Student(object):
                 html_list = '<ul>'
                 for paper in reversed(person_papers):
                     arxiv_url = f"https://arxiv.org/abs/{paper['arxiv']}"
-                    html_list += f'<li><a href="{arxiv_url}">{paper["title"]}</a></li>'
+                    html_list += f'<li><a href="{arxiv_url}">{html.escape(paper["title"])}</a></li>'
                 html_list += '</ul>'
                 return html_list
 
         return None
+
+    def cached_joint_papers(self):
+        """Fallback when ../general/data/papers.yaml is absent: the snapshot in
+        assets/group/joint_papers.yaml, rendered the same way."""
+        try:
+            with open('assets/group/joint_papers.yaml') as f:
+                entry = (yaml.safe_load(f) or {}).get(self.name)
+        except FileNotFoundError:
+            return None
+        if not entry:
+            return None
+        if isinstance(entry, dict):
+            return f'<a href="{entry["author_page"]}">arXiv papers ({entry["count"]})</a>'
+        html_list = '<ul>'
+        for paper in entry:
+            html_list += f'<li><a href="https://arxiv.org/abs/{paper["arxiv"]}">{html.escape(paper["title"])}</a></li>'
+        return html_list + '</ul>'
 
 #yaml_file = os.path.join(os.path.dirname(os.path.abspath(__file__)), 'group.yaml')
 yaml_file = 'assets/group/group.yaml'

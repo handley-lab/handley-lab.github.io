@@ -1,0 +1,18 @@
+{%- comment -%}
+  S-curves from the Bayesian-methods hub out to one column of research-area
+  cards, each in its area's colour, with dots flowing outward along them.
+  Card ends sit at the card centres; hub ends are spread around the hub's middle. include.side is "left" or "right".
+{%- endcomment -%}
+{%- if include.side == "left" %}{% assign cx = 0 %}{% assign hx = 100 %}{% else %}{% assign cx = 100 %}{% assign hx = 0 %}{% endif -%}
+{%- assign n = include.fields | size -%}
+{%- assign spread = n | minus: 1 | times: 10 -%}
+<svg class="research-star-lines" viewBox="0 0 100 100" preserveAspectRatio="none" aria-hidden="true">
+  {%- for f in include.fields %}
+  {%- assign cy = forloop.index0 | times: 100.0 | plus: 50.0 | divided_by: n %}
+  {%- assign hy = forloop.index0 | times: 20 | plus: 50 | minus: spread %}
+  {%- capture d %}M{{ hx }} {{ hy }} C50 {{ hy }} 50 {{ cy }} {{ cx }} {{ cy }}{% endcapture %}
+  {%- capture stroke %}--area:{{ f.colour }}; --area-accent:{{ f.accent }}; --area-bubble:{{ f.bubble }}{% endcapture %}
+  <path class="research-link" d="{{ d }}" style="{{ stroke }}" vector-effect="non-scaling-stroke"/>
+  <path class="research-flow" d="{{ d }}" style="{{ stroke }}" vector-effect="non-scaling-stroke"/>
+  {%- endfor %}
+</svg>

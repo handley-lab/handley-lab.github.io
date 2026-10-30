@@ -4,5 +4,6 @@ title: The Group
 permalink: /group/
 ---
 
-![Timeline of students and postdocs](/assets/group/group.png)
-
+<figure class="group-timeline">
+  <img src="/assets/group/group.png" alt="Timeline of students and postdocs in the group since 2013">
+</figure>

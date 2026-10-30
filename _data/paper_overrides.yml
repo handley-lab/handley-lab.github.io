@@ -1,0 +1,13 @@
+# Manual corrections for the paper map on /papers/ (see script/papers.py).
+# The script finds group papers automatically; use this file when it gets one wrong.
+
+# arXiv IDs to show even though the automatic rules skip them
+# (e.g. Will's pre-group papers that the group still builds on).
+include: []
+
+# arXiv IDs to hide: false name matches, or papers the group doesn't count as its own.
+exclude: []
+
+# Fix a paper's theme. Keys: methods, cosmo, 21cm, astro, other.
+theme:
+  "2507.09228": cosmo  # Alleviating the Hubble tension with Torsion Condensation (TorC)
