@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Handley Research Group website — a Jekyll (4.4, minima theme) GitHub Pages site for the University of Cambridge research group. Content (blog posts, homepage, images) is generated using Google Gemini API. Group member data is managed as structured YAML.
 
-**Domain:** handley-lab.co.uk | **Deploy:** push to `main` runs `.github/workflows/pages.yml`, which builds with `Gemfile.lock`, runs `script/check` and publishes to GitHub Pages.
+**Domain:** handley-lab.co.uk | **Deploy:** push to `main` triggers GitHub Pages rebuild.
 
 ## Essential Commands
 
@@ -33,7 +33,7 @@ python script/papers.py                     # Find group papers on arXiv → ass
 python script/people.py                     # Group faces for the map → assets/papers/people.json (offline)
 ```
 
-Runs weekly via `.github/workflows/papers.yml`, which opens a PR for review. Corrections go in `_data/paper_overrides.yml`. See `skills/website/SKILL.md` § Paper map.
+Not scheduled: run it by hand (`--days 10` adds new papers from the last 10 days and refreshes citations) and open a PR for review. Corrections go in `_data/paper_overrides.yml`. See `skills/website/SKILL.md` § Paper map.
 
 ## Architecture
 

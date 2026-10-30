@@ -13,7 +13,7 @@ broad theme. No API keys needed.
     python script/papers.py                    # full live run (~5 min, arXiv is slow)
     python script/papers.py --summary out.md   # also write a change summary for a PR
     python script/papers.py --feed feed.atom   # reuse a downloaded copy of Will's feed
-    python script/papers.py --days 10          # weekly job: add new group papers from the last
+    python script/papers.py --days 10          # add new group papers from the last
                                                # 10 days to the existing list; removes nothing
 """
 import argparse
