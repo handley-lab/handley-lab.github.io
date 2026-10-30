@@ -6,7 +6,7 @@ This file provides guidance to Claude Code (claude.ai/code) when working with co
 
 Handley Research Group website — a Jekyll (4.4, minima theme) GitHub Pages site for the University of Cambridge research group. Content (blog posts, homepage, images) is generated using Google Gemini API. Group member data is managed as structured YAML.
 
-**Domain:** handley-lab.co.uk | **Deploy:** push to `main` triggers GitHub Pages rebuild.
+**Domain:** handley-lab.co.uk | **Deploy:** push to `main` runs `.github/workflows/pages.yml`, which builds with `Gemfile.lock`, runs `script/check` and publishes to GitHub Pages.
 
 ## Essential Commands
 
