@@ -10,6 +10,7 @@ These skills live inside the website source so anyone who clones the repo can po
 |---|---|
 | [`website`](website/SKILL.md) | Build and serve the Jekyll site, edit `_data/*.yml`, add a long-form companion page to the `_recipes/` collection, commit on a feature branch and open a PR. |
 | [`recipe`](recipe/SKILL.md) | Two paths: (a) interview-driven short recipe card; (b) forensic long-form recipe — discover a past Claude Code session (no UUID required), analyse its JSONL with a 5-minute-cap pair-timing methodology (see [`methodology.md`](recipe/methodology.md)), and emit a draft matching the [jaxwavelets exemplar](../_recipes/jaxwavelets.md) into a [`template`](recipe/template.md). Hands off to the `website` skill to preview. |
+| [`paper`](paper/SKILL.md) | Draft a paper-summary post for `/papers/` from an arXiv ID. Pulls metadata, scaffolds a short post that links prominently to the published paper, leaves space for the lab-author to add the AI-assisted context, and opens a PR for human review. Replaces the auto-publish `script/posts/arxiv.py` workflow. Baseline; iterate on it as it gets used. |
 
 ## Conventions
 
