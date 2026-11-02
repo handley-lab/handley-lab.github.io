@@ -2,12 +2,16 @@
 layout: base
 ---
 <article class="post">
-  <header class="post-header">
+  <header class="post-header group-header">
     <h1 class="post-title">{{ page.title | escape }}</h1>
+    <a class="button button-primary" href="#individuals">Meet the individuals <span aria-hidden="true">↓</span></a>
   </header>
   <div class="post-content">
     {{ content }}
+    <div id="individuals" class="group-individuals">
+    {% include_relative /assets/group/group.html %}
+    </div>
   </div>
 </article>
 
-{% include_relative /assets/group/group.html %}
+{% include group_cards.html %}

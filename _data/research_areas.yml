@@ -1,0 +1,65 @@
+# Homepage "What we work on" star diagram. The five entries are exactly the
+# paper-map themes in assets/papers/papers.json (same `key` and colour; the centre label is shortened),
+# so each links to /papers/#theme=<key>.
+# Methods is the box in the middle; the first two science themes stack on
+# its left, the last two on its right.
+# `colour` is the dark-mode colour; light mode uses `accent` (text, bars,
+# lines) on a `fill` background, and `bubble` (the paper-map bubble colour)
+# for bars, dots, curves and card tints.
+
+centre:
+  key: methods
+  label: Bayesian methods
+  colour: "#5588CC"
+  accent: "#2D5278"
+  fill: "#E8EFF7"
+  bubble: "#7AA8F0"
+  topics:
+    - GPU nested sampling
+    - Simulation-based inference
+    - Anomaly detection
+
+fields:
+  - key: cosmo
+    label: Cosmology & dark energy
+    colour: "#78C6AF"
+    accent: "#25675E"
+    fill: "#E8F3EF"
+    bubble: "#64C8B4"
+    topics:
+      - Evolving dark energy
+      - Tensions and H₀
+      - Curvature and inflation
+
+  - key: 21cm
+    label: 21-cm & radio cosmology
+    colour: "#D7AF7F"
+    accent: "#88602D"
+    fill: "#F6F0E5"
+    bubble: "#F0C46C"
+    topics:
+      - The REACH experiment
+      - Foregrounds and calibration
+      - The first stars
+
+  - key: astro
+    label: Gravitational waves & astrophysics
+    colour: "#EE8866"
+    accent: "#A05246"
+    fill: "#F8ECE8"
+    bubble: "#F29B8F"
+    topics:
+      - Gravitational-wave inference
+      - Quasars and galaxy clusters
+      - Exoplanets
+
+  - key: other
+    label: Particle physics & beyond
+    colour: "#CCEEFF"
+    accent: "#66558F"
+    fill: "#F0EDF7"
+    bubble: "#B7A1E8"
+    topics:
+      - Dark matter global fits
+      - Neutrinos and axions
+      - Modified gravity

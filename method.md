@@ -3,7 +3,7 @@ layout: page
 title: The New Scientific Method
 permalink: /method/
 ---
-Code is cheap. Truth is expensive. When implementation and exposition can be produced at negligible marginal cost, the limiting resource in research is no longer keystrokes but judgement: what to build, what to trust, and what to discard. This page makes explicit how we organise our research practice under that constraint.
+When the code writes itself, how should we do science? When implementation and exposition can be produced at negligible marginal cost, the limiting resource in research is no longer keystrokes but judgement: what to build, what to trust, and what to discard. This page makes explicit how we organise our research practice under that constraint.
 
 ## Two Revolutions
 

@@ -12,18 +12,7 @@ GPU hardware — developed for machine learning — accelerates classical statis
 <section class="feature-list">
   {% for item in site.data.science %}
     {% if item.area == "GPUs for Science" %}
-    <article class="feature-card">
-      <p class="feature-card-meta">{{ item.theme }}</p>
-      <h2>{{ item.title }}</h2>
-      {% if item.people != "" %}<p><strong>People:</strong> {{ item.people }}</p>{% endif %}
-      {% if item.claims != "" %}<p><strong>Key result:</strong> {{ item.claims }}</p>{% endif %}
-      <p>{{ item.summary }}</p>
-      <div class="feature-links">
-        {% if item.link != "" and item.link %}
-          <a href="{{ item.link }}" target="_blank" rel="noopener noreferrer">Representative reference</a>
-        {% endif %}
-      </div>
-    </article>
+      {% include science_card.html item=item %}
     {% endif %}
   {% endfor %}
 </section>
@@ -33,16 +22,7 @@ GPU hardware — developed for machine learning — accelerates classical statis
 <section class="feature-list">
   {% for item in site.data.science %}
     {% if item.area == "Methodology" %}
-    <article class="feature-card">
-      <p class="feature-card-meta">{{ item.theme }}</p>
-      <h2>{{ item.title }}</h2>
-      <p>{{ item.summary }}</p>
-      <div class="feature-links">
-        {% if item.link != "" and item.link %}
-          <a href="{{ item.link }}">Read more</a>
-        {% endif %}
-      </div>
-    </article>
+      {% include science_card.html item=item cta="Read more" %}
     {% endif %}
   {% endfor %}
 </section>

@@ -3,6 +3,18 @@ _site
 .jekyll-cache
 .jekyll-metadata
 vendor
-Gemfile.lock
 .bundle
 vendor/
+
+# Workshop-day orchestrator scratch (transcripts, reports, exports, screenshots)
+context/
+
+# Playwright MCP scratch
+.playwright-mcp/
+
+# Python bytecode
+__pycache__/
+
+# Website handover bundle (internal workshop transcripts; not for publication)
+website-handover-2026-10-22/
+website-handover-2026-10-22.tar.gz

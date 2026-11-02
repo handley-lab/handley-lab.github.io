@@ -1,0 +1,30 @@
+# Builds the site and runs script/check on every pull request and push to
+# main, so a PR that breaks the build, leaks the in-repo skills/ files or
+# leaves a recipe card incomplete fails before it is merged.
+name: Site checks
+
+on:
+  pull_request:
+  push:
+    branches: [main]
+
+permissions:
+  contents: read
+
+jobs:
+  check:
+    runs-on: ubuntu-latest
+    timeout-minutes: 15
+    steps:
+      - uses: actions/checkout@v4.2.2
+
+      - uses: ruby/setup-ruby@v1.245.0
+        with:
+          ruby-version: "3.4"
+          bundler-cache: true
+
+      - name: Build
+        run: bundle exec jekyll build
+
+      - name: Check
+        run: ruby script/check

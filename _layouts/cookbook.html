@@ -1,0 +1,44 @@
+---
+layout: base
+---
+{%- comment -%}
+  AI Cookbook page: normal-width panel with a tag filter rail in the left margin
+  (stacked above the panel when the margin is too narrow).
+  The filter buttons are wired up by the script in cookbook.md.
+{%- endcomment -%}
+{% assign finished = site.data.recipes | where: "status", "Complete" %}
+{% assign developing = site.data.recipes | where_exp: "r", "r.status != 'Complete'" %}
+{% assign tags = site.data.recipes | map: "category" | uniq | sort %}
+<div class="cookbook-page">
+<div class="cookbook-rail">
+<aside class="cookbook-filters" aria-label="Filter recipes">
+  <p class="cookbook-filters-title">Filter recipes</p>
+
+  <div class="cookbook-filter-group" role="group" aria-label="Status">
+    <p class="cookbook-filter-label">Status</p>
+    <button type="button" class="cookbook-chip" data-state="all" aria-pressed="true">All <span>{{ site.data.recipes.size }}</span></button>
+    <button type="button" class="cookbook-chip" data-state="ready" aria-pressed="false">Ready to use <span>{{ finished.size }}</span></button>
+    <button type="button" class="cookbook-chip" data-state="dev" aria-pressed="false">In development <span>{{ developing.size }}</span></button>
+  </div>
+
+  <div class="cookbook-filter-group" role="group" aria-label="Tags">
+    <p class="cookbook-filter-label">Tags</p>
+    {%- for t in tags %}
+      {%- assign n = site.data.recipes | where: "category", t | size %}
+    <button type="button" class="cookbook-chip" data-tag="{{ t | slugify }}" aria-pressed="false">{{ t }} <span>{{ n }}</span></button>
+    {%- endfor %}
+  </div>
+
+  <button type="button" class="cookbook-clear" hidden>Clear filters</button>
+</aside>
+</div>
+
+  <article class="post cookbook-panel">
+    <header class="post-header">
+      <h1 class="post-title">{{ page.title | escape }}</h1>
+    </header>
+    <div class="post-content">
+      {{ content }}
+    </div>
+  </article>
+</div>

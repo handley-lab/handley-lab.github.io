@@ -7,6 +7,9 @@
   Optional:
     variant   "archive" (full archive page, default) or "landing" (compact)
 
+  Optional `image_before` / `image_after` (with `_caption`) show a
+  side-by-side comparison above the summary.
+
   When a matching companion page exists at _recipes/<id>.md, the card
   appends a "Read full recipe" link to /cookbook/<id>/.
 
@@ -34,13 +37,49 @@
     {%- endif -%}
   </article>
 {%- else -%}
-  <article class="feature-card recipe-card">
-    <p class="feature-card-meta">
-      {%- if recipe.category -%}{{ recipe.category }}{%- endif -%}
-      {%- if recipe.timebox -%}{% if recipe.category %} · {% endif %}{{ recipe.timebox }}{%- endif -%}
-    </p>
+  {%- assign in_dev = false -%}
+  {%- if recipe.status and recipe.status != "Complete" -%}{%- assign in_dev = true -%}{%- endif -%}
+  {%- assign tag = recipe.category | default: "Other" -%}
+  <article class="feature-card recipe-card{% if in_dev %} recipe-card--dev{% endif %}"
+           data-tag="{{ tag | slugify }}"
+           data-state="{% if in_dev %}dev{% else %}ready{% endif %}">
+    <div class="recipe-card-top">
+      <span class="recipe-tag">{{ tag }}</span>
+      {%- if in_dev -%}
+        <span class="recipe-dev-badge" title="Status: {{ recipe.status }}">In development…</span>
+      {%- endif -%}
+    </div>
 
-    <h2>{{ recipe.title }}</h2>
+    <h2 class="recipe-title">
+      {%- if long_form -%}
+        <a href="{{ long_form.url | relative_url }}">{{ recipe.title }}</a>
+      {%- else -%}
+        {{ recipe.title }}
+      {%- endif -%}
+    </h2>
+
+    <dl class="recipe-facts">
+      {%- if recipe.timebox -%}
+        <div><dt>Time</dt><dd>{{ recipe.timebox }}</dd></div>
+      {%- endif -%}
+      {%- if recipe.proposer -%}
+        <div><dt>Chef</dt><dd>
+          {%- comment -%} Names link to their card on /group/; lowercase notes ("workshop discussion") stay plain {%- endcomment -%}
+          {%- assign parts = recipe.proposer | split: "/" -%}
+          {%- for part in parts -%}
+            {%- assign n = part | strip -%}
+            {%- assign first = n | slice: 0 -%}
+            {%- assign lower = first | downcase -%}
+            {%- if first != lower -%}
+              <a href="{{ '/group/' | relative_url }}#{{ n | slugify: 'latin' }}">{{ n }}</a>
+            {%- else -%}
+              {{ n }}
+            {%- endif -%}
+            {%- unless forloop.last %} / {% endunless -%}
+          {%- endfor -%}
+        </dd></div>
+      {%- endif -%}
+    </dl>
 
     {%- if recipe.image -%}
       <img src="{{ recipe.image | relative_url }}"
@@ -48,23 +87,42 @@
            class="recipe-card-image">
     {%- endif -%}
 
-    {%- if recipe.proposer -%}
-      <p class="card-proposer">Proposed by {{ recipe.proposer }}</p>
+    {%- if recipe.image_before or recipe.image_after -%}
+      <div class="recipe-compare">
+        {%- if recipe.image_before -%}
+          <figure>
+            <figcaption>{{ recipe.image_before_caption | default: "Before" }}</figcaption>
+            <img src="{{ recipe.image_before | relative_url }}" alt="{{ recipe.image_before_caption | default: 'Before' | strip_html }}">
+          </figure>
+        {%- endif -%}
+        {%- if recipe.image_after -%}
+          <figure>
+            <figcaption>{{ recipe.image_after_caption | default: "After" }}</figcaption>
+            <img src="{{ recipe.image_after | relative_url }}" alt="{{ recipe.image_after_caption | default: 'After' | strip_html }}">
+          </figure>
+        {%- endif -%}
+      </div>
     {%- endif -%}
 
-    <p>{{ recipe.summary }}</p>
+    <p class="recipe-summary">{{ recipe.summary | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
 
     {%- if recipe.outcome -%}
-      <p><strong>Outcome:</strong> {{ recipe.outcome }}</p>
+      <div class="recipe-section">
+        <h3 class="recipe-step">What you get</h3>
+        <p>{{ recipe.outcome | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </div>
     {%- endif -%}
 
     {%- if recipe.evidence -%}
-      <p><strong>Evidence:</strong> {{ recipe.evidence }}</p>
+      <div class="recipe-section">
+        <h3 class="recipe-step">Proof it works</h3>
+        <p>{{ recipe.evidence | markdownify | remove: '<p>' | remove: '</p>' | strip }}</p>
+      </div>
     {%- endif -%}
 
-    <div class="feature-links">
+    <div class="feature-links recipe-links">
       {%- if long_form -%}
-        <a href="{{ long_form.url | relative_url }}">Read full recipe</a>
+        <a class="recipe-cta" href="{{ long_form.url | relative_url }}">Read full recipe →</a>
       {%- endif -%}
       {%- if recipe.demo_url -%}
         <a href="{{ recipe.demo_url }}" target="_blank" rel="noopener noreferrer">Demo</a>

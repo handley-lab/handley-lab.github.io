@@ -1,0 +1,544 @@
+<section class="paper-map" aria-labelledby="paper-map-title">
+  <header class="paper-map-top">
+    <div>
+      <h2 id="paper-map-title">Group Papers</h2>
+      <p class="paper-map-note">Papers written by group members during their time in the group.<span class="paper-map-bubble-only"> Click a bubble to read about it.</span></p>
+      <p class="paper-map-note paper-map-bubble-only">Bubble size is citation count; brighter bubbles are more recent.</p>
+    </div>
+    <div class="paper-map-views" role="group" aria-label="View">
+      <button type="button" data-view="map" aria-pressed="true">Bubbles</button>
+      <button type="button" data-view="list" aria-pressed="false">List</button>
+    </div>
+  </header>
+  <div class="paper-map-layout">
+    <div class="paper-map-side">
+      <ul class="paper-map-legend" aria-label="Filter by theme"></ul>
+      <section class="paper-map-team" aria-labelledby="paper-map-team-title" hidden>
+        <div class="paper-map-team-bar">
+          <h3 id="paper-map-team-title">Current group</h3>
+          <div class="paper-map-team-when" role="group" aria-label="Current or past members">
+            <button type="button" data-when="current" aria-pressed="true">Current</button>
+            <button type="button" data-when="past" aria-pressed="false">Past</button>
+          </div>
+        </div>
+        <ul class="paper-map-team-list"></ul>
+      </section>
+    </div>
+    <div class="paper-map-main">
+      <div class="paper-map-stage">
+        <svg class="paper-map-svg" role="img" aria-label="Bubble chart of group papers, coloured by theme"></svg>
+        <div class="paper-map-tooltip" hidden></div>
+      </div>
+      <section class="paper-map-list" aria-label="All papers" hidden>
+        <div class="paper-map-list-bar">
+          <p class="paper-map-list-count" aria-live="polite"></p>
+          <label>Sort
+            <select class="paper-map-sort">
+              <option value="newest">Newest first</option>
+              <option value="cited">Most cited</option>
+            </select>
+          </label>
+        </div>
+        <ol class="paper-map-cards"></ol>
+        <nav class="paper-map-pager" aria-label="Pages"></nav>
+      </section>
+    </div>
+  </div>
+  <article class="paper-map-detail" aria-live="polite">
+    <p class="paper-map-empty">Select a paper to see its title, abstract and the group members who wrote it.</p>
+  </article>
+</section>
+
+<style>
+  {%- assign ra = site.data.research_areas %}
+  {%- assign areas = ra.fields | unshift: ra.centre %}
+  /* Theme colours are the site-wide topic tokens (_includes/custom-head.html),
+     which already switch between light and dark. */
+  .paper-map {
+    {%- for a in areas %}
+    --pm-{{ a.key }}: var(--topic-{{ a.key }});
+    --pm-fill-{{ a.key }}: var(--topic-{{ a.key }}-mark);
+    {%- endfor %}
+  }
+  .paper-map {
+    --pm-bg: var(--canvas);
+    --pm-panel: var(--panel);
+    --pm-text: var(--ink);
+    --pm-muted: var(--ink-soft);
+    --pm-blue: var(--accent);
+    --pm-line: var(--line);
+    margin: 0 0 1rem;
+    padding: 1.5rem;
+    border-radius: 18px;
+    background: var(--pm-panel);
+    color: var(--pm-text);
+    border: 1px solid var(--pm-line);
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  }
+  .paper-map h2, .paper-map h3 { font-family: inherit; color: var(--pm-text); }
+  .paper-map-top {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 1rem 2rem;
+    margin-bottom: 1.4rem;
+  }
+  .paper-map-layout {
+    display: grid;
+    grid-template-columns: minmax(220px, 300px) 1fr;
+    gap: 1.5rem 2.5rem;
+    align-items: start;
+  }
+  .paper-map-main { min-width: 0; }
+  .paper-map-top h2 { margin: 0 0 0.8rem; font-size: clamp(2rem, 4vw, 2.6rem); line-height: 1.1; font-weight: 700; letter-spacing: -0.02em; }
+  .paper-map-note { margin: 0 0 0.5rem; color: var(--pm-muted); font-size: 0.92rem; line-height: 1.5; }
+  .paper-map-legend { display: flex; flex-direction: column; align-items: flex-start; gap: 0.5rem; margin: 0; padding: 0; list-style: none; }
+  @media (max-width: 720px) {
+    .paper-map-layout { grid-template-columns: 1fr; }
+    .paper-map-legend { flex-direction: row; flex-wrap: wrap; }
+    .paper-map:not(.is-list) .paper-map-legend { margin-top: 0; }
+  }
+  .paper-map-legend button {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.45rem;
+    padding: 0.35rem 0.75rem;
+    border: 1px solid var(--pm-line);
+    border-radius: 999px;
+    background: var(--pm-bg);
+    color: var(--pm-text);
+    font: inherit;
+    font-size: 0.82rem;
+    text-align: left;
+    white-space: nowrap;
+    cursor: pointer;
+  }
+  .paper-map-legend button[aria-pressed="true"] { border-color: var(--pm-text); }
+  .paper-map-legend .swatch { width: 0.7rem; height: 0.7rem; border-radius: 50%; }
+  .paper-map-legend .count { color: var(--pm-muted); }
+  .paper-map-stage { position: relative; }
+  .paper-map-svg { display: block; width: 100%; height: auto; overflow: visible; }
+  .paper-map:not(.is-list) .paper-map-legend { margin-top: 3rem; }
+  .paper-map-svg circle { cursor: pointer; }
+  .paper-map-svg circle:focus-visible { outline: none; stroke: var(--pm-text); stroke-width: 2.5; }
+  .paper-map-tooltip {
+    position: absolute;
+    max-width: 280px;
+    padding: 0.45rem 0.65rem;
+    border: 1px solid var(--pm-line);
+    border-radius: 8px;
+    background: var(--pm-bg);
+    color: var(--pm-text);
+    font-size: 0.82rem;
+    line-height: 1.35;
+    pointer-events: none;
+  }
+  .paper-map-detail {
+    margin-top: 1rem;
+    padding: 1.25rem 1.4rem;
+    border: 1px solid var(--pm-line);
+    border-radius: 14px;
+    background: var(--pm-bg);
+  }
+  .paper-map-empty { margin: 0; color: var(--pm-muted); }
+  .paper-map-meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.4rem 1rem;
+    margin: 0 0 0.5rem;
+    color: var(--pm-muted);
+    font-size: 0.82rem;
+  }
+  .paper-map-meta .theme { font-weight: 700; }
+  .paper-map-detail h3, .paper-map-cards h3 { margin: 0 0 0.9rem; font-size: 1.25rem; line-height: 1.3; font-weight: 700; }
+  .paper-map-detail h3 a, .paper-map-cards h3 a { color: var(--pm-text); text-decoration: none; }
+  .paper-map-detail h3 a:hover, .paper-map-cards h3 a:hover { color: var(--pm-blue); }
+  .paper-map-people { display: flex; flex-wrap: wrap; gap: 0.9rem; margin: 0 0 1rem; padding: 0; list-style: none; }
+  .paper-map-people li { display: flex; flex-direction: column; align-items: center; gap: 0.35rem; width: 72px; text-align: center; font-size: 0.75rem; color: var(--pm-muted); line-height: 1.25; }
+  .paper-map-people img, .paper-map-people .initials {
+    width: 56px;
+    height: 56px;
+    border-radius: 50%;
+    border: 2px solid var(--pm-line);
+    object-fit: cover;
+    background: var(--pm-bg);
+  }
+  .paper-map-people .initials { display: flex; align-items: center; justify-content: center; color: var(--pm-text); font-weight: 700; font-size: 1rem; }
+  .paper-map-authors { margin: 0 0 0.9rem; color: var(--pm-muted); font-size: 0.85rem; line-height: 1.45; }
+  .paper-map-abstract { margin: 0 0 1rem; color: var(--pm-text); font-size: 0.95rem; line-height: 1.6; }
+  .paper-map-links a { color: var(--pm-blue); font-weight: 700; text-decoration: none; margin-right: 1.2rem; }
+  .paper-map-links a:hover { text-decoration: underline; }
+  .paper-map-views { display: inline-flex; flex-shrink: 0; border: 1px solid var(--pm-line); border-radius: 999px; overflow: hidden; }
+  .paper-map-views button { padding: 0.4rem 1rem; border: 0; background: var(--pm-bg); color: var(--pm-muted); font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .paper-map-views button[aria-pressed="true"] { background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
+  .paper-map.is-list .paper-map-stage,
+  .paper-map.is-list .paper-map-detail,
+  .paper-map.is-list .paper-map-bubble-only { display: none; }
+  .paper-map.is-list .paper-map-layout { grid-template-columns: 1fr; }
+  .paper-map.is-list .paper-map-legend { flex-direction: row; flex-wrap: wrap; }
+  .paper-map-list-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; color: var(--pm-muted); font-size: 0.88rem; }
+  .paper-map-list-count { margin: 0; }
+  .paper-map-sort { margin-left: 0.4rem; padding: 0.3rem 0.5rem; border: 1px solid var(--pm-line); border-radius: 8px; background: var(--pm-bg); color: var(--pm-text); font: inherit; }
+  .paper-map-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
+  .paper-map-cards > li { padding: 1.2rem 1.4rem; border: 1px solid var(--pm-line); border-left: 4px solid var(--card-colour); border-radius: 14px; background: var(--pm-bg); }
+  .paper-map-cards .paper-map-abstract.is-clamped { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
+  .paper-map-more { margin: -0.6rem 0 0.8rem; padding: 0; border: 0; background: none; color: var(--pm-blue); font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .paper-map-pager { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 1.2rem; }
+  .paper-map-pager button { min-width: 2.3rem; padding: 0.4rem 0.7rem; border: 1px solid var(--pm-line); border-radius: 8px; background: var(--pm-bg); color: var(--pm-text); font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .paper-map-pager button[aria-current="page"] { border-color: var(--pm-blue); background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
+  .paper-map-pager button:disabled { opacity: 0.4; cursor: default; }
+  .paper-map-side { min-width: 0; }
+  .paper-map-team { margin-top: 1.8rem; }
+  .paper-map-team-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.5rem; margin-bottom: 0.7rem; }
+  .paper-map-team-bar h3 { margin: 0; font-size: 0.95rem; font-weight: 700; }
+  .paper-map-team-when { display: inline-flex; border: 1px solid var(--pm-line); border-radius: 999px; overflow: hidden; }
+  .paper-map-team-when button { padding: 0.2rem 0.7rem; border: 0; background: var(--pm-bg); color: var(--pm-muted); font: inherit; font-size: 0.75rem; cursor: pointer; }
+  .paper-map-team-when button[aria-pressed="true"] { background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
+  .paper-map-team-list { display: flex; flex-wrap: wrap; gap: 0.4rem; margin: 0; padding: 0; list-style: none; }
+  .paper-map-team-list a, .paper-map-team-list span[role="img"] { display: block; border-radius: 50%; }
+  .paper-map-team-list img, .paper-map-team-list .initials { display: flex; width: 42px; height: 42px; border-radius: 50%; border: 2px solid var(--pm-line); object-fit: cover; background: var(--pm-bg); transition: border-color 0.15s ease, transform 0.15s ease; }
+  .paper-map-team-list .initials { align-items: center; justify-content: center; color: var(--pm-text); font-weight: 700; font-size: 0.8rem; }
+  .paper-map-team-list a:hover img, .paper-map-team-list a:hover .initials,
+  .paper-map-team-list a:focus-visible img, .paper-map-team-list a:focus-visible .initials { border-color: var(--pm-text); transform: scale(1.08); }
+  .paper-map-team-list a:focus-visible { outline: none; }
+  .paper-map-team-list .new img, .paper-map-team-list .new .initials { border-style: dashed; }
+  .paper-map-team-empty { color: var(--pm-muted); font-size: 0.82rem; font-style: italic; }
+  @media (prefers-reduced-motion: reduce) { .paper-map-team-list img, .paper-map-team-list .initials { transition: none; transform: none !important; } }
+  @media (max-width: 720px) {
+    .paper-map { padding: 1rem; border-radius: 14px; }
+    .paper-map-cards > li { padding: 1rem; }
+    .paper-map-detail { padding: 1rem; }
+  }
+</style>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/d3/7.9.0/d3.min.js"></script>
+<script>
+(function () {
+  const root = document.querySelector(".paper-map");
+  if (!root || !window.d3) return;
+
+  // Theme colours come from CSS variables (--pm-<key>, set per light/dark theme above)
+  const COLOURS = new Proxy({}, { get: (_, key) => `var(--pm-${String(key)})` });
+  const FILLS = new Proxy({}, { get: (_, key) => `var(--pm-fill-${String(key)})` });
+  const reduceMotion = window.matchMedia("(prefers-reduced-motion: reduce)").matches;
+  const svg = d3.select(root.querySelector(".paper-map-svg"));
+  const tooltip = root.querySelector(".paper-map-tooltip");
+  const detail = root.querySelector(".paper-map-detail");
+  const legend = root.querySelector(".paper-map-legend");
+  const EMPTY = '<p class="paper-map-empty">Select a paper to see its title, abstract and the group members who wrote it.</p>';
+
+  // people.json is optional: without it the map works, just with no people panel
+  Promise.all([
+    fetch("{{ '/assets/papers/papers.json' | relative_url }}").then((r) => r.json()),
+    fetch("{{ '/assets/papers/people.json' | relative_url }}").then((r) => r.json()).catch(() => null),
+  ])
+    .then(([data, people]) => init(data, people))
+    .catch((err) => { console.error(err); detail.innerHTML = '<p class="paper-map-empty">The paper map could not be loaded.</p>'; });
+
+  function init(data, peopleData) {
+    const themes = data.themes.filter((t) => data.papers.some((p) => p.theme === t.key));
+    const highlighted = new Set();
+    const years = data.papers.map((p) => +p.date.slice(0, 4));
+    const opacity = d3.scaleLinear().domain([d3.min(years), d3.max(years)]).range([0.25, 1]).clamp(true);
+    // Log scale, so a few very highly cited papers don't shrink the rest to dots.
+    // A floor of 10px keeps new, uncited papers clickable and visible.
+    const base = d3.scaleLog().domain([1, (d3.max(data.papers, (p) => p.citations) || 1) + 1]).range([10, 30]);
+    const nodes = data.papers.map((p) => ({ ...p, year: +p.date.slice(0, 4), phase: Math.random() * Math.PI * 2 }));
+    let selected = null;
+    let width, height, cy, radius, sim, edge;
+
+    themes.forEach((t) => {
+      const li = document.createElement("li");
+      const count = nodes.filter((n) => n.theme === t.key).length;
+      li.innerHTML = `<button type="button" aria-pressed="false"><span class="swatch" style="background:${FILLS[t.key]}"></span>${t.label} <span class="count">${count}</span></button>`;
+      li.firstChild.addEventListener("click", (e) => {
+        const on = highlighted.has(t.key);
+        on ? highlighted.delete(t.key) : highlighted.add(t.key);
+        e.currentTarget.setAttribute("aria-pressed", String(!on));
+        render();
+      });
+      legend.appendChild(li);
+    });
+
+    // Themes cluster like slices of a pie: each gets a wedge of the ball sized
+    // by its bubbles' total area, and each paper is pulled to its own fixed
+    // spot inside that wedge.
+    nodes.forEach((d) => { d.u = Math.random(); d.v = Math.random(); });
+
+    const circles = svg.append("g").selectAll("circle").data(nodes).join("circle")
+      .style("fill", (d) => FILLS[d.theme])
+      .attr("tabindex", 0)
+      .attr("role", "button")
+      .attr("aria-label", (d) => `${d.title} (${d.year}, ${d.citations} citations)`)
+      .on("click", (e, d) => select(d))
+      .on("keydown", (e, d) => { if (e.key === "Enter" || e.key === " ") { e.preventDefault(); select(d); } })
+      .on("mouseenter", (e, d) => showTip(e, d))
+      .on("mousemove", (e, d) => showTip(e, d))
+      .on("mouseleave", () => { tooltip.hidden = true; });
+
+    function layout() {
+      width = root.querySelector(".paper-map-stage").clientWidth;
+      // Scale every bubble by one factor so the whole cloud fits the stage
+      // (force-packed circles fill roughly 85% of the disc they occupy).
+      const cloud = (k) => Math.sqrt(d3.sum(nodes, (n) => (k * base(n.citations + 1) + 1.5) ** 2) / 0.85);
+      const target = Math.min(width / 2 - 12, 280);
+      const k = Math.min(1.6, target / cloud(1));
+      radius = (n) => k * base(n.citations + 1);
+      const R = cloud(k);
+      height = 2 * R + 40;
+      cy = R + 20;
+      svg.attr("viewBox", `0 0 ${width} ${height}`);
+      circles.attr("r", radius);
+
+      const cx = width / 2;
+      edge = R * 1.03;  // boundary circle: a little slack over the packed cloud
+      const area = d3.rollup(nodes, (v) => d3.sum(v, (n) => (radius(n) + 1.5) ** 2), (n) => n.theme);
+      const total = d3.sum(area.values());
+      let a0 = -Math.PI / 2;
+      const wedges = new Map(themes.map((t) => {
+        const span = (2 * Math.PI * area.get(t.key)) / total;
+        const w = { a0, span };
+        a0 += span;
+        return [t.key, w];
+      }));
+      nodes.forEach((d) => {
+        const w = wedges.get(d.theme);
+        const pad = Math.min(0.12, w.span * 0.15);
+        const angle = w.a0 + pad + d.v * (w.span - 2 * pad);
+        const r = R * 0.9 * Math.sqrt(0.05 + 0.95 * d.u);
+        d.tx = cx + r * Math.cos(angle);
+        d.ty = cy + r * Math.sin(angle);
+      });
+
+      if (!sim) {
+        // Start each bubble at its spot: the cloud is too densely packed for
+        // bubbles to push past each other into their wedges from random starts.
+        nodes.forEach((d) => { d.x = d.tx; d.y = d.ty; });
+        sim = d3.forceSimulation(nodes).alphaDecay(0.03).on("tick", render);
+      }
+      sim
+        .force("x", d3.forceX((d) => d.tx).strength(0.12))
+        .force("y", d3.forceY((d) => d.ty).strength(0.12))
+        .force("collide", d3.forceCollide((d) => radius(d) + 1.5).iterations(2))
+        .force("contain", contain)
+        .alpha(0.8)
+        .restart();
+    }
+
+    // Keep every bubble inside the boundary circle, so the cloud stays round
+    function contain() {
+      const cx = width / 2;
+      nodes.forEach((d) => {
+        const dx = d.x - cx, dy = d.y - cy;
+        const dist = Math.hypot(dx, dy) || 1;
+        const max = edge - radius(d);
+        if (dist > max) {
+          d.x = cx + (dx / dist) * max;
+          d.y = cy + (dy / dist) * max;
+          d.vx *= 0.5;
+          d.vy *= 0.5;
+        }
+      });
+    }
+
+    function faded(d) {
+      if (selected) return selected !== d;
+      return highlighted.size > 0 && !highlighted.has(d.theme);
+    }
+
+    function render() {
+      const t = reduceMotion ? 0 : performance.now() / 1000;
+      circles
+        .attr("cx", (d) => d.x + (reduceMotion ? 0 : Math.sin(t * 0.6 + d.phase) * 1.6))
+        .attr("cy", (d) => d.y + (reduceMotion ? 0 : Math.cos(t * 0.5 + d.phase) * 1.6))
+        .attr("opacity", (d) => opacity(d.year) * (faded(d) ? 0.2 : 1))
+        .style("stroke", (d) => (selected === d ? "var(--pm-text)" : null))
+        .attr("stroke-width", (d) => (selected === d ? 2.5 : null));
+    }
+
+    if (!reduceMotion) d3.timer(() => { if (sim && sim.alpha() < sim.alphaMin()) render(); });
+
+    function showTip(e, d) {
+      const box = root.querySelector(".paper-map-stage").getBoundingClientRect();
+      tooltip.textContent = `${d.title} · ${d.year} · ${d.citations} citations`;
+      tooltip.hidden = false;
+      const x = Math.min(e.clientX - box.left + 14, box.width - 290);
+      tooltip.style.left = `${Math.max(0, x)}px`;
+      tooltip.style.top = `${e.clientY - box.top + 14}px`;
+    }
+
+    function esc(s) {
+      return String(s).replace(/[&<>"']/g, (c) => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;" }[c]));
+    }
+
+    function face(m) {
+      const initials = m.name.split(/\s+/).map((w) => w[0]).slice(0, 2).join("");
+      return m.image
+        ? `<img src="${esc(m.image)}" alt="" loading="lazy" onerror="this.outerHTML='<span class=&quot;initials&quot;>${esc(initials)}</span>'">`
+        : `<span class="initials">${esc(initials)}</span>`;
+    }
+
+    function person(m) {
+      return `<li>${face(m)}<span>${esc(m.name)}</span></li>`;
+    }
+
+    function select(d) {
+      selected = selected === d ? null : d;
+      render();
+      detail.innerHTML = selected ? paperHTML(d, false) : EMPTY;
+    }
+
+    function paperHTML(d, clamp) {
+      const theme = themes.find((t) => t.key === d.theme);
+      const authors = d.authors.length > 12 ? d.authors.slice(0, 12).join(", ") + ` and ${d.authors.length - 12} others` : d.authors.join(", ");
+      return `
+        <p class="paper-map-meta">
+          <span class="theme" style="color:${COLOURS[d.theme]}">${esc(theme.label)}</span>
+          <span>${esc(d.date)}</span>
+          <span>arXiv:${esc(d.arxiv)}</span>
+          <span>${d.citations} citations</span>
+        </p>
+        <h3><a href="https://arxiv.org/abs/${esc(d.arxiv)}" target="_blank" rel="noopener noreferrer">${esc(d.title)}</a></h3>
+        ${d.group.length ? `<ul class="paper-map-people" aria-label="Group authors">${d.group.map(person).join("")}</ul>` : ""}
+        <p class="paper-map-authors">${esc(authors)}</p>
+        <p class="paper-map-abstract${clamp ? " is-clamped" : ""}">${esc(d.abstract)}</p>
+        ${clamp ? '<button type="button" class="paper-map-more">Show full abstract</button>' : ""}
+        <p class="paper-map-links">
+          <a href="https://arxiv.org/abs/${esc(d.arxiv)}" target="_blank" rel="noopener noreferrer">Read on arXiv</a>
+          <a href="https://arxiv.org/pdf/${esc(d.arxiv)}" target="_blank" rel="noopener noreferrer">PDF</a>
+        </p>`;
+    }
+
+    // People panel (left column): faces of group members, without Co-Is.
+    // With themes highlighted it narrows to people who wrote papers there,
+    // plus current members whose focus (assets/group/focus.yaml) includes it.
+    // Current/past comes from role dates, so it never goes stale.
+    const team = root.querySelector(".paper-map-team");
+    const teamList = root.querySelector(".paper-map-team-list");
+    const today = new Date().toISOString().slice(0, 10);
+    const GROUP_URL = "{{ '/group/' | relative_url }}";
+    // Same slug as the card ids on the group page (_includes/group_cards.html)
+    const slug = (name) => name.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().replace(/[^a-z0-9]+/g, "-").replace(/^-|-$/g, "");
+    let when = "current";
+    const people = (peopleData ? peopleData.people : []).map((p) => {
+      const roles = p.roles.filter((r) => r.role !== "Co-I");
+      if (!roles.length) return null;
+      const now = roles.filter((r) => r.start <= today && (!r.end || r.end >= today));
+      const counts = {};
+      nodes.forEach((n) => { if (n.group.some((g) => g.name === p.name)) counts[n.theme] = (counts[n.theme] || 0) + 1; });
+      const first = d3.min(roles, (r) => r.start).slice(0, 4);
+      const last = roles.some((r) => !r.end) ? null : d3.max(roles, (r) => r.end).slice(0, 4);
+      const lastRole = roles.slice().sort((a, b) => (b.end || "9999").localeCompare(a.end || "9999"))[0];
+      const total = d3.sum(Object.values(counts));
+      return { ...p, current: now.length > 0, role: (now[0] || lastRole).role, total, counts,
+               years: last ? (first === last ? first : `${first}–${last}`) : `${first}–` };
+    }).filter((p) => p && p.roles[0].start <= today);
+    if (people.length) team.hidden = false;
+
+    function papersIn(p) {
+      return highlighted.size ? d3.sum([...highlighted], (k) => p.counts[k] || 0) : p.total;
+    }
+
+    function renderTeam() {
+      if (!people.length) return;
+      const keys = [...highlighted];
+      const label = when === "current" ? "Current" : "Past";
+      root.querySelector("#paper-map-team-title").textContent = keys.length
+        ? `${label} people here`
+        : `${label} group`;
+      root.querySelectorAll(".paper-map-team-when button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.when === when)));
+      const shown = people
+        .filter((p) => (when === "current") === p.current)
+        .filter((p) => !keys.length || papersIn(p) > 0 || (p.current && p.themes.some((k) => highlighted.has(k))))
+        .sort((a, b) => papersIn(b) - papersIn(a) || b.tags.length - a.tags.length || a.name.localeCompare(b.name));
+      teamList.innerHTML = shown.length
+        ? shown.map((p) => {
+            const inner = p.card
+              ? `<a href="${GROUP_URL}#${slug(p.name)}" title="${esc(p.name)}" aria-label="${esc(p.name)}">${face(p)}</a>`
+              : `<span title="${esc(p.name)}" role="img" aria-label="${esc(p.name)}">${face(p)}</span>`;
+            return `<li${papersIn(p) ? "" : ' class="new"'}>${inner}</li>`;
+          }).join("")
+        : `<li class="paper-map-team-empty">No ${when} members here.</li>`;
+    }
+
+    root.querySelector(".paper-map-team-when").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-when]");
+      if (!b) return;
+      when = b.dataset.when;
+      renderTeam();
+    });
+    legend.addEventListener("click", renderTeam);
+    renderTeam();
+
+    // List view: every paper as a card, PAGE_SIZE per page, filtered by the
+    // highlighted themes.
+    const PAGE_SIZE = 20;
+    const list = root.querySelector(".paper-map-list");
+    const cards = root.querySelector(".paper-map-cards");
+    const pager = root.querySelector(".paper-map-pager");
+    const sortBy = root.querySelector(".paper-map-sort");
+    let page = 1;
+
+    function renderList() {
+      const shown = nodes
+        .filter((d) => !highlighted.size || highlighted.has(d.theme))
+        .sort(sortBy.value === "cited" ? (a, b) => b.citations - a.citations : (a, b) => b.date.localeCompare(a.date));
+      const pages = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
+      page = Math.min(page, pages);
+      const first = (page - 1) * PAGE_SIZE;
+      root.querySelector(".paper-map-list-count").textContent =
+        `${shown.length} papers · showing ${shown.length ? first + 1 : 0}–${Math.min(first + PAGE_SIZE, shown.length)}`;
+      cards.innerHTML = shown.slice(first, first + PAGE_SIZE)
+        .map((d) => `<li style="--card-colour:${FILLS[d.theme]}">${paperHTML(d, true)}</li>`).join("");
+      const button = (label, target, attrs = "") => `<button type="button" data-page="${target}" ${attrs}>${label}</button>`;
+      let html = button("Previous", page - 1, page === 1 ? "disabled" : "");
+      for (let i = 1; i <= pages; i++) html += button(i, i, i === page ? 'aria-current="page"' : "");
+      pager.innerHTML = html + button("Next", page + 1, page === pages ? "disabled" : "");
+    }
+
+    cards.addEventListener("click", (e) => {
+      const more = e.target.closest(".paper-map-more");
+      if (!more) return;
+      const abstract = more.previousElementSibling;
+      const open = abstract.classList.toggle("is-clamped");
+      more.textContent = open ? "Show full abstract" : "Show less";
+    });
+    pager.addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-page]");
+      if (!b || b.disabled) return;
+      page = +b.dataset.page;
+      renderList();
+      list.scrollIntoView({ behavior: reduceMotion ? "auto" : "smooth", block: "start" });
+    });
+    sortBy.addEventListener("change", () => { page = 1; renderList(); });
+    legend.addEventListener("click", () => { page = 1; if (!list.hidden) renderList(); });
+
+    function setView(view) {
+      root.classList.toggle("is-list", view === "list");
+      list.hidden = view !== "list";
+      root.querySelectorAll(".paper-map-views button").forEach((b) => b.setAttribute("aria-pressed", String(b.dataset.view === view)));
+      if (view === "list") renderList();
+      else layout();
+    }
+    root.querySelector(".paper-map-views").addEventListener("click", (e) => {
+      const b = e.target.closest("button[data-view]");
+      if (b) setView(b.dataset.view);
+    });
+
+    // #theme=<key> (from the homepage research cards) highlights one theme.
+    const themeLink = location.hash.match(/^#theme=(.+)$/);
+    if (themeLink) {
+      const i = themes.findIndex((t) => t.key === decodeURIComponent(themeLink[1]));
+      if (i >= 0) legend.children[i].firstChild.click();
+    }
+
+    layout();
+    if (location.hash === "#list") setView("list");
+    const linked = nodes.find((n) => `#${n.arxiv}` === location.hash);
+    if (linked) select(linked);
+    let resizeTimer;
+    window.addEventListener("resize", () => { clearTimeout(resizeTimer); resizeTimer = setTimeout(() => { if (list.hidden) layout(); }, 150); });
+  }
+})();
+</script>

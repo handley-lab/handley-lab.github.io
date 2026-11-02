@@ -5,14 +5,17 @@ layout: base
 
   <header class="post-header">
     <h1 class="post-title">{{ page.title | escape }}</h1>
-    {%- if page.author or page.timebox or page.status -%}
+    {%- comment -%} Like the cookbook cards: no status for finished recipes, "In development…" otherwise. {%- endcomment -%}
+    {%- assign in_dev = false -%}
+    {%- if page.status and page.status != "Complete" -%}{%- assign in_dev = true -%}{%- endif -%}
+    {%- if page.author or page.timebox or in_dev -%}
       <p class="post-meta">
         {%- if page.author -%}{{ page.author }}{%- endif -%}
         {%- if page.author and page.timebox %} · {% endif -%}
         {%- if page.timebox -%}{{ page.timebox }}{%- endif -%}
-        {%- if page.status -%}
+        {%- if in_dev -%}
           {%- if page.author or page.timebox %} · {% endif -%}
-          {{ page.status }}
+          In development…
         {%- endif -%}
       </p>
     {%- endif -%}
@@ -28,15 +31,6 @@ layout: base
     {{ content }}
   </div>
 
-  <script>
-    window.MathJax = {
-      tex: {
-        inlineMath: [['$', '$'], ['\\(', '\\)']],
-        displayMath: [['$$', '$$'], ['\\[', '\\]']],
-        processEscapes: true
-      }
-    };
-  </script>
-  <script defer src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml.js"></script>
+  {% include katex.html %}
 
 </article>
