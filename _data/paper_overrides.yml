@@ -3,11 +3,178 @@
 
 # arXiv IDs to show even though the automatic rules skip them
 # (e.g. Will's pre-group papers that the group still builds on).
-include: []
+# Most of these come from the paper list in handley-lab-summary (2026-11).
+include:
+  - "1701.08165"
+  - "1710.10360"
+  - "1805.01968"
+  - "1805.01991"
+  - "1809.03325"
+  - "1811.11679"
+  - "1901.09980"
+  - "1903.04763"
+  - "1903.05128"
+  - "1905.09110"
+  - "1909.00029"
+  - "2009.03286"
+  - "2012.01783"
+  - "2012.04045"
+  - "2106.02056"
+  - "2204.10859"
+  - "2205.15570"
+  - "2207.08435"
+  - "2209.00677"
+  - "2310.02146"
+  - "2311.05366"
+  - "2312.08095"
+  - "2402.04008"
+  - "2501.16292"
+  - "2503.11740"
+  - "2504.08081"
+  - "2507.20190"
+  - "2508.03888"
+  - "2508.09070"
+  - "2508.21152"
+  - "2508.21182"
+  - "2509.03360"
+  - "2509.10079"
+  - "2509.10117"
+  - "2509.16111"
+  - "2510.07637"
+  - "2510.11719"
+  - "2510.14766"
+  - "2511.07517"
+  - "2511.08438"
+  - "2511.09618"
+  - "2511.10640"
+  - "2511.11548"
+  - "2511.11943"
+  - "2511.11982"
+  - "2511.15196"
+  - "2512.01489"
+  - "2512.01929"
+  - "2512.03038"
+  - "2512.05050"
+  - "2512.06319"
+  - "2512.08522"
+  - "2512.10924"
+  - "2512.16416"
+  - "2512.20132"
+  - "2512.25007"
+  - "2601.06258"
+  - "2601.06290"
+  - "2601.14235"
+  - "2601.17239"
+  - "2601.21630"
+  - "2602.02677"
+  - "2602.17414"
+  - "2603.03441"
+  - "2603.11165"
+  - "2603.13196"
+  - "2603.15072"
+  - "2604.00105"
+  - "2604.06318"
+  - "2604.17981"
+  - "2605.00092"
+  - "2605.06799"
+  - "2605.27370"
+  - "2606.01547"
+  - "2606.10027"
+  - "2606.10038"
+  - "2606.14853"
+  - "2606.19429"
+  - "2606.21334"
+  - "2606.25955"
+  - "2606.27110"
+  - "2606.27244"
+  - "2606.30504"
+  - "2606.30750"
+  - "2606.30785"
+  - "2607.00299"
+  - "2607.01864"
+  - "2607.03432"
+  - "2607.27467"
+  - "2607.28265"
+  - "2607.28725"
+  - "2608.31161"
+  - "2609.10709"
+  - "2609.15894"
+  - "2609.24588"
+  - "2609.24589"
+  - "2609.29413"
+  - "2609.35661"
+  - "2610.08903"
+  - "2610.19000"
+  - "2610.23016"
+  - "2610.27328"
+  - "2610.30244"
 
 # arXiv IDs to hide: false name matches, or papers the group doesn't count as its own.
 exclude: []
 
 # Fix a paper's theme. Keys: methods, cosmo, 21cm, astro, other.
 theme:
-  "2507.09228": cosmo  # Alleviating the Hubble tension with Torsion Condensation (TorC)
+  # Most of these follow the chapters of handley-lab-summary (2026-11).
+  "1612.02288": cosmo  # The Runge-Kutta-Wentzel-Kramers-Brillouin Method
+  "1710.10360": other  # Rotation of inertial frames by angular momentum of matter and waves
+  "1804.08143": methods  # Maximum-Entropy Priors with Derived Parameters in a Specified Distribu
+  "1809.11095": cosmo  # Rapid numerical solutions for the Mukhanov-Sasaki equation
+  "1811.11679": other  # The HANDE-QMC project: open-source stochastic quantum chemistry from t
+  "1906.01421": cosmo  # An efficient method for solving highly oscillatory ordinary differenti
+  "1907.11638": cosmo  # Beyond the Runge-Kutta-Wentzel-Kramers-Brillouin method
+  "2003.02690": other  # Addressing $H_0$ tension with emergent dark radiation in unitary gravi
+  "2006.03581": other  # Mapping Poincar\'{e} gauge cosmology to Horndeski theory for emergent 
+  "2007.05013": cosmo  # Dense output for highly oscillatory numerical solutions
+  "2007.07278": astro  # Global Analysis of the TRAPPIST Ultra-Cool Dwarf Transit Survey
+  "2012.01783": methods  # Narrative structure of A Song of Ice and Fire creates a fictional worl
+  "2102.03387": astro  # The HARPS search for southern extra-solar planets XLV. Two Neptune mas
+  "2102.11511": cosmo  # Bayesian evidence for the tensor-to-scalar ratio $r$ and neutrino mass
+  "2105.13923": other  # Nested sampling for frequentist computation: fast estimation of small 
+  "2205.02030": other  # Exploring phase space with Nested Sampling
+  "2205.12841": methods  # Marginal Post Processing of Bayesian Inference Products with Normalizi
+  "2211.10391": other  # Hunting for bumps in the margins
+  "2211.15448": 21cm  # Bayesian approach to radio frequency interference mitigation
+  "2301.03298": 21cm  # Joint analysis constraints on the physics of the first galaxies with l
+  "2310.02146": 21cm  # Enhanced Bayesian RFI Mitigation and Transient Flagging Using Likeliho
+  "2311.04153": cosmo  # Kernel-, mean- and noise-marginalised Gaussian processes for exoplanet
+  "2312.08095": 21cm  # Constraining the properties of Population III galaxies with multi-wave
+  "2404.16428": methods  # Costless correction of chain based nested sampling parameter estimatio
+  "2407.15478": cosmo  # Calibrating Bayesian Tension Statistics using Neural Ratio Estimation
+  "2504.12374": methods  # Resonances in reflective Hamiltonian Monte Carlo
+  "2507.20190": astro  # Interpreting nebular emission lines in the high-redshift Universe
+  "2508.09070": cosmo  # Study of the Connected Four-Point Correlation Function of Galaxies fro
+  "2509.03360": methods  # The Early Career Workshop of GR-Amaldi 2025
+  "2509.13307": cosmo  # High-Dimensional Bayesian Model Comparison in Cosmology with GPU-accel
+  "2509.13394": cosmo  # Bayesian Anomaly Detection for Ia Cosmology: Automating SALT3 Data Cur
+  "2510.07637": cosmo  # Testing Lens Models of PLCK G165.7+67.0 Using Lensed SN H0pe
+  "2511.04661": cosmo  # unimpeded: A Public Grid of Nested Sampling Chains for Cosmological Mo
+  "2511.05470": cosmo  # $\texttt{unimpeded}$: A Public Nested Sampling Database for Bayesian C
+  "2511.11548": other  # $CPT$-Symmetric Kähler-Dirac Fermions
+  "2511.11943": astro  # Euclid Quick Data Release (Q1): Identification of massive galaxy candi
+  "2511.11982": astro  # First Light And Reionisation Epoch Simulations (FLARES) XX: Comparing 
+  "2511.15196": other  # Particle Monte Carlo methods for Lattice Field Theory
+  "2512.01929": astro  # Nested Sampling for ARIMA Model Selection in Astronomical Time-Series 
+  "2512.06319": cosmo  # A Fully Photometric Approach to Type Ia Supernova Cosmology in the LSS
+  "2512.08522": 21cm  # Measuring the diffuse Galactic synchrotron spectral index and curvatur
+  "2512.20132": cosmo  # Parity-odd Four-Point Correlation Function from DESI Data Release 1 Lu
+  "2601.06258": astro  # Cosmological back-reaction of baryons on dark matter in the CAMELS sim
+  "2601.14235": methods  # Opportunities in AI/ML for the Rubin LSST Dark Energy Science Collabor
+  "2602.11264": cosmo  # Time delays and stationarity in quasar light curves
+  "2602.22307": cosmo  # Global structure of the time delay likelihood
+  "2603.11165": cosmo  # FlowSN: Neural Simulation-Based Inference under Realistic Selection Ef
+  "2604.17981": astro  # Efficiently emulating distribution functions in gigaparsec volumes for
+  "2605.27370": astro  # First Light and Reionization Epoch Simulations (FLARES) XXII: UV-dust 
+  "2606.01547": cosmo  # JAXtronomy: A JAX port of lenstronomy
+  "2606.10038": astro  # Learning the Universe with the 2nd Generation of CAMELS: Varying 35 pa
+  "2606.21334": 21cm  # All-sky modeling of Galactic emission at radio and microwave frequenci
+  "2606.27110": 21cm  # Probing Anomalous Microwave Emission with the Square Kilometre Array
+  "2606.30504": astro  # Rapid Hubble constant inference from GW170817 using GPU-accelerated ne
+  "2606.30785": other  # Numerical polology: towards next-generation model-building for cosmolo
+  "2607.28725": cosmo  # A Simulation Based Inference Approach to Modelling of Type Ia Supernov
+  "2608.31161": methods  # Agentic research is oxymoronic
+  "2609.24588": astro  # LATED: Ly$α$-anchored photometric selection of candidate metal-free an
+  "2609.29413": other  # Neural Transport Nested Sampling
+  "2609.35661": cosmo  # Accelerating massive ensembles of ordinary differential equations
+  "2610.19000": cosmo  # jax-SNANA: A GPU-accelerated Supernova Framework for the SBI Era
+  "2610.27328": astro  # Core-Collapse Supernova Rates in the Dark Energy Survey
+  "2610.30244": cosmo  # 2Flow2SN: Dusty Supernova Cosmology with Photometric Redshifts and Con

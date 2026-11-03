@@ -121,7 +121,7 @@
   --feature-line: rgba(23, 50, 70, 0.22);
   --feature-edge: #B6E3D9;
   --feature-glow: var(--shadow);
-  --radius: 18px;
+  --radius: 22px;
   --font: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
@@ -596,7 +596,7 @@ a:hover {
 
 .card {
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   padding: 0.9rem 1rem;
   background: var(--panel-strong);
 }
@@ -718,7 +718,7 @@ a:hover {
 
 .feature-card {
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   padding: 1rem;
   background: var(--panel-strong);
 }
@@ -950,7 +950,7 @@ a:hover {
   /* A quiet panel: just a faint tint, no bar or border */
   margin: 0 0 0.5rem;
   padding: 0.55rem 0.75rem;
-  border-radius: 8px;
+  border-radius: 12px;
   background: color-mix(in srgb, var(--ink) 4%, transparent);
 
   p {
@@ -996,7 +996,7 @@ a:hover {
   width: 100%;
   max-height: 260px;
   object-fit: contain;
-  border-radius: 6px;
+  border-radius: 8px;
   margin: 0 0 1rem;
   background: var(--panel-strong);
 }
@@ -1055,7 +1055,7 @@ a:hover {
   gap: 1.1rem;
   padding: 1rem;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   background: var(--panel-strong);
   font-family: var(--font);
 }
@@ -1191,7 +1191,7 @@ a:hover {
   img {
     display: block;
     width: 100%;
-    border-radius: 4px;
+    border-radius: 6px;
   }
 }
 
@@ -1200,7 +1200,7 @@ a:hover {
   max-width: 100%;
   max-height: 420px;
   object-fit: contain;
-  border-radius: 8px;
+  border-radius: 12px;
   margin: 0 auto 2rem;
   background: var(--panel-strong);
 }
@@ -1258,7 +1258,7 @@ a:hover {
   width: 100%;
   height: auto;
   border: 1px solid var(--line);
-  border-radius: 4px;
+  border-radius: 6px;
   box-shadow: 0 4px 14px var(--thumb-shadow);
   background: #fff;
 }
@@ -1301,7 +1301,7 @@ a:hover {
   gap: 1.1rem;
   padding: 0.95rem 1rem;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   background: var(--panel-strong);
   align-items: start;
 }
@@ -1309,7 +1309,7 @@ a:hover {
 .paper-list-thumb {
   display: block;
   text-decoration: none;
-  border-radius: 4px;
+  border-radius: 6px;
   overflow: hidden;
   background: #fff;
   border: 1px solid var(--line);
@@ -1400,7 +1400,7 @@ a:hover {
 .group-timeline {
   margin: 0.5rem 0 0;
   padding: 1rem;
-  border-radius: 12px;
+  border-radius: 16px;
   background: var(--timeline-bg);
 }
 
@@ -1515,7 +1515,7 @@ html {
 .group-card.is-linked {
   outline: 2px solid var(--accent-2);
   outline-offset: 4px;
-  border-radius: 12px;
+  border-radius: 16px;
 }
 
 .group-card {
@@ -1526,7 +1526,7 @@ html {
   margin-bottom: 1rem;
   padding: 1.2rem;
   border: 1px solid var(--line);
-  border-radius: 14px;
+  border-radius: 18px;
   background: var(--panel-strong);
 }
 
@@ -1616,7 +1616,7 @@ html {
   width: 100%;
   height: 100%;
   object-fit: cover;
-  border-radius: 8px;
+  border-radius: 12px;
 }
 
 .group-collage-overlay {
@@ -1684,6 +1684,13 @@ html {
   display: grid;
   grid-template-columns: 1fr minmax(40px, 90px) minmax(220px, 280px) minmax(40px, 90px) 1fr;
   align-items: center;
+}
+
+/* Mid widths: shorter curves and a narrower hub, so the side cards keep room */
+@media (min-width: 861px) and (max-width: 1150px) {
+  .research-star {
+    grid-template-columns: 1fr 28px 240px 28px 1fr;
+  }
 }
 
 .research-star-lines {
@@ -1763,7 +1770,7 @@ html {
   display: flex;
   flex-direction: column;
   border: 1px solid var(--area-edge);
-  border-radius: 14px;
+  border-radius: 18px;
   text-decoration: none;
   transition: border-color 0.2s ease, transform 0.2s ease;
 }
@@ -1774,7 +1781,7 @@ html {
   width: 32px;
   height: 5px;
   margin-bottom: 0.75rem;
-  border-radius: 3px;
+  border-radius: 4px;
   background: var(--area-mark);
 }
 
@@ -1790,6 +1797,7 @@ html {
   color: var(--area-ink);
   font-size: 1.45rem;
   line-height: 1.2;
+  text-wrap: balance;  /* no lone last word ("& AI") on its own line */
 }
 
 .research-hub ul {
@@ -1800,7 +1808,7 @@ html {
   list-style: none;
   color: var(--ink);
   font-size: 0.98rem;
-  line-height: 1.75;
+  line-height: 1.4;
 }
 
 /* Stretch to the row height, so the cards sit level with each other */
@@ -1821,6 +1829,7 @@ html {
   color: var(--area-ink);
   font-size: 1.3rem;
   line-height: 1.25;
+  text-wrap: balance;
 }
 
 .research-node ul {
@@ -1829,20 +1838,32 @@ html {
   list-style: none;
   color: var(--ink);
   font-size: 0.95rem;
-  line-height: 1.7;
+  line-height: 1.4;
 }
 
-/* A small dot in the area's colour before each topic */
+/* A small dot in the area's colour before each topic; a topic that wraps
+   keeps its second line under the text, not under the dot */
+.research-hub li,
+.research-node li {
+  position: relative;
+  padding-left: 1.1em;
+}
+
+.research-hub li + li,
+.research-node li + li {
+  margin-top: 0.3em;
+}
+
 .research-hub li::before,
 .research-node li::before {
   content: "";
-  display: inline-block;
+  position: absolute;
+  left: 0;
+  top: 0.55em;
   width: 6px;
   height: 6px;
-  margin: 0 0.6em 0.15em 0;
   border-radius: 50%;
   background: var(--area-mark);
-  vertical-align: middle;
 }
 
 .research-hub:hover,
@@ -2097,7 +2118,7 @@ html {
 .swatch-grid li {
   overflow: hidden;
   border: 1px solid var(--line);
-  border-radius: 12px;
+  border-radius: 16px;
   background: var(--panel-strong);
   font-family: var(--font);
   font-size: 0.78rem;

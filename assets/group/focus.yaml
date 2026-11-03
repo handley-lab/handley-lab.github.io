@@ -5,67 +5,77 @@
 #           have a paper there (methods, cosmo, 21cm, astro, other)
 #   tags:   two or three short labels for their current work
 #
-# First drafted from each person's recent papers and thesis titles, so please
-# correct anything that is out of date. People without an entry still appear
-# under any theme they have papers in, just without tags.
+# Students and postdocs were updated from the member write-ups in
+# handley-lab-summary (2026-11); Co-Is were first drafted from recent papers.
+# Please correct anything that is out of date. People without an entry still
+# appear under any theme they have papers in, just without tags.
 
 Will Handley:
   themes: [methods, cosmo, 21cm, astro, other]
-  tags: [Nested sampling, GPU inference, AI for science]
+  tags: [Nested sampling, Cosmological tensions, AI for science]
 
 # Postdocs
 Natalie Hogg:
   themes: [cosmo, astro]
-  tags: [Strong lensing, JAX tools, AI and research practice]
+  tags: [Strong lensing, Line-of-sight shear, AI ethics in science]
 Matt Grayling:
   themes: [cosmo, methods]
-  tags: [Type Ia supernovae, Simulation-based inference, BayeSN]
+  tags: [Type Ia supernovae, Simulation-based inference, jax-SNANA]
 Chris Lovell:
   themes: [astro, methods]
-  tags: [Galaxy formation, JWST, Field-level emulators]
+  tags: [Galaxy formation, Synthetic observations, ML emulators]
 
 # PhD students
 Toby Lovick:
   themes: [methods, cosmo]
-  tags: [GPU nested sampling, Model comparison, Marginalisation]
+  tags: [High-dimensional model comparison, Laplace collapsed sampling, Ambient AI lab]
 Namu Kroupa:
-  themes: [methods, astro]
-  tags: [Quasar time delays, Nested slice sampling, Hamiltonian Monte Carlo]
+  themes: [methods, cosmo]
+  tags: [Nested slice sampling, Hamiltonian Monte Carlo, Quasar time delays]
 Dily Ong:
   themes: [cosmo, methods]
-  tags: [Evolving dark energy, DESI, Nested sampling database]
+  tags: [unimpeded, Cosmological tensions, Evolving dark energy]
 Sam Leeney:
-  themes: [21cm, methods]
-  tags: [RFI mitigation, Radiometer calibration, Anomaly detection]
+  themes: [21cm, methods, cosmo]
+  tags: [Bayesian anomaly detection, RFI mitigation, Supernova data curation]
 Sinah Legner:
   themes: [cosmo, other]
-  tags: [Torsion condensation, Hubble tension]
+  tags: [Torsion condensation, Hubble tension, Torsional dark energy]
 Metha Prathaban:
   themes: [astro]
   tags: [Gravitational-wave inference, GPU nested sampling, Hubble constant]
 Wei-Ning Deng:
-  themes: [cosmo]
-  tags: [Spatial curvature, CPT-symmetric universe]
+  themes: [cosmo, other]
+  tags: [CPT-symmetric universe, Quantised curvature, Kähler-Dirac fermions]
 Samuel Hewson:
-  themes: [cosmo]
-  tags: [Parity violation, Large-scale structure]
+  themes: [cosmo, other]
+  tags: [Parity violation, AI for fundamental theory]
 Charlotte Priestley:
-  themes: [astro]
-  tags: [Satellite orbits, GPU acceleration]
+  themes: [astro, methods]
+  tags: [jaxsgp4, Orbit determination, Space situational awareness]
+Lawrence Berry:
+  themes: [cosmo, methods]
+  tags: [GPU ODE solvers, Einstein-Boltzmann solvers, modax]
+Farah Wallauer:
+  themes: [astro, methods]
+  tags: [Fibre allocation in JAX, Overlapping gravitational waves]
+Selma Vangstein:
+  themes: [other, cosmo]
+  tags: [Poincaré gauge theory, Boltzmann solvers]
 
 # Part III students
 Jaiman Lad:
-  themes: [astro, methods]
+  themes: [cosmo, methods]
   tags: [Quasar time delays, GPU inference]
 Jesús Girones Fraile:
-  themes: [astro, cosmo]
+  themes: [cosmo, astro]
   tags: [Lensed supernovae, Time delays]
 David Parodi:
   themes: [cosmo]
   tags: [Cosmological tensions]
 Manaal Khan:
   themes: [astro, cosmo]
-  tags: [Gravitational-wave cosmology, Dark sirens]
+  tags: [Subthreshold sirens, Gravitational-wave cosmology]
 
 # Co-investigators
 Harry Bevins:

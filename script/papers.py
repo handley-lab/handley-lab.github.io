@@ -47,11 +47,11 @@ NS = {"a": "http://www.w3.org/2005/Atom", "arxiv": "http://arxiv.org/schemas/ato
 
 # Display order. Classification order is RULES below.
 THEMES = [
-    ("methods", "Bayesian methods & software"),
-    ("cosmo", "Cosmology & dark energy"),
-    ("21cm", "21-cm & radio cosmology"),
-    ("astro", "Gravitational waves & astrophysics"),
-    ("other", "Particle physics & beyond"),
+    ("methods", "Bayesian inference & AI"),
+    ("cosmo", "Early universe & dark energy"),
+    ("21cm", "21-cm & cosmic dawn"),
+    ("astro", "Galaxies & gravitational waves"),
+    ("other", "Gravity & particle physics"),
 ]
 OTHER = "other"
 
@@ -172,6 +172,16 @@ def arxiv_query(name, start, end):
         offset += 200
 
 
+def arxiv_ids(ids):
+    """Fetch named arXiv papers, 50 per request so arXiv doesn't throttle us."""
+    ids, papers = sorted(ids), []
+    for i in range(0, len(ids), 50):
+        chunk = ids[i:i + 50]
+        papers += parse_feed(arxiv_get({"id_list": ",".join(chunk), "max_results": len(chunk)}))
+        time.sleep(3)  # arXiv asks for at most one request every three seconds
+    return papers
+
+
 def parse_feed(xml):
     root = ET.fromstring(xml)
     papers = []
@@ -204,11 +214,11 @@ def citations(ids):
     counts = {}
     for i in range(0, len(ids), 100):
         chunk = ids[i:i + 100]
-        for attempt in range(5):
+        for attempt in range(8):
             r = requests.post(S2_URL, params={"fields": "citationCount"},
                               json={"ids": [f"ARXIV:{a}" for a in chunk]}, timeout=60)
             if r.status_code == 429:
-                time.sleep(5 * (attempt + 1))
+                time.sleep(10 * (attempt + 1))
                 continue
             r.raise_for_status()
             break
@@ -273,11 +283,14 @@ def recent_papers(members, start, days, known, include, theme_fix):
         for p in hits:
             if p["arxiv"] not in known and is_group_paper(p, members, start):
                 found[p["arxiv"]] = p
-    for arxiv in include - known:
-        found.update({p["arxiv"]: p for p in parse_feed(arxiv_get({"id_list": arxiv}))})
+    found.update({p["arxiv"]: p for p in arxiv_ids(include - known)})
     for p in found.values():
         enrich(p, members, theme_fix)
-    counts = citations(list(found))
+    try:
+        counts = citations(list(found))
+    except requests.RequestException as e:
+        print(f"Citation lookup failed, new papers start at 0: {e}")
+        counts = {}
     for p in found.values():
         p["citations"] = counts.get(p["arxiv"], 0)
         del p["categories"]
@@ -327,9 +340,7 @@ def main():
         print(f"[{i}/{len(searched)}] {m['name']}: {len(found)} arXiv hits")
         for p in found:
             candidates[p["arxiv"]] = p
-    for arxiv in include - candidates.keys():
-        hits = parse_feed(arxiv_get({"id_list": arxiv}))
-        candidates.update({p["arxiv"]: p for p in hits})
+    candidates.update({p["arxiv"]: p for p in arxiv_ids(include - candidates.keys())})
 
     papers = []
     for arxiv, p in candidates.items():

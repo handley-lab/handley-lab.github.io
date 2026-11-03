@@ -1,5 +1,6 @@
 # Homepage "What we work on" star diagram. The five entries are exactly the
-# paper-map themes in assets/papers/papers.json (same `key` and colour; the centre label is shortened),
+# paper-map themes in assets/papers/papers.json (same `key`, label and colour),
+# and pair up the ten chapters of the group summary; the topics name those chapters,
 # so each links to /papers/#theme=<key>.
 # Methods is the box in the middle; the first two science themes stack on
 # its left, the last two on its right.
@@ -9,7 +10,7 @@
 
 centre:
   key: methods
-  label: Bayesian methods
+  label: Bayesian inference & AI
   colour: "#5588CC"
   accent: "#2D5278"
   fill: "#E8EFF7"
@@ -17,49 +18,49 @@ centre:
   topics:
     - GPU nested sampling
     - Simulation-based inference
-    - Anomaly detection
+    - Agentic AI for science
 
 fields:
   - key: cosmo
-    label: Cosmology & dark energy
+    label: Early universe & dark energy
     colour: "#78C6AF"
     accent: "#25675E"
     fill: "#E8F3EF"
     bubble: "#64C8B4"
     topics:
-      - Evolving dark energy
-      - Tensions and H₀
-      - Curvature and inflation
+      - Inflation & the primordial universe
+      - Tensions & dark energy
+      - Supernovae & strong lensing
 
   - key: 21cm
-    label: 21-cm & radio cosmology
+    label: 21-cm & cosmic dawn
     colour: "#D7AF7F"
     accent: "#88602D"
     fill: "#F6F0E5"
     bubble: "#F0C46C"
     topics:
       - The REACH experiment
-      - Foregrounds and calibration
+      - Foregrounds & calibration
       - The first stars
 
   - key: astro
-    label: Gravitational waves & astrophysics
+    label: Galaxies & gravitational waves
     colour: "#EE8866"
     accent: "#A05246"
     fill: "#F8ECE8"
     bubble: "#F29B8F"
     topics:
+      - Galaxy formation & simulations
       - Gravitational-wave inference
-      - Quasars and galaxy clusters
-      - Exoplanets
+      - Exoplanets & time series
 
   - key: other
-    label: Particle physics & beyond
+    label: Gravity & particle physics
     colour: "#CCEEFF"
     accent: "#66558F"
     fill: "#F0EDF7"
     bubble: "#B7A1E8"
     topics:
-      - Dark matter global fits
-      - Neutrinos and axions
-      - Modified gravity
+      - Modified & gauge theory gravity
+      - Particle astrophysics global fits
+      - Nested sampling for colliders

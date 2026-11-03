@@ -214,7 +214,7 @@
    ],
    "tags": [
     "Nested sampling",
-    "GPU inference",
+    "Cosmological tensions",
     "AI for science"
    ]
   },
@@ -372,8 +372,8 @@
    ],
    "tags": [
     "Strong lensing",
-    "JAX tools",
-    "AI and research practice"
+    "Line-of-sight shear",
+    "AI ethics in science"
    ]
   },
   {
@@ -394,7 +394,7 @@
    "tags": [
     "Type Ia supernovae",
     "Simulation-based inference",
-    "BayeSN"
+    "jax-SNANA"
    ]
   },
   {
@@ -428,8 +428,8 @@
    ],
    "tags": [
     "Galaxy formation",
-    "JWST",
-    "Field-level emulators"
+    "Synthetic observations",
+    "ML emulators"
    ]
   },
   {
@@ -538,8 +538,14 @@
      "end": "2026-06-01"
     }
    ],
-   "themes": [],
-   "tags": []
+   "themes": [
+    "astro",
+    "methods"
+   ],
+   "tags": [
+    "Fibre allocation in JAX",
+    "Overlapping gravitational waves"
+   ]
   },
   {
    "name": "Selma Vangstein",
@@ -552,8 +558,14 @@
      "end": null
     }
    ],
-   "themes": [],
-   "tags": []
+   "themes": [
+    "other",
+    "cosmo"
+   ],
+   "tags": [
+    "Poincaré gauge theory",
+    "Boltzmann solvers"
+   ]
   },
   {
    "name": "Samuel Hewson",
@@ -577,11 +589,12 @@
     }
    ],
    "themes": [
-    "cosmo"
+    "cosmo",
+    "other"
    ],
    "tags": [
     "Parity violation",
-    "Large-scale structure"
+    "AI for fundamental theory"
    ]
   },
   {
@@ -595,8 +608,15 @@
      "end": null
     }
    ],
-   "themes": [],
-   "tags": []
+   "themes": [
+    "cosmo",
+    "methods"
+   ],
+   "tags": [
+    "GPU ODE solvers",
+    "Einstein-Boltzmann solvers",
+    "modax"
+   ]
   },
   {
    "name": "Charlotte Priestley",
@@ -620,11 +640,13 @@
     }
    ],
    "themes": [
-    "astro"
+    "astro",
+    "methods"
    ],
    "tags": [
-    "Satellite orbits",
-    "GPU acceleration"
+    "jaxsgp4",
+    "Orbit determination",
+    "Space situational awareness"
    ]
   },
   {
@@ -653,9 +675,9 @@
     "cosmo"
    ],
    "tags": [
-    "GPU nested sampling",
-    "Model comparison",
-    "Marginalisation"
+    "High-dimensional model comparison",
+    "Laplace collapsed sampling",
+    "Ambient AI lab"
    ]
   },
   {
@@ -676,12 +698,12 @@
    ],
    "themes": [
     "methods",
-    "astro"
+    "cosmo"
    ],
    "tags": [
-    "Quasar time delays",
     "Nested slice sampling",
-    "Hamiltonian Monte Carlo"
+    "Hamiltonian Monte Carlo",
+    "Quasar time delays"
    ]
   },
   {
@@ -700,9 +722,9 @@
     "methods"
    ],
    "tags": [
-    "Evolving dark energy",
-    "DESI",
-    "Nested sampling database"
+    "unimpeded",
+    "Cosmological tensions",
+    "Evolving dark energy"
    ]
   },
   {
@@ -723,12 +745,13 @@
    ],
    "themes": [
     "21cm",
-    "methods"
+    "methods",
+    "cosmo"
    ],
    "tags": [
+    "Bayesian anomaly detection",
     "RFI mitigation",
-    "Radiometer calibration",
-    "Anomaly detection"
+    "Supernova data curation"
    ]
   },
   {
@@ -748,7 +771,8 @@
    ],
    "tags": [
     "Torsion condensation",
-    "Hubble tension"
+    "Hubble tension",
+    "Torsional dark energy"
    ]
   },
   {
@@ -788,11 +812,13 @@
     }
    ],
    "themes": [
-    "cosmo"
+    "cosmo",
+    "other"
    ],
    "tags": [
-    "Spatial curvature",
-    "CPT-symmetric universe"
+    "CPT-symmetric universe",
+    "Quantised curvature",
+    "Kähler-Dirac fermions"
    ]
   },
   {
@@ -1013,7 +1039,7 @@
     }
    ],
    "themes": [
-    "astro",
+    "cosmo",
     "methods"
    ],
    "tags": [
@@ -1033,8 +1059,8 @@
     }
    ],
    "themes": [
-    "astro",
-    "cosmo"
+    "cosmo",
+    "astro"
    ],
    "tags": [
     "Lensed supernovae",
@@ -1075,8 +1101,8 @@
     "cosmo"
    ],
    "tags": [
-    "Gravitational-wave cosmology",
-    "Dark sirens"
+    "Subthreshold sirens",
+    "Gravitational-wave cosmology"
    ]
   },
   {

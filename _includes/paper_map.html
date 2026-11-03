@@ -69,7 +69,7 @@
     --pm-line: var(--line);
     margin: 0 0 1rem;
     padding: 1.5rem;
-    border-radius: 18px;
+    border-radius: 22px;
     background: var(--pm-panel);
     color: var(--pm-text);
     border: 1px solid var(--pm-line);
@@ -127,7 +127,7 @@
     max-width: 280px;
     padding: 0.45rem 0.65rem;
     border: 1px solid var(--pm-line);
-    border-radius: 8px;
+    border-radius: 12px;
     background: var(--pm-bg);
     color: var(--pm-text);
     font-size: 0.82rem;
@@ -138,7 +138,7 @@
     margin-top: 1rem;
     padding: 1.25rem 1.4rem;
     border: 1px solid var(--pm-line);
-    border-radius: 14px;
+    border-radius: 18px;
     background: var(--pm-bg);
   }
   .paper-map-empty { margin: 0; color: var(--pm-muted); }
@@ -179,13 +179,13 @@
   .paper-map.is-list .paper-map-legend { flex-direction: row; flex-wrap: wrap; }
   .paper-map-list-bar { display: flex; flex-wrap: wrap; justify-content: space-between; align-items: center; gap: 0.6rem; margin-bottom: 0.8rem; color: var(--pm-muted); font-size: 0.88rem; }
   .paper-map-list-count { margin: 0; }
-  .paper-map-sort { margin-left: 0.4rem; padding: 0.3rem 0.5rem; border: 1px solid var(--pm-line); border-radius: 8px; background: var(--pm-bg); color: var(--pm-text); font: inherit; }
+  .paper-map-sort { margin-left: 0.4rem; padding: 0.3rem 0.5rem; border: 1px solid var(--pm-line); border-radius: 12px; background: var(--pm-bg); color: var(--pm-text); font: inherit; }
   .paper-map-cards { list-style: none; margin: 0; padding: 0; display: grid; gap: 0.9rem; }
-  .paper-map-cards > li { padding: 1.2rem 1.4rem; border: 1px solid var(--pm-line); border-left: 4px solid var(--card-colour); border-radius: 14px; background: var(--pm-bg); }
+  .paper-map-cards > li { padding: 1.2rem 1.4rem; border: 1px solid var(--pm-line); border-left: 4px solid var(--card-colour); border-radius: 18px; background: var(--pm-bg); }
   .paper-map-cards .paper-map-abstract.is-clamped { display: -webkit-box; -webkit-line-clamp: 4; -webkit-box-orient: vertical; overflow: hidden; }
   .paper-map-more { margin: -0.6rem 0 0.8rem; padding: 0; border: 0; background: none; color: var(--pm-blue); font: inherit; font-size: 0.85rem; cursor: pointer; }
   .paper-map-pager { display: flex; flex-wrap: wrap; justify-content: center; gap: 0.4rem; margin-top: 1.2rem; }
-  .paper-map-pager button { min-width: 2.3rem; padding: 0.4rem 0.7rem; border: 1px solid var(--pm-line); border-radius: 8px; background: var(--pm-bg); color: var(--pm-text); font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .paper-map-pager button { min-width: 2.3rem; padding: 0.4rem 0.7rem; border: 1px solid var(--pm-line); border-radius: 12px; background: var(--pm-bg); color: var(--pm-text); font: inherit; font-size: 0.85rem; cursor: pointer; }
   .paper-map-pager button[aria-current="page"] { border-color: var(--pm-blue); background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
   .paper-map-pager button:disabled { opacity: 0.4; cursor: default; }
   .paper-map-side { min-width: 0; }
@@ -206,7 +206,7 @@
   .paper-map-team-empty { color: var(--pm-muted); font-size: 0.82rem; font-style: italic; }
   @media (prefers-reduced-motion: reduce) { .paper-map-team-list img, .paper-map-team-list .initials { transition: none; transform: none !important; } }
   @media (max-width: 720px) {
-    .paper-map { padding: 1rem; border-radius: 14px; }
+    .paper-map { padding: 1rem; border-radius: 18px; }
     .paper-map-cards > li { padding: 1rem; }
     .paper-map-detail { padding: 1rem; }
   }
@@ -304,9 +304,9 @@
       }));
       nodes.forEach((d) => {
         const w = wedges.get(d.theme);
-        const pad = Math.min(0.12, w.span * 0.15);
-        const angle = w.a0 + pad + d.v * (w.span - 2 * pad);
-        const r = R * 0.9 * Math.sqrt(0.05 + 0.95 * d.u);
+        // No padding between wedges: an empty strip there leaves a notch in the ball.
+        const angle = w.a0 + d.v * w.span;
+        const r = R * 0.95 * Math.sqrt(0.05 + 0.95 * d.u);
         d.tx = cx + r * Math.cos(angle);
         d.ty = cy + r * Math.sin(angle);
       });
@@ -321,6 +321,8 @@
         .force("x", d3.forceX((d) => d.tx).strength(0.12))
         .force("y", d3.forceY((d) => d.ty).strength(0.12))
         .force("collide", d3.forceCollide((d) => radius(d) + 1.5).iterations(2))
+        // A gentle pull to the middle closes any dents left between wedges
+        .force("centre", d3.forceRadial(0, width / 2, cy).strength(0.03))
         .force("contain", contain)
         .alpha(0.8)
         .restart();
