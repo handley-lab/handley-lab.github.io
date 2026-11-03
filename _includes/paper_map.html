@@ -311,21 +311,29 @@
         d.ty = cy + r * Math.sin(angle);
       });
 
-      if (!sim) {
+      const first = !sim;
+      if (first) {
         // Start each bubble at its spot: the cloud is too densely packed for
         // bubbles to push past each other into their wedges from random starts.
         nodes.forEach((d) => { d.x = d.tx; d.y = d.ty; });
-        sim = d3.forceSimulation(nodes).alphaDecay(0.03).on("tick", render);
+        sim = d3.forceSimulation(nodes).alphaDecay(0.045).on("tick", render).stop();
       }
       sim
-        .force("x", d3.forceX((d) => d.tx).strength(0.12))
-        .force("y", d3.forceY((d) => d.ty).strength(0.12))
+        .force("x", d3.forceX((d) => d.tx).strength(0.16))
+        .force("y", d3.forceY((d) => d.ty).strength(0.16))
         .force("collide", d3.forceCollide((d) => radius(d) + 1.5).iterations(2))
         // A gentle pull to the middle closes any dents left between wedges
         .force("centre", d3.forceRadial(0, width / 2, cy).strength(0.03))
         .force("contain", contain)
-        .alpha(0.8)
-        .restart();
+        .alpha(0.8);
+      if (first) {
+        // Untangle the overlapping start off screen, so the page opens on a
+        // nearly settled ball and only the last gentle settle is animated
+        sim.tick(80);
+        render();
+        sim.alpha(0.15);
+      }
+      sim.restart();
     }
 
     // Keep every bubble inside the boundary circle, so the cloud stays round
