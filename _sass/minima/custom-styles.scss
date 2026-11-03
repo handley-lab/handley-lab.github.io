@@ -1686,13 +1686,6 @@ html {
   align-items: center;
 }
 
-/* Mid widths: shorter curves and a narrower hub, so the side cards keep room */
-@media (min-width: 861px) and (max-width: 1150px) {
-  .research-star {
-    grid-template-columns: 1fr 28px 240px 28px 1fr;
-  }
-}
-
 .research-star-lines {
   align-self: stretch;
   width: 100%;
@@ -1808,7 +1801,7 @@ html {
   list-style: none;
   color: var(--ink);
   font-size: 0.98rem;
-  line-height: 1.4;
+  line-height: 1.75;
 }
 
 /* Stretch to the row height, so the cards sit level with each other */
@@ -1821,6 +1814,9 @@ html {
 
 .research-node {
   justify-content: center;
+  /* A floor on the height, so the cards stay roomy even when every title
+     fits on one line (all four share the tallest card's height) */
+  min-height: 10rem;
   padding: 1.3rem 1.5rem;
   background: var(--area-bg);
 }
@@ -1838,7 +1834,7 @@ html {
   list-style: none;
   color: var(--ink);
   font-size: 0.95rem;
-  line-height: 1.4;
+  line-height: 1.7;
 }
 
 /* A small dot in the area's colour before each topic; a topic that wraps
@@ -1849,17 +1845,12 @@ html {
   padding-left: 1.1em;
 }
 
-.research-hub li + li,
-.research-node li + li {
-  margin-top: 0.3em;
-}
-
 .research-hub li::before,
 .research-node li::before {
   content: "";
   position: absolute;
   left: 0;
-  top: 0.55em;
+  top: calc(0.5lh - 3px);  /* centred on the first line */
   width: 6px;
   height: 6px;
   border-radius: 50%;
@@ -1888,6 +1879,10 @@ html {
 
   .research-hub {
     order: -1;
+  }
+
+  .research-node {
+    min-height: 0;
   }
 }
 

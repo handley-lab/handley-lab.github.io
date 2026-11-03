@@ -50,7 +50,7 @@ layout: base
       </div>
       {% include research_lines.html side="left" fields=left %}
       <a class="research-hub" style="--area:{{ ra.centre.colour }}; --area-accent:{{ ra.centre.accent }}; --area-fill:{{ ra.centre.fill }}; --area-bubble:{{ ra.centre.bubble }}" href="{{ '/papers/' | relative_url }}#theme={{ ra.centre.key }}">
-        <strong>{{ ra.centre.label }}</strong>
+        <strong>{{ ra.centre.label | replace: " & ", "<br>&amp; " }}</strong>
         <ul>
           {%- for t in ra.centre.topics %}
           <li>{{ t }}</li>

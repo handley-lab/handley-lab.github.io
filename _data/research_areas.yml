@@ -1,6 +1,7 @@
 # Homepage "What we work on" star diagram. The five entries are exactly the
 # paper-map themes in assets/papers/papers.json (same `key`, label and colour),
-# and pair up the ten chapters of the group summary; the topics name those chapters,
+# and pair up the ten chapters of the group summary; the topics are themes
+# from those chapters,
 # so each links to /papers/#theme=<key>.
 # Methods is the box in the middle; the first two science themes stack on
 # its left, the last two on its right.
@@ -18,7 +19,7 @@ centre:
   topics:
     - GPU nested sampling
     - Simulation-based inference
-    - Agentic AI for science
+    - The Ambient AI Lab
 
 fields:
   - key: cosmo
@@ -28,9 +29,9 @@ fields:
     fill: "#E8F3EF"
     bubble: "#64C8B4"
     topics:
-      - Inflation & the primordial universe
-      - Tensions & dark energy
-      - Supernovae & strong lensing
+      - Curved inflation
+      - Cosmological tensions
+      - Supernova cosmology
 
   - key: 21cm
     label: 21-cm & cosmic dawn
@@ -40,8 +41,8 @@ fields:
     bubble: "#F0C46C"
     topics:
       - The REACH experiment
-      - Foregrounds & calibration
-      - The first stars
+      - Radiometer calibration
+      - Neural signal emulation
 
   - key: astro
     label: Galaxies & gravitational waves
@@ -50,9 +51,9 @@ fields:
     fill: "#F8ECE8"
     bubble: "#F29B8F"
     topics:
-      - Galaxy formation & simulations
-      - Gravitational-wave inference
-      - Exoplanets & time series
+      - Real-time gravitational waves
+      - High-redshift galaxies
+      - Exoplanet surveys
 
   - key: other
     label: Gravity & particle physics
@@ -61,6 +62,6 @@ fields:
     fill: "#F0EDF7"
     bubble: "#B7A1E8"
     topics:
-      - Modified & gauge theory gravity
-      - Particle astrophysics global fits
-      - Nested sampling for colliders
+      - Poincaré gauge theory
+      - GAMBIT global fits
+      - Lattice field theory
