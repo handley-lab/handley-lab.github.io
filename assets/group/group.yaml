@@ -170,6 +170,10 @@ Natalie Hogg:
     start: 2025-10-06
     thesis: null
   image: images/natalie_hogg.jpg
+  links:
+    Webpage: https://nataliebhogg.com/
+    GitHub: https://github.com/nataliehogg
+    LinkedIn: https://www.linkedin.com/in/nataliebhogg/
 Matt Grayling:
   postdoc:
     start: 2025-10-01

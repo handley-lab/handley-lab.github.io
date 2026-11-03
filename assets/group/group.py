@@ -87,6 +87,21 @@ def paper_authors(paper):
     return authors
 
 
+_papers = []
+
+
+def load_papers():
+    """The group's publication list (../general/data/papers.yaml, the ground
+    truth), read once: it is large, and every card needs it. None if absent."""
+    if not _papers:
+        try:
+            with open('../general/data/papers.yaml') as f:
+                _papers.append(yaml.load(f, Loader=getattr(yaml, 'CSafeLoader', yaml.SafeLoader)))
+        except FileNotFoundError:
+            _papers.append(None)
+    return _papers[0]
+
+
 def arxiv_date(arxiv_id):
     """First of the month an arXiv paper was submitted, from its new-style ID."""
     m = re.match(r'(\d\d)(\d\d)\.\d+', str(arxiv_id))
@@ -153,12 +168,8 @@ class Student(object):
         import yaml
         import re
 
-        # Load papers.yaml - the ground truth
-        papers_file = '../general/data/papers.yaml'
-        try:
-            with open(papers_file) as f:
-                papers = yaml.safe_load(f)
-        except FileNotFoundError:
+        papers = load_papers()
+        if papers is None:
             return self.cached_joint_papers()
 
         name_parts = self.name.split(' ')
