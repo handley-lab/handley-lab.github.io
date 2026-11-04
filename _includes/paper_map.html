@@ -3,11 +3,14 @@
     <div>
       <h2 id="paper-map-title">Group Papers</h2>
       <p class="paper-map-note">Papers written by group members during their time in the group.<span class="paper-map-bubble-only"> Click a bubble to read about it.</span></p>
-      <p class="paper-map-note paper-map-bubble-only">Bubble size is citation count; brighter bubbles are more recent.</p>
+      <p class="paper-map-note paper-map-bubble-only">Bigger bubbles are newer papers; brighter bubbles have more citations.</p>
     </div>
-    <div class="paper-map-views" role="group" aria-label="View">
-      <button type="button" data-view="map" aria-pressed="true">Bubbles</button>
-      <button type="button" data-view="list" aria-pressed="false">List</button>
+    <div class="paper-map-controls">
+      <div class="paper-map-views" role="group" aria-label="View">
+        <button type="button" data-view="map" aria-pressed="true">Bubbles</button>
+        <button type="button" data-view="list" aria-pressed="false">List</button>
+      </div>
+      <button type="button" class="paper-map-recent" aria-pressed="false" title="Highlight papers from the last six months">Newest</button>
     </div>
   </header>
   <div class="paper-map-layout">
@@ -169,6 +172,9 @@
   .paper-map-abstract { margin: 0 0 1rem; color: var(--pm-text); font-size: 0.95rem; line-height: 1.6; }
   .paper-map-links a { color: var(--pm-blue); font-weight: 700; text-decoration: none; margin-right: 1.2rem; }
   .paper-map-links a:hover { text-decoration: underline; }
+  .paper-map-controls { display: flex; flex-wrap: wrap; align-items: center; gap: 0.6rem; }
+  .paper-map-recent { padding: 0.4rem 1rem; border: 1px solid var(--pm-line); border-radius: 999px; background: var(--pm-bg); color: var(--pm-muted); font: inherit; font-size: 0.85rem; cursor: pointer; }
+  .paper-map-recent[aria-pressed="true"] { border-color: var(--pm-blue); background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
   .paper-map-views { display: inline-flex; flex-shrink: 0; border: 1px solid var(--pm-line); border-radius: 999px; overflow: hidden; }
   .paper-map-views button { padding: 0.4rem 1rem; border: 0; background: var(--pm-bg); color: var(--pm-muted); font: inherit; font-size: 0.85rem; cursor: pointer; }
   .paper-map-views button[aria-pressed="true"] { background: var(--pm-blue); color: var(--pm-bg); font-weight: 700; }
@@ -239,19 +245,27 @@
   function init(data, peopleData) {
     const themes = data.themes.filter((t) => data.papers.some((p) => p.theme === t.key));
     const highlighted = new Set();
-    const years = data.papers.map((p) => +p.date.slice(0, 4));
-    const opacity = d3.scaleLinear().domain([d3.min(years), d3.max(years)]).range([0.25, 1]).clamp(true);
-    // Log scale, so a few very highly cited papers don't shrink the rest to dots.
-    // A floor of 10px keeps new, uncited papers clickable and visible.
-    const base = d3.scaleLog().domain([1, (d3.max(data.papers, (p) => p.citations) || 1) + 1]).range([10, 30]);
+    // Brightness is citation count, on a log scale so a few very highly cited
+    // papers don't leave everything else dim
+    const bright = d3.scaleLog().domain([1, (d3.max(data.papers, (p) => p.citations) || 1) + 1]).range([0.3, 1]).clamp(true);
+    // Size is how recent the paper is. A power curve keeps most of the growth
+    // for the last few years, so new papers stand out clearly; a 6px floor
+    // keeps the oldest clickable.
+    const dateOf = (p) => Date.parse(p.date);
+    const base = d3.scalePow().exponent(3).domain(d3.extent(data.papers, dateOf)).range([6, 42]).clamp(true);
     const nodes = data.papers.map((p) => ({ ...p, year: +p.date.slice(0, 4), phase: Math.random() * Math.PI * 2 }));
     let selected = null;
     let width, height, cy, radius, sim, edge;
+    // "Newest" highlights papers from the past half year (the list
+    // view shows only those)
+    let recent = false;
+    const cutoff = Date.now() - 182.5 * 864e5;
+    const isShown = (d) => !recent || dateOf(d) >= cutoff;
 
     themes.forEach((t) => {
       const li = document.createElement("li");
       const count = nodes.filter((n) => n.theme === t.key).length;
-      li.innerHTML = `<button type="button" aria-pressed="false"><span class="swatch" style="background:${FILLS[t.key]}"></span>${t.label} <span class="count">${count}</span></button>`;
+      li.innerHTML = `<button type="button" aria-pressed="false"><span class="swatch" style="background:${FILLS[t.key]}"></span>${t.label} <span class="count" data-theme="${t.key}">${count}</span></button>`;
       li.firstChild.addEventListener("click", (e) => {
         const on = highlighted.has(t.key);
         on ? highlighted.delete(t.key) : highlighted.add(t.key);
@@ -281,10 +295,10 @@
       width = root.querySelector(".paper-map-stage").clientWidth;
       // Scale every bubble by one factor so the whole cloud fits the stage
       // (force-packed circles fill roughly 85% of the disc they occupy).
-      const cloud = (k) => Math.sqrt(d3.sum(nodes, (n) => (k * base(n.citations + 1) + 1.5) ** 2) / 0.85);
+      const cloud = (k) => Math.sqrt(d3.sum(nodes, (n) => (k * base(dateOf(n)) + 1.5) ** 2) / 0.85);
       const target = Math.min(width / 2 - 12, 280);
       const k = Math.min(1.6, target / cloud(1));
-      radius = (n) => k * base(n.citations + 1);
+      radius = (n) => k * base(dateOf(n));
       const R = cloud(k);
       height = 2 * R + 40;
       cy = R + 20;
@@ -354,7 +368,7 @@
 
     function faded(d) {
       if (selected) return selected !== d;
-      return highlighted.size > 0 && !highlighted.has(d.theme);
+      return (highlighted.size > 0 && !highlighted.has(d.theme)) || !isShown(d);
     }
 
     function render() {
@@ -362,7 +376,7 @@
       circles
         .attr("cx", (d) => d.x + (reduceMotion ? 0 : Math.sin(t * 0.6 + d.phase) * 1.6))
         .attr("cy", (d) => d.y + (reduceMotion ? 0 : Math.cos(t * 0.5 + d.phase) * 1.6))
-        .attr("opacity", (d) => opacity(d.year) * (faded(d) ? 0.2 : 1))
+        .attr("opacity", (d) => (faded(d) ? 0.15 * bright(d.citations + 1) : recent ? 1 : bright(d.citations + 1)))
         .style("stroke", (d) => (selected === d ? "var(--pm-text)" : null))
         .attr("stroke-width", (d) => (selected === d ? 2.5 : null));
     }
@@ -492,6 +506,7 @@
 
     function renderList() {
       const shown = nodes
+        .filter(isShown)
         .filter((d) => !highlighted.size || highlighted.has(d.theme))
         .sort(sortBy.value === "cited" ? (a, b) => b.citations - a.citations : (a, b) => b.date.localeCompare(a.date));
       const pages = Math.max(1, Math.ceil(shown.length / PAGE_SIZE));
@@ -534,6 +549,18 @@
     root.querySelector(".paper-map-views").addEventListener("click", (e) => {
       const b = e.target.closest("button[data-view]");
       if (b) setView(b.dataset.view);
+    });
+
+    root.querySelector(".paper-map-recent").addEventListener("click", (e) => {
+      recent = !recent;
+      e.currentTarget.setAttribute("aria-pressed", String(recent));
+      legend.querySelectorAll(".count").forEach((c) => {
+        c.textContent = nodes.filter((n) => n.theme === c.dataset.theme && isShown(n)).length;
+      });
+      if (selected && !isShown(selected)) select(selected);
+      page = 1;
+      if (list.hidden) render();
+      else renderList();
     });
 
     // #theme=<key> (from the homepage research cards) highlights one theme.
