@@ -5,6 +5,17 @@
 # (e.g. Will's pre-group papers that the group still builds on).
 # Most of these come from the paper list in handley-lab-summary (2026-11).
 include:
+  # Already on the map but outside the automatic rule (Will's pre-group
+  # papers, and two the rule misses), so a full rebuild keeps them
+  - "1401.2253"
+  - "1502.01856"
+  - "1506.00171"
+  - "1506.09024"
+  - "1604.06120"
+  - "1607.00270"
+  - "1607.04148"
+  - "2210.07409"
+  - "2603.27830"
   - "1701.08165"
   - "1710.10360"
   - "1805.01968"

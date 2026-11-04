@@ -7,18 +7,22 @@ after leaving, for papers that land late). Large collaboration papers only
 count when a group member is first author. _data/paper_overrides.yml can force
 papers in or out and fix themes; everything else is automatic.
 
-Each paper gets Semantic Scholar citation counts, group-author photos and a
-broad theme. No API keys needed.
+Each paper gets citation counts (INSPIRE-HEP, then NASA ADS for papers INSPIRE
+lacks, if an ADS token is in ADS_TOKEN or ~/.ads/dev_key), group-author photos
+and a broad theme. No API keys needed; without an ADS token, papers INSPIRE
+lacks keep their previous count.
 
     python script/papers.py                    # full live run (~5 min, arXiv is slow)
     python script/papers.py --summary out.md   # also write a change summary for a PR
     python script/papers.py --feed feed.atom   # reuse a downloaded copy of Will's feed
     python script/papers.py --days 10          # add new group papers from the last
                                                # 10 days to the existing list; removes nothing
+    python script/papers.py --citations        # only refresh citation counts
 """
 import argparse
 import datetime as dt
 import json
+import os
 import re
 import time
 import unicodedata
@@ -36,7 +40,8 @@ OVERRIDES = ROOT / "_data" / "paper_overrides.yml"
 PI = "Will Handley"
 PI_FEED = "https://arxiv.org/a/handley_w_1.atom"
 ARXIV_API = "https://export.arxiv.org/api/query"
-S2_URL = "https://api.semanticscholar.org/graph/v1/paper/batch"
+INSPIRE_API = "https://inspirehep.net/api/literature"
+ADS_API = "https://api.adsabs.harvard.edu/v1/search/query"
 SEARCHED_ROLES = ("pi", "postdoc", "phd")
 GRACE = dt.timedelta(days=365)
 COLLABORATION_SIZE = 15
@@ -210,22 +215,67 @@ def classify(title, abstract):
     return OTHER
 
 
-def citations(ids):
+def fetch(method, url, **kwargs):
+    """An API request, waiting out rate limits (HTTP 429)."""
+    for attempt in range(6):
+        r = requests.request(method, url, timeout=60, **kwargs)
+        if r.status_code != 429:
+            r.raise_for_status()
+            return r.json()
+        time.sleep(10 * (attempt + 1))
+    r.raise_for_status()
+
+
+def inspire_citations(ids):
+    """Citation counts from INSPIRE-HEP: open, no key, 50 papers per request."""
     counts = {}
-    for i in range(0, len(ids), 100):
-        chunk = ids[i:i + 100]
-        for attempt in range(8):
-            r = requests.post(S2_URL, params={"fields": "citationCount"},
-                              json={"ids": [f"ARXIV:{a}" for a in chunk]}, timeout=60)
-            if r.status_code == 429:
-                time.sleep(10 * (attempt + 1))
-                continue
-            r.raise_for_status()
-            break
-        else:
-            r.raise_for_status()
-        for arxiv, hit in zip(chunk, r.json()):
-            counts[arxiv] = (hit or {}).get("citationCount") or 0
+    for i in range(0, len(ids), 50):
+        chunk = ids[i:i + 50]
+        data = fetch("GET", INSPIRE_API, params={
+            "q": " or ".join(f"arxiv:{a}" for a in chunk), "size": 2 * len(chunk),
+            "fields": "arxiv_eprints,citation_count"})
+        for hit in data["hits"]["hits"]:
+            m = hit["metadata"]
+            for e in m.get("arxiv_eprints", []):
+                if e["value"] in chunk:
+                    counts[e["value"]] = m.get("citation_count") or 0
+        time.sleep(1)
+    return counts
+
+
+def ads_citations(ids, token):
+    """Citation counts from NASA ADS, which covers astrophysics INSPIRE misses.
+    Needs a personal API token (ADS_TOKEN), so it only runs here, never in the page."""
+    counts = {}
+    for i in range(0, len(ids), 50):
+        chunk = ids[i:i + 50]
+        data = fetch("GET", ADS_API, headers={"Authorization": f"Bearer {token}"}, params={
+            "q": "identifier:(" + " OR ".join(f'"arXiv:{a}"' for a in chunk) + ")",
+            "fl": "identifier,citation_count", "rows": 2 * len(chunk)})
+        for doc in data["response"]["docs"]:
+            for ident in doc.get("identifier", []):
+                if ident.startswith("arXiv:") and ident[6:] in chunk:
+                    counts[ident[6:]] = doc.get("citation_count") or 0
+    return counts
+
+
+def ads_token():
+    """The ADS API token: ADS_TOKEN, or ~/.ads/dev_key (where the ads package
+    keeps it). Never stored in this repository."""
+    key = Path.home() / ".ads" / "dev_key"
+    return os.environ.get("ADS_TOKEN") or (key.read_text().strip() if key.exists() else None)
+
+
+def citations(ids):
+    """Citation counts by arXiv ID, from INSPIRE then ADS. Papers neither knows
+    are left out, so callers can keep a previous count."""
+    counts = inspire_citations(ids)
+    missing = [a for a in ids if a not in counts]
+    token = ads_token()
+    if missing and token:
+        counts.update(ads_citations(missing, token))
+    elif missing:
+        print(f"{len(missing)} papers not on INSPIRE; set ADS_TOKEN or ~/.ads/dev_key to look them up on ADS")
     return counts
 
 
@@ -302,7 +352,18 @@ def main():
     parser.add_argument("--days", type=int, help="only add new group papers from the last DAYS days")
     parser.add_argument("--summary", help="write a markdown summary of changes to this path")
     parser.add_argument("--feed", help="reuse a downloaded copy of the PI's arXiv feed")
+    parser.add_argument("--citations", action="store_true", help="only refresh citation counts")
     args = parser.parse_args()
+
+    if args.citations:
+        current = json.loads(OUT.read_text())["papers"]
+        counts = citations([p["arxiv"] for p in current])
+        changed = sum(1 for p in current if counts.get(p["arxiv"], p["citations"]) != p["citations"])
+        for p in current:
+            p["citations"] = counts.get(p["arxiv"], p["citations"])
+        write_output(current, args, [])
+        print(f"Citation counts: {len(counts)} of {len(current)} found, {changed} changed")
+        return
 
     members = load_group()
     start = group_start(members)
@@ -319,14 +380,14 @@ def main():
             p["theme"] = theme_fix.get(p["arxiv"], p["theme"])
         known = {p["arxiv"] for p in current} | exclude
         new, failed = recent_papers(members, start, args.days, known, include, theme_fix)
-        # Keep the old count if Semantic Scholar is down or doesn't know the paper
+        # Keep the old count if the citation sources are down or don't know the paper
         try:
             counts = citations([p["arxiv"] for p in current])
         except requests.RequestException as e:
             print(f"Citation refresh failed, keeping old counts: {e}")
             counts = {}
         for p in current:
-            p["citations"] = counts.get(p["arxiv"]) or p["citations"]
+            p["citations"] = counts.get(p["arxiv"], p["citations"])
         write_output(current + new, args, failed)
         return
 

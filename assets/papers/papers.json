@@ -69,7 +69,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2610.23016",
@@ -109,7 +109,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2610.08903",
@@ -188,7 +188,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 2
+   "citations": 3
   },
   {
    "arxiv": "2609.29413",
@@ -211,7 +211,7 @@
     }
    ],
    "theme": "other",
-   "citations": 1
+   "citations": 0
   },
   {
    "arxiv": "2609.24588",
@@ -424,7 +424,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 4
   },
   {
    "arxiv": "2607.27467",
@@ -449,7 +449,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 2
   },
   {
    "arxiv": "2607.03432",
@@ -680,7 +680,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 3
+   "citations": 6
   },
   {
    "arxiv": "2607.01864",
@@ -727,7 +727,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 1
+   "citations": 3
   },
   {
    "arxiv": "2607.00299",
@@ -761,7 +761,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2606.30504",
@@ -896,7 +896,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 0
+   "citations": 2
   },
   {
    "arxiv": "2606.27244",
@@ -949,7 +949,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 1
+   "citations": 3
   },
   {
    "arxiv": "2606.25955",
@@ -989,7 +989,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 2
+   "citations": 4
   },
   {
    "arxiv": "2606.21334",
@@ -1022,7 +1022,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 0
+   "citations": 2
   },
   {
    "arxiv": "2606.19429",
@@ -1044,7 +1044,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 3
   },
   {
    "arxiv": "2606.16525",
@@ -1199,7 +1199,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 1
+   "citations": 2
   },
   {
    "arxiv": "2606.10038",
@@ -1229,7 +1229,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 3
+   "citations": 5
   },
   {
    "arxiv": "2606.10027",
@@ -1256,7 +1256,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2606.01547",
@@ -1280,7 +1280,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 2
   },
   {
    "arxiv": "2605.27370",
@@ -1308,7 +1308,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2605.06799",
@@ -1333,7 +1333,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 4
   },
   {
    "arxiv": "2605.00092",
@@ -1420,7 +1420,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 8
   },
   {
    "arxiv": "2604.17981",
@@ -1444,7 +1444,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2604.06318",
@@ -1482,7 +1482,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 6
   },
   {
    "arxiv": "2604.00105",
@@ -1579,7 +1579,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2603.27830",
@@ -1615,7 +1615,7 @@
     "Will Handley"
    ],
    "category": "cs.LG",
-   "citations": 1,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -1646,7 +1646,7 @@
     "J. L. Tutt"
    ],
    "category": "astro-ph.IM",
-   "citations": 1,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -1767,7 +1767,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 1
+   "citations": 2
   },
   {
    "arxiv": "2603.13196",
@@ -1798,7 +1798,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 4
+   "citations": 6
   },
   {
    "arxiv": "2603.11165",
@@ -1828,7 +1828,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 2
+   "citations": 5
   },
   {
    "arxiv": "2603.05472",
@@ -1841,7 +1841,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 17,
+   "citations": 35,
    "theme": "cosmo",
    "group": [
     {
@@ -1878,7 +1878,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 1
+   "citations": 0
   },
   {
    "arxiv": "2602.22307",
@@ -1932,7 +1932,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 2,
+   "citations": 3,
    "theme": "cosmo",
    "group": [
     {
@@ -1982,7 +1982,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 1
+   "citations": 10
   },
   {
    "arxiv": "2601.23252",
@@ -1995,7 +1995,7 @@
     "Will Handley"
    ],
    "category": "stat.CO",
-   "citations": 12,
+   "citations": 9,
    "theme": "methods",
    "group": [
     {
@@ -2030,7 +2030,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 3
+   "citations": 4
   },
   {
    "arxiv": "2601.17239",
@@ -2088,7 +2088,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 7
+   "citations": 8
   },
   {
    "arxiv": "2601.14235",
@@ -2171,7 +2171,7 @@
     }
    ],
    "theme": "methods",
-   "citations": 4
+   "citations": 5
   },
   {
    "arxiv": "2601.06290",
@@ -2197,7 +2197,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 2
+   "citations": 6
   },
   {
    "arxiv": "2601.06258",
@@ -2230,7 +2230,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 5
+   "citations": 4
   },
   {
    "arxiv": "2512.25007",
@@ -2301,7 +2301,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 5
+   "citations": 9
   },
   {
    "arxiv": "2512.16416",
@@ -2489,7 +2489,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 3
   },
   {
    "arxiv": "2512.10924",
@@ -2522,7 +2522,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 1
+   "citations": 5
   },
   {
    "arxiv": "2512.08316",
@@ -2536,7 +2536,7 @@
     "Eloy de Lera Acedo"
    ],
    "category": "astro-ph.IM",
-   "citations": 0,
+   "citations": 1,
    "theme": "methods",
    "group": [
     {
@@ -2570,7 +2570,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 1
+   "citations": 0
   },
   {
    "arxiv": "2512.06319",
@@ -2599,7 +2599,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 4
+   "citations": 9
   },
   {
    "arxiv": "2512.05050",
@@ -2620,7 +2620,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 4
+   "citations": 1
   },
   {
    "arxiv": "2512.03038",
@@ -2644,7 +2644,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 5
+   "citations": 10
   },
   {
    "arxiv": "2512.01489",
@@ -2839,7 +2839,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2512.01929",
@@ -2913,7 +2913,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 1
+   "citations": 3
   },
   {
    "arxiv": "2511.11548",
@@ -3247,7 +3247,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 2
   },
   {
    "arxiv": "2511.10631",
@@ -3260,7 +3260,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 25,
+   "citations": 33,
    "theme": "cosmo",
    "group": [
     {
@@ -3308,7 +3308,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 3
+   "citations": 1
   },
   {
    "arxiv": "2511.09618",
@@ -3330,7 +3330,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 6
   },
   {
    "arxiv": "2511.08438",
@@ -3351,7 +3351,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 5
   },
   {
    "arxiv": "2511.07517",
@@ -3451,7 +3451,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 117
+   "citations": 231
   },
   {
    "arxiv": "2511.05470",
@@ -3463,7 +3463,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 3,
+   "citations": 5,
    "theme": "cosmo",
    "group": [
     {
@@ -3522,7 +3522,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 1
   },
   {
    "arxiv": "2510.11719",
@@ -3548,7 +3548,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 0
+   "citations": 5
   },
   {
    "arxiv": "2510.07637",
@@ -3577,7 +3577,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 6
+   "citations": 9
   },
   {
    "arxiv": "2510.05216",
@@ -3596,7 +3596,7 @@
     "Martin White"
    ],
    "category": "hep-ph",
-   "citations": 1,
+   "citations": 2,
    "theme": "other",
    "group": [
     {
@@ -3617,7 +3617,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 2,
+   "citations": 4,
    "theme": "astro",
    "group": [
     {
@@ -3661,7 +3661,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 6
   },
   {
    "arxiv": "2509.13220",
@@ -3676,7 +3676,7 @@
     "D. Yallup"
    ],
    "category": "astro-ph.CO",
-   "citations": 6,
+   "citations": 8,
    "theme": "cosmo",
    "group": [
     {
@@ -3714,7 +3714,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 7,
+   "citations": 6,
    "theme": "cosmo",
    "group": [
     {
@@ -3743,7 +3743,7 @@
     "E. de Lera Acedo"
    ],
    "category": "astro-ph.IM",
-   "citations": 5,
+   "citations": 4,
    "theme": "cosmo",
    "group": [
     {
@@ -3774,7 +3774,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 0,
+   "citations": 2,
    "theme": "cosmo",
    "group": [
     {
@@ -3821,7 +3821,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 0
+   "citations": 8
   },
   {
    "arxiv": "2509.10079",
@@ -3859,7 +3859,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 2
+   "citations": 11
   },
   {
    "arxiv": "2509.04336",
@@ -3965,7 +3965,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 1
+   "citations": 2
   },
   {
    "arxiv": "2508.21152",
@@ -4005,7 +4005,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 5
+   "citations": 6
   },
   {
    "arxiv": "2508.09070",
@@ -4068,7 +4068,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 7
+   "citations": 8
   },
   {
    "arxiv": "2508.03888",
@@ -4091,7 +4091,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 6
+   "citations": 5
   },
   {
    "arxiv": "2507.20190",
@@ -4118,7 +4118,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 1
+   "citations": 12
   },
   {
    "arxiv": "2507.09228",
@@ -4132,7 +4132,7 @@
     "Adam Ormondroyd"
    ],
    "category": "astro-ph.CO",
-   "citations": 6,
+   "citations": 7,
    "theme": "other",
    "group": [
     {
@@ -4199,7 +4199,7 @@
     "M. Spinelli"
    ],
    "category": "astro-ph.IM",
-   "citations": 5,
+   "citations": 10,
    "theme": "21cm",
    "group": [
     {
@@ -4259,7 +4259,7 @@
     "Will Handley"
    ],
    "category": "stat.ML",
-   "citations": 6,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -4288,7 +4288,7 @@
     "William Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 5,
+   "citations": 15,
    "theme": "astro",
    "group": [
     {
@@ -4314,7 +4314,7 @@
     "Rennan Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 6,
+   "citations": 18,
    "theme": "21cm",
    "group": [
     {
@@ -4355,7 +4355,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 4
+   "citations": 6
   },
   {
    "arxiv": "2504.04503",
@@ -4369,7 +4369,7 @@
     "Nima Razavi-Ghods"
    ],
    "category": "astro-ph.IM",
-   "citations": 0,
+   "citations": 1,
    "theme": "21cm",
    "group": [
     {
@@ -4402,7 +4402,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 55,
+   "citations": 76,
    "theme": "cosmo",
    "group": [
     {
@@ -4434,7 +4434,7 @@
     "W. J. Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 3,
+   "citations": 5,
    "theme": "methods",
    "group": [
     {
@@ -4666,7 +4666,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 7
+   "citations": 20
   },
   {
    "arxiv": "2503.08658",
@@ -4680,7 +4680,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 32,
+   "citations": 45,
    "theme": "cosmo",
    "group": [
     {
@@ -4718,7 +4718,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 1,
+   "citations": 17,
    "theme": "21cm",
    "group": [
     {
@@ -4762,7 +4762,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 1
+   "citations": 5
   },
   {
    "arxiv": "2501.03921",
@@ -4774,7 +4774,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 0,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -4795,7 +4795,7 @@
     "Nima Razavi-Ghods"
    ],
    "category": "astro-ph.IM",
-   "citations": 0,
+   "citations": 7,
    "theme": "21cm",
    "group": [
     {
@@ -4833,7 +4833,7 @@
     "Eloy de Lera Acedo"
    ],
    "category": "astro-ph.IM",
-   "citations": 5,
+   "citations": 10,
    "theme": "21cm",
    "group": [
     {
@@ -4873,7 +4873,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 5,
+   "citations": 12,
    "theme": "astro",
    "group": [
     {
@@ -4901,7 +4901,7 @@
     "Christopher G. Lester"
    ],
    "category": "astro-ph.CO",
-   "citations": 4,
+   "citations": 7,
    "theme": "cosmo",
    "group": [
     {
@@ -4933,7 +4933,7 @@
     "Martin White"
    ],
    "category": "hep-ph",
-   "citations": 15,
+   "citations": 24,
    "theme": "methods",
    "group": [
     {
@@ -4955,7 +4955,7 @@
     "Torsten Enßlin"
    ],
    "category": "physics.comp-ph",
-   "citations": 0,
+   "citations": 1,
    "theme": "methods",
    "group": [
     {
@@ -4974,7 +4974,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 0,
+   "citations": 7,
    "theme": "cosmo",
    "group": [
     {
@@ -4998,7 +4998,7 @@
     "Thomas Gessey-Jones"
    ],
    "category": "astro-ph.CO",
-   "citations": 0,
+   "citations": 5,
    "theme": "cosmo",
    "group": [
     {
@@ -5035,7 +5035,7 @@
     "Aaron C. Vincent"
    ],
    "category": "hep-ph",
-   "citations": 38,
+   "citations": 61,
    "theme": "other",
    "group": [
     {
@@ -5054,7 +5054,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 1,
+   "citations": 2,
    "theme": "methods",
    "group": [
     {
@@ -5080,7 +5080,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 11,
+   "citations": 20,
    "theme": "21cm",
    "group": [
     {
@@ -5127,7 +5127,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 2
+   "citations": 13
   },
   {
    "arxiv": "2312.11907",
@@ -5167,7 +5167,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 0,
+   "citations": 17,
    "theme": "21cm",
    "group": [
     {
@@ -5229,7 +5229,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 20
+   "citations": 35
   },
   {
    "arxiv": "2312.03911",
@@ -5245,7 +5245,7 @@
     "Laurence Perreault-Levasseur"
    ],
    "category": "cs.LG",
-   "citations": 19,
+   "citations": 8,
    "theme": "methods",
    "group": [
     {
@@ -5265,7 +5265,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 13,
+   "citations": 21,
    "theme": "cosmo",
    "group": [
     {
@@ -5293,7 +5293,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 8,
+   "citations": 5,
    "theme": "methods",
    "group": [
     {
@@ -5332,7 +5332,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 7
+   "citations": 13
   },
   {
    "arxiv": "2311.04153",
@@ -5379,7 +5379,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 1,
+   "citations": 6,
    "theme": "cosmo",
    "group": [
     {
@@ -5421,7 +5421,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 6
+   "citations": 15
   },
   {
    "arxiv": "2309.15984",
@@ -5433,7 +5433,7 @@
     "W. J. Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 3,
+   "citations": 6,
    "theme": "cosmo",
    "group": [
     {
@@ -5456,7 +5456,7 @@
     "W. J. Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 3,
+   "citations": 8,
    "theme": "methods",
    "group": [
     {
@@ -5515,7 +5515,7 @@
     "K. Zarb-Adami"
    ],
    "category": "astro-ph.IM",
-   "citations": 11,
+   "citations": 27,
    "theme": "21cm",
    "group": [
     {
@@ -5575,7 +5575,7 @@
     "Thomas Gessey-Jones"
    ],
    "category": "stat.ML",
-   "citations": 2,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -5605,7 +5605,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 7,
+   "citations": 33,
    "theme": "21cm",
    "group": [
     {
@@ -5642,7 +5642,7 @@
     "Rennan Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 11,
+   "citations": 36,
    "theme": "21cm",
    "group": [
     {
@@ -5676,7 +5676,7 @@
     "Léon V. E. Koopmans"
    ],
    "category": "astro-ph.CO",
-   "citations": 9,
+   "citations": 17,
    "theme": "21cm",
    "group": [
     {
@@ -5699,7 +5699,7 @@
     "William James Handley"
    ],
    "category": "physics.comp-ph",
-   "citations": 9,
+   "citations": 4,
    "theme": "methods",
    "group": [
     {
@@ -5727,7 +5727,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 34,
+   "citations": 61,
    "theme": "21cm",
    "group": [
     {
@@ -5762,7 +5762,7 @@
     "Anthony N. Lasenby"
    ],
    "category": "gr-qc",
-   "citations": 12,
+   "citations": 21,
    "theme": "cosmo",
    "group": [
     {
@@ -5802,7 +5802,7 @@
     "E. de Lera Acedo"
    ],
    "category": "astro-ph.IM",
-   "citations": 6,
+   "citations": 17,
    "theme": "21cm",
    "group": [
     {
@@ -5833,7 +5833,7 @@
     "Eloy De Lera Acedo"
    ],
    "category": "astro-ph.CO",
-   "citations": 6,
+   "citations": 21,
    "theme": "21cm",
    "group": [
     {
@@ -5860,7 +5860,7 @@
     "Will Handley"
    ],
    "category": "physics.data-an",
-   "citations": 5,
+   "citations": 6,
    "theme": "other",
    "group": [
     {
@@ -5915,7 +5915,7 @@
     "K. Zarb-Adami"
    ],
    "category": "astro-ph.CO",
-   "citations": 86,
+   "citations": 140,
    "theme": "21cm",
    "group": [
     {
@@ -5971,7 +5971,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 15,
+   "citations": 30,
    "theme": "21cm",
    "group": [
     {
@@ -6011,7 +6011,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 15
+   "citations": 36
   },
   {
    "arxiv": "2207.11457",
@@ -6027,7 +6027,7 @@
     "Anastasia Fialkov"
    ],
    "category": "astro-ph.CO",
-   "citations": 10,
+   "citations": 17,
    "theme": "methods",
    "group": [
     {
@@ -6071,7 +6071,7 @@
     }
    ],
    "theme": "methods",
-   "citations": 31
+   "citations": 35
   },
   {
    "arxiv": "2205.15570",
@@ -6131,7 +6131,7 @@
     }
    ],
    "theme": "methods",
-   "citations": 146
+   "citations": 135
   },
   {
    "arxiv": "2205.13549",
@@ -6152,7 +6152,7 @@
     "Patrick Stöcker"
    ],
    "category": "astro-ph.CO",
-   "citations": 58,
+   "citations": 81,
    "theme": "other",
    "group": [
     {
@@ -6176,7 +6176,7 @@
     "Justin Alsing"
    ],
    "category": "astro-ph.IM",
-   "citations": 10,
+   "citations": 27,
    "theme": "methods",
    "group": [
     {
@@ -6244,7 +6244,7 @@
     "Anthony N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 17,
+   "citations": 21,
    "theme": "cosmo",
    "group": [
     {
@@ -6281,7 +6281,7 @@
     "Will Handley"
    ],
    "category": "hep-ph",
-   "citations": 13,
+   "citations": 10,
    "theme": "other",
    "group": [
     {
@@ -6325,7 +6325,7 @@
     }
    ],
    "theme": "21cm",
-   "citations": 6
+   "citations": 19
   },
   {
    "arxiv": "2204.04491",
@@ -6338,7 +6338,7 @@
     "E. de Lera Acedo"
    ],
    "category": "astro-ph.CO",
-   "citations": 5,
+   "citations": 16,
    "theme": "21cm",
    "group": [
     {
@@ -6366,7 +6366,7 @@
     "W. Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 7,
+   "citations": 13,
    "theme": "21cm",
    "group": [
     {
@@ -6400,7 +6400,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 18,
+   "citations": 59,
    "theme": "21cm",
    "group": [
     {
@@ -6436,7 +6436,7 @@
     "R. Barkana"
    ],
    "category": "astro-ph.CO",
-   "citations": 14,
+   "citations": 30,
    "theme": "21cm",
    "group": [
     {
@@ -6467,7 +6467,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 9,
+   "citations": 19,
    "theme": "cosmo",
    "group": [
     {
@@ -6490,7 +6490,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 1,
+   "citations": 2,
    "theme": "cosmo",
    "group": [
     {
@@ -6515,7 +6515,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 16,
+   "citations": 32,
    "theme": "21cm",
    "group": [
     {
@@ -6574,7 +6574,7 @@
     }
    ],
    "theme": "other",
-   "citations": 41
+   "citations": 53
   },
   {
    "arxiv": "2105.13923",
@@ -6587,7 +6587,7 @@
     "Will Handley"
    ],
    "category": "physics.data-an",
-   "citations": 9,
+   "citations": 7,
    "theme": "other",
    "group": [
     {
@@ -6609,7 +6609,7 @@
     "K. Javid"
    ],
    "category": "astro-ph.CO",
-   "citations": 33,
+   "citations": 65,
    "theme": "21cm",
    "group": [
     {
@@ -6644,7 +6644,7 @@
     "W. J. Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 8,
+   "citations": 14,
    "theme": "cosmo",
    "group": [
     {
@@ -6668,7 +6668,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 5,
+   "citations": 7,
    "theme": "cosmo",
    "group": [
     {
@@ -6697,7 +6697,7 @@
     "C. S. Negreanu"
    ],
    "category": "gr-qc",
-   "citations": 5,
+   "citations": 6,
    "theme": "cosmo",
    "group": [
     {
@@ -6724,7 +6724,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 15,
+   "citations": 19,
    "theme": "methods",
    "group": [
     {
@@ -6745,7 +6745,7 @@
     "Anthony N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 38,
+   "citations": 60,
    "theme": "cosmo",
    "group": [
     {
@@ -6778,7 +6778,7 @@
     "P. Lemos"
    ],
    "category": "astro-ph.CO",
-   "citations": 0,
+   "citations": 16,
    "theme": "cosmo",
    "group": [
     {
@@ -6809,7 +6809,7 @@
     "N. Unger"
    ],
    "category": "astro-ph.EP",
-   "citations": 5,
+   "citations": 30,
    "theme": "astro",
    "group": [
     {
@@ -6830,7 +6830,7 @@
     "W. J. Handley"
    ],
    "category": "gr-qc",
-   "citations": 11,
+   "citations": 17,
    "theme": "other",
    "group": [
     {
@@ -6866,7 +6866,7 @@
     "Anthony G. Williams"
    ],
    "category": "hep-ph",
-   "citations": 4,
+   "citations": 7,
    "theme": "other",
    "group": [
     {
@@ -6923,7 +6923,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 18
+   "citations": 22
   },
   {
    "arxiv": "2012.01783",
@@ -6947,7 +6947,7 @@
     }
    ],
    "theme": "methods",
-   "citations": 28
+   "citations": 12
   },
   {
    "arxiv": "2011.14052",
@@ -6960,7 +6960,7 @@
     "N. Razavi-Ghods"
    ],
    "category": "astro-ph.IM",
-   "citations": 17,
+   "citations": 32,
    "theme": "21cm",
    "group": [
     {
@@ -6990,7 +6990,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 31,
+   "citations": 53,
    "theme": "21cm",
    "group": [
     {
@@ -7026,7 +7026,7 @@
     "Liangliang Su"
    ],
    "category": "stat.CO",
-   "citations": 14,
+   "citations": 12,
    "theme": "methods",
    "group": [
     {
@@ -7046,7 +7046,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 37,
+   "citations": 75,
    "theme": "21cm",
    "group": [
     {
@@ -7074,7 +7074,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 12,
+   "citations": 26,
    "theme": "cosmo",
    "group": [
     {
@@ -7114,7 +7114,7 @@
     "Martin White"
    ],
    "category": "astro-ph.CO",
-   "citations": 27,
+   "citations": 54,
    "theme": "other",
    "group": [
     {
@@ -7154,7 +7154,7 @@
     }
    ],
    "theme": "other",
-   "citations": 33
+   "citations": 38
   },
   {
    "arxiv": "2007.14970",
@@ -7170,7 +7170,7 @@
     "D. C. Price"
    ],
    "category": "astro-ph.CO",
-   "citations": 31,
+   "citations": 60,
    "theme": "21cm",
    "group": [
     {
@@ -7201,7 +7201,7 @@
     "Pablo Lemos"
    ],
    "category": "astro-ph.CO",
-   "citations": 32,
+   "citations": 73,
    "theme": "cosmo",
    "group": [
     {
@@ -7231,7 +7231,7 @@
     "B. V. Rackham"
    ],
    "category": "astro-ph.EP",
-   "citations": 11,
+   "citations": 18,
    "theme": "astro",
    "group": [
     {
@@ -7252,7 +7252,7 @@
     "A. N. Lasenby"
    ],
    "category": "physics.comp-ph",
-   "citations": 4,
+   "citations": 5,
    "theme": "cosmo",
    "group": [
     {
@@ -7285,7 +7285,7 @@
     "W. J. Handley"
    ],
    "category": "gr-qc",
-   "citations": 1,
+   "citations": 18,
    "theme": "other",
    "group": [
     {
@@ -7317,7 +7317,7 @@
     "Liangliang Su"
    ],
    "category": "stat.CO",
-   "citations": 21,
+   "citations": 23,
    "theme": "methods",
    "group": [
     {
@@ -7338,7 +7338,7 @@
     "Anthony Lasenby"
    ],
    "category": "stat.ML",
-   "citations": 8,
+   "citations": 9,
    "theme": "methods",
    "group": [
     {
@@ -7371,7 +7371,7 @@
     "W. J. Handley"
    ],
    "category": "gr-qc",
-   "citations": 7,
+   "citations": 56,
    "theme": "other",
    "group": [
     {
@@ -7405,7 +7405,7 @@
     "M. P. Hobson"
    ],
    "category": "gr-qc",
-   "citations": 3,
+   "citations": 10,
    "theme": "cosmo",
    "group": [
     {
@@ -7444,7 +7444,7 @@
     "Ofer Lahav"
    ],
    "category": "astro-ph.CO",
-   "citations": 27,
+   "citations": 43,
    "theme": "cosmo",
    "group": [
     {
@@ -7469,7 +7469,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 6
+   "citations": 0
   },
   {
    "arxiv": "1908.09139",
@@ -7480,7 +7480,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 250,
+   "citations": 426,
    "theme": "cosmo",
    "group": [
     {
@@ -7501,7 +7501,7 @@
     "Michael P. Hobson"
    ],
    "category": "astro-ph.CO",
-   "citations": 37,
+   "citations": 53,
    "theme": "cosmo",
    "group": [
     {
@@ -7527,7 +7527,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 58,
+   "citations": 81,
    "theme": "methods",
    "group": [
     {
@@ -7546,7 +7546,7 @@
     "Will Handley"
    ],
    "category": "physics.comp-ph",
-   "citations": 6,
+   "citations": 4,
    "theme": "cosmo",
    "group": [
     {
@@ -7568,7 +7568,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 45,
+   "citations": 79,
    "theme": "cosmo",
    "group": [
     {
@@ -7589,7 +7589,7 @@
     "M. P. Hobson"
    ],
    "category": "physics.comp-ph",
-   "citations": 30,
+   "citations": 19,
    "theme": "cosmo",
    "group": [
     {
@@ -7626,7 +7626,7 @@
     }
    ],
    "theme": "methods",
-   "citations": 3
+   "citations": 1
   },
   {
    "arxiv": "1905.04768",
@@ -7637,7 +7637,7 @@
     "Will Handley"
    ],
    "category": "astro-ph.IM",
-   "citations": 84,
+   "citations": 120,
    "theme": "methods",
    "group": [
     {
@@ -7656,7 +7656,7 @@
     "Pablo Lemos"
    ],
    "category": "astro-ph.CO",
-   "citations": 43,
+   "citations": 99,
    "theme": "cosmo",
    "group": [
     {
@@ -7743,7 +7743,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 17
+   "citations": 29
   },
   {
    "arxiv": "1903.04763",
@@ -7899,7 +7899,7 @@
     }
    ],
    "theme": "other",
-   "citations": 64
+   "citations": 90
   },
   {
    "arxiv": "1902.04029",
@@ -7911,7 +7911,7 @@
     "Pablo Lemos"
    ],
    "category": "astro-ph.CO",
-   "citations": 76,
+   "citations": 148,
    "theme": "cosmo",
    "group": [
     {
@@ -7955,7 +7955,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 10
+   "citations": 6
   },
   {
    "arxiv": "1901.07540",
@@ -7968,7 +7968,7 @@
     "Mike Hobson"
    ],
    "category": "gr-qc",
-   "citations": 4,
+   "citations": 9,
    "theme": "cosmo",
    "group": [
     {
@@ -8018,7 +8018,7 @@
     }
    ],
    "theme": "other",
-   "citations": 41
+   "citations": 45
   },
   {
    "arxiv": "1811.09844",
@@ -8032,7 +8032,7 @@
     "William J Handley"
    ],
    "category": "gr-qc",
-   "citations": 2,
+   "citations": 3,
    "theme": "other",
    "group": [
     {
@@ -8063,7 +8063,7 @@
     "W. J. Handley"
    ],
    "category": "astro-ph.CO",
-   "citations": 10,
+   "citations": 13,
    "theme": "cosmo",
    "group": [
     {
@@ -8121,7 +8121,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 24,
+   "citations": 25,
    "theme": "cosmo",
    "group": [
     {
@@ -8154,7 +8154,7 @@
     "Anthony Lasenby"
    ],
    "category": "astro-ph.IM",
-   "citations": 17,
+   "citations": 13,
    "theme": "methods",
    "group": [
     {
@@ -8194,7 +8194,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 8
+   "citations": 6
   },
   {
    "arxiv": "1806.00518",
@@ -8208,7 +8208,7 @@
     "Didier Queloz"
    ],
    "category": "astro-ph.EP",
-   "citations": 41,
+   "citations": 66,
    "theme": "astro",
    "group": [
     {
@@ -8246,7 +8246,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 5
+   "citations": 3
   },
   {
    "arxiv": "1805.01991",
@@ -8283,7 +8283,7 @@
     }
    ],
    "theme": "astro",
-   "citations": 6
+   "citations": 5
   },
   {
    "arxiv": "1804.08143",
@@ -8295,7 +8295,7 @@
     "Marius Millea"
    ],
    "category": "math.ST",
-   "citations": 23,
+   "citations": 25,
    "theme": "methods",
    "group": [
     {
@@ -8316,7 +8316,7 @@
     "Anthony Lasenby"
    ],
    "category": "stat.CO",
-   "citations": 50,
+   "citations": 46,
    "theme": "methods",
    "group": [
     {
@@ -8353,7 +8353,7 @@
     "Anthony N. Lasenby"
    ],
    "category": "gr-qc",
-   "citations": 29,
+   "citations": 33,
    "theme": "astro",
    "group": [
     {
@@ -8393,7 +8393,7 @@
     }
    ],
    "theme": "other",
-   "citations": 3
+   "citations": 4
   },
   {
    "arxiv": "1704.03459",
@@ -8407,7 +8407,7 @@
     "Anthony Lasenby"
    ],
    "category": "stat.CO",
-   "citations": 278,
+   "citations": 200,
    "theme": "methods",
    "group": [
     {
@@ -8440,7 +8440,7 @@
     "Anthony Lasenby"
    ],
    "category": "stat.ME",
-   "citations": 44,
+   "citations": 48,
    "theme": "methods",
    "group": [
     {
@@ -8506,7 +8506,7 @@
     }
    ],
    "theme": "cosmo",
-   "citations": 491
+   "citations": 560
   },
   {
    "arxiv": "1612.02288",
@@ -8519,7 +8519,7 @@
     "M. P. Hobson"
    ],
    "category": "physics.comp-ph",
-   "citations": 9,
+   "citations": 10,
    "theme": "cosmo",
    "group": [
     {
@@ -8547,7 +8547,7 @@
     "M. P. Hobson"
    ],
    "category": "gr-qc",
-   "citations": 31,
+   "citations": 38,
    "theme": "cosmo",
    "group": [
     {
@@ -8577,7 +8577,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 40,
+   "citations": 42,
    "theme": "cosmo",
    "group": [
     {
@@ -8649,7 +8649,7 @@
     "Anthony N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 64,
+   "citations": 90,
    "theme": "cosmo",
    "group": [
     {
@@ -8677,7 +8677,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.IM",
-   "citations": 435,
+   "citations": 416,
    "theme": "methods",
    "group": [
     {
@@ -8705,7 +8705,7 @@
     "A. N. Lasenby"
    ],
    "category": "astro-ph.CO",
-   "citations": 412,
+   "citations": 524,
    "theme": "methods",
    "group": [
     {
@@ -8734,7 +8734,7 @@
     "M. P. Hobson"
    ],
    "category": "astro-ph.CO",
-   "citations": 57,
+   "citations": 61,
    "theme": "cosmo",
    "group": [
     {
